@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2d183d9d-1058-4d5f-ab84-12ef958a9d79" name="Changes" comment="feature: add contributing document">
+      <change afterPath="$PROJECT_DIR$/Contributing.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Style Guide.md" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "git-widget-placeholder": "main"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <task id="LOCAL-00001" summary="chore: introduce ide settings files">
+      <option name="closed" value="true" />
+      <created>1696948777856</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1696948777856</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feature: add contributing document">
+      <option name="closed" value="true" />
+      <created>1696949141517</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1696949141517</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="chore: introduce ide settings files" />
+    <MESSAGE value="feature: add contributing document" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature: add contributing document" />
+  </component>
+</project>
