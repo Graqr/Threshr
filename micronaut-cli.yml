@@ -1,0 +1,6 @@
+applicationType: cli
+defaultPackage: com.github.peanutbutter.unicorn.tarvester
+testFramework: junit
+sourceLanguage: java
+buildTool: maven
+features: [annotation-api, app-name, github-workflow-ci, graalvm, http-client, jackson-databind, java, junit, log4j2, lombok, maven, picocli, picocli-java-application, picocli-junit, properties, readme, shade]
