@@ -1,0 +1,13 @@
+services:
+  app:
+    entrypoint:
+    - sleep
+    - infinity
+    image: vegardit/graalvm-maven:17.0.8
+    container_name: tarvester-dev
+    init: true
+    volumes:
+      - type: bind
+        source: ${TARVESTER_REPO}
+        target: /tarvester
+
