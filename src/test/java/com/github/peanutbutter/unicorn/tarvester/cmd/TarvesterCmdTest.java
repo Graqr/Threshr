@@ -4,7 +4,7 @@ import com.github.peanutbutter.unicorn.tarvester.TarvesterCmd;
 import io.micronaut.configuration.picocli.PicocliRunner;
 import io.micronaut.context.ApplicationContext;
 import io.micronaut.context.env.Environment;
-import io.micronaut.test.extensions.junit5.annotation.MicronautTest;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
@@ -13,11 +13,6 @@ import java.io.PrintStream;
 
 public class TarvesterCmdTest {
 
-    @Test
-    void smokeTest(){
-        System.out.println(executeCommand("-t 82691535".split(" ")));
-    }
-
     String executeCommand(String[] args){
         OutputStream baos = new ByteArrayOutputStream();
         System.setOut(new PrintStream(baos));
@@ -25,5 +20,18 @@ public class TarvesterCmdTest {
             PicocliRunner.run(TarvesterCmd.class, ctx, args);
         }
         return baos.toString();
+    }
+
+    @Test
+    void smokeTest() {
+        System.out.println(executeCommand("-t 82691535".split(" ")));
+    }
+
+
+    @Test
+    void validateTcins() {
+        TarvesterCmd tarvesterCmd = new TarvesterCmd();
+        tarvesterCmd.tcins = new long[]{82691535, 82642843, 85813668};
+        Assertions.assertDoesNotThrow(tarvesterCmd::validateTCIN);
     }
 }
