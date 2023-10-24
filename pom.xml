@@ -18,7 +18,7 @@
     <jdk.version>17</jdk.version>
     <release.version>17</release.version>
     <micronaut.version>3.9.3</micronaut.version>
-    <exec.mainClass>com.github.peanutbutter.unicorn.tarvester.main</exec.mainClass>
+    <exec.mainClass>com.github.peanutbutter.unicorn.tarvester.TarvesterCmd</exec.mainClass>
   </properties>
 
   <repositories>
