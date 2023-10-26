@@ -1,13 +1,12 @@
 package com.github.peanutbutter.unicorn.tarvester;
 
 import com.github.peanutbutter.unicorn.tarvester.model.TargetStore;
+import com.github.peanutbutter.unicorn.tarvester.model.TcinList;
 import io.micronaut.configuration.picocli.PicocliRunner;
 import jakarta.inject.Inject;
 import picocli.CommandLine;
 
 import java.util.Arrays;
-import java.util.function.LongPredicate;
-import java.util.stream.Collectors;
 
 @CommandLine.Command(name = "tarvester",
         description = "pulls current pricing from target's api",
@@ -17,17 +16,17 @@ import java.util.stream.Collectors;
 public class TarvesterCmd implements Runnable {
 
     @Inject
-    TarvesterClient tarvesterClient;
+    TarvesterController tarvesterController;
 
-    @CommandLine.Option(names = {"-t", "--tcins"}, split = ",") // https://picocli.info/#_split_regex
-    public long[] tcins;
+    @CommandLine.Option(names = {"-t", "--tcins"}, converter = TcinsConverter.class)
+    // https://picocli.info/#_split_regex
+    public TcinList tcins;
 
     public static void main(String[] args) {
         PicocliRunner.run(TarvesterCmd.class, args);
     }
 
     public void run() {
-        validateTCIN();
         TargetStore targetStore = new TargetStore(
                 "1750",
                 "Centerville",
@@ -43,22 +42,7 @@ public class TarvesterCmd implements Runnable {
                 "8012920071",
                 "false"
         );
-        System.out.println(tarvesterClient.fetchProducts(targetStore.toString(), "&tcins="
-                + Arrays.stream(tcins)
-                .mapToObj(String::valueOf)
-                .collect(Collectors.joining("%2C"))).body());
-    }
-
-
-    public void validateTCIN() {
-        LongPredicate tcin = t -> !String.valueOf(t).matches("\\d{8}");
-        String badTcin = Arrays.stream(tcins)
-                .filter(tcin)
-                .mapToObj(String::valueOf)
-                .collect(Collectors.joining(", "));
-        if (!badTcin.isEmpty()) {
-            throw new CommandLine.PicocliException("the following are invalid tcin:" + badTcin);
-        }
+        System.out.println(tarvesterController.fetchProducts(tcins, targetStore).body());
     }
 
     public static class ManifestVersionProvider implements CommandLine.IVersionProvider {
@@ -67,6 +51,13 @@ public class TarvesterCmd implements Runnable {
             return new String[]{
                     TarvesterCmd.class.getPackage().getImplementationVersion()
             };
+        }
+    }
+
+    static class TcinsConverter implements CommandLine.ITypeConverter<TcinList> {
+        @Override
+        public TcinList convert(String s) {
+            return new TcinList(Arrays.stream(s.split(",")).mapToLong(Long::parseLong).toArray());
         }
     }
 }
