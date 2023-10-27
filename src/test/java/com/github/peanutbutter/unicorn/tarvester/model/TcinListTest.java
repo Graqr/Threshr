@@ -33,7 +33,7 @@ class TcinListTest {
     void testToString() {
         Stream.of(1, 5).forEach(size -> {
             tcinList = new TcinList(randomTcinList.apply(size));
-            if (!tcinList.toString().matches("^&tcins=\\d{8}(%2C\\d{8})*$")) {
+            if (!tcinList.toString().matches("^tcins=\\d{8}(%2C\\d{8})*$")) {
                 throw new AssertionFailedError("The provided tcins string, \"" + tcinList.toString() + "\", is invalid.");
             }
         });

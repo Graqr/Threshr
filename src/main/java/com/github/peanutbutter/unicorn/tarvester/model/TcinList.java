@@ -28,7 +28,7 @@ public class TcinList {
 
     @Override
     public String toString() {
-        return "&tcins=" + Arrays.stream(id)
+        return "tcins=" + Arrays.stream(id)
                 .mapToObj(String::valueOf)
                 .collect(Collectors.joining("%2C"));
     }

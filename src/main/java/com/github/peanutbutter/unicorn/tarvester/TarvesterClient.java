@@ -15,6 +15,6 @@ import static io.micronaut.http.HttpHeaders.USER_AGENT;
 @Header(name = ACCEPT, value = "application/vnd.github.v3+json, application/json")
 public interface TarvesterClient {
 
-    @Get("/product_summary_with_fulfillment_v1?key=${redsky-api.token}&{tcins}&{targetStore}&channel=WEB")
+    @Get("/product_summary_with_fulfillment_v1?key=${redsky-api.token}&{+tcins}&{+targetStore}&channel=WEB")
     HttpResponse<List<?>> fetchProducts(String tcins, String targetStore);
 }
