@@ -13,6 +13,16 @@
     <version>3.9.3</version>
   </parent>
 
+  <developers>
+    <developer>
+      <id>jzollinger</id>
+      <name>Jonathan Zollinger</name>
+      <timezone>Mountain Standard Time</timezone>
+      <url>https://www.linkedin.com/in/jonathan-zollinger/</url>
+    </developer>
+  </developers>
+
+
   <properties>
     <packaging>jar</packaging>
     <jdk.version>17</jdk.version>
