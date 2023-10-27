@@ -19,7 +19,6 @@ public class TarvesterCmd implements Runnable {
     TarvesterController tarvesterController;
 
     @CommandLine.Option(names = {"-t", "--tcins"}, converter = TcinsConverter.class)
-    // https://picocli.info/#_split_regex
     public TcinList tcins;
 
     public static void main(String[] args) {
