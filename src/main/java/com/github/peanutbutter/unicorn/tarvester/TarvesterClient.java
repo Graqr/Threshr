@@ -1,6 +1,5 @@
 package com.github.peanutbutter.unicorn.tarvester;
 
-import com.github.peanutbutter.unicorn.tarvester.model.Product;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.Get;
 import io.micronaut.http.annotation.Header;
@@ -16,6 +15,6 @@ import static io.micronaut.http.HttpHeaders.USER_AGENT;
 @Header(name = ACCEPT, value = "application/vnd.github.v3+json, application/json")
 public interface TarvesterClient {
 
-    @Get("/product_summary_with_fulfillment_v1?key=${redsky-api.token}&{targetStore}&{tcins}&channel=WEB")
+    @Get("/product_summary_with_fulfillment_v1?key=${redsky-api.token}&{tcins}&{targetStore}&channel=WEB")
     HttpResponse<List<?>> fetchProducts(String tcins, String targetStore);
 }
