@@ -1,0 +1,72 @@
+name: Test Request
+description: We need a test for this
+labels: [ "Quabity Assuance" ]
+assignees: "Jonathan-Zollinger"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this test request!
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: Summarize the what you want to see tested.
+      placeholder: I want to validate <this portion of our api> is tested <this way which isn't tested right now>
+    validations:
+      required: true
+  - type: textarea
+    id: why-test
+    attributes:
+      label: Why Test?
+      description: Why is this necessary?
+      placeholder: Much of micronaut's declarative tools is obfuscated. This is helpful for new devs
+    validations:
+      required: true
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Proposed Solution
+      description: What solution do you recommend? What libraries do you recommend?
+      placeholder: the HttpClient's url interpolation can be tested with micronaut's mock server
+    validations:
+      required: true
+  - type: textarea
+    id: why-proposed-solution
+    attributes:
+      label: Why Proposed Solution
+      description: Why is your proposed solution adequate? Would others argue against this
+      placeholder: micronaut's mock server requires no changes to the pom, and tests only the httpRequest
+    validations:
+      required: true
+  - type: textarea
+    id: explored-alternatives
+    attributes:
+      label: Alternative
+      description: What alternative solutions have you considered?
+      placeholder: I've looked into mockito, but that requires adding more dependencies and more work to maintain in the future.
+  - type: textarea
+    id: requirements
+    attributes:
+      label: Test Requirements
+      description: write a checklist summarizing what this test should accomplish (not how to accomplish it)
+      placeholder: |
+        - [ ] test validates the url of an httpclient is interpolated as expected
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Add any other context or screenshots about the feature request here.
+      placeholder: this is a resource I've been consuming on the subject
+  - type: checkboxes
+    attributes:
+      label: Code of Conduct
+      description: The Code of Conduct helps create a safe space for everyone. We require
+        that everyone agrees to it.
+      options:
+        - label: I agree to follow this project's [Code of Conduct](../blob/main/CODE_OF_CONDUCT.md)
+          required: true
+  - type: markdown
+    attributes:
+      value: |
+        <marquee>Thanks for filling out this test request!</marquee>
