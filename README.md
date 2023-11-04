@@ -14,11 +14,11 @@ Want to get involved?
 ---------------------
 See our [contributing] doc before taking a whack at any [open issues]. We'd love for you to work with us!
 
-**Upcoming Milestones**<ul>
-![milestone 2] <br>
-![milestone 7] <br> 
-![milestone 5] <br>
-![milestone 6]
+**Upcoming Milestones**<br>
+![milestone 2]<br>
+![milestone 7]<br>
+![milestone 5]<br>
+![milestone 6]<br>
 
 [milestone 2]:https://img.shields.io/github/milestones/progress-percent/PeanutButter-Unicorn/Tarvester/2?style=plastic&label=Release%200.1.0&link=https%3A%2F%2Fgithub.com%2FPeanutButter-Unicorn%2FTarvester%2Fmilestone%2F2
 [milestone 5]:https://img.shields.io/github/milestones/progress-percent/PeanutButter-Unicorn/Tarvester/5?style=plastic&label=Release%200.1.2&link=https%3A%2F%2Fgithub.com%2FPeanutButter-Unicorn%2FTarvester%2Fmilestone%2F5
