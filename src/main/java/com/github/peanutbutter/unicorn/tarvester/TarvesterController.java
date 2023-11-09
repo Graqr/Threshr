@@ -2,14 +2,13 @@ package com.github.peanutbutter.unicorn.tarvester;
 
 import com.github.peanutbutter.unicorn.tarvester.model.TargetStore;
 import com.github.peanutbutter.unicorn.tarvester.model.TcinList;
+import com.github.peanutbutter.unicorn.tarvester.model.products.Products;
 import io.micronaut.core.async.annotation.SingleResult;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
 
-import java.util.List;
-
-@Controller("products")
+@Controller("/products")
 public class TarvesterController {
 
     final TarvesterClient tarvesterClient;
@@ -18,9 +17,9 @@ public class TarvesterController {
         this.tarvesterClient = tarvesterClient;
     }
 
-    @Get("by-tcin")
+    @Get("/by-tcin")
     @SingleResult
-    HttpResponse<List<?>> fetchProducts(TcinList tcinlist, TargetStore targetStore) {
-        return tarvesterClient.fetchProducts(tcinlist.toString(), targetStore.toString());
+    public HttpResponse<Products> fetchProducts(String apiToken, TcinList tcins, TargetStore targetStore) {
+        return tarvesterClient.productSummaryWithFulfillment(apiToken, tcins, targetStore);
     }
 }

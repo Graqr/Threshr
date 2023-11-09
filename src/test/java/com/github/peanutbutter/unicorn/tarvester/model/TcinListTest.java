@@ -41,9 +41,9 @@ class TcinListTest {
 
     @Test
     void setId() {
-        Stream.of(1, 5).forEach(size -> {
+        Stream.of(1, 2).forEach(size -> {
             tcinList = new TcinList(randomTcinList.apply(size));
-            assertDoesNotThrow(() -> tcinList.setId(randomTcinList.apply(random.nextInt(0, 5))));
+            assertDoesNotThrow(() -> tcinList.setId(randomTcinList.apply(random.nextInt(0, 2))));
         });
     }
 

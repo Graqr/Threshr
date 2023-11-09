@@ -1,7 +1,10 @@
 package com.github.peanutbutter.unicorn.tarvester;
 
+import com.fasterxml.jackson.dataformat.csv.CsvMapper;
+import com.fasterxml.jackson.dataformat.csv.CsvSchema;
 import com.github.peanutbutter.unicorn.tarvester.model.TargetStore;
 import com.github.peanutbutter.unicorn.tarvester.model.TcinList;
+import com.github.peanutbutter.unicorn.tarvester.model.products.ProductSummary;
 import io.micronaut.configuration.picocli.PicocliRunner;
 import jakarta.inject.Inject;
 import picocli.CommandLine;
@@ -19,7 +22,10 @@ public class TarvesterCmd implements Runnable {
     TarvesterController tarvesterController;
 
     @CommandLine.Option(names = {"-t", "--tcins"}, converter = TcinsConverter.class)
-    public TcinList tcins;
+    TcinList tcins;
+
+    @CommandLine.Option(names = {"--key", "--secret", "-p",})
+    String key;
 
     public static void main(String[] args) {
         PicocliRunner.run(TarvesterCmd.class, args);
@@ -27,21 +33,14 @@ public class TarvesterCmd implements Runnable {
 
     public void run() {
         TargetStore targetStore = new TargetStore(
-                "1750",
-                "Centerville",
-                "STORE",
-                "200 N Market Place Dr",
-                "Centerville",
+                1750,
                 "UT",
                 "84014-1752",
-                "40.91825",
-                "-111.887",
-                "true",
-                false,
-                "8012920071",
-                "false"
+                40.91825,
+                -111.887
         );
-        System.out.println(tarvesterController.fetchProducts(tcins, targetStore).body());
+        CsvMapper csvMapper = new CsvMapper();
+        CsvSchema csvSchema = csvMapper.schemaFor(ProductSummary.class);
     }
 
     public static class ManifestVersionProvider implements CommandLine.IVersionProvider {
