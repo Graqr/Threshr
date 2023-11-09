@@ -1,6 +1,6 @@
 package com.github.peanutbutter.unicorn.tarvester;
 
-import com.github.peanutbutter.unicorn.tarvester.model.TargetStore;
+
 import com.github.peanutbutter.unicorn.tarvester.model.TcinList;
 import io.micronaut.configuration.picocli.PicocliRunner;
 import jakarta.inject.Inject;
@@ -19,29 +19,16 @@ public class TarvesterCmd implements Runnable {
     TarvesterController tarvesterController;
 
     @CommandLine.Option(names = {"-t", "--tcins"}, converter = TcinsConverter.class)
-    public TcinList tcins;
+    TcinList tcins;
+
+    @CommandLine.Option(names = {"--key", "--secret", "-p",})
+    String key;
 
     public static void main(String[] args) {
         PicocliRunner.run(TarvesterCmd.class, args);
     }
 
     public void run() {
-        TargetStore targetStore = new TargetStore(
-                "1750",
-                "Centerville",
-                "STORE",
-                "200 N Market Place Dr",
-                "Centerville",
-                "UT",
-                "84014-1752",
-                "40.91825",
-                "-111.887",
-                "true",
-                false,
-                "8012920071",
-                "false"
-        );
-        System.out.println(tarvesterController.fetchProducts(tcins, targetStore).body());
     }
 
     public static class ManifestVersionProvider implements CommandLine.IVersionProvider {
