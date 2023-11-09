@@ -1,0 +1,82 @@
+{
+  "data": {
+    "product_summaries": [
+      {
+        "__typename": "ProductSummary",
+        "tcin": "82691535",
+        "item": {
+          "is_limited_time_offer": false,
+          "relationship_type_code": "SA",
+          "product_description": {
+            "title": "Sweet Corn - 18oz/4ct - Good &#38; Gather&#8482;"
+          },
+          "enrichment": {
+            "buy_url": "https://www.target.com/p/sweet-corn-18oz-4ct-good-38-gather-8482/-/A-82691535"
+          },
+          "fulfillment": {},
+          "merchandise_classification": {
+            "class_id": 21,
+            "department_id": 211
+          },
+          "product_vendors": [
+            {
+              "id": "2002070"
+            },
+            {
+              "id": "1983737"
+            },
+            {
+              "id": "1974025"
+            },
+            {
+              "id": "1294679"
+            },
+            {
+              "id": "1263516"
+            },
+            {
+              "id": "1217025"
+            },
+            {
+              "id": "1142161"
+            }
+          ],
+          "eligibility_rules": {}
+        },
+        "fulfillment": {
+          "product_id": "82691535",
+          "is_out_of_stock_in_all_store_locations": false,
+          "sold_out": false,
+          "shipping_options": {
+            "availability_status": "OUT_OF_STOCK",
+            "loyalty_availability_status": "OUT_OF_STOCK",
+            "services": []
+          },
+          "store_options": [
+            {
+              "search_response_store_type": "PRIMARY",
+              "location_available_to_promise_quantity": 9.0,
+              "location_id": "1750",
+              "store": {
+                "location_name": "Centerville"
+              },
+              "order_pickup": {
+                "availability_status": "IN_STOCK",
+                "pickup_date": "2023-10-27",
+                "guest_pick_sla": 120,
+                "location_locale": "America/Denver"
+              },
+              "in_store_only": {
+                "availability_status": "IN_STOCK"
+              }
+            }
+          ],
+          "scheduled_delivery": {
+            "availability_status": "IN_STOCK",
+            "location_available_to_promise_quantity": 9.0
+          }
+        }
+      }
+    ]
+  }
+}
