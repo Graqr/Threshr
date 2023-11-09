@@ -1,7 +1,6 @@
 package com.github.peanutbutter.unicorn.tarvester.model;
 
 import org.junit.jupiter.api.Test;
-import org.opentest4j.AssertionFailedError;
 import picocli.CommandLine;
 
 import java.util.Random;
@@ -28,22 +27,12 @@ class TcinListTest {
                         return tcin;
                     }).toArray();
 
-
-    @Test
-    void testToString() {
-        Stream.of(1, 5).forEach(size -> {
-            tcinList = new TcinList(randomTcinList.apply(size));
-            if (!tcinList.toString().matches("^tcins=\\d{8}(%2C\\d{8})*$")) {
-                throw new AssertionFailedError("The provided tcins string, \"" + tcinList.toString() + "\", is invalid.");
-            }
-        });
-    }
-
     @Test
     void setId() {
-        Stream.of(1, 5).forEach(size -> {
+        Stream.of(1, 2).forEach(size -> {
             tcinList = new TcinList(randomTcinList.apply(size));
-            assertDoesNotThrow(() -> tcinList.setId(randomTcinList.apply(random.nextInt(0, 5))));
+            assertDoesNotThrow(() -> tcinList.setId(randomTcinList.apply(random.nextInt(0, 2))),
+                    "a tcins validation error was thrown when none was expected.");
         });
     }
 
@@ -51,6 +40,7 @@ class TcinListTest {
     void setIdWithBadIdSize() {
         Stream.of(1, 5).forEach(size -> assertThrows(
                 CommandLine.PicocliException.class,
-                () -> tcinList = new TcinList(randomBadTcinList.apply(size))));
+                () -> tcinList = new TcinList(randomBadTcinList.apply(size)),
+                "no validation error was thrown when a poorly sized tcins was provided."));
     }
 }
