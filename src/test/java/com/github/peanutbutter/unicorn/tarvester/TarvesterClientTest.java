@@ -1,6 +1,6 @@
 package com.github.peanutbutter.unicorn.tarvester;
 
-import com.github.peanutbutter.unicorn.tarvester.model.products.Products;
+import com.github.peanutbutter.unicorn.tarvester.model.targetProducts.Products;
 import io.micronaut.http.HttpResponse;
 import org.junit.jupiter.api.Test;
 
@@ -13,6 +13,5 @@ class TarvesterClientTest extends TarvesterTest {
         HttpResponse<Products> response = client.productSummaryWithFulfillment(testApiKey, tcinList, targetStore);
         response.body();
         assertTrue(okResponse.test(response));
-        System.out.println(response);
     }
 }

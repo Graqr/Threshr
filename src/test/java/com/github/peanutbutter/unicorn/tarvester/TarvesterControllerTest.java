@@ -1,6 +1,6 @@
 package com.github.peanutbutter.unicorn.tarvester;
 
-import com.github.peanutbutter.unicorn.tarvester.model.products.Products;
+import com.github.peanutbutter.unicorn.tarvester.model.targetProducts.Products;
 import io.micronaut.http.HttpResponse;
 import org.junit.jupiter.api.Test;
 

@@ -1,19 +1,20 @@
-package com.github.peanutbutter.unicorn.tarvester;
+package com.github.peanutbutter.unicorn.tarvester.controller;
 
+import com.github.peanutbutter.unicorn.tarvester.client.HarvesterClient;
 import com.github.peanutbutter.unicorn.tarvester.model.TargetStore;
 import com.github.peanutbutter.unicorn.tarvester.model.TcinList;
-import com.github.peanutbutter.unicorn.tarvester.model.products.Products;
+import com.github.peanutbutter.unicorn.tarvester.model.targetProducts.Products;
 import io.micronaut.core.async.annotation.SingleResult;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
 
 @Controller("/products")
-public class TarvesterController {
+public class HarvesterController {
 
-    final TarvesterClient tarvesterClient;
+    final HarvesterClient tarvesterClient;
 
-    public TarvesterController(TarvesterClient tarvesterClient) {
+    public HarvesterController(HarvesterClient tarvesterClient) {
         this.tarvesterClient = tarvesterClient;
     }
 

@@ -1,6 +1,7 @@
 package com.github.peanutbutter.unicorn.tarvester;
 
 
+import com.github.peanutbutter.unicorn.tarvester.controller.HarvesterController;
 import com.github.peanutbutter.unicorn.tarvester.model.TcinList;
 import io.micronaut.configuration.picocli.PicocliRunner;
 import jakarta.inject.Inject;
@@ -16,7 +17,7 @@ import java.util.Arrays;
 public class TarvesterCmd implements Runnable {
 
     @Inject
-    TarvesterController tarvesterController;
+    HarvesterController tarvesterController;
 
     @CommandLine.Option(names = {"-t", "--tcins"}, converter = TcinsConverter.class)
     TcinList tcins;

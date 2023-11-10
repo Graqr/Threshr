@@ -1,5 +1,7 @@
 package com.github.peanutbutter.unicorn.tarvester;
 
+import com.github.peanutbutter.unicorn.tarvester.client.HarvesterClient;
+import com.github.peanutbutter.unicorn.tarvester.controller.HarvesterController;
 import com.github.peanutbutter.unicorn.tarvester.model.TargetStore;
 import com.github.peanutbutter.unicorn.tarvester.model.TcinList;
 import io.micronaut.http.HttpResponse;
@@ -12,10 +14,10 @@ import java.util.function.Predicate;
 @MicronautTest
 public class TarvesterTest {
     @Inject
-    TarvesterController controller;
+    HarvesterController controller;
 
     @Inject
-    TarvesterClient client;
+    HarvesterClient client;
 
     TcinList tcinList;
     TargetStore targetStore;
