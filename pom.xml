@@ -6,13 +6,11 @@
   <artifactId>tarvester</artifactId>
   <version>0.1</version>
   <packaging>${packaging}</packaging>
-
   <parent>
     <groupId>io.micronaut</groupId>
     <artifactId>micronaut-parent</artifactId>
     <version>3.9.3</version>
   </parent>
-
   <developers>
     <developer>
       <id>jzollinger</id>
@@ -21,8 +19,6 @@
       <url>https://www.linkedin.com/in/jonathan-zollinger/</url>
     </developer>
   </developers>
-
-
   <properties>
     <packaging>jar</packaging>
     <jdk.version>17</jdk.version>
@@ -59,6 +55,10 @@
       <groupId>io.micronaut</groupId>
       <artifactId>micronaut-http-client</artifactId>
       <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.micronaut.graphql</groupId>
+      <artifactId>micronaut-graphql</artifactId>
     </dependency>
     <dependency>
       <groupId>io.micronaut.serde</groupId>
