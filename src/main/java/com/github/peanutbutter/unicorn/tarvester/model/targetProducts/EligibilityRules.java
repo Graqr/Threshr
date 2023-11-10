@@ -1,4 +1,4 @@
-package com.github.peanutbutter.unicorn.tarvester.model.products;
+package com.github.peanutbutter.unicorn.tarvester.model.targetProducts;
 
 import io.micronaut.core.annotation.Nullable;
 import io.micronaut.serde.annotation.Serdeable;
