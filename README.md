@@ -19,14 +19,13 @@ See our [contributing] doc before taking a whack at any [open issues]. We'd love
 [![milestone 7]][milestone 7 link]<br>
 [![milestone 8]][milestone 8 link]<br>
 
-[milestone 2]:https://img.shields.io/github/milestones/progress-percent/PeanutButter-Unicorn/Tarvester/2?style=plastic&label=Release%200.1.0&link=https%3A%2F%2Fgithub.com%2FPeanutButter-Unicorn%2FTarvester%2Fmilestone%2F2
+[milestone 2]:https://img.shields.io/github/milestones/progress-percent/PeanutButter-Unicorn/Tarvester/2?style=plastic&label=Release%200.0.1&link=https%3A%2F%2Fgithub.com%2FPeanutButter-Unicorn%2FTarvester%2Fmilestone%2F2
 [milestone 2 link]:https://github.com/PeanutButter-Unicorn/Tarvester/milestone/2
 
-[milestone 7]:https://img.shields.io/github/milestones/progress-percent/PeanutButter-Unicorn/Tarvester/7?style=plastic&label=Release%200.1.1&link=https%3A%2F%2Fgithub.com%2FPeanutButter-Unicorn%2FTarvester%2Fmilestone%2F7
+[milestone 7]:https://img.shields.io/github/milestones/progress-percent/PeanutButter-Unicorn/Tarvester/7?style=plastic&label=Release%200.0.2&link=https%3A%2F%2Fgithub.com%2FPeanutButter-Unicorn%2FTarvester%2Fmilestone%2F7
 [milestone 7 link]:https://github.com/PeanutButter-Unicorn/Tarvester/milestone/7
 
-[milestone 8]:https://img.shields.io/github/milestones/progress-percent/PeanutButter-Unicorn/Tarvester/8?style=plastic&label=Release%200.1.2&link=https%3A%2F%2Fgithub.com%2FPeanutButter-Unicorn%2FTarvester%2Fmilestone%2F8
-
+[milestone 8]:https://img.shields.io/github/milestones/progress-percent/PeanutButter-Unicorn/Tarvester/8?style=plastic&label=Release%200.0.3&link=https%3A%2F%2Fgithub.com%2FPeanutButter-Unicorn%2FTarvester%2Fmilestone%2F8
 [milestone 8 link]:https://github.com/PeanutButter-Unicorn/Tarvester/milestone/8
 
 [build badge]:https://img.shields.io/github/actions/workflow/status/PeanutButter-Unicorn/Tarvester/maven.yml?style=plastic&logo=github&label=Github%20CI%20with%20Maven&link=https%3A%2F%2Fgithub.com%2FPeanutButter-Unicorn%2FTarvester%2Factions"build-status"
