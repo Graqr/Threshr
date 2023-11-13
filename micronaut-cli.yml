@@ -1,5 +1,5 @@
 applicationType: cli
-defaultPackage: com.github.peanutbutter.unicorn.tarvester
+defaultPackage: com.github.graqr.combine
 testFramework: junit
 sourceLanguage: java
 buildTool: maven
