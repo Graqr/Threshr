@@ -2,9 +2,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.github.peanutbutter.unicorn.tarvester</groupId>
-  <artifactId>tarvester</artifactId>
-  <version>0.1</version>
+  <groupId>com.github.graqr.combine</groupId>
+  <artifactId>combine</artifactId>
+  <version>0.0.1</version>
   <packaging>${packaging}</packaging>
 
   <parent>
@@ -28,7 +28,7 @@
     <jdk.version>17</jdk.version>
     <release.version>17</release.version>
     <micronaut.version>3.9.3</micronaut.version>
-    <exec.mainClass>com.github.peanutbutter.unicorn.tarvester.TarvesterCmd</exec.mainClass>
+    <exec.mainClass>com.github.graqr.combine.CombineCmd</exec.mainClass>
   </properties>
 
   <repositories>
@@ -164,8 +164,8 @@
             </path>
           </annotationProcessorPaths>
           <compilerArgs>
-            <arg>-Amicronaut.processing.group=com.github.peanutbutter.unicorn.tarvester</arg>
-            <arg>-Amicronaut.processing.module=tarvester</arg>
+            <arg>-Amicronaut.processing.group=com.github.graqr.combine</arg>
+            <arg>-Amicronaut.processing.module=combine</arg>
           </compilerArgs>
         </configuration>
       </plugin>
