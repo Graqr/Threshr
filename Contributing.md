@@ -5,9 +5,7 @@ By participating in this project, you agree to abide our
 
 ## Set up your machine
 
-`combine` is written in [Java](https://www.azul.com/modern-cloud-enterprise/) using
-Oracle's [GraalVM](https://github.com/oracle/graal) and uses [Maven](https://maven.apache.org/what-is-maven.html) to
-handle dependencies.
+`tarvester` is written in [Java](https://www.azul.com/modern-cloud-enterprise/) using Oracle's [GraalVM](https://github.com/oracle/graal) and uses [Maven](https://maven.apache.org/what-is-maven.html) to handle dependencies.
 
 Prerequisites:
 
@@ -20,10 +18,10 @@ Other things you might need to run the tests:
 
 [//]: # (TODO: add docker configuration)
 
-Create your own fork of `combine`, then clone your fork anywhere:
+Create your own fork of `tarvester`, then clone your fork anywhere:
 
 ```shell
-git clone git@github.com:<Seymoure-Butts>/combine.git
+git clone git@github.com:<Seymoure-Butts>/tarvester.git
 ```
 
 `cd` into the directory and install the dependencies:
@@ -37,17 +35,16 @@ mvn clean compile
 It's a good practice not to put your changes in the main branch. Branch naming conventions aren't enforced, but I
 personally like naming my branches with a `tag`/`task` convention. See [Create a commit](#create-a-commit).
 
-See our [style guide](https://github.com/Graqr#general-styling-guide) for supported coding practices.
+See our [style guide](StyleGuide.md) for supported coding practices.
 ## Test your change
 
-Adequate acceptance testing is to be included with pull requests for new code. See
-our [style guide](https://github.com/Graqr#testing) for our testing standards.
+Adequate acceptance testing is to be included with pull requests for new code. See our [style guide](StyleGuide.md#Testing) for our testing standards.
 
 ```sh
 mvn clean test
 ```
 
-## Validate `combine` builds
+## Validate `tarvester` builds
 
 ```sh
 mvn clean install
@@ -60,4 +57,4 @@ Commit messages should be well formatted and conform to [Conventional Commits](h
 
 ## Submit a pull request
 
-Push your branch to your `combine` fork and open a pull request against the original `combine` main branch.
+Push your branch to your `tarvester` fork and open a pull request against the original `tarvester` main branch.

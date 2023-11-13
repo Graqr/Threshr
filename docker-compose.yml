@@ -4,10 +4,10 @@ services:
     - sleep
     - infinity
     image: vegardit/graalvm-maven:17.0.8
-    container_name: combine-dev
+    container_name: tarvester-dev
     init: true
     volumes:
       - type: bind
-        source: ${COMBINE_REPO}
-        target: /combine
+        source: ${TARVESTER_REPO}
+        target: /tarvester
 
