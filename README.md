@@ -1,4 +1,4 @@
-<img src="combine-header.svg" alt="Combine - The Target Grocery Harvester" width="250">
+<img src="logo.svg" alt="Combine - The Target Grocery Harvester" width="250">
 
 [![build badge]][build link]
 [![GitHub code size in bytes]][download link]
