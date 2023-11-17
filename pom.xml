@@ -22,7 +22,6 @@
     </developer>
   </developers>
 
-
   <properties>
     <packaging>jar</packaging>
     <jdk.version>17</jdk.version>
@@ -40,13 +39,6 @@
 
   <dependencyManagement>
     <dependencies>
-    <dependency>
-      <groupId>org.apache.logging.log4j</groupId>
-      <artifactId>log4j-bom</artifactId>
-      <version>2.19.0</version>
-      <type>pom</type>
-      <scope>import</scope>
-    </dependency>
     </dependencies>
   </dependencyManagement>
   <dependencies>
@@ -76,21 +68,6 @@
       <scope>compile</scope>
     </dependency>
     <dependency>
-      <groupId>org.apache.logging.log4j</groupId>
-      <artifactId>log4j-api</artifactId>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.logging.log4j</groupId>
-      <artifactId>log4j-core</artifactId>
-      <scope>runtime</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.logging.log4j</groupId>
-      <artifactId>log4j-slf4j-impl</artifactId>
-      <scope>runtime</scope>
-    </dependency>
-    <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
       <scope>provided</scope>
@@ -118,13 +95,12 @@
         <groupId>io.micronaut.build</groupId>
         <artifactId>micronaut-maven-plugin</artifactId>
       </plugin>
-      
+
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
         <configuration>
-          <!-- Uncomment to enable incremental compilation -->
-          <!-- <useIncrementalCompilation>false</useIncrementalCompilation> -->
+           <useIncrementalCompilation>false</useIncrementalCompilation>
 
           <annotationProcessorPaths threshr.self="override">
             <path>
