@@ -13,6 +13,6 @@ class ThreshrClientTest extends ThreshrTest {
         HttpResponse<Products> response = client.productSummaryWithFulfillment(testApiKey, tcinList, targetStore);
         response.body();
         assertTrue(okResponse.test(response));
-        System.out.println(response);
+        assertTrue(productsCount.test(response));
     }
 }

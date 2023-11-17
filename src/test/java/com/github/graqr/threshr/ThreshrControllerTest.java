@@ -13,6 +13,6 @@ class ThreshrControllerTest extends ThreshrTest {
         HttpResponse<Products> response = controller.fetchProducts(testApiKey, tcinList, targetStore);
         response.body();
         assertTrue(okResponse.test(response));
-        System.out.println(response);
+        assertTrue(productsCount.test(response));
     }
 }
