@@ -2,25 +2,32 @@ package com.github.graqr.threshr;
 
 import com.github.graqr.threshr.model.TargetStore;
 import com.github.graqr.threshr.model.TcinList;
+import com.github.graqr.threshr.model.products.Data;
 import com.github.graqr.threshr.model.products.Products;
+import io.micronaut.core.io.ResourceLoader;
 import io.micronaut.http.HttpResponse;
+import io.micronaut.serde.ObjectMapper;
 import io.micronaut.test.extensions.junit5.annotation.MicronautTest;
 import jakarta.inject.Inject;
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.BeforeAll;
+import picocli.CommandLine;
 
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.util.Objects;
+import java.util.Optional;
 import java.util.function.Predicate;
 
 @MicronautTest
 public class ThreshrTest {
     @Inject
-    ThreshrController controller;
+    ObjectMapper om;
 
     @Inject
-    ThreshrClient client;
+    ResourceLoader rl;
 
-    TcinList tcinList;
-    TargetStore targetStore;
+    static TcinList tcinList;
+    static TargetStore targetStore;
     String testApiKey = "9f36aeafbe60771e321a7cc95a78140772ab3e96";
 
     Predicate<HttpResponse<?>> okResponse = response -> response.code() >= 200 && response.code() < 300;
@@ -29,9 +36,8 @@ public class ThreshrTest {
             .productSummary()
             .size();
 
-
-    @BeforeEach
-    void setUp() {
+    @BeforeAll
+    static void setUp(DataRepository dataRepository) {
         tcinList = new TcinList(new long[]{82691535, 12953464}); //corn & coke https://bit.ly/45V8dui https://bit.ly/40j4A0e
         targetStore = new TargetStore(
                 1750,
@@ -40,5 +46,28 @@ public class ThreshrTest {
                 40.91825,
                 -111.887
         );
+        dataRepository.save();
+    }
+
+    Data getSampleData(ObjectMapper objectMapper, ResourceLoader resourceLoader) {
+        Optional<Data> myData = resourceLoader
+                .getResourceAsStream("product_summary_with_fulfillment_v1.json")
+                .flatMap(inputStream -> {
+                    try {
+                        return Optional.ofNullable(objectMapper
+                                .readValue(new String(
+                                                inputStream.readAllBytes(),
+                                                StandardCharsets.UTF_8),
+                                        Data.class));
+                    } catch (IOException e) {
+                        return Optional.empty();
+                    }
+                });
+        if (myData.isEmpty()) {
+            throw new CommandLine.PicocliException(
+                    "failed to load test resource for tests in " + this.getClass().getName()
+            );
+        }
+        return myData.get();
     }
 }
