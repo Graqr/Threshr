@@ -10,7 +10,7 @@ class ThreshrControllerTest extends ThreshrTest {
 
     @Test
     void fetchProducts() {
-        HttpResponse<Products> response = controller.fetchProducts(testApiKey, tcinList, targetStore);
+        HttpResponse<Products> response = threshrController.fetchProducts(testApiKey, tcinList, targetStore);
         response.body();
         assertTrue(okResponse.test(response));
         assertTrue(productsCount.test(response));
