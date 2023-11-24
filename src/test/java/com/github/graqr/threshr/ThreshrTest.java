@@ -2,8 +2,8 @@ package com.github.graqr.threshr;
 
 import com.github.graqr.threshr.model.TargetStore;
 import com.github.graqr.threshr.model.TcinList;
-import com.github.graqr.threshr.model.products.Data;
-import com.github.graqr.threshr.model.products.Products;
+import com.github.graqr.threshr.model.targetProducts.Data;
+import com.github.graqr.threshr.model.targetProducts.Products;
 import io.micronaut.core.io.ResourceLoader;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.serde.ObjectMapper;
@@ -37,7 +37,7 @@ public class ThreshrTest {
             .size();
 
     @BeforeAll
-    static void setUp(DataRepository dataRepository) {
+    static void setUp(ProductSummaryRepository dataRepository) {
         tcinList = new TcinList(new long[]{82691535, 12953464}); //corn & coke https://bit.ly/45V8dui https://bit.ly/40j4A0e
         targetStore = new TargetStore(
                 1750,
@@ -46,7 +46,6 @@ public class ThreshrTest {
                 40.91825,
                 -111.887
         );
-        dataRepository.save();
     }
 
     Data getSampleData(ObjectMapper objectMapper, ResourceLoader resourceLoader) {

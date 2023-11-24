@@ -2,7 +2,7 @@ package com.github.graqr.threshr;
 
 import com.github.graqr.threshr.model.TargetStore;
 import com.github.graqr.threshr.model.TcinList;
-import com.github.graqr.threshr.model.products.Products;
+import com.github.graqr.threshr.model.targetProducts.Products;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.Get;
 import io.micronaut.http.annotation.Header;
