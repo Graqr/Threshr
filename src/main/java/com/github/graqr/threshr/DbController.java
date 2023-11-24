@@ -1,6 +1,6 @@
 package com.github.graqr.threshr;
 
-import com.github.graqr.threshr.model.products.ProductSummary;
+import com.github.graqr.threshr.model.targetProducts.ProductSummary;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.scheduling.TaskExecutors;
 import io.micronaut.scheduling.annotation.ExecuteOn;
@@ -9,13 +9,13 @@ import lombok.NonNull;
 @ExecuteOn(TaskExecutors.IO)
 @Controller("/db")
 public class DbController {
-    protected final DataRepository dataRepository;
+    protected final ProductSummaryRepository productSummaryRepository;
 
-    public DbController(DataRepository dataRepository) {
-        this.dataRepository = dataRepository;
+    public DbController(ProductSummaryRepository dataRepository) {
+        this.productSummaryRepository = dataRepository;
     }
 
-    public ProductSummary save(@NonNull ProductSummary productSummaries) {
-        return dataRepository.save(productSummaries);
+    public void insert(@NonNull ProductSummary productSummaries) {
+        productSummaryRepository.insert(productSummaries);
     }
 }

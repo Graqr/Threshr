@@ -1,4 +1,4 @@
-package com.github.graqr.threshr.model.products;
+package com.github.graqr.threshr.model.targetProducts;
 
 import io.micronaut.serde.annotation.Serdeable;
 
