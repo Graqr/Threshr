@@ -1,5 +1,6 @@
 package com.github.graqr.threshr;
 
+import com.github.graqr.threshr.model.RedskyMetadata;
 import com.github.graqr.threshr.model.TargetStore;
 import com.github.graqr.threshr.model.TcinList;
 import com.github.graqr.threshr.model.targetProducts.Root;
@@ -15,6 +16,10 @@ import static io.micronaut.http.HttpHeaders.USER_AGENT;
 @Header(name = USER_AGENT, value = "Micronaut HTTP Client")
 @Header(name = ACCEPT, value = "application/vnd.github.v3+json, application/json")
 public interface ThreshrClient {
+
     @Get("/product_summary_with_fulfillment_v1{?key}{&tcinList*}{&targetStore*}&channel=WEB")
     HttpResponse<Root> productSummaryWithFulfillment(String key, TcinList tcinList, TargetStore targetStore);
+
+    @Get("/plp_search_v2{?key}{&metadata*}{&tcinList*}{&targetStore.id}")
+    HttpResponse<Root> plpSearch(RedskyMetadata metadata, String key, TcinList tcinList, TargetStore targetStore);
 }

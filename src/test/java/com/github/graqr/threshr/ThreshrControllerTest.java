@@ -11,9 +11,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 class ThreshrControllerTest extends ThreshrTest {
 
     @Test
-    void fetchProducts(ThreshrController threshrController) {
-        HttpResponse<Root> response = threshrController.fetchProducts(testApiKey, tcinList, targetStore);
-        response.body();
+    void fetchProducts(String apiKey, ThreshrController threshrController) {
+        HttpResponse<Root> response = threshrController.fetchProducts(apiKey, tcinList, targetStore);
         assertTrue(okResponse.test(response));
         assertTrue(productsCount.test(response));
     }
