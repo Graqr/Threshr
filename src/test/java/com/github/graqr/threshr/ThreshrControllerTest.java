@@ -1,16 +1,18 @@
 package com.github.graqr.threshr;
 
-import com.github.graqr.threshr.model.targetProducts.Products;
+import com.github.graqr.threshr.model.targetProducts.Root;
 import io.micronaut.http.HttpResponse;
+import io.micronaut.test.extensions.junit5.annotation.MicronautTest;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+@MicronautTest
 class ThreshrControllerTest extends ThreshrTest {
 
     @Test
-    void fetchProducts() {
-        HttpResponse<Products> response = threshrController.fetchProducts(testApiKey, tcinList, targetStore);
+    void fetchProducts(ThreshrController threshrController) {
+        HttpResponse<Root> response = threshrController.fetchProducts(testApiKey, tcinList, targetStore);
         response.body();
         assertTrue(okResponse.test(response));
         assertTrue(productsCount.test(response));

@@ -3,7 +3,7 @@ package com.github.graqr.threshr;
 import com.github.graqr.threshr.model.TargetStore;
 import com.github.graqr.threshr.model.TcinList;
 import com.github.graqr.threshr.model.targetProducts.Data;
-import com.github.graqr.threshr.model.targetProducts.Products;
+import com.github.graqr.threshr.model.targetProducts.Root;
 import io.micronaut.core.io.ResourceLoader;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.serde.ObjectMapper;
@@ -31,13 +31,13 @@ public class ThreshrTest {
     String testApiKey = "9f36aeafbe60771e321a7cc95a78140772ab3e96";
 
     Predicate<HttpResponse<?>> okResponse = response -> response.code() >= 200 && response.code() < 300;
-    Predicate<HttpResponse<Products>> productsCount = response -> 2 == Objects.requireNonNull(response.body())
+    Predicate<HttpResponse<Root>> productsCount = response -> 2 == Objects.requireNonNull(response.body())
             .data()
             .productSummary()
             .size();
 
     @BeforeAll
-    static void setUp(ProductSummaryRepository dataRepository) {
+    static void setUp(SiloRepository dataRepository) {
         tcinList = new TcinList(new long[]{82691535, 12953464}); //corn & coke https://bit.ly/45V8dui https://bit.ly/40j4A0e
         targetStore = new TargetStore(
                 1750,
@@ -49,7 +49,7 @@ public class ThreshrTest {
     }
 
     Data getSampleData(ObjectMapper objectMapper, ResourceLoader resourceLoader) {
-        Optional<Data> myData = resourceLoader
+        Optional<Root> root = resourceLoader
                 .getResourceAsStream("product_summary_with_fulfillment_v1.json")
                 .flatMap(inputStream -> {
                     try {
@@ -57,16 +57,16 @@ public class ThreshrTest {
                                 .readValue(new String(
                                                 inputStream.readAllBytes(),
                                                 StandardCharsets.UTF_8),
-                                        Data.class));
+                                        Root.class));
                     } catch (IOException e) {
                         return Optional.empty();
                     }
                 });
-        if (myData.isEmpty()) {
+        if (root.isEmpty()) {
             throw new CommandLine.PicocliException(
                     "failed to load test resource for tests in " + this.getClass().getName()
             );
         }
-        return myData.get();
+        return root.get().data();
     }
 }
