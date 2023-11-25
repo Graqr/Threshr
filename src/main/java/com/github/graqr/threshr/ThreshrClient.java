@@ -2,7 +2,7 @@ package com.github.graqr.threshr;
 
 import com.github.graqr.threshr.model.TargetStore;
 import com.github.graqr.threshr.model.TcinList;
-import com.github.graqr.threshr.model.targetProducts.Products;
+import com.github.graqr.threshr.model.targetProducts.Root;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.Get;
 import io.micronaut.http.annotation.Header;
@@ -16,5 +16,5 @@ import static io.micronaut.http.HttpHeaders.USER_AGENT;
 @Header(name = ACCEPT, value = "application/vnd.github.v3+json, application/json")
 public interface ThreshrClient {
     @Get("/product_summary_with_fulfillment_v1{?key}{&tcinList*}{&targetStore*}&channel=WEB")
-    HttpResponse<Products> productSummaryWithFulfillment(String key, TcinList tcinList, TargetStore targetStore);
+    HttpResponse<Root> productSummaryWithFulfillment(String key, TcinList tcinList, TargetStore targetStore);
 }

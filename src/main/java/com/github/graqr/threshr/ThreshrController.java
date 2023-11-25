@@ -2,7 +2,7 @@ package com.github.graqr.threshr;
 
 import com.github.graqr.threshr.model.TargetStore;
 import com.github.graqr.threshr.model.TcinList;
-import com.github.graqr.threshr.model.targetProducts.Products;
+import com.github.graqr.threshr.model.targetProducts.Root;
 import io.micronaut.core.async.annotation.SingleResult;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.Controller;
@@ -19,7 +19,7 @@ public class ThreshrController {
 
     @Get("/by-tcin")
     @SingleResult
-    public HttpResponse<Products> fetchProducts(String apiToken, TcinList tcins, TargetStore targetStore) {
+    public HttpResponse<Root> fetchProducts(String apiToken, TcinList tcins, TargetStore targetStore) {
         return threshrClient.productSummaryWithFulfillment(apiToken, tcins, targetStore);
     }
 }

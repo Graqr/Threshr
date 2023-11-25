@@ -59,7 +59,7 @@
         </dependency>
         <dependency>
             <groupId>io.micronaut.data</groupId>
-            <artifactId>micronaut-data-jdbc</artifactId> <!-- wrong library? -->
+            <artifactId>micronaut-data-jdbc</artifactId>
             <scope>compile</scope>
         </dependency>
         <dependency>
