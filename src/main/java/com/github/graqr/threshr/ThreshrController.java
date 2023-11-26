@@ -2,13 +2,13 @@ package com.github.graqr.threshr;
 
 import com.github.graqr.threshr.model.TargetStore;
 import com.github.graqr.threshr.model.TcinList;
-import com.github.graqr.threshr.model.targetProducts.Root;
+import com.github.graqr.threshr.model.redsky.ProductSummary;
 import io.micronaut.core.async.annotation.SingleResult;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
 
-@Controller("/targetProducts")
+@Controller("/productSummary")
 public class ThreshrController {
 
     final ThreshrClient threshrClient;
@@ -17,9 +17,14 @@ public class ThreshrController {
         this.threshrClient = threshrClient;
     }
 
-    @Get("/by-tcin")
+    @Get("/product-summaries")
     @SingleResult
-    public HttpResponse<Root> fetchProducts(String apiToken, TcinList tcins, TargetStore targetStore) {
+    public HttpResponse<ProductSummary> fetchProductSummaries(String apiToken, TcinList tcins, TargetStore targetStore) {
         return threshrClient.productSummaryWithFulfillment(apiToken, tcins, targetStore);
     }
+
+//    @Get("/product-listing")
+//    @SingleResult
+//    public httpResponse<ProductPricing>
+
 }
