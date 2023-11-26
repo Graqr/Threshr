@@ -29,7 +29,7 @@ public class ThreshrCmdTest extends ThreshrTest {
     @Test
     void smokeTest() {
         String[] command = new String[]{
-                "-p", testApiKey,
+                "-p", System.getenv("REDSKY_TOKEN"),
                 "-t", tcinList.getTcins()};
         assertDoesNotThrow(() -> executeCommand(command));
     }

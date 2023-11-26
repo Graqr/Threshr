@@ -4,6 +4,7 @@ import com.github.graqr.threshr.model.HarvestedProduct;
 import com.github.graqr.threshr.model.TargetStore;
 import com.github.graqr.threshr.model.TcinList;
 import com.github.graqr.threshr.model.redsky.Root;
+import io.micronaut.context.annotation.Value;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.test.extensions.junit5.annotation.MicronautTest;
 import org.junit.jupiter.api.BeforeAll;
@@ -13,18 +14,20 @@ import java.util.function.Predicate;
 
 @MicronautTest
 public class ThreshrTest {
+    @Value("visitorId")
+    String id;
 
     static TcinList tcinList;
     static TargetStore targetStore;
+
+
     HarvestedProduct[] harvestedProducts = new HarvestedProduct[]{
             new HarvestedProduct(null, null, 76382974, "Quest Protein Bar - Pumpkin Pie - 4ct", 11.00)
     };
 
-    Predicate<HttpResponse<?>> okResponse = response -> response.code() >= 200 && response.code() < 300;
-    Predicate<HttpResponse<Root>> productsCount = response -> 2 == Objects.requireNonNull(response.body())
-            .data()
-            .productSummary()
-            .size();
+    Predicate<HttpResponse<?>> okResponse = response ->
+            response.code() >= 200
+            && response.code() < 300;
 
     @BeforeAll
     static void setUp() {
