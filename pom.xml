@@ -43,6 +43,10 @@
     </dependencyManagement>
     <dependencies>
         <dependency>
+            <groupId>io.micronaut</groupId>
+            <artifactId>micronaut-retry</artifactId>
+        </dependency>
+        <dependency>
             <groupId>info.picocli</groupId>
             <artifactId>picocli</artifactId>
             <scope>compile</scope>

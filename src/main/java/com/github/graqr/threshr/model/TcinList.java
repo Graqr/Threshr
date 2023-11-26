@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 public class TcinList {
     long[] tcins;
 
-    public TcinList(long[] tcins) {
+    public TcinList(long... tcins) {
         setId(tcins);
     }
 

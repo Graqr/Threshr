@@ -6,10 +6,7 @@ micronaut:
       redsky-api:
         url: https://redsky.target.com/
         path: redsky_aggregations/v1/web
-        #Tokens for testing only, don't use in prod
-        token: 9f36aeafbe60771e321a7cc95a78140772ab3e96
-      target-api:
-        token: 5622b71fe94d55e17b492fa9e2b07dbc69f68c4f
+        visitorId: 0187CE61782B0201A47AAD8525AD73D8
 ---
 datasources:
   default:
