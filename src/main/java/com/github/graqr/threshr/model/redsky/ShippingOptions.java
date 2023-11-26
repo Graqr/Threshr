@@ -7,8 +7,10 @@ import java.util.List;
 
 @Serdeable
 public record ShippingOptions(
+
         @JsonProperty("availability_status")
         String availabilityStatus,
+
         @JsonProperty("loyalty_availability_status")
         String loyaltyAvailabilityStatus,
         List<?> services) {

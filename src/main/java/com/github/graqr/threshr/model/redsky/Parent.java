@@ -8,12 +8,15 @@ import java.util.List;
 record Parent(
         @JsonProperty("__typename")
         String typename,
+
         String tcin,
         Item item,
-        List<Any> promotions,
+        List<Promotion> promotions,
         Price price,
+
         @JsonProperty("ratings_and_reviews")
         RatingsAndReviews ratingsAndReviews,
+
         @JsonProperty("variation_summary")
         VariationSummary variationSummary
 ) {
