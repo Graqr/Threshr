@@ -1,5 +1,6 @@
 package com.github.graqr.threshr;
 
+import com.github.graqr.threshr.model.RedskyQueryMetadata;
 import com.github.graqr.threshr.model.TargetStore;
 import com.github.graqr.threshr.model.TcinList;
 import com.github.graqr.threshr.model.redsky.ProductSummary;
@@ -8,19 +9,25 @@ import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
 
-@Controller("/productSummary")
+@Controller("/product")
 public class ThreshrController {
 
     final ThreshrClient threshrClient;
+    final RedskyQueryMetadata metadata;
 
-    public ThreshrController(ThreshrClient threshrClient) {
+    public ThreshrController(RedskyQueryMetadata metadata,
+                             ThreshrClient threshrClient) {
+        this.metadata = metadata;
         this.threshrClient = threshrClient;
     }
 
-    @Get("/product-summaries")
+    @Get("/summary")
     @SingleResult
-    public HttpResponse<ProductSummary> fetchProductSummaries(String apiToken, TcinList tcins, TargetStore targetStore) {
-        return threshrClient.productSummaryWithFulfillment(apiToken, tcins, targetStore);
+    public HttpResponse<ProductSummary> fetchProductSummaries(
+            String apiToken,
+            TcinList tcins,
+            TargetStore targetStore) {
+        return threshrClient.productSummaryWithFulfillment(metadata, apiToken, tcins, targetStore);
     }
 
 //    @Get("/product-listing")
