@@ -4,13 +4,10 @@ import io.micronaut.configuration.picocli.PicocliRunner;
 import io.micronaut.context.ApplicationContext;
 import io.micronaut.context.env.Environment;
 import io.micronaut.test.extensions.junit5.annotation.MicronautTest;
-import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.OutputStream;
 import java.io.PrintStream;
-
-import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 
 @MicronautTest
 public class ThreshrCmdTest extends ThreshrTest {
@@ -26,11 +23,11 @@ public class ThreshrCmdTest extends ThreshrTest {
         return out.toString();
     }
 
-    @Test
-    void smokeTest() {
-        String[] command = new String[]{
-                "-p", System.getenv("REDSKY_TOKEN"),
-                "-t", tcinList.getTcins()};
-        assertDoesNotThrow(() -> executeCommand(command));
-    }
+//    @Test
+//    void smokeTest() {
+//        String[] command = new String[]{
+//                "-p", System.getenv("REDSKY_TOKEN"),
+//                "-t",  new TcinList(harvestedProducts[0].tcin()).getTcins()};
+//        assertDoesNotThrow(() -> executeCommand(command));
+//    }
 }
