@@ -11,18 +11,23 @@ public record Fulfillment(
         @Nullable
         @JsonProperty("product_id")
         String productId,
+
         @Nullable
         @JsonProperty("is_out_of_stock_in_all_store_locations")
         Boolean isOutOfStockInAllStoreLocations,
+
         @Nullable
         @JsonProperty("sold_out")
         Boolean soldOut,
+
         @Nullable
         @JsonProperty("shipping_options")
         ShippingOptions shippingOptions,
+
         @Nullable
         @JsonProperty("store_options")
         List<StoreOption> storeOptions,
+
         @Nullable
         @JsonProperty("scheduled_delivery")
         ScheduledDelivery scheduledDelivery) {

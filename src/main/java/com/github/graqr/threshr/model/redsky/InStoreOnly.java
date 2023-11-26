@@ -6,5 +6,6 @@ import io.micronaut.serde.annotation.Serdeable;
 @Serdeable
 public record InStoreOnly(
         @JsonProperty("availability_status")
-        String availabilityStatus) {
+        String availabilityStatus
+) {
 }

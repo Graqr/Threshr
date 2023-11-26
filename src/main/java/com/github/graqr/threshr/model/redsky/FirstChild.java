@@ -12,6 +12,7 @@ record FirstChild(
 
         @JsonProperty("alternate_image_urls")
         List<String> alternateImageUrls,
+
         @JsonProperty("swatch_image_url")
         String swatchImageUrl
 ) {

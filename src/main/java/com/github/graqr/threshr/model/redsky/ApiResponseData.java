@@ -15,7 +15,6 @@ import java.util.List;
  */
 @Serdeable
 public record ApiResponseData(
-
         @Nullable @JsonProperty("product_summaries")
         List<ProductSummary> productSummary,
 

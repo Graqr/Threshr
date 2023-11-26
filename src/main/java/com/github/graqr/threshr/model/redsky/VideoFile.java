@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 record VideoFile(
         @JsonProperty("mime_type")
         String mimeType,
+
         @JsonProperty("video_url")
         String videoUrl
 ) {
