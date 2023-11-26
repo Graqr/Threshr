@@ -1,6 +1,6 @@
 package com.github.graqr.threshr;
 
-import com.github.graqr.threshr.model.targetProducts.Root;
+import com.github.graqr.threshr.model.redsky.Root;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.test.extensions.junit5.annotation.MicronautTest;
 import org.junit.jupiter.api.Test;
@@ -12,7 +12,7 @@ class ThreshrControllerTest extends ThreshrTest {
 
     @Test
     void fetchProducts(String apiKey, ThreshrController threshrController) {
-        HttpResponse<Root> response = threshrController.fetchProducts(apiKey, tcinList, targetStore);
+        HttpResponse<Root> response = threshrController.fetchProductSummaries(apiKey, tcinList, targetStore);
         assertTrue(okResponse.test(response));
         assertTrue(productsCount.test(response));
     }

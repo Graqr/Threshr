@@ -3,7 +3,7 @@ package com.github.graqr.threshr;
 import com.github.graqr.threshr.model.HarvestedProduct;
 import com.github.graqr.threshr.model.TargetStore;
 import com.github.graqr.threshr.model.TcinList;
-import com.github.graqr.threshr.model.targetProducts.Root;
+import com.github.graqr.threshr.model.redsky.Root;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.test.extensions.junit5.annotation.MicronautTest;
 import org.junit.jupiter.api.BeforeAll;
