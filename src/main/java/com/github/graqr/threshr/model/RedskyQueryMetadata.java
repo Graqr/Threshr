@@ -1,10 +1,12 @@
 package com.github.graqr.threshr.model;
 
+import io.micronaut.core.annotation.Introspected;
 import io.micronaut.http.annotation.QueryValue;
-import jakarta.inject.Singleton;
 import jakarta.validation.constraints.Size;
+import lombok.Data;
 
-@Singleton
+@Data
+@Introspected
 public class RedskyQueryMetadata {
     @Size(min = 32, max = 32)
     @QueryValue("visitor_id")

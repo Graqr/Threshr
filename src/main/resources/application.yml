@@ -6,7 +6,10 @@ micronaut:
       redsky-api:
         url: https://redsky.target.com/
         path: redsky_aggregations/v1/web
-        visitorId: 0187CE61782B0201A47AAD8525AD73D8
+        key: 9f36aeafbe60771e321a7cc95a78140772ab3e96
+        visitor-id: 0187CE61782B0201A47AAD8525AD73D8
+        channel: WEB
+        category
 ---
 datasources:
   default:
@@ -18,3 +21,8 @@ flyway:
   datasources:
     default:
       enabled: true
+---
+logger:
+  levels:
+#    log4j2: WARN
+##    io.micronaut.http.client: TRACE

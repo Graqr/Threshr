@@ -1,0 +1,17 @@
+<configuration>
+    <appender class="ch.qos.logback.core.ConsoleAppender" name="STDOUT">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="info">
+        <appender-ref ref="STDOUT">
+        </appender-ref>
+    </root>
+
+    <logger level="TRACE" name="io.micronaut.http.client">
+    </logger>
+    <logger level="TRACE" name="com.github.graqr.threshr">
+    </logger>
+</configuration>
