@@ -8,18 +8,15 @@ import io.micronaut.core.async.annotation.SingleResult;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
-import io.micronaut.retry.annotation.Retryable;
+import jakarta.inject.Inject;
 
 @Controller("/product")
 public class ThreshrController {
 
-    final ThreshrClient threshrClient;
+    @Inject
+    ThreshrClient threshrClient;
 
-    public ThreshrController(ThreshrClient threshrClient) {
-        this.threshrClient = threshrClient;
-    }
 
-    @Retryable
     @Get("/summary")
     @SingleResult
     public HttpResponse<ApiResponseData> fetchProductSummaries(
@@ -30,7 +27,7 @@ public class ThreshrController {
         return threshrClient.productSummaryWithFulfillment(metadata, apiToken, tcins, targetStore);
     }
 
-    @Retryable
+
     @Get("/search")
     @SingleResult
     public HttpResponse<ApiResponseData> search(
