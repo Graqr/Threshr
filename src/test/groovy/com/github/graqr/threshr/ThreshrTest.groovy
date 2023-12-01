@@ -35,10 +35,9 @@ class ThreshrTest extends Specification {
             -111.887)
 
     @Shared
-    Tcin[] tcinList = new Tcin[]{
-            new Tcin("82691535"), //corn & coke https://bit.ly/45V8dui https://bit.ly/40j4A0e
-            new Tcin("12953464")
-    }
+    Tcin tcinList = new Tcin(
+            new String[]{"82691535", "12953464"} //corn & coke https://bit.ly/45V8dui https://bit.ly/40j4A0e
+    )
 
     @Shared
     Predicate<HttpResponse<?>> okResponse = response -> response.code() >= 200 && response.code() < 300

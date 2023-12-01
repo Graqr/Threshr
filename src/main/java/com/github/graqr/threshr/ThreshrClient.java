@@ -3,7 +3,6 @@ package com.github.graqr.threshr;
 import com.github.graqr.threshr.model.TargetStore;
 import com.github.graqr.threshr.model.Tcin;
 import com.github.graqr.threshr.model.redsky.ApiResponseData;
-import io.micronaut.core.convert.format.Format;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.Get;
 import io.micronaut.http.annotation.Header;
@@ -22,8 +21,7 @@ public interface ThreshrClient {
     /**
      * Queries target's product summaries from of the given tcins at a given target store.
      * A product summary does not include pricing.
-     * Uses environment variables MICRONAUT_HTTP_SERVICES_REDSKY-API_VISITOR-ID and
-     * MICRONAUT_HTTP_SERVICES_REDSKY-API_KEY to authenticate.
+     * Uses environment variables THRESHR_KEY and CHANNEL to authenticate.
      *
      * @param tcin          tcin ID's for products to query
      * @param targetStore store from which the product summaries are to be queried.
@@ -32,20 +30,18 @@ public interface ThreshrClient {
     @Retryable
     @Get("/product_summary_with_fulfillment_v1" +
             "?key=${threshr.key}" +
+            "{&tcins*}" +
             "{&targetStore*}" +
-            "{&tcin}" +
-            "{&CHANNEL}")
+            "&CHANNEL=${threshr.CHANNEL}")
     HttpResponse<ApiResponseData> productSummaryWithFulfillment(
             TargetStore targetStore,
-            String CHANNEL,
-            @Format("csv")
-            Tcin... tcin);
+            Tcin tcins);
 
     /**
      * Submits a search query to target's redsky api. Search results include pricing.
      *
      * @param key api key for the redsky api, normally provided by an environment variable.
-     * @param tcinList tcin ID's for products to query
+     * @param tcin tcin ID's for products to query
      * @param targetStore store from which the product summaries are to be queried.
      * @return Search object in an ApiResponseData object, wrapped in an HttpResponse.
      */
@@ -53,7 +49,7 @@ public interface ThreshrClient {
     @Get("/plp_search_v2{?key}{&member_id}{&targetStore.id}")
     HttpResponse<ApiResponseData> plpSearch(
             String key,
-            Tcin tcinList,
+            Tcin tcin,
             TargetStore targetStore);
 }
 //https://redsky.target.com/redsky_aggregations/v1/web/
