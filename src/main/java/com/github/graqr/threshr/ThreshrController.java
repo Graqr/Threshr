@@ -1,9 +1,9 @@
 package com.github.graqr.threshr;
 
-import com.github.graqr.threshr.model.RedskyQueryMetadata;
 import com.github.graqr.threshr.model.TargetStore;
-import com.github.graqr.threshr.model.TcinList;
+import com.github.graqr.threshr.model.Tcin;
 import com.github.graqr.threshr.model.redsky.ApiResponseData;
+import io.micronaut.context.annotation.Property;
 import io.micronaut.core.async.annotation.SingleResult;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.Controller;
@@ -16,26 +16,28 @@ public class ThreshrController {
     @Inject
     ThreshrClient threshrClient;
 
+    @Property(name = "threshr.CHANNEL")
+    String CHANNEL;
+
 
     @Get("/summary")
     @SingleResult
     public HttpResponse<ApiResponseData> fetchProductSummaries(
-            RedskyQueryMetadata metadata,
-            String apiToken,
-            TcinList tcins,
-            TargetStore targetStore) {
-        return threshrClient.productSummaryWithFulfillment(metadata, apiToken, tcins, targetStore);
+            TargetStore targetStore,
+            Tcin... tcins) {
+        return threshrClient.productSummaryWithFulfillment(
+                targetStore,
+                CHANNEL,
+                tcins);
     }
 
 
     @Get("/search")
     @SingleResult
     public HttpResponse<ApiResponseData> search(
-            RedskyQueryMetadata metadata,
-            String apiToken,
-            TcinList tcins,
+            Tcin tcins,
             TargetStore targetStore) {
-        return threshrClient.plpSearch(metadata, apiToken, tcins, targetStore);
+        return threshrClient.plpSearch("I'm a key", tcins, targetStore);
     }
 
 }
