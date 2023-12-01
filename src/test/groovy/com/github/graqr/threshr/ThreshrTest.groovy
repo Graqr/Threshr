@@ -1,10 +1,9 @@
 package com.github.graqr.threshr
 
-import com.github.graqr.threshr.model.RedskyQueryMetadata
+
 import com.github.graqr.threshr.model.TargetStore
-import com.github.graqr.threshr.model.TcinList
+import com.github.graqr.threshr.model.Tcin
 import io.micronaut.context.ApplicationContext
-import io.micronaut.context.annotation.Value
 import io.micronaut.context.env.Environment
 import io.micronaut.http.HttpResponse
 import io.micronaut.test.extensions.spock.annotation.MicronautTest
@@ -16,10 +15,6 @@ import java.util.function.Predicate
 
 @MicronautTest
 class ThreshrTest extends Specification {
-
-    @Shared
-    @Value('${micronaut.http.services.redsky-api.visitorId}')
-    String visitorId
 
     @Inject
     @Shared
@@ -40,13 +35,10 @@ class ThreshrTest extends Specification {
             -111.887)
 
     @Shared
-    RedskyQueryMetadata metadata = new RedskyQueryMetadata(visitorId, "5q0f2", "WEB")
-
-    @Shared
-    String redskyToken = System.getenv("REDSKY_TOKEN")
-
-    @Shared
-    TcinList tcinList = new TcinList(12345678)
+    Tcin[] tcinList = new Tcin[]{
+            new Tcin("82691535"), //corn & coke https://bit.ly/45V8dui https://bit.ly/40j4A0e
+            new Tcin("12953464")
+    }
 
     @Shared
     Predicate<HttpResponse<?>> okResponse = response -> response.code() >= 200 && response.code() < 300

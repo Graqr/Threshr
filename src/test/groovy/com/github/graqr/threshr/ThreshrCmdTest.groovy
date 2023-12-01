@@ -35,7 +35,7 @@ class ThreshrCmdTest extends ThreshrTest {
 
         where:
         tcinArgs            | _
-        "82691535,12953464" | _ //corn & coke https://bit.ly/45V8dui https://bit.ly/40j4A0e
+        "82691535,12953464" | _ //use tcinList ThreshrTest value
         "82691535"          | _
     }
 

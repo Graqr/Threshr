@@ -8,11 +8,8 @@ class ThreshrControllerTest extends ThreshrTest {
 
     void "query product summaries with no error"() {
         when:
-        threshrController.fetchProductSummaries(
-                metadata,
-                redskyToken,
-                tcinList,
-                targetStore)
+        threshrController.fetchProductSummaries(targetStore, tcinList)
+
         then:
         noExceptionThrown()
     }

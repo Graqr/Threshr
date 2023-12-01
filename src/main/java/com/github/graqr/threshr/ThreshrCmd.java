@@ -1,7 +1,7 @@
 package com.github.graqr.threshr;
 
 
-import com.github.graqr.threshr.model.TcinList;
+import com.github.graqr.threshr.model.Tcin;
 import io.micronaut.configuration.picocli.PicocliRunner;
 import jakarta.inject.Inject;
 import picocli.CommandLine;
@@ -19,7 +19,7 @@ public class ThreshrCmd implements Runnable {
     ThreshrController threshrController;
 
     @CommandLine.Option(names = {"-t", "--tcins"}, converter = TcinsConverter.class)
-    TcinList tcins;
+    Tcin[] tcin;
 
     @CommandLine.Option(names = {"--key", "--secret", "-p",})
     String key;
@@ -40,10 +40,10 @@ public class ThreshrCmd implements Runnable {
         }
     }
 
-    static class TcinsConverter implements CommandLine.ITypeConverter<TcinList> {
+    static class TcinsConverter implements CommandLine.ITypeConverter<Tcin[]> {
         @Override
-        public TcinList convert(String s) {
-            return new TcinList(Arrays.stream(s.split(",")).mapToLong(Long::parseLong).toArray());
+        public Tcin[] convert(String s) {
+            return Arrays.stream((s.split(","))).map(Tcin::new).toArray(Tcin[]::new);
         }
     }
 }
