@@ -1,5 +1,4 @@
 package com.github.graqr.threshr
-
 //note: this test enables logging the actual http requests being sent
 class ThreshrClientTest extends ThreshrTest {
 
@@ -7,7 +6,6 @@ class ThreshrClientTest extends ThreshrTest {
         when:
         threshrClient.productSummaryWithFulfillment(
                 targetStore,
-                "WEB",
                 tcinList
         )
 

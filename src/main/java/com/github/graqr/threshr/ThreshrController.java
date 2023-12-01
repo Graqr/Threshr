@@ -3,7 +3,6 @@ package com.github.graqr.threshr;
 import com.github.graqr.threshr.model.TargetStore;
 import com.github.graqr.threshr.model.Tcin;
 import com.github.graqr.threshr.model.redsky.ApiResponseData;
-import io.micronaut.context.annotation.Property;
 import io.micronaut.core.async.annotation.SingleResult;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.Controller;
@@ -15,20 +14,19 @@ public class ThreshrController {
 
     @Inject
     ThreshrClient threshrClient;
-
-    @Property(name = "threshr.CHANNEL")
-    String CHANNEL;
+//
+//    @Property(name = "threshr.CHANNEL")
+//    String CHANNEL;
 
 
     @Get("/summary")
     @SingleResult
     public HttpResponse<ApiResponseData> fetchProductSummaries(
             TargetStore targetStore,
-            Tcin... tcins) {
+            Tcin tcin) {
         return threshrClient.productSummaryWithFulfillment(
                 targetStore,
-                CHANNEL,
-                tcins);
+                tcin);
     }
 
 

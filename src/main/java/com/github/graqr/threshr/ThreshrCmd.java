@@ -6,8 +6,6 @@ import io.micronaut.configuration.picocli.PicocliRunner;
 import jakarta.inject.Inject;
 import picocli.CommandLine;
 
-import java.util.Arrays;
-
 @CommandLine.Command(name = "threshr",
         description = "pulls current pricing from target's api",
         mixinStandardHelpOptions = true,
@@ -19,7 +17,7 @@ public class ThreshrCmd implements Runnable {
     ThreshrController threshrController;
 
     @CommandLine.Option(names = {"-t", "--tcins"}, converter = TcinsConverter.class)
-    Tcin[] tcin;
+    Tcin tcin;
 
     @CommandLine.Option(names = {"--key", "--secret", "-p",})
     String key;
@@ -40,10 +38,10 @@ public class ThreshrCmd implements Runnable {
         }
     }
 
-    static class TcinsConverter implements CommandLine.ITypeConverter<Tcin[]> {
+    static class TcinsConverter implements CommandLine.ITypeConverter<Tcin> {
         @Override
-        public Tcin[] convert(String s) {
-            return Arrays.stream((s.split(","))).map(Tcin::new).toArray(Tcin[]::new);
+        public Tcin convert(String s) {
+            return new Tcin(s.split(","));
         }
     }
 }
