@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
 
-record FacetList(
+public record FacetList(
         @JsonProperty("facet_id")
         String facetId,
 

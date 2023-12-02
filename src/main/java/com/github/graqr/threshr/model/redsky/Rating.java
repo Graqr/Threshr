@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
 
-record Rating(
+public record Rating(
         Double average,
         Long count,
 

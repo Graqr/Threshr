@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
 
-record Video(
+public record Video(
         @JsonProperty("is_list_page_eligible")
         Boolean isListPageEligible,
 

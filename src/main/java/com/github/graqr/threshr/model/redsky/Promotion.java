@@ -2,7 +2,7 @@ package com.github.graqr.threshr.model.redsky;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-record Promotion(
+public record Promotion(
         @JsonProperty("plp_message")
         String plpMessage,
 

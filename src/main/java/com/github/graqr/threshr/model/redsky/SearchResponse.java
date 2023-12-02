@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
 
-record SearchResponse(
+public record SearchResponse(
 
         @JsonProperty("bread_crumb_list")
         List<BreadCrumbList> breadCrumbList,

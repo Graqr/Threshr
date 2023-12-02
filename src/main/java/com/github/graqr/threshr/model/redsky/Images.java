@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
 
-record Images(
+public record Images(
         @JsonProperty("primary_image_url")
         String primaryImageUrl,
 

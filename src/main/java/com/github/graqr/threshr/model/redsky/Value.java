@@ -2,7 +2,7 @@ package com.github.graqr.threshr.model.redsky;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-record Value(
+public record Value(
         String label,
 
         String url,
