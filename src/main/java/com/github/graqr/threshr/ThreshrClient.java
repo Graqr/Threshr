@@ -2,8 +2,8 @@ package com.github.graqr.threshr;
 
 import com.github.graqr.threshr.model.TargetStore;
 import com.github.graqr.threshr.model.Tcin;
-import com.github.graqr.threshr.model.redsky.ApiResponseData;
 import com.github.graqr.threshr.model.redsky.Search;
+import com.github.graqr.threshr.model.redsky.product.search.Data;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.Get;
 import io.micronaut.http.annotation.Header;
@@ -50,7 +50,7 @@ public interface ThreshrClient {
             "{&tcins*}" +
             "{&targetStore*}" +
             "&CHANNEL=${threshr.CHANNEL}")
-    HttpResponse<ApiResponseData> productSummaryWithFulfillment(
+    HttpResponse<com.github.graqr.threshr.model.redsky.product.summary.Data> productSummaryWithFulfillment(
             TargetStore targetStore,
             Tcin tcins);
 
@@ -71,7 +71,7 @@ public interface ThreshrClient {
      *
      * @param tcin tcin ID's for products to query
      * @param targetStore store from which the product summaries are to be queried.
-     * @return {@link Search} object in an {@link ApiResponseData} wrapped in an HttpResponse.
+     * @return {@link Search} object in an {@link Data} wrapped in an HttpResponse.
      */
     @Retryable
     @Get("/plp_search_v2" +
@@ -79,7 +79,7 @@ public interface ThreshrClient {
             "&category=${threshr.category}" +
             "&member_id=${threshr.visitor}" +
             "{&targetStore.id}")
-    HttpResponse<ApiResponseData> plpSearch(
+    HttpResponse<com.github.graqr.threshr.model.redsky.product.search.Data> plpSearch(
             Tcin tcin,
             TargetStore targetStore);
 }

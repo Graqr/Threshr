@@ -2,7 +2,6 @@ package com.github.graqr.threshr;
 
 import com.github.graqr.threshr.model.TargetStore;
 import com.github.graqr.threshr.model.Tcin;
-import com.github.graqr.threshr.model.redsky.ApiResponseData;
 import io.micronaut.core.async.annotation.SingleResult;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.Controller;
@@ -14,28 +13,19 @@ public class ThreshrController {
 
     @Inject
     ThreshrClient threshrClient;
-//
-//    @Property(name = "threshr.CHANNEL")
-//    String CHANNEL;
 
 
     @Get("/summary")
     @SingleResult
-    public HttpResponse<ApiResponseData> fetchProductSummaries(
-            TargetStore targetStore,
-            Tcin tcin) {
-        return threshrClient.productSummaryWithFulfillment(
-                targetStore,
-                tcin);
+    public HttpResponse<com.github.graqr.threshr.model.redsky.product.summary.Data> fetchProductSummaries(TargetStore targetStore, Tcin tcin) {
+        return threshrClient.productSummaryWithFulfillment(targetStore, tcin);
     }
 
 
     @Get("/search")
     @SingleResult
-    public HttpResponse<ApiResponseData> search(
-            Tcin tcins,
-            TargetStore targetStore) {
-        return threshrClient.plpSearch("I'm a key", tcins, targetStore);
+    public HttpResponse<com.github.graqr.threshr.model.redsky.product.search.Data> search(Tcin tcins, TargetStore targetStore) {
+        return threshrClient.plpSearch(tcins, targetStore);
     }
 
 }
