@@ -2,7 +2,7 @@ package com.github.graqr.threshr.model.redsky;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-record PrimaryBrand(
+public record PrimaryBrand(
         @JsonProperty("canonical_url")
         String canonicalUrl,
 

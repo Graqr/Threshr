@@ -6,7 +6,7 @@ import io.micronaut.core.annotation.Nullable;
 
 import java.util.Map;
 
-record EligibilityRules(
+public record EligibilityRules(
 
         @Nullable Grocery grocery,
 

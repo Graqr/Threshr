@@ -1,6 +1,6 @@
 package com.github.graqr.threshr.model.redsky;
 
-record Statistics(
+public record Statistics(
         Rating rating
 ) {
 }

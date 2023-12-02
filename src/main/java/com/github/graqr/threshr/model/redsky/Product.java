@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
 
-record Product(
+public record Product(
         @JsonProperty("__typename")
         String typename,
 

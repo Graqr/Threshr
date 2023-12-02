@@ -1,6 +1,6 @@
 package com.github.graqr.threshr.model.redsky;
 
-record SortOption(
+public record SortOption(
         String name,
         String value
 ) {

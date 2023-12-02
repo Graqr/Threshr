@@ -2,7 +2,7 @@ package com.github.graqr.threshr.model.redsky;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-record VideoFile(
+public record VideoFile(
         @JsonProperty("mime_type")
         String mimeType,
 

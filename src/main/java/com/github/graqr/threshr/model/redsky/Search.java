@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
 
-record Search(
+public record Search(
         @JsonProperty("search_recommendations")
         SearchRecommendations searchRecommendations,
 

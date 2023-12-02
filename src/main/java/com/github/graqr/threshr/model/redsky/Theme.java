@@ -5,7 +5,7 @@ import io.micronaut.core.annotation.Nullable;
 
 import java.util.List;
 
-record Theme(
+public record Theme(
         String name,
 
         @JsonProperty("has_swatch")

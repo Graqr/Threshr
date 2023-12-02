@@ -1,11 +1,10 @@
 package com.github.graqr.threshr.model.redsky;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import io.micronaut.context.annotation.Any;
 
 import java.util.List;
 
-record Parent(
+public record Parent(
         @JsonProperty("__typename")
         String typename,
 
