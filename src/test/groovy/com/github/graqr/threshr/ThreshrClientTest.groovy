@@ -10,12 +10,11 @@ class ThreshrClientTest extends ThreshrTest {
         when:
         HttpResponse<Products> response = threshrClient.productSummaryWithFulfillment(
                 targetStore,
-                tcinList
+                tcin
         )
 
         then:
         noExceptionThrown()
-        !response.body()
-
+        response.body().data().productSummary().size() == tcin.getTcinCount()
     }
 }

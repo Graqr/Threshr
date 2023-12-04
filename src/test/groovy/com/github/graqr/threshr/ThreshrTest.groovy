@@ -2,7 +2,7 @@ package com.github.graqr.threshr
 
 
 import com.github.graqr.threshr.model.TargetStore
-import com.github.graqr.threshr.model.TcinList
+import com.github.graqr.threshr.model.Tcin
 import io.micronaut.context.ApplicationContext
 import io.micronaut.context.env.Environment
 import io.micronaut.http.HttpResponse
@@ -35,8 +35,8 @@ class ThreshrTest extends Specification {
             -111.887)
 
     @Shared
-    TcinList tcinList = new TcinList(
-            new long[]{82691535, 12953464} //corn & coke https://bit.ly/45V8dui https://bit.ly/40j4A0e
+    Tcin tcin = new Tcin(
+            new String[]{"82691535", "12953464"} //corn & coke https://bit.ly/45V8dui https://bit.ly/40j4A0e
     )
 
     @Shared

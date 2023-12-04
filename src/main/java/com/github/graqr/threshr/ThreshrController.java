@@ -1,7 +1,7 @@
 package com.github.graqr.threshr;
 
 import com.github.graqr.threshr.model.TargetStore;
-import com.github.graqr.threshr.model.TcinList;
+import com.github.graqr.threshr.model.Tcin;
 import com.github.graqr.threshr.model.redsky.products.summary.Products;
 import io.micronaut.core.async.annotation.SingleResult;
 import io.micronaut.http.HttpResponse;
@@ -20,7 +20,7 @@ public class ThreshrController {
     @SingleResult
     public HttpResponse<Products> fetchProductSummaries(
             TargetStore targetStore,
-            TcinList tcin) {
+            Tcin tcin) {
         return threshrClient.productSummaryWithFulfillment(targetStore, tcin);
     }
 }
