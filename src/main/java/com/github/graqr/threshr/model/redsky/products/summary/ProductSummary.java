@@ -1,4 +1,4 @@
-package com.github.graqr.threshr.model.products;
+package com.github.graqr.threshr.model.redsky.products.summary;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.micronaut.core.annotation.Nullable;
