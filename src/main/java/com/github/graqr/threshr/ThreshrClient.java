@@ -2,8 +2,7 @@ package com.github.graqr.threshr;
 
 import com.github.graqr.threshr.model.TargetStore;
 import com.github.graqr.threshr.model.Tcin;
-import com.github.graqr.threshr.model.redsky.Search;
-import com.github.graqr.threshr.model.redsky.product.search.Data;
+import com.github.graqr.threshr.model.redsky.Data;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.Get;
 import io.micronaut.http.annotation.Header;
@@ -50,36 +49,36 @@ public interface ThreshrClient {
             "{&tcins*}" +
             "{&targetStore*}" +
             "&CHANNEL=${threshr.CHANNEL}")
-    HttpResponse<com.github.graqr.threshr.model.redsky.product.summary.Data> productSummaryWithFulfillment(
+    HttpResponse<Data> productSummaryWithFulfillment(
             TargetStore targetStore,
             Tcin tcins);
 
-    /**
-     * Submits a search query to target's redsky api. {@link com.github.graqr.threshr.model.redsky.Search} results
-     * include pricing.
-     * <p>
-     * Uses the following environment variables (See {@link ThreshrClient}).
-     * <ul>
-     *     <li>THRESHR_KEY</li>
-     *     <li>THRESHR_CATEGORY</li>
-     *     <li>THRESHR_CHANNEL</li>
-     *     <li>THRESHR_NEW_SEARCH</li>
-     *     <li>THRESHR_OFFSET</li>
-     *     <li>THRESHR_PAGE</li>
-     *     <li>THRESHR_PLATFORM</li>
-     * </ul>
-     *
-     * @param tcin tcin ID's for products to query
-     * @param targetStore store from which the product summaries are to be queried.
-     * @return {@link Search} object in an {@link Data} wrapped in an HttpResponse.
-     */
-    @Retryable
-    @Get("/plp_search_v2" +
-            "?key=${threshr.key}" +
-            "&category=${threshr.category}" +
-            "&member_id=${threshr.visitor}" +
-            "{&targetStore.id}")
-    HttpResponse<com.github.graqr.threshr.model.redsky.product.search.Data> plpSearch(
-            Tcin tcin,
-            TargetStore targetStore);
+//    /**
+//     * Submits a search query to target's redsky api. {@link com.github.graqr.threshr.model.redsky.Search} results
+//     * include pricing.
+//     * <p>
+//     * Uses the following environment variables (See {@link ThreshrClient}).
+//     * <ul>
+//     *     <li>THRESHR_KEY</li>
+//     *     <li>THRESHR_CATEGORY</li>
+//     *     <li>THRESHR_CHANNEL</li>
+//     *     <li>THRESHR_NEW_SEARCH</li>
+//     *     <li>THRESHR_OFFSET</li>
+//     *     <li>THRESHR_PAGE</li>
+//     *     <li>THRESHR_PLATFORM</li>
+//     * </ul>
+//     *
+//     * @param tcin tcin ID's for products to query
+//     * @param targetStore store from which the product summaries are to be queried.
+//     * @return {@link Search} object in an {@link Data} wrapped in an HttpResponse.
+//     */
+//    @Retryable
+//    @Get("/plp_search_v2" +
+//            "?key=${threshr.key}" +
+//            "&category=${threshr.category}" +
+//            "&member_id=${threshr.visitor}" +
+//            "{&targetStore.id}")
+//    HttpResponse<com.github.graqr.threshr.model.redsky.product.search.Data> plpSearch(
+//            Tcin tcin,
+//            TargetStore targetStore);
 }

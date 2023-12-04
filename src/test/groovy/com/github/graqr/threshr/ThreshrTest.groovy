@@ -16,9 +16,9 @@ import java.util.function.Predicate
 @MicronautTest
 class ThreshrTest extends Specification {
 
-    @Inject
-    @Shared
-    ThreshrController threshrController
+//    @Inject
+//    @Shared
+//    ThreshrController threshrController
 
     @Inject
     @Shared

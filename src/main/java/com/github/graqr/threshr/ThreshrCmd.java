@@ -3,7 +3,6 @@ package com.github.graqr.threshr;
 
 import com.github.graqr.threshr.model.Tcin;
 import io.micronaut.configuration.picocli.PicocliRunner;
-import jakarta.inject.Inject;
 import picocli.CommandLine;
 
 @CommandLine.Command(name = "threshr",
@@ -13,8 +12,8 @@ import picocli.CommandLine;
         showDefaultValues = true)
 public class ThreshrCmd implements Runnable {
 
-    @Inject
-    ThreshrController threshrController;
+//    @Inject
+//    ThreshrController threshrController;
 
     @CommandLine.Option(names = {"-t", "--tcins"}, converter = TcinsConverter.class)
     Tcin tcin;
