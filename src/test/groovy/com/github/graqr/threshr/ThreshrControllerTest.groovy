@@ -8,7 +8,7 @@ class ThreshrControllerTest extends ThreshrTest {
 
     void "query product summaries with no error"() {
         when:
-        threshrController.fetchProductSummaries(targetStore, tcinList)
+        threshrController.fetchProductSummaries(targetStore, tcin)
 
         then:
         noExceptionThrown()

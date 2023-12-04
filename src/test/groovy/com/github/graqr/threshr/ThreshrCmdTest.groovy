@@ -35,12 +35,12 @@ class ThreshrCmdTest extends ThreshrTest {
         String[] streams = executeCommand(ThreshrCmd, args)
 
         then:
-        streams[2].isEmpty()
+        streams[1].isEmpty()
 
         where:
-        tcinArgs            | _
-        tcinList.toString() | _
-        tcinList.tcins[0]   | _
+        tcinArgs               | _
+        tcin.getTcins()        | _
+        tcin.getTcinByIndex(0) | _
     }
 
     def "invalid tcin args produce PicoCliError"() {
@@ -50,7 +50,7 @@ class ThreshrCmdTest extends ThreshrTest {
 
         then:
         for (String line : (helpText + new String[]{
-                "Invalid value for option '--tcins': cannot convert ' ${tcinArgs}' to TcinList (picocli.CommandLine\$PicocliException: the following are invalid tcin: ${tcinList})\n",
+                "Invalid value for option '--tcins': cannot convert ' ${tcinArgs}' to TcinList (picocli.CommandLine\$PicocliException: the following are invalid tcin: ${tcin})\n",
         })) {
             streams[1].contains(line)
         }

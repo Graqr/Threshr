@@ -1,7 +1,7 @@
 package com.github.graqr.threshr;
 
 import com.github.graqr.threshr.model.TargetStore;
-import com.github.graqr.threshr.model.TcinList;
+import com.github.graqr.threshr.model.Tcin;
 import com.github.graqr.threshr.model.redsky.products.summary.Products;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.Get;
@@ -39,7 +39,7 @@ public interface ThreshrClient {
      * A product summary does not include pricing.
      * Uses environment variables THRESHR_KEY and THRESHR_CHANNEL to authenticate.
      *
-     * @param tcins       tcin ID's for products to query. see {@link TcinList#setTcins(long...)}
+     * @param tcins       tcin ID's for products to query. see {@link Tcin#setTcins(String...)}
      * @param targetStore store from which the product summaries are to be queried.
      * @return List {@literal <}ProductSummary{@literal >} in an ApiResponseData object, wrapped in an HttpResponse.
      */
@@ -51,5 +51,5 @@ public interface ThreshrClient {
             "&CHANNEL=${threshr.CHANNEL}")
     HttpResponse<Products> productSummaryWithFulfillment(
             TargetStore targetStore,
-            TcinList tcins);
+            Tcin tcins);
 }
