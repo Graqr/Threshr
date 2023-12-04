@@ -14,10 +14,10 @@ public class TcinList {
     long[] tcins;
 
     public TcinList(long[] tcins) {
-        setId(tcins);
+        setTcins(tcins);
     }
 
-    public void setId(long[] tcins) {
+    public void setTcins(long[] tcins) {
         LongPredicate tcin = t -> !String.valueOf(t).matches("\\d{8}");
         String badTcin = Arrays.stream(tcins)
                 .filter(tcin)
