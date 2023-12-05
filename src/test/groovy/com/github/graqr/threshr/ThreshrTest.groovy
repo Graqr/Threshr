@@ -1,6 +1,5 @@
 package com.github.graqr.threshr
 
-
 import com.github.graqr.threshr.model.TargetStore
 import com.github.graqr.threshr.model.Tcin
 import io.micronaut.context.ApplicationContext
@@ -28,7 +27,8 @@ class ThreshrTest extends Specification {
     ApplicationContext ctx
 
     @Shared
-    TargetStore targetStore = new TargetStore(1750,
+    TargetStore targetStore = new TargetStore(
+            "1750",
             "UT",
             "84014-1752",
             40.91825,
