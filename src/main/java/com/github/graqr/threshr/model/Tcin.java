@@ -34,19 +34,6 @@ public class Tcin {
         this.tcins = tcins;
     }
 
-    public String getTcinByIndex(int index) {
-        if (index >= tcins.length) {
-            throw new CommandLine.PicocliException(String.format(
-                    "cannot retrieve value at index %s from an array with %s indices.",
-                    index,
-                    tcins.length));
-        }
-        return tcins[index];
-    }
-
-    public int getTcinCount() {
-        return tcins.length;
-    }
 
 
     public String getTcins() {

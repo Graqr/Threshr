@@ -9,10 +9,7 @@ micronaut:
 ---
 threshr:
   key: 9f36aeafbe60771e321a7cc95a78140772ab3e96
-  visitor: 0187CE61782B0201A47AAD8525AD73D8
   CHANNEL: WEB
-  category: 5q0f2
-  page: /c/{threshr.category}
 ---
 datasources:
   default:
