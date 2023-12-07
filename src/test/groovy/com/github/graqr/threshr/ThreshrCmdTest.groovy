@@ -38,9 +38,9 @@ class ThreshrCmdTest extends ThreshrTest {
         streams[1].isEmpty()
 
         where:
-        tcinArgs               | _
-        tcin.getTcins()        | _
-        tcin.getTcinByIndex(0) | _
+        tcinArgs                      | _
+        tcin.getTcins()               | _
+        tcin.getTcins().split(",")[0] | _
     }
 
     def "invalid tcin args produce PicoCliError"() {
