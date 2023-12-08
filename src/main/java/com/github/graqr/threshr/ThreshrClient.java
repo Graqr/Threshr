@@ -3,9 +3,9 @@ package com.github.graqr.threshr;
 import com.github.graqr.threshr.model.TargetStore;
 import com.github.graqr.threshr.model.TargetStorePdpSearch;
 import com.github.graqr.threshr.model.Tcin;
-import com.github.graqr.threshr.model.redsky.products.pdp.client.ClientResponse;
-import com.github.graqr.threshr.model.redsky.products.plp.search.Results;
-import com.github.graqr.threshr.model.redsky.products.summary.ProductSummaryWithFulfillment;
+import com.github.graqr.threshr.model.redsky.products.pdp.client.pdpClientRoot;
+import com.github.graqr.threshr.model.redsky.products.plp.search.plpSearchRoot;
+import com.github.graqr.threshr.model.redsky.products.summary.ProductSummaryRoot;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.Get;
 import io.micronaut.http.annotation.Header;
@@ -53,12 +53,12 @@ public interface ThreshrClient {
             "{&tcins*}" +
             "{&targetStore*}" +
             "&CHANNEL=${threshr.CHANNEL}")
-    HttpResponse<ProductSummaryWithFulfillment> productSummaryWithFulfillment(
+    HttpResponse<ProductSummaryRoot> productSummaryWithFulfillment(
             TargetStore targetStore,
             Tcin tcins);
 
     /**
-     * Submits a search query to target's redsky api. {@link Results} results
+     * Submits a search query to target's redsky api. {@link plpSearchRoot} results
      * include pricing.
      * <p>
      * Uses the following environment variables (See {@link ThreshrClient}).
@@ -81,21 +81,8 @@ public interface ThreshrClient {
             "?key=${threshr.key}" +
             "{&tcin}" +
             "{&targetStorePdpSearch*}")
-    HttpResponse<ClientResponse> pdpClient(
+    HttpResponse<pdpClientRoot> pdpClient(
             TargetStorePdpSearch targetStorePdpSearch,
             @Pattern(regexp = "(\\d{8})|(\\d{9})")
             String tcin);
 }
-//https://redsky.target.com/redsky_aggregations/v1/web/
-// pdp_client_v1
-// ?key=9f36aeafbe60771e321a7cc95a78140772ab3e96
-// &tcin=54556735
-// &store_id=1750
-// &pricing_store_id=1750
-
-//https://redsky.target.com/redsky_aggregations/v1/web/
-// pdp_search_v1
-// ?key=9f36aeafbe60771e321a7cc95a78140772ab3e96
-// &tcin=82691535
-// &pricing_store_id=1750
-// &store_id=1750
