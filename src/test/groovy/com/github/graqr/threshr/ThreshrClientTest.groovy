@@ -1,8 +1,8 @@
 package com.github.graqr.threshr
 
 import com.github.graqr.threshr.model.TargetStorePdpSearch
-import com.github.graqr.threshr.model.redsky.products.pdp.client.ClientResponse
-import com.github.graqr.threshr.model.redsky.products.summary.ProductSummaryWithFulfillment
+import com.github.graqr.threshr.model.redsky.products.pdp.client.pdpClientRoot
+import com.github.graqr.threshr.model.redsky.products.summary.ProductSummaryRoot
 import io.micronaut.http.HttpResponse
 /**
  * This test class is necessary despite similarity to the controller test. please dont delete this as the
@@ -12,7 +12,7 @@ class ThreshrClientTest extends ThreshrTest {
 
     void "no error requesting product summaries"() {
         when:
-        HttpResponse<ProductSummaryWithFulfillment> response = threshrClient.productSummaryWithFulfillment(
+        HttpResponse<ProductSummaryRoot> response = threshrClient.productSummaryWithFulfillment(
                 targetStore, tcin)
 
         then:
@@ -23,7 +23,7 @@ class ThreshrClientTest extends ThreshrTest {
 
     void "no error calling pdp client search"() {
         when:
-        HttpResponse<ClientResponse> response = threshrClient.pdpClient(
+        HttpResponse<pdpClientRoot> response = threshrClient.pdpClient(
                 new TargetStorePdpSearch(targetStore),
                 tcin.getTcins().split(",")[0])
 
