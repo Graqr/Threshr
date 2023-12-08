@@ -15,6 +15,16 @@ Threshr is a cross-platform cli tool capable of querying product information fro
 - [Install Instructions](#install)
 - [Contributing](#want-to-get-involved)
 
+___
+
+### Roadmap
+
+Current store supported is Target, with Kroger, Walmart and Associated Foods on the horizon.
+
+#### Target
+
+Endpoints currently supported are the `pdp_client_v1` and `product_summary_with_fulfillment_v1` endpoints.
+___
 ### Install
 
 <details><summary>Windows</summary>
@@ -38,7 +48,10 @@ if (!($env:Path -like "*$_*"))
 <ol>
         <li>Download latest linux <a href="https://github.com/Graqr/Threshr/releases/latest">binary</a></li>
         <li>Add to <code>$HOME\bin\</code> directory</li>
+</ol>
 </details>
+
+___
 
 ### Want to get involved?
 
