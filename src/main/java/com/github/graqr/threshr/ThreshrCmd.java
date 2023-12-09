@@ -1,7 +1,7 @@
 package com.github.graqr.threshr;
 
 
-import com.github.graqr.threshr.model.Tcin;
+import com.github.graqr.threshr.model.redsky.Tcin;
 import io.micronaut.configuration.picocli.PicocliRunner;
 import jakarta.inject.Inject;
 import picocli.CommandLine;

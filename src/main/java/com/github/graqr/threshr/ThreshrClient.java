@@ -1,11 +1,11 @@
 package com.github.graqr.threshr;
 
-import com.github.graqr.threshr.model.TargetStore;
-import com.github.graqr.threshr.model.TargetStorePdpSearch;
-import com.github.graqr.threshr.model.Tcin;
-import com.github.graqr.threshr.model.redsky.products.pdp.client.pdpClientRoot;
-import com.github.graqr.threshr.model.redsky.products.plp.search.plpSearchRoot;
-import com.github.graqr.threshr.model.redsky.products.summary.ProductSummaryRoot;
+import com.github.graqr.threshr.model.redsky.TargetStore;
+import com.github.graqr.threshr.model.redsky.TargetStorePdpSearch;
+import com.github.graqr.threshr.model.redsky.Tcin;
+import com.github.graqr.threshr.model.redsky.api.pdp.client.pdpClientRoot;
+import com.github.graqr.threshr.model.redsky.api.plp.search.plpSearchRoot;
+import com.github.graqr.threshr.model.redsky.api.summary.ProductSummaryRoot;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.Get;
 import io.micronaut.http.annotation.Header;

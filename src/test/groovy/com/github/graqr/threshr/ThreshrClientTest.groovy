@@ -1,8 +1,8 @@
 package com.github.graqr.threshr
 
-import com.github.graqr.threshr.model.TargetStorePdpSearch
-import com.github.graqr.threshr.model.redsky.products.pdp.client.pdpClientRoot
-import com.github.graqr.threshr.model.redsky.products.summary.ProductSummaryRoot
+import com.github.graqr.threshr.model.redsky.TargetStorePdpSearch
+import com.github.graqr.threshr.model.redsky.api.pdp.client.pdpClientRoot
+import com.github.graqr.threshr.model.redsky.api.summary.ProductSummaryRoot
 import io.micronaut.http.HttpResponse
 /**
  * This test class is necessary despite similarity to the controller test. please dont delete this as the

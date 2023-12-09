@@ -1,7 +1,7 @@
 package com.github.graqr.threshr
 
-import com.github.graqr.threshr.model.TargetStore
-import com.github.graqr.threshr.model.Tcin
+import com.github.graqr.threshr.model.redsky.TargetStore
+import com.github.graqr.threshr.model.redsky.Tcin
 import io.micronaut.context.ApplicationContext
 import io.micronaut.context.env.Environment
 import io.micronaut.http.HttpResponse
