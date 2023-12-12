@@ -1,0 +1,479 @@
+# Same data as pdp_client.json. This is provided for readability.
+data:
+  product:
+    __typename: Product
+    tcin: "54556735"
+    category:
+      parent_category_id: u7fty
+      name: Fresh Vegetables
+    ratings_and_reviews:
+      has_verified: true
+      statistics:
+        not_recommended_count: 36
+        question_count: 0
+        rating:
+          average: 4.65
+          count: 2305
+          distribution:
+            rating1: 70
+            rating2: 31
+            rating3: 96
+            rating4: 243
+            rating5: 1865
+          secondary_averages:
+            - id: Taste
+              label: taste
+              range: 5
+              type: RATING
+              value: 3.48
+            - id: Quality
+              label: quality
+              range: 5
+              type: RATING
+              value: 3.33
+            - id: Value
+              label: value
+              range: 5
+              type: RATING
+              value: 3.49
+        recommended_count: 51
+        recommended_percentage: 58
+        review_count: 99
+      most_recent:
+        - id: c5d41466-61f5-44a8-9737-d52502b8d77e
+          text:
+            Was in a rush He didn’t realize until he got home they were bad carrots
+            with mold already on them. They don’t expire until December 18th
+          author:
+            nickname: J
+            external_id: "8075601551"
+          title: Carrots bad before date
+          rating:
+            value: 1
+            submitted_at: 2023-12-07T16:54:55.149Z
+        - id: 73db6cad-34a9-4d9e-a2eb-508c4274fd06
+          text:
+            Disliked the fact it says baby on the bag and these carrots were definetly
+            not!
+          author:
+            nickname: 47j
+            external_id: "2380603900"
+          title: Good & gathers "baby" carrots
+          rating:
+            value: 2
+            submitted_at: 2023-11-16T01:44:35.095Z
+        - id: f7fb667e-83ef-4ebd-b5ff-64f4faf9d5fe
+          text:
+            These are always an easy snack. I wished there was a way to request that
+            the expiration date were later- but I had enough time this time-
+            great for dipping too- or adding to stews.
+          author:
+            nickname: True Roar
+            external_id: "20027694343"
+          title: Easy
+          rating:
+            value: 4
+            submitted_at: 2023-06-25T02:43:15.969Z
+        - id: cae36bfe-8be8-46d9-a9d8-5f621026c6c6
+          text:
+            Surprisingly sweet. This pkg. was fresh and clean. Nice and convenient
+            that the carrots are pre-cut and washed. Was happy with this
+            purchase.
+          author:
+            nickname: Maspqa Shopper 113
+            external_id: "10044718119"
+          title: Good and Gather cut baby carrots.
+          rating:
+            value: 5
+            submitted_at: 2023-06-08T14:05:41.658Z
+        - id: 777094a6-02d8-403c-9d5c-7700df639907
+          text:
+            Don’t buy these. I thought my local Target would do better. Picked up my
+            order at 4pm. These carrots expiration date was the next day. Not
+            that it mattered. They were dried out and gross already. Who picks
+            these out? They should know better.
+          author:
+            nickname: Lc98226
+            external_id: "8014273307"
+          title: If ordering online, no
+          rating:
+            value: 1
+            submitted_at: 2023-05-16T20:59:35.548Z
+        - id: 05cba5e2-f168-4a11-bcdb-ee40190ceee4
+          text: Carrots were practically white, dried out and inedible.
+          author:
+            nickname: Mwalek
+            external_id: "8023046140"
+          title: Gross old carrots
+          rating:
+            value: 1
+            submitted_at: 2023-05-15T19:12:20.623Z
+        - id: b4baef34-d38a-4bb1-87ad-cf748c0d3a82
+          text: Delish and crunchy - more than 24 carrots
+          author:
+            nickname: MamaTarget
+            external_id: "1090040779"
+          title: Yum
+          rating:
+            value: 5
+            submitted_at: 2023-04-21T00:39:54.435Z
+        - id: d489d140-1dde-4570-8a73-5ec7c0c04a4d
+          text: They’re good, I’d get them again.
+          author:
+            nickname: Mrs M
+            external_id: "10004641832"
+          title: Good
+          rating:
+            value: 4
+            submitted_at: 2023-04-17T18:28:50.707Z
+      photos:
+        - https://target.scene7.com/is/image/Target/GUEST_3efe656d-30dd-4355-af6d-2d5619795e4d
+        - https://target.scene7.com/is/image/Target/GUEST_f0a36949-d313-4501-8c5f-ea54c3eee0ab
+        - https://target.scene7.com/is/image/Target/GUEST_debd4a7a-4c32-400e-b0e7-cefe89468739
+        - https://target.scene7.com/is/image/Target/GUEST_18e39167-d4c8-4b95-85a1-9432f5ea2272
+        - https://target.scene7.com/is/image/Target/GUEST_2550ad90-be32-45a3-9d64-166375976d9d
+        - https://target.scene7.com/is/image/Target/GUEST_f692cecf-fc22-40f7-a6e8-73ba389d6710
+        - https://target.scene7.com/is/image/Target/GUEST_1e038045-6b96-4f4a-8f10-07b0a7a3e5cd
+        - https://target.scene7.com/is/image/Target/GUEST_ae4f9373-8b6f-41ee-b469-e1e5bb1666ab
+        - https://target.scene7.com/is/image/Target/GUEST_3f6cca82-60a0-45b1-9888-ac675f20db02
+        - https://target.scene7.com/is/image/Target/GUEST_584052ac-28a0-438e-9af0-fe4cda5e9ec4
+        - https://target.scene7.com/is/image/Target/GUEST_2c5cba22-4b60-44f8-9162-d89db1c16221
+        - https://target.scene7.com/is/image/Target/GUEST_e6ac8058-77b0-4163-9591-b1498aa5d430
+    item:
+      cart_add_on_threshold: 35
+      compliance:
+        is_proposition_65: false
+      disclaimer:
+        description:
+          Content on this site is for reference purposes only.  Target does
+          not represent or warrant that the nutrition, ingredient, allergen and
+          other product information on our Web or Mobile sites are accurate or
+          complete, since this information comes from the product
+          manufacturers.  On occasion, manufacturers may improve or change their
+          product formulas and update their labels.  We recommend that you do
+          not rely solely on the information presented on our Web or Mobile
+          sites and that you review the product's label or contact the
+          manufacturer directly if you have specific product concerns or
+          questions.  If you have specific healthcare concerns or questions
+          about the products displayed, please contact your licensed healthcare
+          professional for advice or answers.  Any additional pictures are
+          suggested servings only.
+        type: Grocery Disclaimer
+      dpci: 211-15-0017
+      eligibility_rules:
+        add_on:
+          is_active: false
+        grocery:
+          is_active: true
+        hold:
+          is_active: true
+        inventory_notification_to_guest_excluded:
+          is_active: true
+        scheduled_delivery:
+          is_active: true
+      enrichment:
+        buy_url: https://www.target.com/p/baby-cut-carrots-1lb-good-38-gather-8482/-/A-54556735
+        images:
+          base_url: //target.scene7.com/is/image/Target/
+          primary_image_url: https://target.scene7.com/is/image/Target/GUEST_abaa4c53-5fd7-4a83-8275-e21fa71e5e16
+          primary_image: GUEST_abaa4c53-5fd7-4a83-8275-e21fa71e5e16
+          alternate_images:
+            - GUEST_670c149c-4bbc-43f7-bf39-e1d03414a1c0
+            - GUEST_16fa6f7c-7c7a-47b1-b83a-b52446922311
+          alternate_image_urls:
+            - https://target.scene7.com/is/image/Target/GUEST_670c149c-4bbc-43f7-bf39-e1d03414a1c0
+            - https://target.scene7.com/is/image/Target/GUEST_16fa6f7c-7c7a-47b1-b83a-b52446922311
+          content_labels:
+            - image_url: https://target.scene7.com/is/image/Target/GUEST_670c149c-4bbc-43f7-bf39-e1d03414a1c0
+            - image_url: https://target.scene7.com/is/image/Target/GUEST_abaa4c53-5fd7-4a83-8275-e21fa71e5e16
+            - image_url: https://target.scene7.com/is/image/Target/GUEST_16fa6f7c-7c7a-47b1-b83a-b52446922311
+        nutrition_facts:
+          ingredients: "CARROTS. "
+          nutrition_label_type_code: LEGACY_FORMAT
+          value_prepared_list:
+            - description: Per Serving
+              serving_size: "3"
+              serving_size_unit_of_measurement: oz
+              servings_per_container: ABOUT 5
+              nutrients:
+                - name: Calories
+                  quantity: 35
+                  unit_of_measurement: Cal
+                - name: Total Fat
+                  percentage: 0
+                  quantity: 0
+                  unit_of_measurement: g
+                - name: Saturated Fat
+                  percentage: 0
+                  quantity: 0
+                  unit_of_measurement: g
+                - name: Trans Fat
+                  quantity: 0
+                  unit_of_measurement: g
+                - name: Cholesterol
+                  percentage: 0
+                  quantity: 0
+                  unit_of_measurement: mg
+                - name: Sodium
+                  percentage: 3
+                  quantity: 65
+                  unit_of_measurement: mg
+                - name: Total Carbohydrate
+                  percentage: 3
+                  quantity: 8
+                  unit_of_measurement: g
+                - name: Dietary Fiber
+                  percentage: 7
+                  quantity: 2
+                  unit_of_measurement: g
+                - name: Sugars
+                  quantity: 5
+                  unit_of_measurement: g
+                - name: Added Sugars
+                  percentage: 0
+                  quantity: 0
+                  unit_of_measurement: g
+                - name: Protein
+                  quantity: 1
+                  unit_of_measurement: g
+                - name: Potassium
+                  percentage: 6
+                  quantity: 270
+                  unit_of_measurement: mg
+                - name: Vitamin D
+                  percentage: 0
+                  quantity: 0
+                  unit_of_measurement: mcg
+                - name: Calcium
+                  percentage: 2
+                  quantity: 20
+                  unit_of_measurement: mg
+                - name: Iron
+                  percentage: 2
+                  quantity: 0.4
+                  unit_of_measurement: mg
+                - name: Vitamin A
+                  percentage: 35
+                  quantity: 300
+                  unit_of_measurement: mcg
+        videos:
+          - video_captions:
+              - caption_url: https://target.scene7.com/is/content/Target/GUEST_a54afff7-366e-4605-8863-7af956200539
+                language: EN
+            video_files:
+              - mime_type: video/mp4
+                video_height_pixels: "720"
+                video_url: https://target.scene7.com/is/content/Target/GUEST_79ce3d45-1dd0-41f4-8678-8c13d2582e52_Flash9_Autox720p_2600k
+            video_length_seconds: "18"
+            video_poster_image: https://target.scene7.com/is/image/Target/GUEST_751e4096-ceef-4de3-b702-65efcaa84c5f
+            video_title: Good & Gather™ Baby-Cut Carrots - 1lb
+        return_policies:
+          - user_type: best_guest
+            day_count: 365
+          - user_type: regular_guest
+            day_count: 365
+      environmental_segmentation:
+        is_hazardous_material: false
+      formatted_return_method: This item can be returned to any Target store or Target.com.
+      fulfillment:
+        is_gift_wrap_eligible: true
+        purchase_limit: 10
+      handling:
+        import_designation_description: Made in the USA
+      is_fresh_grocery: true
+      is_limited_time_offer: false
+      merchandise_classification:
+        class_id: 15
+        department_id: 211
+        department_name: VEGETABLES/PACKAGED VEG
+      package_dimensions:
+        depth: 2.2
+        dimension_unit_of_measure: INCH
+        height: 7.11
+        weight: 1.08
+        weight_unit_of_measure: POUND
+        width: 5.59
+      primary_barcode: "085239051368"
+      primary_brand:
+        canonical_url: /b/good-gather/-/N-yfqzk
+        linking_id: yfqzk
+        name: Good & Gather
+      product_classification:
+        product_type: 109420
+        product_type_name: GROCERY
+        purchase_behavior: Frequency
+      product_description:
+        bullet_descriptions:
+          - <B>Contains:</B> Does Not Contain Any of the 9 Major Allergens
+          - <B>State of Readiness:</B> Ready to Eat
+          - <B>Form:</B> Pieces
+          - <B>Package Quantity:</B> 1
+          - <B>Pre-package preparation:</B> Raw
+          - <B>Net weight:</B> 16 Ounces
+          - <B>Country of Origin:</B> United States
+        downstream_description:
+          No fridge is complete without Baby-Cut Carrots from Good
+          & Gather™. The bag includes one pound of baby carrots that come
+          peeled, washed and ready to eat for your convenience. As a bonus,
+          these carrots contain no artificial preservatives and provide an
+          excellent source of vitamin A. Whether you eat them straight out of
+          the bag, dip them in ranch, hummus, or your favorite dressing, or use
+          them to make Grandma's famous creamy carrot casserole, this bag of
+          baby-cut carrots offers a classic snack the whole family can enjoy.
+          For a sweet and simple treat, sprinkle brown sugar and cinnamon over
+          the baby-cut carrots and bake them in the oven. <br /><br />Every
+          product that carries the Good & Gather™ name starts with quality
+          ingredients that deliver great taste, making it easier for you and
+          your family to eat well, every day. We promise you’ll love each bite,
+          or your money back.
+        soft_bullet_description:
+          "&bull;Peeled baby-cut carrots offer a great option for
+          snacks, salads, side dishes and more<br>&bull;Packaged in a 1lb bag,
+          conveniently prewashed and ready to eat<br>&bull;Provides an excellent
+          source of vitamin A with no artifical preservatives<br>&bull;Product
+          of the USA"
+        soft_bullets:
+          bullets:
+            - Peeled baby-cut carrots offer a great option for snacks, salads,
+              side dishes and more
+            - Packaged in a 1lb bag, conveniently prewashed and ready to eat
+            - Provides an excellent source of vitamin A with no artifical
+              preservatives
+            - Product of the USA
+          title: highlights
+        title: Baby-Cut Carrots - 1lb - Good &#38; Gather&#8482;
+      product_vendors:
+        - id: "1286218"
+          vendor_name: GRIMMWAY FARMS
+        - id: "1216958"
+          vendor_name: BOLTHOUSE FARMS - DFD
+        - id: "1213676"
+          vendor_name: STORE ONLY DUMMY VENDOR
+        - id: "1142161"
+          vendor_name: C & S WHOLESALE GROCERS
+      relationship_type_code: SA
+      return_policies_guest_message:
+        This item must be returned within 365 days of the
+        date it was purchased in store, shipped, delivered by a Shipt shopper,
+        or made ready for pickup. If purchased online with SNAP EBT, this item
+        must be returned within 90 days of the date it was shipped, delivered by
+        a Shipt shopper, or made ready for pickup. This 90-day return window is
+        required by SNAP.
+      ribbons:
+        - Only At Target
+      wellness_merchandise_attributes: [ ]
+    finds_stories:
+      - id: ideas-after-school-snacks-collection
+        channel_id: finds
+        description: Prep for post-school snacking with easy, affordable &
+          kiddo-approved ideas.
+        display_date: August 7
+        highlight_color: "#fda9b5"
+        image:
+          url: https://target.scene7.com/is/image/Target/GUEST_a2f6ed7d-062b-4f80-b6f5-fbdcb1ebfed4
+          alt_text: "Simple & tasty back-to-school bites under $5. "
+          height: 0
+          width: 0
+          aspect_ratio: 1:1
+        images:
+          - url: https://target.scene7.com/is/image/Target/GUEST_a2f6ed7d-062b-4f80-b6f5-fbdcb1ebfed4
+            alt_text: "Simple & tasty back-to-school bites under $5. "
+            height: 0
+            width: 0
+            aspect_ratio: 1:1
+          - url: https://api-finds.target.com/v2/images/ideas-after-school-snacks-collection?key=a401f7fb988b0edfc4d21938e9f22e19abcc9d89&columns=3&rows=2
+            alt_text: "Simple & tasty back-to-school bites under $5. "
+            height: 600
+            width: 900
+            aspect_ratio: 3:2
+        label: Ideas
+        name: ideas-after-school-snacks-collection
+        short_title: "School snacks under $5. "
+        title: "Simple & tasty back-to-school bites under $5. "
+        url: https://www.target.com/finds/stories/ideas-after-school-snacks-collection
+      - id: ideas-board-spreads-collection
+        channel_id: finds
+        description:
+          Flavor-packed ideas that’ll have you (and your guests) noshing in
+          no time.
+        display_date: July 31
+        highlight_color: "#fda9b5"
+        image:
+          url: https://target.scene7.com/is/image/Target/GUEST_bfdc9410-f682-4bf9-8d22-61c29a6fd7c2
+          alt_text: 5 easy-breezy board spreads you’ll totally crave.
+          height: 0
+          width: 0
+          aspect_ratio: 1:1
+        images:
+          - url: https://target.scene7.com/is/image/Target/GUEST_bfdc9410-f682-4bf9-8d22-61c29a6fd7c2
+            alt_text: 5 easy-breezy board spreads you’ll totally crave.
+            height: 0
+            width: 0
+            aspect_ratio: 1:1
+          - url: https://api-finds.target.com/v2/images/ideas-board-spreads-collection?key=a401f7fb988b0edfc4d21938e9f22e19abcc9d89&columns=3&rows=2
+            alt_text: 5 easy-breezy board spreads you’ll totally crave.
+            height: 600
+            width: 900
+            aspect_ratio: 3:2
+        label: Ideas
+        name: ideas-board-spreads-collection
+        short_title:
+          Flavor-packed ideas that’ll have you (and your guests) noshing in
+          no time.
+        title: 5 easy-breezy board spreads you’ll totally crave.
+        url: https://www.target.com/finds/stories/ideas-board-spreads-collection
+      - id: ideas-football-get-togethers
+        channel_id: finds
+        description: ""
+        display_date: November 18
+        highlight_color: "#fda9b5"
+        image:
+          url: https://target.scene7.com/is/image/Target/GUEST_3285497e-1d63-48c7-9a9e-64b64eeb8a2c
+          alt_text: "Bring your A-game with these Big Game must-haves. "
+          height: 0
+          width: 0
+          aspect_ratio: 1:1
+        images:
+          - url: https://target.scene7.com/is/image/Target/GUEST_3285497e-1d63-48c7-9a9e-64b64eeb8a2c
+            alt_text: "Bring your A-game with these Big Game must-haves. "
+            height: 0
+            width: 0
+            aspect_ratio: 1:1
+          - url: https://api-finds.target.com/v2/images/ideas-football-get-togethers?key=a401f7fb988b0edfc4d21938e9f22e19abcc9d89&columns=3&rows=2
+            alt_text: "Bring your A-game with these Big Game must-haves. "
+            height: 600
+            width: 900
+            aspect_ratio: 3:2
+        label: Ideas
+        name: ideas-football-get-togethers
+        short_title: Target Finds
+        title: "Bring your A-game with these Big Game must-haves. "
+        url: https://www.target.com/finds/stories/ideas-football-get-togethers
+    finds_posts:
+      - id: qCJ4yBb91jtqodEHRXjdAy
+        caption: ""
+        url: https://www.target.com/finds/posts/qCJ4yBb91jtqodEHRXjdAy
+        placeholder_color: "#dac4ae"
+        user:
+          display_name: "@stylealady"
+          image_alt_text: "@stylealady"
+          image_url: https://edge.curalate.com/v1/img/NBhuquSqA95xCTwMOglawt_gXL8qjzd_8MKeYq-PY0U=/b/200
+          url: https://www.target.com/finds/posts?usernames=stylealady
+          username: stylealady
+        image:
+          url: https://edge.curalate.com/v1/img/zo65g7SSWtif_twzQ8kng8H188FuRj-8-PmEcuCNVwo=
+          alt_text: user image by @stylealady
+          height: 1502
+          width: 1440
+          aspect_ratio: 10:11
+    price:
+      formatted_current_price: $1.29
+      formatted_current_price_type: reg
+      reg_retail: 1.29
+      formatted_unit_price: $0.08
+      formatted_unit_price_suffix: /ounce
+      location_id: 1750
+      current_retail: 1.29
+      external_system_id: 54556735-1750-1.29-2023112417
+      is_current_price_range: false
+    promotions: [ ]
