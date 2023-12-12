@@ -10,7 +10,9 @@ public record Product(
         @JsonProperty("__typename") String typename,
         String tcin,
         Category category,
-        @JsonProperty("ratings_and_reviews") RatingsAndReviews ratingsAndReviews, Item item,
+        @JsonProperty("ratings_and_reviews")
+        RatingsAndReviews ratingsAndReviews,
+        Item item,
         @JsonProperty("finds_stories")
         List<FindsStory> findsStories,
         @JsonProperty("finds_posts")

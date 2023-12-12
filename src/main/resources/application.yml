@@ -17,6 +17,11 @@ datasources:
     dialect: POSTGRES
     schema-generate: NONE
 ---
+jpa:
+  default:
+    entity-scan:
+      packages: com.github.graqr.threshr.model.silo
+---
 flyway:
   datasources:
     default:

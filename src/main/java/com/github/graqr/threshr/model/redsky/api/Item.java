@@ -2,11 +2,14 @@ package com.github.graqr.threshr.model.redsky.api;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.micronaut.core.annotation.Nullable;
+import io.micronaut.data.annotation.Id;
+import io.micronaut.data.annotation.MappedEntity;
 import io.micronaut.serde.annotation.Serdeable;
 
 import java.util.List;
 
 @Serdeable
+@MappedEntity
 public record Item(
         @Nullable @JsonProperty("cart_add_on_threshold")
         Double cartAddOnThreshold,
@@ -15,6 +18,7 @@ public record Item(
 
         @Nullable Disclaimer disclaimer,
 
+        @Id
         String dpci,
 
         @JsonProperty("eligibility_rules")
@@ -30,7 +34,8 @@ public record Item(
 
         Fulfillment fulfillment,
 
-        @Nullable Handling handling,
+        @Nullable
+        Handling handling,
 
         @Nullable @JsonProperty("is_fresh_grocery")
         Boolean isFreshGrocery,
