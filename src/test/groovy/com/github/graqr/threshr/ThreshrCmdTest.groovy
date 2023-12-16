@@ -9,6 +9,15 @@ import spock.lang.Shared
 @MicronautTest
 class ThreshrCmdTest extends ThreshrTest {
 
+
+    void setupSpec() {
+        ctx = ApplicationContext.run(Environment.CLI, Environment.TEST)
+    }
+
+    void cleanupSpec() {
+        ctx.stop()
+    }
+
     @Shared
     String[] helpText = new String[]{
             "Usage: threshr [-hV] [-p=<key>] [-t=<tcins>]",

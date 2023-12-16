@@ -2,9 +2,13 @@ package com.github.graqr.threshr
 
 import com.github.graqr.threshr.model.redsky.TargetStore
 import com.github.graqr.threshr.model.redsky.Tcin
+import com.github.graqr.threshr.model.redsky.api.Product
+import com.github.graqr.threshr.model.redsky.api.pdp.client.Data
 import io.micronaut.context.ApplicationContext
-import io.micronaut.context.env.Environment
+import io.micronaut.core.io.IOUtils
+import io.micronaut.core.io.ResourceResolver
 import io.micronaut.http.HttpResponse
+import io.micronaut.serde.ObjectMapper
 import io.micronaut.test.extensions.spock.annotation.MicronautTest
 import jakarta.inject.Inject
 import spock.lang.Shared
@@ -23,8 +27,21 @@ class ThreshrTest extends Specification {
     @Shared
     ThreshrClient threshrClient
 
+    @Inject
+    @Shared
+    SiloRepository siloRepository
+
     @Shared
     ApplicationContext ctx
+
+    @Inject
+    ObjectMapper objectMapper
+
+    @Inject
+    ResourceResolver resourceResolver
+
+    @Shared
+    Product testProduct
 
     @Shared
     TargetStore targetStore = new TargetStore(
@@ -43,11 +60,21 @@ class ThreshrTest extends Specification {
     Predicate<HttpResponse<?>> okResponse = response -> response.code() >= 200 && response.code() < 300
 
     void setupSpec() {
-        ctx = ApplicationContext.run(Environment.CLI, Environment.TEST)
+        testProduct = getProductTestResource()
     }
 
-    void cleanupSpec() {
-        ctx.stop()
+
+    Product getProductTestResource() {
+        return objectMapper
+                .readValue(
+                        IOUtils.readText(new BufferedReader(new InputStreamReader(
+                                resourceResolver
+                                        .getResource("classpath:example/response/pdp_client.json")
+                                        .get()
+                                        .openStream()
+                        ))),
+                        Data.class)
+                .product()
     }
 
 }

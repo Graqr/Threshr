@@ -8,7 +8,7 @@ micronaut:
         path: redsky_aggregations/v1/web
 ---
 threshr:
-  key: 9f36aeafbe60771e321a7cc95a78140772ab3e96
+  key: ""
   CHANNEL: WEB
 ---
 datasources:
@@ -16,6 +16,9 @@ datasources:
     driverClassName: org.postgresql.Driver
     dialect: POSTGRES
     schema-generate: NONE
+    url: db.fmihonrcefvjcxcntqfx.supabase.co
+    username: postgres
+    password: ""
 ---
 jpa:
   default:
@@ -26,3 +29,6 @@ flyway:
   datasources:
     default:
       enabled: true
+---
+test-resource:
+  pdp-client: file:pdp_client.json

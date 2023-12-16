@@ -5,6 +5,8 @@ import com.github.graqr.threshr.model.redsky.Tcin;
 import io.micronaut.configuration.picocli.PicocliRunner;
 import jakarta.inject.Inject;
 import picocli.CommandLine;
+import picocli.CommandLine.Model.CommandSpec;
+import picocli.CommandLine.Spec;
 
 @CommandLine.Command(name = "threshr",
         description = "pulls current pricing from target's api",
@@ -12,6 +14,9 @@ import picocli.CommandLine;
         versionProvider = ThreshrCmd.ManifestVersionProvider.class,
         showDefaultValues = true)
 public class ThreshrCmd implements Runnable {
+
+    @Spec
+    CommandSpec spec;
 
     @Inject
     ThreshrController threshrController;
