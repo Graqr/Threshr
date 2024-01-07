@@ -1,12 +1,15 @@
 package com.github.graqr.threshr;
 
-import com.github.graqr.threshr.model.silo.HarvestedItem;
-import io.micronaut.http.annotation.Controller;
-import io.micronaut.scheduling.TaskExecutors;
-import io.micronaut.scheduling.annotation.ExecuteOn;
+import com.github.graqr.threshr.model.silo.Purchasable;
+import io.micronaut.http.HttpHeaders;
+import io.micronaut.http.HttpResponse;
+import io.micronaut.http.annotation.*;
+import io.micronaut.validation.Validated;
 import jakarta.validation.Valid;
 
-@ExecuteOn(TaskExecutors.IO)
+import java.util.Optional;
+
+@Validated
 @Controller("/silo")
 public class SiloController {
     protected final SiloRepository siloRepository;
@@ -15,7 +18,14 @@ public class SiloController {
         this.siloRepository = dataRepository;
     }
 
-    public void insert(@Valid HarvestedItem harvestedItem) {
-        siloRepository.insert(harvestedItem);
+    @("/{id}")
+    public Optional<Purchasable> show(Long id) {
+        return siloRepository.findById(id);
+    }
+
+    @Post
+    public HttpResponse<Purchasable> update(@Body @Valid HarvestedItemUpdateCommand command) {
+        siloRepository.update(command.getId(), command.getName());
+        return HttpResponse.noContent().header(HttpHeaders.LOCATION, "I'm a location");
     }
 }

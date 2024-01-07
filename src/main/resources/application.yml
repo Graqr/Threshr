@@ -16,14 +16,9 @@ datasources:
     driverClassName: org.postgresql.Driver
     dialect: POSTGRES
     schema-generate: NONE
-    url: db.fmihonrcefvjcxcntqfx.supabase.co
+    url: jdbc:postgresql://db.fmihonrcefvjcxcntqfx.supabase.co:5432/
     username: postgres
-    password: ""
----
-jpa:
-  default:
-    entity-scan:
-      packages: com.github.graqr.threshr.model.silo
+    password: 9DhCghHM1Ltr6bWU
 ---
 flyway:
   datasources:
