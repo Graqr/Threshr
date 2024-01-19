@@ -1,0 +1,4 @@
+https://redsky.target.com/redsky_aggregations/v1/web/
+    - store_location_v1?store_id=1750&key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&page=%2Fc%2Fclwp0
+    - nearby_stores_v1?limit=5&within=100&place=84014&key=9f36aeafbe60771e321a7cc95a78140772ab3e96&channel=WEB&page=%2Fc%2Fclwp0
+    - product_summary_with_fulfillment_v1?key=9f36aeafbe60771e321a7cc95a78140772ab3e96&tcins=14774376%2C76152363%2C75648536%2C13921055%2C52188493%2C86219602%2C85728914%2C86219596%2C85599404%2C53662364%2C82020694%2C81455641%2C82020682%2C82610860%2C81194090%2C88115866%2C87921054%2C87822771%2C87822760%2C81128948%2C82610744%2C85190653%2C80954190%2C86904798&store_id=1750&zip=84010&state=UT&latitude=40.894523&longitude=-111.872400&scheduled_delivery_store_id=1750&required_store_id=1750&has_required_store_id=true&skip_price_promo=true&visitor_id=0187CE61782B0201A47AAD8525AD73D8&channel=WEB&page=%2Fc%2Fclwp0
