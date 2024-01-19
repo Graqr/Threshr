@@ -1,0 +1,71 @@
+api calls:
+  - file: aisles_search_v1
+    url: https://redsky.target.com/redsky_aggregations/v1/web/
+    api endpoint: aisles_search_v1
+    key: 9f36aeafbe60771e321a7cc95a78140772ab3e96
+    category: wdysv
+    platform: desktop
+    offset: 0
+    include_sponsored: true
+    pricing_store_id: 1750
+    scheduled_delivery_store_id: 1750
+    channel: WEB
+    count: 19
+    page: /c/5xszd
+    store_ids: 1750,1755,2641,3365,2609
+    visitor_id: 018D1543C74F02019D098E1779D9452A
+  - file: bia_categories_v1.json
+    url:
+    key: 9f36aeafbe60771e321a7cc95a78140772ab3e96
+    placement_id: adapt_primary_BIAtoGAPtoTOPSELLERS
+    category_id: 5xszd
+    page: /c/5xszd
+    visitor_id: 018D1543C74F02019D098E1779D9452A
+    pricing_store_id: 1750
+    channel: WEB
+    purchasable_store_ids: 1750,1755,2641,3365,2609
+  - file: taxonomy_subcategories.json
+    category_id: 5xszd
+    key: 9f36aeafbe60771e321a7cc95a78140772ab3e96
+    channel: WEB
+    page: /c/5xszd
+  - file: redoak_metadata.json
+    url: https://redoak.target.com/content-publish/pages/v1?
+    endpoint: /c/-/N-5xszd
+    visitor_id: 018D1543C74F02019D098E1779D9452A
+    children: true
+    breadcrumbs: true
+    pageId: /c/5xszd
+    attr_member_id: 1557340908
+    platform: desktop
+  - file: 15_near_centerville.json
+    url: https://redsky.target.com/redsky_aggregations/v1/web/nearby_stores_v1?
+    parameters:
+      limit: 20
+      within: 100
+      place: a,RI
+      key: 8df66ea1e1fc070a6ea99e942431c9cd67a80f02
+      channel: WEB
+      page: /s/
+  - file: by_state_pennsylvania.json
+    url: https://api.target.com/locations/v3/
+    parameters:
+      key: 8df66ea1e1fc070a6ea99e942431c9cd67a80f02
+      keyword: Pennsylvania
+      per_page: 200
+      search_by: state
+      status: OPEN
+      type_code: STR
+others:
+  - file: target_stores.json
+    source: I dunno where I got this
+    comments: |
+      there are a crap ton of locations in this, but only about 2k are stores, the rest are vendor locations, distribution
+      centers and seller locations:
+      location_type
+      -------------
+      STORE
+      VENDOR
+      SELLER_LOCATION
+      DISTRIBUTION_CENTER
+

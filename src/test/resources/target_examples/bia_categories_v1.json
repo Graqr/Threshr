@@ -1,0 +1,1018 @@
+{
+  "data": {
+    "recommended_products": {
+      "__typename": "RecommendedProducts",
+      "placement_id": "adapt_primary_BIAtoGAPtoTOPSELLERS",
+      "category_id": "5xszd",
+      "products": [
+        {
+          "__typename": "ProductSummary",
+          "tcin": "14760224",
+          "original_tcin": "14760224",
+          "item": {
+            "is_limited_time_offer": false,
+            "relationship_type": "Variation Child",
+            "relationship_type_code": "VC",
+            "merchandise_classification": {
+              "class_id": 2,
+              "department_id": 270
+            },
+            "eligibility_rules": {
+              "add_on": {
+                "is_active": false
+              }
+            },
+            "enrichment": {
+              "buy_url": "https://www.target.com/p/smucker-39-s-uncrustables-frozen-peanut-butter-38-grape-jelly-sandwich-30oz-15ct/-/A-14760224",
+              "images": {
+                "primary_image_url": "https://target.scene7.com/is/image/Target/GUEST_5d8a74df-6cce-470f-9139-ee5e7bbf12ae",
+                "alternate_image_urls": [
+                  "https://target.scene7.com/is/image/Target/GUEST_d37b593f-0266-4e2a-a83b-26604979210c",
+                  "https://target.scene7.com/is/image/Target/GUEST_0738af09-3f7a-4f6f-bdc7-9468838ab571",
+                  "https://target.scene7.com/is/image/Target/GUEST_5774ee01-3b34-4a64-aad9-3bfdd790c715",
+                  "https://target.scene7.com/is/image/Target/GUEST_69599d19-29d2-4245-a582-711d3f9988c8",
+                  "https://target.scene7.com/is/image/Target/GUEST_a51282f6-2978-455e-9ed1-7cb259b2acfd",
+                  "https://target.scene7.com/is/image/Target/GUEST_ac27af89-2296-4aee-bf93-3db470043beb"
+                ]
+              }
+            },
+            "__typename": "Item",
+            "dpci": "270-02-0104",
+            "product_description": {
+              "title": "Smucker&#39;s Uncrustables Frozen Peanut Butter &#38; Grape Jelly Sandwich - 30oz/15ct"
+            }
+          },
+          "parent": {
+            "__typename": "ParentProductSummary",
+            "tcin": "88566470",
+            "item": {
+              "is_limited_time_offer": false,
+              "relationship_type": "Variation Parent",
+              "relationship_type_code": "VAP",
+              "merchandise_classification": {
+                "class_id": 2,
+                "department_id": 270
+              },
+              "enrichment": {
+                "buy_url": "https://www.target.com/p/smucker-s-uncrustables-frozen-peanut-butter-grape-jelly-sandwich/-/A-88566470",
+                "images": {
+                  "primary_image_url": "https://target.scene7.com/is/image/Target/GUEST_5d8a74df-6cce-470f-9139-ee5e7bbf12ae",
+                  "alternate_image_urls": [
+                    "https://target.scene7.com/is/image/Target/GUEST_d37b593f-0266-4e2a-a83b-26604979210c",
+                    "https://target.scene7.com/is/image/Target/GUEST_0738af09-3f7a-4f6f-bdc7-9468838ab571",
+                    "https://target.scene7.com/is/image/Target/GUEST_5774ee01-3b34-4a64-aad9-3bfdd790c715",
+                    "https://target.scene7.com/is/image/Target/GUEST_69599d19-29d2-4245-a582-711d3f9988c8",
+                    "https://target.scene7.com/is/image/Target/GUEST_a51282f6-2978-455e-9ed1-7cb259b2acfd",
+                    "https://target.scene7.com/is/image/Target/GUEST_ac27af89-2296-4aee-bf93-3db470043beb"
+                  ]
+                }
+              },
+              "product_description": {
+                "title": "Smucker's Uncrustables Frozen Peanut Butter & Grape Jelly Sandwich"
+              }
+            },
+            "price": {
+              "formatted_current_price": "$4.19 - $13.99",
+              "formatted_current_price_type": "reg"
+            },
+            "promotions": []
+          },
+          "price": {
+            "current_retail": 13.99,
+            "formatted_current_price": "$13.99",
+            "formatted_current_price_type": "reg",
+            "reg_retail": 13.99
+          },
+          "promotions": []
+        },
+        {
+          "__typename": "ProductSummary",
+          "tcin": "13257689",
+          "original_tcin": "13257689",
+          "item": {
+            "is_limited_time_offer": false,
+            "relationship_type": "Stand Alone",
+            "relationship_type_code": "SA",
+            "merchandise_classification": {
+              "class_id": 1,
+              "department_id": 270
+            },
+            "eligibility_rules": {
+              "add_on": {
+                "is_active": false
+              }
+            },
+            "enrichment": {
+              "buy_url": "https://www.target.com/p/ore-ida-frozen-gluten-free-tater-tots-seasoned-frozen-shredded-potatoes-32oz/-/A-13257689",
+              "images": {
+                "primary_image_url": "https://target.scene7.com/is/image/Target/GUEST_70f6039c-d693-4b65-b62c-e2f4178850dc",
+                "alternate_image_urls": [
+                  "https://target.scene7.com/is/image/Target/GUEST_d8a40997-85cb-40af-a054-234bfd8ed9bf",
+                  "https://target.scene7.com/is/image/Target/GUEST_aca88020-0b83-4a33-9a98-e80177faf7a2",
+                  "https://target.scene7.com/is/image/Target/GUEST_69e49340-eea4-4d56-84ed-bd46d54563e4",
+                  "https://target.scene7.com/is/image/Target/GUEST_67c9ab92-ae27-421f-b110-9da881fd203c",
+                  "https://target.scene7.com/is/image/Target/GUEST_ef999a31-b27d-4258-b6e8-5794736ef416",
+                  "https://target.scene7.com/is/image/Target/GUEST_44930420-1b4a-4a2f-bff7-a70fc44d13ae",
+                  "https://target.scene7.com/is/image/Target/GUEST_af46d1d1-34f9-477b-8c52-2ea292fe9ed8",
+                  "https://target.scene7.com/is/image/Target/GUEST_3022cf2c-18a9-4db4-82ff-95b0279e09f9"
+                ]
+              }
+            },
+            "__typename": "Item",
+            "dpci": "270-01-0114",
+            "product_description": {
+              "title": "Ore-Ida Frozen Gluten Free Tater Tots Seasoned Frozen Shredded Potatoes - 32oz"
+            }
+          },
+          "price": {
+            "current_retail": 5.49,
+            "formatted_current_price": "$5.49",
+            "formatted_current_price_type": "reg",
+            "reg_retail": 5.49
+          },
+          "promotions": []
+        },
+        {
+          "__typename": "ProductSummary",
+          "tcin": "82326740",
+          "original_tcin": "82326740",
+          "item": {
+            "is_limited_time_offer": false,
+            "relationship_type": "Stand Alone",
+            "relationship_type_code": "SA",
+            "merchandise_classification": {
+              "class_id": 14,
+              "department_id": 270
+            },
+            "eligibility_rules": {},
+            "enrichment": {
+              "buy_url": "https://www.target.com/p/frozen-diced-avocado-10oz-good-38-gather-8482/-/A-82326740",
+              "images": {
+                "primary_image_url": "https://target.scene7.com/is/image/Target/GUEST_bf240a0a-70c8-4071-aa45-e30b9d15cf57",
+                "alternate_image_urls": [
+                  "https://target.scene7.com/is/image/Target/GUEST_118dd763-2da1-4df5-b93e-79ad82669a5e"
+                ]
+              }
+            },
+            "__typename": "Item",
+            "dpci": "270-14-0098",
+            "product_description": {
+              "title": "Frozen Diced Avocado - 10oz - Good &#38; Gather&#8482;"
+            }
+          },
+          "price": {
+            "current_retail": 3.49,
+            "formatted_current_price": "$3.49",
+            "formatted_current_price_type": "reg",
+            "reg_retail": 3.49
+          },
+          "promotions": []
+        },
+        {
+          "__typename": "ProductSummary",
+          "tcin": "54541758",
+          "original_tcin": "54541758",
+          "item": {
+            "is_limited_time_offer": false,
+            "relationship_type": "Stand Alone",
+            "relationship_type_code": "SA",
+            "merchandise_classification": {
+              "class_id": 14,
+              "department_id": 270
+            },
+            "eligibility_rules": {
+              "add_on": {
+                "is_active": false
+              }
+            },
+            "enrichment": {
+              "buy_url": "https://www.target.com/p/frozen-blueberries-48oz-good-38-gather-8482/-/A-54541758",
+              "images": {
+                "primary_image_url": "https://target.scene7.com/is/image/Target/GUEST_73eb6473-4f41-4fc5-996a-3295ff4f3f94",
+                "alternate_image_urls": [
+                  "https://target.scene7.com/is/image/Target/GUEST_400cb0db-2436-4755-8baa-1cfd5df1283c"
+                ]
+              }
+            },
+            "__typename": "Item",
+            "dpci": "270-14-0416",
+            "product_description": {
+              "title": "Frozen Blueberries - 48oz - Good &#38; Gather&#8482;"
+            }
+          },
+          "price": {
+            "current_retail": 7.99,
+            "formatted_current_price": "$7.99",
+            "formatted_current_price_type": "reg",
+            "reg_retail": 7.99
+          },
+          "promotions": []
+        },
+        {
+          "__typename": "ProductSummary",
+          "tcin": "14778154",
+          "original_tcin": "14778154",
+          "item": {
+            "relationship_type": "Stand Alone",
+            "relationship_type_code": "SA",
+            "merchandise_classification": {
+              "class_id": 5,
+              "department_id": 210
+            },
+            "eligibility_rules": {
+              "add_on": {
+                "is_active": false
+              }
+            },
+            "enrichment": {
+              "buy_url": "https://www.target.com/p/tyson-all-natural-all-natural-chicken-nuggets-frozen-32oz/-/A-14778154",
+              "images": {
+                "primary_image_url": "https://target.scene7.com/is/image/Target/GUEST_0978a47c-f4d3-4d39-9de5-2af5f948df0d",
+                "alternate_image_urls": [
+                  "https://target.scene7.com/is/image/Target/GUEST_5faa359d-ce07-4ca7-bad0-d6ac8caf7468",
+                  "https://target.scene7.com/is/image/Target/GUEST_cde63955-5058-4215-ab0d-a00fa36d09bc",
+                  "https://target.scene7.com/is/image/Target/GUEST_d7af0d32-2f6c-4bd4-a006-8bce1d764678",
+                  "https://target.scene7.com/is/image/Target/GUEST_f0230cd5-5398-4244-8c24-7112f0748eef",
+                  "https://target.scene7.com/is/image/Target/GUEST_d23e41b7-4127-4c93-9c10-5b5a885f1a09"
+                ]
+              }
+            },
+            "__typename": "Item",
+            "dpci": "210-05-0152",
+            "product_description": {
+              "title": "Tyson All Natural All Natural Chicken Nuggets - Frozen - 32oz"
+            }
+          },
+          "price": {
+            "current_retail": 6.99,
+            "formatted_current_price": "$6.99",
+            "formatted_current_price_type": "reg",
+            "reg_retail": 6.99
+          },
+          "promotions": []
+        },
+        {
+          "__typename": "ProductSummary",
+          "tcin": "79226807",
+          "original_tcin": "79226807",
+          "item": {
+            "is_limited_time_offer": false,
+            "relationship_type": "Stand Alone",
+            "relationship_type_code": "SA",
+            "merchandise_classification": {
+              "class_id": 3,
+              "department_id": 288
+            },
+            "eligibility_rules": {
+              "add_on": {
+                "is_active": false
+              }
+            },
+            "enrichment": {
+              "buy_url": "https://www.target.com/p/thin-crust-four-cheese-frozen-pizza-15-55oz-market-pantry-8482/-/A-79226807",
+              "images": {
+                "primary_image_url": "https://target.scene7.com/is/image/Target/GUEST_b6770c11-1ec8-42db-96af-2778a03c3580",
+                "alternate_image_urls": [
+                  "https://target.scene7.com/is/image/Target/GUEST_881cd185-fef6-4e65-a27d-d978dacb1a89",
+                  "https://target.scene7.com/is/image/Target/GUEST_50a2f4db-240b-4702-9089-e8108d295c9d"
+                ]
+              }
+            },
+            "__typename": "Item",
+            "dpci": "288-03-0961",
+            "product_description": {
+              "title": "Thin Crust Four Cheese Frozen Pizza - 15.55oz - Market Pantry&#8482;"
+            }
+          },
+          "price": {
+            "current_retail": 3.99,
+            "formatted_current_price": "$3.99",
+            "formatted_current_price_type": "reg",
+            "reg_retail": 3.99
+          },
+          "promotions": []
+        },
+        {
+          "__typename": "ProductSummary",
+          "tcin": "80948168",
+          "original_tcin": "80948168",
+          "item": {
+            "is_limited_time_offer": false,
+            "relationship_type": "Stand Alone",
+            "relationship_type_code": "SA",
+            "merchandise_classification": {
+              "class_id": 5,
+              "department_id": 270
+            },
+            "eligibility_rules": {
+              "add_on": {
+                "is_active": false
+              }
+            },
+            "enrichment": {
+              "buy_url": "https://www.target.com/p/frozen-buttermilk-waffles-12-3oz-10pk-good-38-gather-8482/-/A-80948168",
+              "images": {
+                "primary_image_url": "https://target.scene7.com/is/image/Target/GUEST_0dd90146-091e-40ca-b71a-8bc8bcdafbee",
+                "alternate_image_urls": [
+                  "https://target.scene7.com/is/image/Target/GUEST_2d6df3d7-093b-475b-9d44-92aeb5d133dd",
+                  "https://target.scene7.com/is/image/Target/GUEST_3b20f61f-034a-43b2-a8a1-393d0b9ed3e9"
+                ]
+              }
+            },
+            "__typename": "Item",
+            "dpci": "270-05-0353",
+            "product_description": {
+              "title": "Frozen Buttermilk Waffles - 12.3oz/10pk - Good &#38; Gather&#8482;"
+            }
+          },
+          "price": {
+            "current_retail": 2.49,
+            "formatted_current_price": "$2.49",
+            "formatted_current_price_type": "reg",
+            "reg_retail": 2.49
+          },
+          "promotions": []
+        },
+        {
+          "__typename": "ProductSummary",
+          "tcin": "13190250",
+          "original_tcin": "13190250",
+          "item": {
+            "is_limited_time_offer": false,
+            "relationship_type": "Stand Alone",
+            "relationship_type_code": "SA",
+            "merchandise_classification": {
+              "class_id": 5,
+              "department_id": 270
+            },
+            "eligibility_rules": {
+              "add_on": {
+                "is_active": false
+              }
+            },
+            "enrichment": {
+              "buy_url": "https://www.target.com/p/kellogg-39-s-eggo-frozen-mini-pancakes-14-1oz-40ct/-/A-13190250",
+              "images": {
+                "primary_image_url": "https://target.scene7.com/is/image/Target/GUEST_5915662e-5146-4214-aa94-a7ce96603c55",
+                "alternate_image_urls": [
+                  "https://target.scene7.com/is/image/Target/GUEST_9e0fafb4-9d61-4f60-9a2b-f9e3ab6997a0",
+                  "https://target.scene7.com/is/image/Target/GUEST_ba1e5b0d-64cd-4922-8bbd-a15036c1f5b2",
+                  "https://target.scene7.com/is/image/Target/GUEST_b1c95a97-120f-46e2-8deb-316eb33e9589",
+                  "https://target.scene7.com/is/image/Target/GUEST_45096963-b132-401e-aefe-d3818a9f5049",
+                  "https://target.scene7.com/is/image/Target/GUEST_cd95e61c-0409-4c7a-aacc-0c90ed71a6c6",
+                  "https://target.scene7.com/is/image/Target/GUEST_016a4c5c-b286-4ddf-be7a-bb5e00aa141e",
+                  "https://target.scene7.com/is/image/Target/GUEST_b49e273a-dc58-4a63-8b1f-09bb8c65d870",
+                  "https://target.scene7.com/is/image/Target/GUEST_83bcf184-efd0-4a91-a47e-e229b98fdf94"
+                ]
+              }
+            },
+            "__typename": "Item",
+            "dpci": "270-05-0007",
+            "product_description": {
+              "title": "Kellogg&#39;s Eggo Frozen Mini Pancakes - 14.1oz/40ct"
+            }
+          },
+          "price": {
+            "current_retail": 3.49,
+            "formatted_current_price": "$3.49",
+            "formatted_current_price_type": "reg",
+            "reg_retail": 3.49
+          },
+          "promotions": []
+        },
+        {
+          "__typename": "ProductSummary",
+          "tcin": "79397039",
+          "original_tcin": "79397039",
+          "item": {
+            "is_limited_time_offer": false,
+            "relationship_type": "Stand Alone",
+            "relationship_type_code": "SA",
+            "merchandise_classification": {
+              "class_id": 0,
+              "department_id": 270
+            },
+            "eligibility_rules": {
+              "add_on": {
+                "is_active": false
+              }
+            },
+            "enrichment": {
+              "buy_url": "https://www.target.com/p/frozen-broccoli-florets-12oz-good-38-gather-8482/-/A-79397039",
+              "images": {
+                "primary_image_url": "https://target.scene7.com/is/image/Target/GUEST_af0a884b-02cf-48e8-942c-43cc4106e8ec",
+                "alternate_image_urls": [
+                  "https://target.scene7.com/is/image/Target/GUEST_8ff02f40-9ee7-4cc0-b1e4-14b9fefc2a1d"
+                ]
+              }
+            },
+            "__typename": "Item",
+            "dpci": "270-00-0669",
+            "product_description": {
+              "title": "Frozen Broccoli Florets - 12oz - Good &#38; Gather&#8482;"
+            }
+          },
+          "price": {
+            "current_retail": 1.29,
+            "formatted_current_price": "$1.29",
+            "formatted_current_price_type": "reg",
+            "reg_retail": 1.29
+          },
+          "promotions": []
+        },
+        {
+          "__typename": "ProductSummary",
+          "tcin": "79580863",
+          "original_tcin": "79580863",
+          "item": {
+            "is_limited_time_offer": false,
+            "relationship_type": "Stand Alone",
+            "relationship_type_code": "SA",
+            "merchandise_classification": {
+              "class_id": 0,
+              "department_id": 270
+            },
+            "eligibility_rules": {
+              "add_on": {
+                "is_active": false
+              }
+            },
+            "enrichment": {
+              "buy_url": "https://www.target.com/p/frozen-crinkle-cut-carrots-12oz-good-38-gather-8482/-/A-79580863",
+              "images": {
+                "primary_image_url": "https://target.scene7.com/is/image/Target/GUEST_b424c32c-ddd0-4a5b-b8d7-7c26ad0b5af4",
+                "alternate_image_urls": [
+                  "https://target.scene7.com/is/image/Target/GUEST_66320a0f-d743-4388-a858-1bad053f441e"
+                ]
+              }
+            },
+            "__typename": "Item",
+            "dpci": "270-00-0688",
+            "product_description": {
+              "title": "Frozen Crinkle-Cut Carrots - 12oz - Good &#38; Gather&#8482;"
+            }
+          },
+          "price": {
+            "current_retail": 0.99,
+            "formatted_current_price": "$0.99",
+            "formatted_current_price_type": "reg",
+            "reg_retail": 0.99
+          },
+          "promotions": []
+        },
+        {
+          "__typename": "ProductSummary",
+          "tcin": "79580985",
+          "original_tcin": "79580985",
+          "item": {
+            "is_limited_time_offer": false,
+            "relationship_type": "Stand Alone",
+            "relationship_type_code": "SA",
+            "merchandise_classification": {
+              "class_id": 0,
+              "department_id": 270
+            },
+            "eligibility_rules": {
+              "add_on": {
+                "is_active": false
+              }
+            },
+            "enrichment": {
+              "buy_url": "https://www.target.com/p/frozen-mini-corn-on-the-cob-6ct-good-38-gather-8482/-/A-79580985",
+              "images": {
+                "primary_image_url": "https://target.scene7.com/is/image/Target/GUEST_8d22a67f-dae1-45d9-942c-343894b44868",
+                "alternate_image_urls": [
+                  "https://target.scene7.com/is/image/Target/GUEST_1380e05f-e00c-475b-8ecf-1c292bfe2cba"
+                ]
+              }
+            },
+            "__typename": "Item",
+            "dpci": "270-00-0692",
+            "product_description": {
+              "title": "Frozen Mini Corn on the Cob - 6ct - Good &#38; Gather&#8482;"
+            }
+          },
+          "price": {
+            "current_retail": 1.99,
+            "formatted_current_price": "$1.99",
+            "formatted_current_price_type": "reg",
+            "reg_retail": 1.99
+          },
+          "promotions": []
+        },
+        {
+          "__typename": "ProductSummary",
+          "tcin": "54542270",
+          "original_tcin": "54542270",
+          "item": {
+            "is_limited_time_offer": false,
+            "relationship_type": "Stand Alone",
+            "relationship_type_code": "SA",
+            "merchandise_classification": {
+              "class_id": 14,
+              "department_id": 270
+            },
+            "eligibility_rules": {
+              "add_on": {
+                "is_active": false
+              }
+            },
+            "enrichment": {
+              "buy_url": "https://www.target.com/p/organic-frozen-sliced-strawberries-10oz-good-38-gather-8482/-/A-54542270",
+              "images": {
+                "primary_image_url": "https://target.scene7.com/is/image/Target/GUEST_134fb771-cf9a-40c5-8749-d1aedad73725",
+                "alternate_image_urls": [
+                  "https://target.scene7.com/is/image/Target/GUEST_3b80a4d9-a4ee-49a5-801f-e368ede6a3c6"
+                ]
+              }
+            },
+            "__typename": "Item",
+            "dpci": "270-14-0421",
+            "product_description": {
+              "title": "Organic Frozen Sliced Strawberries - 10oz - Good &#38; Gather&#8482;"
+            }
+          },
+          "price": {
+            "current_retail": 3.49,
+            "formatted_current_price": "$3.49",
+            "formatted_current_price_type": "reg",
+            "reg_retail": 3.49
+          },
+          "promotions": []
+        },
+        {
+          "__typename": "ProductSummary",
+          "tcin": "54542251",
+          "original_tcin": "54542251",
+          "item": {
+            "is_limited_time_offer": false,
+            "relationship_type": "Stand Alone",
+            "relationship_type_code": "SA",
+            "merchandise_classification": {
+              "class_id": 14,
+              "department_id": 270
+            },
+            "eligibility_rules": {
+              "add_on": {
+                "is_active": false
+              }
+            },
+            "enrichment": {
+              "buy_url": "https://www.target.com/p/organic-frozen-mango-chunks-10oz-good-gather-8482/-/A-54542251",
+              "images": {
+                "primary_image_url": "https://target.scene7.com/is/image/Target/GUEST_ab616913-3ac3-479b-87f8-e019041a3c1d",
+                "alternate_image_urls": [
+                  "https://target.scene7.com/is/image/Target/GUEST_866efe25-00d4-47b2-927d-d13d1276dae5"
+                ]
+              }
+            },
+            "__typename": "Item",
+            "dpci": "270-14-0398",
+            "product_description": {
+              "title": "Organic Frozen Mango Chunks - 10oz - Good & Gather&#8482;"
+            }
+          },
+          "price": {
+            "current_retail": 3.29,
+            "formatted_current_price": "$3.29",
+            "formatted_current_price_type": "reg",
+            "reg_retail": 3.29
+          },
+          "promotions": []
+        },
+        {
+          "__typename": "ProductSummary",
+          "tcin": "54541754",
+          "original_tcin": "54541754",
+          "item": {
+            "is_limited_time_offer": false,
+            "relationship_type": "Stand Alone",
+            "relationship_type_code": "SA",
+            "merchandise_classification": {
+              "class_id": 14,
+              "department_id": 270
+            },
+            "eligibility_rules": {
+              "add_on": {
+                "is_active": false
+              }
+            },
+            "enrichment": {
+              "buy_url": "https://www.target.com/p/frozen-mango-strawberry-fruit-blend-48oz-good-38-gather-8482/-/A-54541754",
+              "images": {
+                "primary_image_url": "https://target.scene7.com/is/image/Target/GUEST_80b2dc62-ffd5-4144-a60f-4e78afd23bc0",
+                "alternate_image_urls": [
+                  "https://target.scene7.com/is/image/Target/GUEST_110ee11c-5492-41a2-8636-28cd42cc28eb"
+                ]
+              }
+            },
+            "__typename": "Item",
+            "dpci": "270-14-0412",
+            "product_description": {
+              "title": "Frozen Mango Strawberry Fruit Blend - 48oz - Good &#38; Gather&#8482;"
+            }
+          },
+          "price": {
+            "current_retail": 10.79,
+            "formatted_current_price": "$10.79",
+            "formatted_current_price_type": "reg",
+            "reg_retail": 10.79
+          },
+          "promotions": []
+        },
+        {
+          "__typename": "ProductSummary",
+          "tcin": "54541756",
+          "original_tcin": "54541756",
+          "item": {
+            "is_limited_time_offer": false,
+            "relationship_type": "Stand Alone",
+            "relationship_type_code": "SA",
+            "merchandise_classification": {
+              "class_id": 14,
+              "department_id": 270
+            },
+            "eligibility_rules": {
+              "add_on": {
+                "is_active": false
+              }
+            },
+            "enrichment": {
+              "buy_url": "https://www.target.com/p/cherries-and-berries-frozen-blend-48oz-good-38-gather-8482/-/A-54541756",
+              "images": {
+                "primary_image_url": "https://target.scene7.com/is/image/Target/GUEST_be76a5fd-689f-43d3-b5df-d23876466620",
+                "alternate_image_urls": [
+                  "https://target.scene7.com/is/image/Target/GUEST_09f7a647-a8d5-4261-b957-8bc432617bcd"
+                ]
+              }
+            },
+            "__typename": "Item",
+            "dpci": "270-14-0422",
+            "product_description": {
+              "title": "Cherries and Berries Frozen Blend - 48oz - Good &#38; Gather&#8482;"
+            }
+          },
+          "price": {
+            "current_retail": 7.99,
+            "formatted_current_price": "$7.99",
+            "formatted_current_price_type": "reg",
+            "reg_retail": 7.99
+          },
+          "promotions": []
+        },
+        {
+          "__typename": "ProductSummary",
+          "tcin": "54557736",
+          "original_tcin": "54557736",
+          "item": {
+            "is_limited_time_offer": false,
+            "relationship_type": "Stand Alone",
+            "relationship_type_code": "SA",
+            "merchandise_classification": {
+              "class_id": 14,
+              "department_id": 270
+            },
+            "eligibility_rules": {},
+            "enrichment": {
+              "buy_url": "https://www.target.com/p/organic-frozen-tropical-fruit-blend-32oz-good-38-gather-8482/-/A-54557736",
+              "images": {
+                "primary_image_url": "https://target.scene7.com/is/image/Target/GUEST_92df4409-c9f5-4fc0-87a5-12794dff46b3",
+                "alternate_image_urls": [
+                  "https://target.scene7.com/is/image/Target/GUEST_6ed8a9c8-2d70-4d29-8c2a-5fbe128ab34a"
+                ]
+              }
+            },
+            "__typename": "Item",
+            "dpci": "270-14-0429",
+            "product_description": {
+              "title": "Organic Frozen Tropical Fruit Blend - 32oz - Good &#38; Gather&#8482;"
+            }
+          },
+          "price": {
+            "current_retail": 10.99,
+            "formatted_current_price": "$10.99",
+            "formatted_current_price_type": "reg",
+            "reg_retail": 10.99
+          },
+          "promotions": []
+        },
+        {
+          "__typename": "ProductSummary",
+          "tcin": "54532155",
+          "original_tcin": "54532155",
+          "item": {
+            "is_limited_time_offer": false,
+            "relationship_type": "Stand Alone",
+            "relationship_type_code": "SA",
+            "merchandise_classification": {
+              "class_id": 14,
+              "department_id": 270
+            },
+            "eligibility_rules": {
+              "add_on": {
+                "is_active": false
+              }
+            },
+            "enrichment": {
+              "buy_url": "https://www.target.com/p/frozen-sliced-strawberries-16oz-good-38-gather-8482/-/A-54532155",
+              "images": {
+                "primary_image_url": "https://target.scene7.com/is/image/Target/GUEST_88e967e5-b6e4-4a9c-b634-7fbe82bf0f3a",
+                "alternate_image_urls": [
+                  "https://target.scene7.com/is/image/Target/GUEST_47d4658a-0990-4a5e-8848-0ffa4bc37aa7"
+                ]
+              }
+            },
+            "__typename": "Item",
+            "dpci": "270-14-0410",
+            "product_description": {
+              "title": "Frozen Sliced Strawberries - 16oz - Good &#38; Gather&#8482;"
+            }
+          },
+          "price": {
+            "current_retail": 3.19,
+            "formatted_current_price": "$3.19",
+            "formatted_current_price_type": "reg",
+            "reg_retail": 3.19
+          },
+          "promotions": []
+        },
+        {
+          "__typename": "ProductSummary",
+          "tcin": "54557730",
+          "original_tcin": "54557730",
+          "item": {
+            "is_limited_time_offer": false,
+            "relationship_type": "Stand Alone",
+            "relationship_type_code": "SA",
+            "merchandise_classification": {
+              "class_id": 14,
+              "department_id": 270
+            },
+            "eligibility_rules": {
+              "add_on": {
+                "is_active": false
+              }
+            },
+            "enrichment": {
+              "buy_url": "https://www.target.com/p/organic-frozen-blueberries-32oz-good-38-gather-8482/-/A-54557730",
+              "images": {
+                "primary_image_url": "https://target.scene7.com/is/image/Target/GUEST_69c7aaa0-9359-4d1b-b07c-7c3b4e5cfe31",
+                "alternate_image_urls": [
+                  "https://target.scene7.com/is/image/Target/GUEST_e1e03601-ebf1-42eb-92ee-18f0e589ac0b"
+                ]
+              }
+            },
+            "__typename": "Item",
+            "dpci": "270-14-0403",
+            "product_description": {
+              "title": "Organic Frozen Blueberries - 32oz - Good &#38; Gather&#8482;"
+            }
+          },
+          "price": {
+            "current_retail": 9.99,
+            "formatted_current_price": "$9.99",
+            "formatted_current_price_type": "reg",
+            "reg_retail": 9.99
+          },
+          "promotions": []
+        },
+        {
+          "__typename": "ProductSummary",
+          "tcin": "54557735",
+          "original_tcin": "54557735",
+          "item": {
+            "is_limited_time_offer": false,
+            "relationship_type": "Stand Alone",
+            "relationship_type_code": "SA",
+            "merchandise_classification": {
+              "class_id": 14,
+              "department_id": 270
+            },
+            "eligibility_rules": {},
+            "enrichment": {
+              "buy_url": "https://www.target.com/p/organic-frozen-strawberries-32oz-good-gather-8482/-/A-54557735",
+              "images": {
+                "primary_image_url": "https://target.scene7.com/is/image/Target/GUEST_830818ba-1f7c-4f3e-9aff-340a6db89467",
+                "alternate_image_urls": [
+                  "https://target.scene7.com/is/image/Target/GUEST_ac0c0344-2397-4f47-901c-5fd311dd88ac"
+                ]
+              }
+            },
+            "__typename": "Item",
+            "dpci": "270-14-0402",
+            "product_description": {
+              "title": "Organic Frozen Strawberries - 32oz - Good & Gather&#8482;"
+            }
+          },
+          "price": {
+            "current_retail": 9.49,
+            "formatted_current_price": "$9.49",
+            "formatted_current_price_type": "reg",
+            "reg_retail": 9.49
+          },
+          "promotions": []
+        },
+        {
+          "__typename": "ProductSummary",
+          "tcin": "54557728",
+          "original_tcin": "54557728",
+          "item": {
+            "is_limited_time_offer": false,
+            "relationship_type": "Stand Alone",
+            "relationship_type_code": "SA",
+            "merchandise_classification": {
+              "class_id": 14,
+              "department_id": 270
+            },
+            "eligibility_rules": {},
+            "enrichment": {
+              "buy_url": "https://www.target.com/p/organic-cherries-berries-frozen-fruit-blend-32oz-good-gather-8482/-/A-54557728",
+              "images": {
+                "primary_image_url": "https://target.scene7.com/is/image/Target/GUEST_4fb62e92-5445-41e0-b61b-c6ee86a8b848",
+                "alternate_image_urls": [
+                  "https://target.scene7.com/is/image/Target/GUEST_c0a952aa-923e-485d-859e-1423818751f0"
+                ]
+              }
+            },
+            "__typename": "Item",
+            "dpci": "270-14-0401",
+            "product_description": {
+              "title": "Organic Cherries & Berries Frozen Fruit Blend - 32oz - Good & Gather&#8482;"
+            }
+          },
+          "price": {
+            "current_retail": 10.79,
+            "formatted_current_price": "$10.79",
+            "formatted_current_price_type": "reg",
+            "reg_retail": 10.79
+          },
+          "promotions": []
+        },
+        {
+          "__typename": "ProductSummary",
+          "tcin": "54532041",
+          "original_tcin": "54532041",
+          "item": {
+            "is_limited_time_offer": false,
+            "relationship_type": "Stand Alone",
+            "relationship_type_code": "SA",
+            "merchandise_classification": {
+              "class_id": 14,
+              "department_id": 270
+            },
+            "eligibility_rules": {
+              "add_on": {
+                "is_active": false
+              }
+            },
+            "enrichment": {
+              "buy_url": "https://www.target.com/p/frozen-blueberries-12oz-good-gather-8482/-/A-54532041",
+              "images": {
+                "primary_image_url": "https://target.scene7.com/is/image/Target/GUEST_3d400c9d-2c4c-4112-ba49-1567bd8bd675",
+                "alternate_image_urls": [
+                  "https://target.scene7.com/is/image/Target/GUEST_d1977d4f-3587-41d6-9419-8b8a3d59d37b"
+                ]
+              }
+            },
+            "__typename": "Item",
+            "dpci": "270-14-0406",
+            "product_description": {
+              "title": "Frozen Blueberries - 12oz - Good & Gather&#8482;"
+            }
+          },
+          "price": {
+            "current_retail": 2.99,
+            "formatted_current_price": "$2.99",
+            "formatted_current_price_type": "reg",
+            "reg_retail": 2.99
+          },
+          "promotions": []
+        },
+        {
+          "__typename": "ProductSummary",
+          "tcin": "54532277",
+          "original_tcin": "54532277",
+          "item": {
+            "is_limited_time_offer": false,
+            "relationship_type": "Stand Alone",
+            "relationship_type_code": "SA",
+            "merchandise_classification": {
+              "class_id": 14,
+              "department_id": 270
+            },
+            "eligibility_rules": {
+              "add_on": {
+                "is_active": false
+              }
+            },
+            "enrichment": {
+              "buy_url": "https://www.target.com/p/frozen-dark-sweet-whole-pitted-cherries-12oz-good-38-gather-8482/-/A-54532277",
+              "images": {
+                "primary_image_url": "https://target.scene7.com/is/image/Target/GUEST_cb2b9879-89c7-47c5-8c49-fd653cda69d0",
+                "alternate_image_urls": [
+                  "https://target.scene7.com/is/image/Target/GUEST_0ad2412f-d82d-4381-8c7b-bf3c21732651"
+                ]
+              }
+            },
+            "__typename": "Item",
+            "dpci": "270-14-0419",
+            "product_description": {
+              "title": "Frozen Dark Sweet Whole Pitted Cherries - 12oz - Good &#38; Gather&#8482;"
+            }
+          },
+          "price": {
+            "current_retail": 4.49,
+            "formatted_current_price": "$4.49",
+            "formatted_current_price_type": "reg",
+            "reg_retail": 4.49
+          },
+          "promotions": []
+        },
+        {
+          "__typename": "ProductSummary",
+          "tcin": "54540667",
+          "original_tcin": "54540667",
+          "item": {
+            "is_limited_time_offer": false,
+            "relationship_type": "Stand Alone",
+            "relationship_type_code": "SA",
+            "merchandise_classification": {
+              "class_id": 14,
+              "department_id": 270
+            },
+            "eligibility_rules": {
+              "add_on": {
+                "is_active": false
+              }
+            },
+            "enrichment": {
+              "buy_url": "https://www.target.com/p/frozen-wild-blueberries-40oz-good-38-gather-8482/-/A-54540667",
+              "images": {
+                "primary_image_url": "https://target.scene7.com/is/image/Target/GUEST_5a4a3e2a-15be-43cc-ab28-dc84521e517e",
+                "alternate_image_urls": [
+                  "https://target.scene7.com/is/image/Target/GUEST_00885973-3e06-4c2c-b4d9-25c323489e60"
+                ]
+              }
+            },
+            "__typename": "Item",
+            "dpci": "270-14-0423",
+            "product_description": {
+              "title": "Frozen Wild Blueberries - 40oz - Good &#38; Gather&#8482;"
+            }
+          },
+          "price": {
+            "current_retail": 8.79,
+            "formatted_current_price": "$8.79",
+            "formatted_current_price_type": "reg",
+            "reg_retail": 8.79
+          },
+          "promotions": []
+        },
+        {
+          "__typename": "ProductSummary",
+          "tcin": "54532124",
+          "original_tcin": "54532124",
+          "item": {
+            "is_limited_time_offer": false,
+            "relationship_type": "Stand Alone",
+            "relationship_type_code": "SA",
+            "merchandise_classification": {
+              "class_id": 14,
+              "department_id": 270
+            },
+            "eligibility_rules": {
+              "add_on": {
+                "is_active": false
+              }
+            },
+            "enrichment": {
+              "buy_url": "https://www.target.com/p/frozen-pineapple-fruit-chunks-16oz-good-38-gather-8482/-/A-54532124",
+              "images": {
+                "primary_image_url": "https://target.scene7.com/is/image/Target/GUEST_952340ca-e497-4fd5-a4d4-2bf86e3436f7",
+                "alternate_image_urls": [
+                  "https://target.scene7.com/is/image/Target/GUEST_7784a05f-4ac2-469b-8114-6cfa023c126e"
+                ]
+              }
+            },
+            "__typename": "Item",
+            "dpci": "270-14-0404",
+            "product_description": {
+              "title": "Frozen Pineapple Fruit Chunks - 16oz - Good &#38; Gather&#8482;"
+            }
+          },
+          "price": {
+            "current_retail": 2.69,
+            "formatted_current_price": "$2.69",
+            "formatted_current_price_type": "reg",
+            "reg_retail": 2.69
+          },
+          "promotions": []
+        }
+      ],
+      "doctype": "",
+      "strategy_description": "Based on your purchases",
+      "strategy_id": "adapt_primary_BIAtoGAPtoTOPSELLERS",
+      "strategy_name": "backfill_product_2_service"
+    }
+  }
+}
