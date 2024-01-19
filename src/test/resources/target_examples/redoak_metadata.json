@@ -1,0 +1,327 @@
+{
+  "metadata": {
+    "activation_date": "2024-01-03T08:00Z",
+    "title": "Frozen Foods",
+    "type": "Category",
+    "node_id": "5xszd",
+    "linking_id": "5xszd",
+    "content": {
+      "suppress_dvm": false
+    },
+    "experience_type": "aisles",
+    "seo_data": {
+      "canonical_url": "/c/frozen-foods-grocery/-/N-5xszd",
+      "seo_h1": "Frozen Foods",
+      "seo_title": "Frozen Foods : Target",
+      "seo_description": "Get Frozen Foods from Target to save money and time. Select Same Day Delivery or Drive Up for easy contactless purchases.",
+      "page_id": "/c/5xszd",
+      "page_type": "category",
+      "robots": "index, follow",
+      "seo_keywords": "Frozen Foods, Grocery",
+      "image_path": "https://target.scene7.com/is/image/Target/GUEST_dc0c7939-d1cc-4900-b5b2-2e2a29c0fc46"
+    },
+    "og": {
+      "title": "Frozen Foods : Target",
+      "type": "product.group",
+      "image": "https://target.scene7.com/is/image/Target/GUEST_dc0c7939-d1cc-4900-b5b2-2e2a29c0fc46",
+      "url": "/c/frozen-foods-grocery/-/N-5xszd",
+      "description": "Get Frozen Foods from Target to save money and time. Select Same Day Delivery or Drive Up for easy contactless purchases."
+    },
+    "breadcrumbs": [
+      {
+        "node_id": "root",
+        "name": "Homepage",
+        "type": "Category",
+        "linking_id": "root",
+        "number_of_children": "40",
+        "canonical_url": "/",
+        "seo_h1": "Homepage",
+        "page_id": "/c/root",
+        "page_type": "category"
+      },
+      {
+        "node_id": "5xt1a",
+        "name": "Grocery",
+        "type": "Category",
+        "linking_id": "5xt1a",
+        "number_of_children": "23",
+        "canonical_url": "/c/grocery/-/N-5xt1a",
+        "seo_h1": "Grocery",
+        "page_id": "/c/5xt1a",
+        "page_type": "category"
+      }
+    ],
+    "children": [
+      {
+        "node_id": "wdysv",
+        "name": "Frozen Single Serve Meals",
+        "type": "Category",
+        "linking_id": "wdysv",
+        "number_of_children": "0",
+        "canonical_url": "/c/frozen-single-serve-meals-foods-grocery/-/N-wdysv",
+        "seo_h1": "Frozen Single Serve Meals",
+        "page_id": "/c/wdysv",
+        "page_type": "category",
+        "image_path": "https://target.scene7.com/is/image/Target/GUEST_3e5e5b14-004b-48e2-b81f-c15418bc17a6"
+      },
+      {
+        "node_id": "rb4pu",
+        "name": "Frozen Foods: Kids",
+        "type": "Tag",
+        "linking_id": "rb4pu",
+        "number_of_children": "0",
+        "canonical_url": "/c/frozen-foods-kids/-/N-rb4pu",
+        "seo_h1": "Frozen Foods: Kids",
+        "page_id": "/c/rb4pu",
+        "page_type": "category",
+        "image_path": "https://target.scene7.com/is/image/Target/GUEST_5f5a1724-51d1-4cbd-84fd-a229ba5b39bf"
+      },
+      {
+        "node_id": "5xsza",
+        "name": "Frozen Breakfast Food",
+        "type": "Category",
+        "linking_id": "5xsza",
+        "number_of_children": "0",
+        "canonical_url": "/c/frozen-breakfast-food-foods-grocery/-/N-5xsza",
+        "seo_h1": "Frozen Breakfast Food",
+        "page_id": "/c/5xsza",
+        "page_type": "category",
+        "image_path": "https://target.scene7.com/is/image/Target/10Wk1_Grocery_FrozenFoods_CN_App_9-QUIVER-191001-1569944958236"
+      },
+      {
+        "node_id": "5xsz2",
+        "name": "Ice Cream & Frozen Desserts",
+        "type": "Category",
+        "linking_id": "5xsz2",
+        "number_of_children": "0",
+        "canonical_url": "/c/ice-cream-frozen-foods-grocery/-/N-5xsz2",
+        "seo_h1": "Ice Cream & Frozen Desserts",
+        "page_id": "/c/5xsz2",
+        "page_type": "category",
+        "image_path": "https://target.scene7.com/is/image/Target/10Wk1_Grocery_FrozenFoods_CN_App_2-QUIVER-191001-1569944174441"
+      },
+      {
+        "node_id": "5xsz4",
+        "name": "Frozen Pizza",
+        "type": "Category",
+        "linking_id": "5xsz4",
+        "number_of_children": "0",
+        "canonical_url": "/c/frozen-pizza-foods-grocery/-/N-5xsz4",
+        "seo_h1": "Frozen Pizza",
+        "page_id": "/c/5xsz4",
+        "page_type": "category",
+        "image_path": "https://target.scene7.com/is/image/Target/GUEST_9b161802-38a0-4baa-8b4f-6843493326ac"
+      },
+      {
+        "node_id": "5xsz5",
+        "name": "Frozen Meat, Poultry & Seafood",
+        "type": "Category",
+        "linking_id": "5xsz5",
+        "number_of_children": "5",
+        "canonical_url": "/c/frozen-meat-poultry-seafood-foods-grocery/-/N-5xsz5",
+        "seo_h1": "Frozen Meat, Poultry & Seafood",
+        "page_id": "/c/5xsz5",
+        "page_type": "category",
+        "image_path": "https://target.scene7.com/is/image/Target/Grocery_BUBCAT_May26BubCat_FrozenMeats-200526-1590505894656"
+      },
+      {
+        "node_id": "5xszb",
+        "name": "Frozen Appetizers & Snacks",
+        "type": "Category",
+        "linking_id": "5xszb",
+        "number_of_children": "0",
+        "canonical_url": "/c/frozen-appetizers-snacks-foods-grocery/-/N-5xszb",
+        "seo_h1": "Frozen Appetizers & Snacks",
+        "page_id": "/c/5xszb",
+        "page_type": "category",
+        "image_path": "https://target.scene7.com/is/image/Target/GUEST_69506fcb-7d77-436e-b3b8-f386e62a0a68"
+      },
+      {
+        "node_id": "5xsz9",
+        "name": "Frozen Desserts",
+        "type": "Category",
+        "linking_id": "5xsz9",
+        "number_of_children": "0",
+        "canonical_url": "/c/frozen-desserts-foods-grocery/-/N-5xsz9",
+        "seo_h1": "Frozen Desserts",
+        "page_id": "/c/5xsz9",
+        "page_type": "category",
+        "image_path": "https://target.scene7.com/is/image/Target/GUEST_5d982b83-8d13-4296-bff9-470b7f82c659"
+      },
+      {
+        "node_id": "a3dpa",
+        "name": "Frozen Family Meals",
+        "type": "Category",
+        "linking_id": "a3dpa",
+        "number_of_children": "0",
+        "canonical_url": "/c/frozen-family-meals-foods-grocery/-/N-a3dpa",
+        "seo_h1": "Frozen Family Meals",
+        "page_id": "/c/a3dpa",
+        "page_type": "category",
+        "image_path": "https://target.scene7.com/is/image/Target/GUEST_8d472915-ed60-4b10-ac3b-421d1622d372"
+      },
+      {
+        "node_id": "5xsz7",
+        "name": "Frozen Fruit",
+        "type": "Category",
+        "linking_id": "5xsz7",
+        "number_of_children": "0",
+        "canonical_url": "/c/frozen-fruit-foods-grocery/-/N-5xsz7",
+        "seo_h1": "Frozen Fruit",
+        "page_id": "/c/5xsz7",
+        "page_type": "category",
+        "image_path": "https://target.scene7.com/is/image/Target/GUEST_c59cde93-66f2-427c-81b6-8010b0a00172"
+      },
+      {
+        "node_id": "a479c",
+        "name": "Frozen Potatoes",
+        "type": "Category",
+        "linking_id": "a479c",
+        "number_of_children": "0",
+        "canonical_url": "/c/frozen-potatoes-foods-grocery/-/N-a479c",
+        "seo_h1": "Frozen Potatoes",
+        "page_id": "/c/a479c",
+        "page_type": "category",
+        "image_path": "https://target.scene7.com/is/image/Target/GUEST_29d8fb5d-036a-40f8-94d8-245b1f4ea9e1"
+      },
+      {
+        "node_id": "5xsz3",
+        "name": "Frozen Vegetables",
+        "type": "Category",
+        "linking_id": "5xsz3",
+        "number_of_children": "0",
+        "canonical_url": "/c/frozen-vegetables-foods-grocery/-/N-5xsz3",
+        "seo_h1": "Frozen Vegetables",
+        "page_id": "/c/5xsz3",
+        "page_type": "category",
+        "image_path": "https://target.scene7.com/is/image/Target/10wk1_Grocery_BubcatBubcat_FrozenVeggies-201005-1601921509372"
+      },
+      {
+        "node_id": "4tglw",
+        "name": "Frozen Bread & Dough",
+        "type": "Category",
+        "linking_id": "4tglw",
+        "number_of_children": "0",
+        "canonical_url": "/c/frozen-bread-dough-foods-grocery/-/N-4tglw",
+        "seo_h1": "Frozen Bread & Dough",
+        "page_id": "/c/4tglw",
+        "page_type": "category",
+        "image_path": "https://target.scene7.com/is/image/Target/10Wk1_Grocery_FrozenFoods_CN_App_11-QUIVER-191001-1569944458812"
+      }
+    ]
+  },
+  "slots": {
+    "200": {
+      "order": 200,
+      "metadata": {
+        "components": [
+          {
+            "title": "Page Title",
+            "id": "WEB-c_web_pagetitle_v01",
+            "type": "c_web_pagetitle_v01",
+            "type_name": "Page Title",
+            "content_type": "dynamic",
+            "placement_id": "WEB-category-page_title-default"
+          }
+        ]
+      },
+      "presentation": "/adaptive/placeholders/pagetitle/v01/mobile"
+    },
+    "300": {
+      "order": 300,
+      "metadata": {
+        "components": [
+          {
+            "title": "Bubcat placeholder for web",
+            "id": "WEB-c_bubcat_v01",
+            "type": "c_bubcat_v01",
+            "type_name": "Bubcat",
+            "content_type": "dynamic",
+            "placement_id": "63111e2c716d5367674daa9d"
+          }
+        ]
+      },
+      "presentation": "bubcat"
+    },
+    "2250": {
+      "order": 2250,
+      "metadata": {
+        "components": [
+          {
+            "title": "Roundel",
+            "id": "WEB-c_web_dvm_v01",
+            "type": "c_web_dvm_v01",
+            "type_name": "ROUNDEL",
+            "content_type": "dynamic",
+            "placement_id": "WEB-category-dvm-default"
+          }
+        ]
+      },
+      "content": {
+        "pos": "BLOCK1",
+        "sizes": "[[[0,0],[]],[[300,125],[\"fluid\",[300,75]]],[[768,200],[\"fluid\",[728,90],[768,100]]],[[1024,200],[\"fluid\",[728,90],[1024,100]]],[[1200,200],[\"fluid\",[728,90],[970,90],[1200,100]]]]"
+      },
+      "presentation": "slingshot/dvm"
+    },
+    "2300": {
+      "order": 2300,
+      "metadata": {
+        "components": [
+          {
+            "title": "Product Grid",
+            "id": "WEB-c_web_productgrid_v01",
+            "type": "c_web_productgrid_v01",
+            "type_name": "Product Grid",
+            "content_type": "dynamic",
+            "placement_id": "WEB-category-product-grid-default"
+          }
+        ]
+      },
+      "presentation": "/adaptive/placeholders/productgrid/v01/mobile"
+    },
+    "2350": {
+      "order": 2350,
+      "metadata": {
+        "components": [
+          {
+            "title": "PLP Recommendations",
+            "id": "WEB-c_web_plp_recs_v01",
+            "type": "c_web_recs_v01",
+            "type_name": "Recommendations",
+            "content_type": "dynamic",
+            "placement_id": "WEB-category-recs-default"
+          }
+        ]
+      },
+      "content": {
+        "placement_id": "plp"
+      },
+      "presentation": "/adaptive/c_web_a_0004/v03/mobile"
+    },
+    "2500": {
+      "order": 2500,
+      "metadata": {
+        "components": [
+          {
+            "title": "SEO",
+            "id": "WEB-392246",
+            "type": "c_web_a_0029_v02",
+            "type_name": "SEO Dynamic Linking",
+            "content_type": "dynamic",
+            "placement_id": "6596055a2c4ee22ab1f6dca2"
+          }
+        ]
+      },
+      "content": {
+        "message": "<a href=https://www.target.com/c/frozen-pizza-foods-grocery/palermo-s/-/N-5xsz4Zog18i>palermo's pizza</a>,<a href=https://www.target.com/c/frozen-bread-dough-foods-grocery/texas-toast/-/N-4tglwZ9ul7h>texas toast</a>,<a href=https://www.target.com/c/ice-cream-frozen-foods-grocery/no-added-sugar/-/N-5xsz2Zy4fzi>sugar free ice cream</a>,<a href=https://www.target.com/b/ben-jerry-s/-/N-56ghc>ben and jerry</a>,<a href=https://www.target.com/c/ice-cream-frozen-foods-grocery/van-leeuwen/-/N-5xsz2Zq643lenwdfu>van leeuwen ice cream where to buy</a>,<a href=https://www.target.com/c/frozen-pizza-foods-grocery/gluten-free/-/N-5xsz4Zb8gba>gluten free frozen pizza</a>,<a href=https://www.target.com/c/frozen-potatoes-foods-grocery/-/N-a479c>frozen potatoes</a>,<a href=https://www.target.com/c/frozen-fruit-foods-grocery/-/N-5xsz7>frozen fruit</a>,<a href=https://www.target.com/p/bellatoria-ultra-thin-crust-italian-sausage-frozen-pizza-18-27oz/-/A-47105866>bellatoria pizza</a>,<a href=https://www.target.com/c/frozen-appetizers-snacks-foods-grocery/good-gather/-/N-5xszbZyfqzk>best frozen appetizers</a>,<a href=https://www.target.com/c/ice-cream-frozen-foods-grocery/roselani/-/N-5xsz2Zi0dt5>roselani ice cream</a>,<a href=https://www.target.com/b/haagen-dazs/-/N-54xgl>haagen dazs</a>,<a href=https://www.target.com/c/frozen-fruit-foods-grocery/strawberries/-/N-5xsz7Zygz7o>frozen strawberries</a>,<a href=https://www.target.com/c/ice-cream-frozen-foods-grocery/icee/-/N-5xsz2Zxkiki>icee ice cream</a>,<a href=https://www.target.com/c/frozen-pizza-foods-grocery/amy-s/-/N-5xsz4Zg3pz2>amys pizza</a>,<a href=https://www.target.com/p/kind-frozen-dark-chocolate-almond-sea-salt-plant-based-dessert-5ct/-/A-78389936>kind ice cream</a>,<a href=https://www.target.com/c/ice-cream-frozen-foods-grocery/mcconnell-s-fine-ice-creams/-/N-5xsz2Zq643lemhyf2>mcconnell's ice cream</a>,<a href=https://www.target.com/c/frozen-appetizers-snacks-foods-grocery/t-g-i-friday-s/-/N-5xszbZ56djo>tgi fridays frozen appetizers</a>,<a href=https://www.target.com/c/frozen-pizza-foods-grocery/all-deals/-/N-5xsz4Zakkos>pizza sale</a>,<a href=https://www.target.com/c/frozen-pizza-foods-grocery/deep-dish-crust/-/N-5xsz4Z4p9q6>deep dish frozen pizza</a>,<a href=https://www.target.com/c/frozen-single-serve-meals-foods-grocery/stouffer-s/-/N-wdysvZ56e9r>stouffer's frozen meals</a>,<a href=https://www.target.com/c/ice-cream-frozen-foods-grocery/so-delicious/-/N-5xsz2Z4ujaq>so delicious ice cream</a>,<a href=https://www.target.com/c/ice-cream-frozen-foods-grocery/noosa/-/N-5xsz2Z4xpkt>noosa ice cream</a>,<a href=https://www.target.com/c/frozen-bread-dough-foods-grocery/-/N-4tglw>frozen dough</a>,<a href=https://www.target.com/c/frozen-bread-dough-foods-grocery/goya/-/N-4tglwZgmbm6>goya discos</a>,<a href=https://www.target.com/c/frozen-family-meals-foods-grocery/mediterranean/-/N-a3dpaZ7fglg>mediterranean frozen meals</a>,<a href=https://www.target.com/c/frozen-potatoes-foods-grocery/alexia/-/N-a479cZ566r2>alexia potatoes</a>,<a href=https://www.target.com/c/frozen-meat-poultry-seafood-foods-grocery/-/N-5xsz5>frozen meat</a>,<a href=https://www.target.com/c/frozen-single-serve-meals-foods-grocery/deep-indian-kitchen/-/N-wdysvZq643lewadpg>deep indian kitchen</a>,<a href=https://www.target.com/p/thelma-39-s-chocolate-chip-cookie-ice-cream-sandwich-5-2oz/-/A-52934320>thelma's ice cream sandwiches</a>,<a href=https://www.target.com/c/ice-cream-frozen-foods-grocery/turkey-hill/-/N-5xsz2Z56dd4>where to buy turkey hill ice cream</a>,<a href=https://www.target.com/c/frozen-pizza-foods-grocery/kosher/-/N-5xsz4Z5zlgb>kosher frozen pizza</a>,<a href=https://www.target.com/c/frozen-single-serve-meals-foods-grocery/smart-ones/-/N-wdysvZ54xko>smart ones frozen dinners</a>,<a href=https://www.target.com/c/ice-cream-frozen-foods-grocery/oatly-/-/N-5xsz2Zy86hn>oatly ice cream</a>,<a href=https://www.target.com/c/frozen-potatoes-foods-grocery/gluten-free/-/N-a479cZb8gba>gluten free french fries</a>,<a href=https://www.target.com/c/frozen-foods-grocery/counter/-/N-5xszdZq643lein34i>counter frozen food</a>,<a href=https://www.target.com/c/frozen-pizza-foods-grocery/newman-s-own/-/N-5xsz4Z560ht>paul newman pizza</a>,<a href=https://www.target.com/c/ice-cream-frozen-foods-grocery/m-m-s/-/N-5xsz2Z560n4>m and m ice cream</a>,<a href=https://www.target.com/c/ice-cream-frozen-foods-grocery/good-humor/-/N-5xsz2Z56djb>good humor ice cream</a>,<a href=https://www.target.com/c/ice-cream-frozen-foods-grocery/rebel-ice-cream/-/N-5xsz2Zq643leirqv5>rebel ice cream flavors</a>,<a href=https://www.target.com/c/frozen-bread-dough-foods-grocery/rhodes/-/N-4tglwZ560hp>rhodes bread</a>,<a href=https://www.target.com/c/frozen-pizza-foods-grocery/tony-s/-/N-5xsz4Zbvaiu>tony's pizza frozen</a>,<a href=https://www.target.com/c/frozen-pizza-foods-grocery/organic/-/N-5xsz4Zs2ozl>organic pizza</a>,<a href=https://www.target.com/c/frozen-desserts-foods-grocery/marie-callender-s/-/N-5xsz9Z56f6z>marie callender's frozen pies</a>,<a href=https://www.target.com/c/ice-cream-frozen-foods-grocery/kosher/-/N-5xsz2Z5zlgb>kosher ice cream</a>,<a href=https://www.target.com/c/frozen-breakfast-food-foods-grocery/jimmy-dean/-/N-5xszaZ56dap>jimmy deans</a>,<a href=https://www.target.com/c/frozen-vegetables-foods-grocery/birds-eye/-/N-5xsz3Z56dgf>birds eye frozen vegetables</a>,<a href=https://www.target.com/c/frozen-breakfast-food-foods-grocery/sandwich-bros-of-wisconsin/-/N-5xszaZq643le7y4fl>sandwich bros</a>,<a href=https://www.target.com/c/ice-cream-frozen-foods-grocery/mango/-/N-5xsz2Z55juw>propitious mango ice cream where to buy</a>,<a href=https://www.target.com/c/frozen-fruit-foods-grocery/blackberries/-/N-5xsz7Zjdpas>frozen blackberries</a>,<a href=https://www.target.com/c/frozen-desserts-foods-grocery/gluten-free/-/N-5xsz9Zb8gba>gluten free desserts to buy</a>,<a href=https://www.target.com/c/ice-cream-frozen-foods-grocery/kemps/-/N-5xsz2Z56cb9>kemps</a>,<a href=https://www.target.com/c/frozen-pizza-foods-grocery/california-pizza-kitchen/-/N-5xsz4Zzhtbe>california pizza kitchen frozen pizza</a>,<a href=https://www.target.com/b/tru-fru/-/N-bjzvm>trufruit</a>,<a href=https://www.target.com/c/frozen-fruit-foods-grocery/wyman-s/-/N-5xsz7Zfu7nl>wymans</a>,<a href=https://www.target.com/c/frozen-breakfast-food-foods-grocery/-/N-5xsza>frozen breakfast</a>,<a href=https://www.target.com/c/frozen-pizza-foods-grocery/tombstone/-/N-5xsz4Z56e7s>tombstone pizza</a>,<a href=https://www.target.com/c/frozen-family-meals-foods-grocery/-/N-a3dpa>frozen family meals</a>,<a href=https://www.target.com/c/frozen-fruit-foods-grocery/raspberries/-/N-5xsz7Zr8jwe>frozen raspberries</a>,<a href=https://www.target.com/c/ice-cream-frozen-foods-grocery/helados-mexico/-/N-5xsz2Zam9p9>helados mexico</a>,<a href=https://www.target.com/c/frozen-pizza-foods-grocery/totino-s/-/N-5xsz4Z56fb9>totinos pizza</a>,<a href=https://www.target.com/c/ice-cream-frozen-foods-grocery/milk-bar/-/N-5xsz2Z4yk7n>milk bar ice cream</a>,<a href=https://www.target.com/c/ice-cream-frozen-foods-grocery/gluten-free/-/N-5xsz2Zb8gba>gluten free ice cream</a>,<a href=https://www.target.com/p/banza-chickpea-gluten-free-protein-cheese-frozen-pizza-10-9oz/-/A-79683344>banza pizza</a>,<a href=https://www.target.com/c/frozen-desserts-foods-grocery/edwards/-/N-5xsz9Z4y3c7>edwards pies</a>,<a href=https://www.target.com/c/frozen-pizza-foods-grocery/authentic-motor-city-pizza-co-/-/N-5xsz4Zq643le93q3b>motor city pizza where to buy</a>,<a href=https://www.target.com/c/frozen-pizza-foods-grocery/lean-cuisine/-/N-5xsz4Z56eff>lean cuisine pizza</a>,<a href=https://www.target.com/c/ice-cream-frozen-foods-grocery/blue-bunny/-/N-5xsz2Zgh7cj>blue bunny ice cream</a>,<a href=https://www.target.com/c/frozen-pizza-foods-grocery/blackbird-foods/-/N-5xsz4Zq643lean1w5>blackbird pizza</a>,<a href=https://www.target.com/c/ice-cream-frozen-foods-grocery/creamalicious/-/N-5xsz2Zq643lejiyul>creamalicious ice cream</a>,<a href=https://www.target.com/c/ice-cream-frozen-foods-grocery/it-s-it/-/N-5xsz2Zntcf>its it ice cream</a>,<a href=https://www.target.com/c/frozen-pizza-foods-grocery/freschetta/-/N-5xsz4Z56dcp>freschetta pizza</a>,<a href=https://www.target.com/c/frozen-vegetables-foods-grocery/-/N-5xsz3>frozen vegetables</a>,<a href=https://www.target.com/c/ice-cream-frozen-foods-grocery/frozen-dessert-cones/-/N-5xsz2Zohuuc>ice cream cone</a>,<a href=https://www.target.com/c/frozen-pizza-foods-grocery/jack-s/-/N-5xsz4Z56e9x>jacks pizza</a>,<a href=https://www.target.com/c/ice-cream-frozen-foods-grocery/magnum/-/N-5xsz2Z56ghi>magnum ice cream</a>,<a href=https://www.target.com/p/digiorno-pepperoni-frozen-pizza-with-rising-crust-27-5oz/-/A-13428574>digiorno pizza</a>,<a href=https://www.target.com/c/ice-cream-frozen-foods-grocery/halo-top/-/N-5xsz2Zm17f8>halo top ice cream</a>,<a href=https://www.target.com/c/frozen-pizza-foods-grocery/-/N-5xsz4>frozen pizza</a>,<a href=https://www.target.com/c/frozen-pizza-foods-grocery/red-baron/-/N-5xsz4Z560a6>red baron pizza</a>",
+        "metadata": {
+          "component_type": "SEO Dynamic Linking",
+          "component_version": "02"
+        }
+      },
+      "presentation": "c_web_a_0029_v02"
+    }
+  },
+  "activation_date": "2024-01-03T08:00Z",
+  "uri": "/5xszd/WEB"
+}

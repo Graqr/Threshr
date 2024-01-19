@@ -1,0 +1,192 @@
+{
+  "data": {
+    "related_categories": {
+      "category": {
+        "canonical_url": "/c/frozen-foods-grocery/-/N-5xszd",
+        "name": "Frozen Foods",
+        "category_id": "5xszd",
+        "parent_category_id": "5xt1a",
+        "image_url": "https://target.scene7.com/is/image/Target/GUEST_dc0c7939-d1cc-4900-b5b2-2e2a29c0fc46",
+        "deep_link": "target://product/listing?idType=ENDECA&id=5xszd&title=Frozen+Foods",
+        "visibility": [
+          "WEB",
+          "APP"
+        ]
+      },
+      "children": [
+        {
+          "canonical_url": "/c/frozen-single-serve-meals-foods-grocery/-/N-wdysv",
+          "name": "Frozen Single Serve Meals",
+          "category_id": "wdysv",
+          "parent_category_id": "5xszd",
+          "image_url": "https://target.scene7.com/is/image/Target/GUEST_3e5e5b14-004b-48e2-b81f-c15418bc17a6",
+          "deep_link": "target://product/listing?idType=ENDECA&id=wdysv&title=Frozen+Single+Serve+Meals",
+          "visibility": [
+            "WEB",
+            "APP"
+          ]
+        },
+        {
+          "canonical_url": "/c/frozen-foods-kids/-/N-rb4pu",
+          "name": "Frozen Foods: Kids",
+          "category_id": "rb4pu",
+          "parent_category_id": "5xszd",
+          "image_url": "https://target.scene7.com/is/image/Target/GUEST_5f5a1724-51d1-4cbd-84fd-a229ba5b39bf",
+          "deep_link": "target://product/listing?idType=ENDECA&id=rb4pu&title=Frozen+Foods%3A+Kids",
+          "visibility": [
+            "WEB",
+            "APP"
+          ]
+        },
+        {
+          "canonical_url": "/c/frozen-breakfast-food-foods-grocery/-/N-5xsza",
+          "name": "Frozen Breakfast Food",
+          "category_id": "5xsza",
+          "parent_category_id": "5xszd",
+          "image_url": "https://target.scene7.com/is/image/Target/10Wk1_Grocery_FrozenFoods_CN_App_9-QUIVER-191001-1569944958236",
+          "deep_link": "target://product/listing?idType=ENDECA&id=5xsza&title=Frozen+Breakfast+Food",
+          "visibility": [
+            "WEB",
+            "APP"
+          ]
+        },
+        {
+          "canonical_url": "/c/ice-cream-frozen-foods-grocery/-/N-5xsz2",
+          "name": "Ice Cream & Frozen Desserts",
+          "category_id": "5xsz2",
+          "parent_category_id": "5xszd",
+          "image_url": "https://target.scene7.com/is/image/Target/10Wk1_Grocery_FrozenFoods_CN_App_2-QUIVER-191001-1569944174441",
+          "deep_link": "target://product/listing?idType=ENDECA&id=5xsz2&title=Ice+Cream+%26+Frozen+Desserts",
+          "visibility": [
+            "WEB",
+            "APP"
+          ]
+        },
+        {
+          "canonical_url": "/c/frozen-pizza-foods-grocery/-/N-5xsz4",
+          "name": "Frozen Pizza",
+          "category_id": "5xsz4",
+          "parent_category_id": "5xszd",
+          "image_url": "https://target.scene7.com/is/image/Target/GUEST_9b161802-38a0-4baa-8b4f-6843493326ac",
+          "deep_link": "target://product/listing?idType=ENDECA&id=5xsz4&title=Frozen+Pizza",
+          "visibility": [
+            "WEB",
+            "APP"
+          ]
+        },
+        {
+          "canonical_url": "/c/frozen-meat-poultry-seafood-foods-grocery/-/N-5xsz5",
+          "name": "Frozen Meat, Poultry & Seafood",
+          "category_id": "5xsz5",
+          "parent_category_id": "5xszd",
+          "image_url": "https://target.scene7.com/is/image/Target/Grocery_BUBCAT_May26BubCat_FrozenMeats-200526-1590505894656",
+          "deep_link": "target://product/listing?idType=ENDECA&id=5xsz5&title=Frozen+Meat%2C+Poultry+%26+Seafood",
+          "visibility": [
+            "WEB",
+            "APP"
+          ]
+        },
+        {
+          "canonical_url": "/c/frozen-appetizers-snacks-foods-grocery/-/N-5xszb",
+          "name": "Frozen Appetizers & Snacks",
+          "category_id": "5xszb",
+          "parent_category_id": "5xszd",
+          "image_url": "https://target.scene7.com/is/image/Target/GUEST_69506fcb-7d77-436e-b3b8-f386e62a0a68",
+          "deep_link": "target://product/listing?idType=ENDECA&id=5xszb&title=Frozen+Appetizers+%26+Snacks",
+          "visibility": [
+            "WEB",
+            "APP"
+          ]
+        },
+        {
+          "canonical_url": "/c/frozen-desserts-foods-grocery/-/N-5xsz9",
+          "name": "Frozen Desserts",
+          "category_id": "5xsz9",
+          "parent_category_id": "5xszd",
+          "image_url": "https://target.scene7.com/is/image/Target/GUEST_5d982b83-8d13-4296-bff9-470b7f82c659",
+          "deep_link": "target://product/listing?idType=ENDECA&id=5xsz9&title=Frozen+Desserts",
+          "visibility": [
+            "WEB",
+            "APP"
+          ]
+        },
+        {
+          "canonical_url": "/c/frozen-family-meals-foods-grocery/-/N-a3dpa",
+          "name": "Frozen Family Meals",
+          "category_id": "a3dpa",
+          "parent_category_id": "5xszd",
+          "image_url": "https://target.scene7.com/is/image/Target/GUEST_8d472915-ed60-4b10-ac3b-421d1622d372",
+          "deep_link": "target://product/listing?idType=ENDECA&id=a3dpa&title=Frozen+Family+Meals",
+          "visibility": [
+            "WEB",
+            "APP"
+          ]
+        },
+        {
+          "canonical_url": "/c/frozen-fruit-foods-grocery/-/N-5xsz7",
+          "name": "Frozen Fruit",
+          "category_id": "5xsz7",
+          "parent_category_id": "5xszd",
+          "image_url": "https://target.scene7.com/is/image/Target/GUEST_c59cde93-66f2-427c-81b6-8010b0a00172",
+          "deep_link": "target://product/listing?idType=ENDECA&id=5xsz7&title=Frozen+Fruit",
+          "visibility": [
+            "WEB",
+            "APP"
+          ]
+        },
+        {
+          "canonical_url": "/c/frozen-potatoes-foods-grocery/-/N-a479c",
+          "name": "Frozen Potatoes",
+          "category_id": "a479c",
+          "parent_category_id": "5xszd",
+          "image_url": "https://target.scene7.com/is/image/Target/GUEST_29d8fb5d-036a-40f8-94d8-245b1f4ea9e1",
+          "deep_link": "target://product/listing?idType=ENDECA&id=a479c&title=Frozen+Potatoes",
+          "visibility": [
+            "WEB",
+            "APP"
+          ]
+        },
+        {
+          "canonical_url": "/c/frozen-vegetables-foods-grocery/-/N-5xsz3",
+          "name": "Frozen Vegetables",
+          "category_id": "5xsz3",
+          "parent_category_id": "5xszd",
+          "image_url": "https://target.scene7.com/is/image/Target/10wk1_Grocery_BubcatBubcat_FrozenVeggies-201005-1601921509372",
+          "deep_link": "target://product/listing?idType=ENDECA&id=5xsz3&title=Frozen+Vegetables",
+          "visibility": [
+            "WEB",
+            "APP"
+          ]
+        },
+        {
+          "canonical_url": "/c/frozen-bread-dough-foods-grocery/-/N-4tglw",
+          "name": "Frozen Bread & Dough",
+          "category_id": "4tglw",
+          "parent_category_id": "5xszd",
+          "image_url": "https://target.scene7.com/is/image/Target/10Wk1_Grocery_FrozenFoods_CN_App_11-QUIVER-191001-1569944458812",
+          "deep_link": "target://product/listing?idType=ENDECA&id=4tglw&title=Frozen+Bread+%26+Dough",
+          "visibility": [
+            "WEB",
+            "APP"
+          ]
+        },
+        {
+          "canonical_url": "/c/frozen-thanksgiving-sides/-/N-3sr2u",
+          "name": "Frozen Thanksgiving Sides",
+          "category_id": "3sr2u",
+          "parent_category_id": "5xszd",
+          "image_url": "https://target.scene7.com/is/image/Target/GUEST_af0a884b-02cf-48e8-942c-43cc4106e8ec",
+          "deep_link": "target://product/listing?idType=ENDECA&id=3sr2u&title=Frozen+Thanksgiving+Sides"
+        },
+        {
+          "canonical_url": "/c/good-gather-frozen-favorites-from-3/-/N-kfj5p",
+          "name": "Good & Gather Frozen Favorites from $3",
+          "category_id": "kfj5p",
+          "parent_category_id": "5xszd",
+          "image_url": "https://target.scene7.com/is/image/Target/GUEST_1a47901d-573e-49b5-829d-48628ee263ef",
+          "deep_link": "target://product/listing?idType=ENDECA&id=kfj5p&title=Good+%26+Gather+Frozen+Favorites+from+%243"
+        }
+      ]
+    }
+  }
+}

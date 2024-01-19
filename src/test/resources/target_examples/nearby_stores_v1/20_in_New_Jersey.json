@@ -1,0 +1,3789 @@
+{
+  "data": {
+    "nearby_stores": {
+      "count": 20,
+      "stores": [
+        {
+          "status": "Open",
+          "store_id": "1404",
+          "location_name": "Smithfield",
+          "distance": 6.97,
+          "main_voice_phone_number": "401-232-1699",
+          "mailing_address": {
+            "address_line1": "371 Putnam Pike Ste A-250",
+            "city": "Smithfield",
+            "country_code": "US",
+            "region": "RI",
+            "state": "Rhode Island",
+            "postal_code": "02917-2440"
+          },
+          "rolling_operating_hours": {
+            "main_hours": {
+              "days": [
+                {
+                  "is_open": true,
+                  "date": "2024-01-17",
+                  "day_name": "Wednesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-17",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-18",
+                  "day_name": "Thursday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-18",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-19",
+                  "day_name": "Friday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-19",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-20",
+                  "day_name": "Saturday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-20",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-21",
+                  "day_name": "Sunday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-21",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-22",
+                  "day_name": "Monday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-22",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-23",
+                  "day_name": "Tuesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-23",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-24",
+                  "day_name": "Wednesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-24",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-25",
+                  "day_name": "Thursday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-25",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-26",
+                  "day_name": "Friday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-26",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-27",
+                  "day_name": "Saturday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-27",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-28",
+                  "day_name": "Sunday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-28",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-29",
+                  "day_name": "Monday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-29",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-30",
+                  "day_name": "Tuesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-30",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "status": "Open",
+          "store_id": "2430",
+          "location_name": "Warwick North",
+          "distance": 8.14,
+          "main_voice_phone_number": "401-244-1972",
+          "mailing_address": {
+            "address_line1": "400 Bald Hill Rd",
+            "city": "Warwick",
+            "country_code": "US",
+            "region": "RI",
+            "state": "Rhode Island",
+            "postal_code": "02886-6101"
+          },
+          "rolling_operating_hours": {
+            "main_hours": {
+              "days": [
+                {
+                  "is_open": true,
+                  "date": "2024-01-17",
+                  "day_name": "Wednesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-17",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-18",
+                  "day_name": "Thursday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-18",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-19",
+                  "day_name": "Friday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-19",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-20",
+                  "day_name": "Saturday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-20",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-21",
+                  "day_name": "Sunday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-21",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-22",
+                  "day_name": "Monday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-22",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-23",
+                  "day_name": "Tuesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-23",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-24",
+                  "day_name": "Wednesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-24",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-25",
+                  "day_name": "Thursday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-25",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-26",
+                  "day_name": "Friday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-26",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-27",
+                  "day_name": "Saturday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-27",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-28",
+                  "day_name": "Sunday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-28",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-29",
+                  "day_name": "Monday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-29",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-30",
+                  "day_name": "Tuesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-30",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "status": "Open",
+          "store_id": "1188",
+          "location_name": "Warwick Route 2",
+          "distance": 8.24,
+          "main_voice_phone_number": "401-821-0121",
+          "mailing_address": {
+            "address_line1": "1245 Bald Hill Rd",
+            "city": "Warwick",
+            "country_code": "US",
+            "region": "RI",
+            "state": "Rhode Island",
+            "postal_code": "02886-4233"
+          },
+          "rolling_operating_hours": {
+            "main_hours": {
+              "days": [
+                {
+                  "is_open": true,
+                  "date": "2024-01-17",
+                  "day_name": "Wednesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-17",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-18",
+                  "day_name": "Thursday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-18",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-19",
+                  "day_name": "Friday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-19",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-20",
+                  "day_name": "Saturday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-20",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-21",
+                  "day_name": "Sunday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-21",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-22",
+                  "day_name": "Monday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-22",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-23",
+                  "day_name": "Tuesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-23",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-24",
+                  "day_name": "Wednesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-24",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-25",
+                  "day_name": "Thursday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-25",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-26",
+                  "day_name": "Friday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-26",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-27",
+                  "day_name": "Saturday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-27",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-28",
+                  "day_name": "Sunday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-28",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-29",
+                  "day_name": "Monday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-29",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-30",
+                  "day_name": "Tuesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-30",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "status": "Open",
+          "store_id": "2073",
+          "location_name": "Lincoln",
+          "distance": 11.57,
+          "main_voice_phone_number": "401-642-0080",
+          "mailing_address": {
+            "address_line1": "620 George Washington Hwy",
+            "city": "Lincoln",
+            "country_code": "US",
+            "region": "RI",
+            "state": "Rhode Island",
+            "postal_code": "02865-4216"
+          },
+          "rolling_operating_hours": {
+            "main_hours": {
+              "days": [
+                {
+                  "is_open": true,
+                  "date": "2024-01-17",
+                  "day_name": "Wednesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-17",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-18",
+                  "day_name": "Thursday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-18",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-19",
+                  "day_name": "Friday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-19",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-20",
+                  "day_name": "Saturday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-20",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-21",
+                  "day_name": "Sunday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-21",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-22",
+                  "day_name": "Monday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-22",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-23",
+                  "day_name": "Tuesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-23",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-24",
+                  "day_name": "Wednesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-24",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-25",
+                  "day_name": "Thursday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-25",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-26",
+                  "day_name": "Friday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-26",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-27",
+                  "day_name": "Saturday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-27",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-28",
+                  "day_name": "Sunday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-28",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-29",
+                  "day_name": "Monday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-29",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-30",
+                  "day_name": "Tuesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-30",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "status": "Open",
+          "store_id": "1374",
+          "location_name": "Seekonk",
+          "distance": 14.33,
+          "main_voice_phone_number": "508-336-1117",
+          "mailing_address": {
+            "address_line1": "79 Commerce Way",
+            "city": "Seekonk",
+            "country_code": "US",
+            "region": "MA",
+            "state": "Massachusetts",
+            "postal_code": "02771-5816"
+          },
+          "rolling_operating_hours": {
+            "main_hours": {
+              "days": [
+                {
+                  "is_open": true,
+                  "date": "2024-01-17",
+                  "day_name": "Wednesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-17",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-18",
+                  "day_name": "Thursday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-18",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-19",
+                  "day_name": "Friday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-19",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-20",
+                  "day_name": "Saturday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-20",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-21",
+                  "day_name": "Sunday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-21",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-22",
+                  "day_name": "Monday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-22",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-23",
+                  "day_name": "Tuesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-23",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-24",
+                  "day_name": "Wednesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-24",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-25",
+                  "day_name": "Thursday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-25",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-26",
+                  "day_name": "Friday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-26",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-27",
+                  "day_name": "Saturday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-27",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-28",
+                  "day_name": "Sunday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-28",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-29",
+                  "day_name": "Monday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-29",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-30",
+                  "day_name": "Tuesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-30",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "status": "Open",
+          "store_id": "2432",
+          "location_name": "Killingly",
+          "distance": 14.96,
+          "main_voice_phone_number": "860-412-1283",
+          "mailing_address": {
+            "address_line1": "2177 Killingly Cmns",
+            "city": "Dayville",
+            "country_code": "US",
+            "region": "CT",
+            "state": "Connecticut",
+            "postal_code": "06241-2188"
+          },
+          "rolling_operating_hours": {
+            "main_hours": {
+              "days": [
+                {
+                  "is_open": true,
+                  "date": "2024-01-17",
+                  "day_name": "Wednesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-17",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-18",
+                  "day_name": "Thursday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-18",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-19",
+                  "day_name": "Friday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-19",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-20",
+                  "day_name": "Saturday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-20",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-21",
+                  "day_name": "Sunday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-21",
+                      "end_time": "21:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-22",
+                  "day_name": "Monday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-22",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-23",
+                  "day_name": "Tuesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-23",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-24",
+                  "day_name": "Wednesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-24",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-25",
+                  "day_name": "Thursday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-25",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-26",
+                  "day_name": "Friday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-26",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-27",
+                  "day_name": "Saturday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-27",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-28",
+                  "day_name": "Sunday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-28",
+                      "end_time": "21:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-29",
+                  "day_name": "Monday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-29",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-30",
+                  "day_name": "Tuesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-30",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "status": "Open",
+          "store_id": "1190",
+          "location_name": "North Attleborough",
+          "distance": 16.17,
+          "main_voice_phone_number": "508-699-9118",
+          "mailing_address": {
+            "address_line1": "1205 S Washington St",
+            "city": "North Attleboro",
+            "country_code": "US",
+            "region": "MA",
+            "state": "Massachusetts",
+            "postal_code": "02760-6251"
+          },
+          "rolling_operating_hours": {
+            "main_hours": {
+              "days": [
+                {
+                  "is_open": true,
+                  "date": "2024-01-17",
+                  "day_name": "Wednesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-17",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-18",
+                  "day_name": "Thursday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-18",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-19",
+                  "day_name": "Friday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-19",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-20",
+                  "day_name": "Saturday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-20",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-21",
+                  "day_name": "Sunday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-21",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-22",
+                  "day_name": "Monday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-22",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-23",
+                  "day_name": "Tuesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-23",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-24",
+                  "day_name": "Wednesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-24",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-25",
+                  "day_name": "Thursday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-25",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-26",
+                  "day_name": "Friday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-26",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-27",
+                  "day_name": "Saturday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-27",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-28",
+                  "day_name": "Sunday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-28",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-29",
+                  "day_name": "Monday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-29",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-30",
+                  "day_name": "Tuesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-30",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "status": "Open",
+          "store_id": "2607",
+          "location_name": "Swansea",
+          "distance": 20.46,
+          "main_voice_phone_number": "774-488-3684",
+          "mailing_address": {
+            "address_line1": "579 GAR Hwy",
+            "city": "Swansea",
+            "country_code": "US",
+            "region": "MA",
+            "state": "Massachusetts",
+            "postal_code": "02777-4587"
+          },
+          "rolling_operating_hours": {
+            "main_hours": {
+              "days": [
+                {
+                  "is_open": true,
+                  "date": "2024-01-17",
+                  "day_name": "Wednesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-17",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-18",
+                  "day_name": "Thursday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-18",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-19",
+                  "day_name": "Friday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-19",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-20",
+                  "day_name": "Saturday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-20",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-21",
+                  "day_name": "Sunday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-21",
+                      "end_time": "21:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-22",
+                  "day_name": "Monday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-22",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-23",
+                  "day_name": "Tuesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-23",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-24",
+                  "day_name": "Wednesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-24",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-25",
+                  "day_name": "Thursday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-25",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-26",
+                  "day_name": "Friday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-26",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-27",
+                  "day_name": "Saturday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-27",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-28",
+                  "day_name": "Sunday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-28",
+                      "end_time": "21:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-29",
+                  "day_name": "Monday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-29",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-30",
+                  "day_name": "Tuesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-30",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "status": "Open",
+          "store_id": "1930",
+          "location_name": "Plainville",
+          "distance": 22.14,
+          "main_voice_phone_number": "508-643-5008",
+          "mailing_address": {
+            "address_line1": "91 Taunton St",
+            "city": "Plainville",
+            "country_code": "US",
+            "region": "MA",
+            "state": "Massachusetts",
+            "postal_code": "02762-1207"
+          },
+          "rolling_operating_hours": {
+            "main_hours": {
+              "days": [
+                {
+                  "is_open": true,
+                  "date": "2024-01-17",
+                  "day_name": "Wednesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-17",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-18",
+                  "day_name": "Thursday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-18",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-19",
+                  "day_name": "Friday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-19",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-20",
+                  "day_name": "Saturday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-20",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-21",
+                  "day_name": "Sunday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-21",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-22",
+                  "day_name": "Monday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-22",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-23",
+                  "day_name": "Tuesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-23",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-24",
+                  "day_name": "Wednesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-24",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-25",
+                  "day_name": "Thursday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-25",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-26",
+                  "day_name": "Friday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-26",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-27",
+                  "day_name": "Saturday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-27",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-28",
+                  "day_name": "Sunday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-28",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-29",
+                  "day_name": "Monday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-29",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-30",
+                  "day_name": "Tuesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-30",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "status": "Open",
+          "store_id": "2433",
+          "location_name": "Lisbon",
+          "distance": 25.18,
+          "main_voice_phone_number": "860-823-2960",
+          "mailing_address": {
+            "address_line1": "195 River Rd",
+            "city": "Lisbon",
+            "country_code": "US",
+            "region": "CT",
+            "state": "Connecticut",
+            "postal_code": "06351-3253"
+          },
+          "rolling_operating_hours": {
+            "main_hours": {
+              "days": [
+                {
+                  "is_open": true,
+                  "date": "2024-01-17",
+                  "day_name": "Wednesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-17",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-18",
+                  "day_name": "Thursday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-18",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-19",
+                  "day_name": "Friday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-19",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-20",
+                  "day_name": "Saturday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-20",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-21",
+                  "day_name": "Sunday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-21",
+                      "end_time": "21:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-22",
+                  "day_name": "Monday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-22",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-23",
+                  "day_name": "Tuesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-23",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-24",
+                  "day_name": "Wednesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-24",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-25",
+                  "day_name": "Thursday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-25",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-26",
+                  "day_name": "Friday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-26",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-27",
+                  "day_name": "Saturday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-27",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-28",
+                  "day_name": "Sunday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-28",
+                      "end_time": "21:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-29",
+                  "day_name": "Monday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-29",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-30",
+                  "day_name": "Tuesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-30",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "status": "Open",
+          "store_id": "1281",
+          "location_name": "Milford",
+          "distance": 25.72,
+          "main_voice_phone_number": "508-478-5880",
+          "mailing_address": {
+            "address_line1": "250 Fortune Blvd",
+            "city": "Milford",
+            "country_code": "US",
+            "region": "MA",
+            "state": "Massachusetts",
+            "postal_code": "01757-1743"
+          },
+          "rolling_operating_hours": {
+            "main_hours": {
+              "days": [
+                {
+                  "is_open": true,
+                  "date": "2024-01-17",
+                  "day_name": "Wednesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-17",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-18",
+                  "day_name": "Thursday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-18",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-19",
+                  "day_name": "Friday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-19",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-20",
+                  "day_name": "Saturday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-20",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-21",
+                  "day_name": "Sunday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-21",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-22",
+                  "day_name": "Monday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-22",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-23",
+                  "day_name": "Tuesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-23",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-24",
+                  "day_name": "Wednesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-24",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-25",
+                  "day_name": "Thursday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-25",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-26",
+                  "day_name": "Friday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-26",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-27",
+                  "day_name": "Saturday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-27",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-28",
+                  "day_name": "Sunday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-28",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-29",
+                  "day_name": "Monday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-29",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-30",
+                  "day_name": "Tuesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-30",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "status": "Open",
+          "store_id": "1189",
+          "location_name": "Taunton",
+          "distance": 27.9,
+          "main_voice_phone_number": "508-824-8004",
+          "mailing_address": {
+            "address_line1": "81 Taunton Depot Dr",
+            "city": "Taunton",
+            "country_code": "US",
+            "region": "MA",
+            "state": "Massachusetts",
+            "postal_code": "02780-6915"
+          },
+          "rolling_operating_hours": {
+            "main_hours": {
+              "days": [
+                {
+                  "is_open": true,
+                  "date": "2024-01-17",
+                  "day_name": "Wednesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-17",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-18",
+                  "day_name": "Thursday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-18",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-19",
+                  "day_name": "Friday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-19",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-20",
+                  "day_name": "Saturday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-20",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-21",
+                  "day_name": "Sunday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-21",
+                      "end_time": "21:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-22",
+                  "day_name": "Monday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-22",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-23",
+                  "day_name": "Tuesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-23",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-24",
+                  "day_name": "Wednesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-24",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-25",
+                  "day_name": "Thursday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-25",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-26",
+                  "day_name": "Friday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-26",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-27",
+                  "day_name": "Saturday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-27",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-28",
+                  "day_name": "Sunday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-28",
+                      "end_time": "21:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-29",
+                  "day_name": "Monday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-29",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-30",
+                  "day_name": "Tuesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-30",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "status": "Open",
+          "store_id": "2267",
+          "location_name": "Easton",
+          "distance": 28.35,
+          "main_voice_phone_number": "508-230-0005",
+          "mailing_address": {
+            "address_line1": "41 Robert Dr",
+            "city": "South Easton",
+            "country_code": "US",
+            "region": "MA",
+            "state": "Massachusetts",
+            "postal_code": "02375-1352"
+          },
+          "rolling_operating_hours": {
+            "main_hours": {
+              "days": [
+                {
+                  "is_open": true,
+                  "date": "2024-01-17",
+                  "day_name": "Wednesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-17",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-18",
+                  "day_name": "Thursday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-18",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-19",
+                  "day_name": "Friday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-19",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-20",
+                  "day_name": "Saturday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-20",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-21",
+                  "day_name": "Sunday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-21",
+                      "end_time": "21:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-22",
+                  "day_name": "Monday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-22",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-23",
+                  "day_name": "Tuesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-23",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-24",
+                  "day_name": "Wednesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-24",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-25",
+                  "day_name": "Thursday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-25",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-26",
+                  "day_name": "Friday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-26",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-27",
+                  "day_name": "Saturday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-27",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-28",
+                  "day_name": "Sunday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-28",
+                      "end_time": "21:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-29",
+                  "day_name": "Monday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-29",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-30",
+                  "day_name": "Tuesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-30",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "status": "Open",
+          "store_id": "1835",
+          "location_name": "Millbury",
+          "distance": 28.96,
+          "main_voice_phone_number": "508-865-3116",
+          "mailing_address": {
+            "address_line1": "70 Worcester Providence Tpke #100",
+            "city": "Millbury",
+            "country_code": "US",
+            "region": "MA",
+            "state": "Massachusetts",
+            "postal_code": "01527-2652"
+          },
+          "rolling_operating_hours": {
+            "main_hours": {
+              "days": [
+                {
+                  "is_open": true,
+                  "date": "2024-01-17",
+                  "day_name": "Wednesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-17",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-18",
+                  "day_name": "Thursday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-18",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-19",
+                  "day_name": "Friday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-19",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-20",
+                  "day_name": "Saturday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-20",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-21",
+                  "day_name": "Sunday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-21",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-22",
+                  "day_name": "Monday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-22",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-23",
+                  "day_name": "Tuesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-23",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-24",
+                  "day_name": "Wednesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-24",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-25",
+                  "day_name": "Thursday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-25",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-26",
+                  "day_name": "Friday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-26",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-27",
+                  "day_name": "Saturday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-27",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-28",
+                  "day_name": "Sunday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-28",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-29",
+                  "day_name": "Monday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-29",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-30",
+                  "day_name": "Tuesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-30",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "status": "Open",
+          "store_id": "2167",
+          "location_name": "North Dartmouth",
+          "distance": 32.65,
+          "main_voice_phone_number": "508-979-7530",
+          "mailing_address": {
+            "address_line1": "479 State Rd",
+            "city": "North Dartmouth",
+            "country_code": "US",
+            "region": "MA",
+            "state": "Massachusetts",
+            "postal_code": "02747-4309"
+          },
+          "rolling_operating_hours": {
+            "main_hours": {
+              "days": [
+                {
+                  "is_open": true,
+                  "date": "2024-01-17",
+                  "day_name": "Wednesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-17",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-18",
+                  "day_name": "Thursday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-18",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-19",
+                  "day_name": "Friday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-19",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-20",
+                  "day_name": "Saturday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-20",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-21",
+                  "day_name": "Sunday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-21",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-22",
+                  "day_name": "Monday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-22",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-23",
+                  "day_name": "Tuesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-23",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-24",
+                  "day_name": "Wednesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-24",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-25",
+                  "day_name": "Thursday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-25",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-26",
+                  "day_name": "Friday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-26",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-27",
+                  "day_name": "Saturday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-27",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-28",
+                  "day_name": "Sunday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-28",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-29",
+                  "day_name": "Monday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-29",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-30",
+                  "day_name": "Tuesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-30",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "status": "Open",
+          "store_id": "1496",
+          "location_name": "Westborough",
+          "distance": 33.6,
+          "main_voice_phone_number": "508-366-1426",
+          "mailing_address": {
+            "address_line1": "330 Turnpike Rd",
+            "city": "Westborough",
+            "country_code": "US",
+            "region": "MA",
+            "state": "Massachusetts",
+            "postal_code": "01581-2813"
+          },
+          "rolling_operating_hours": {
+            "main_hours": {
+              "days": [
+                {
+                  "is_open": true,
+                  "date": "2024-01-17",
+                  "day_name": "Wednesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-17",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-18",
+                  "day_name": "Thursday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-18",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-19",
+                  "day_name": "Friday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-19",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-20",
+                  "day_name": "Saturday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-20",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-21",
+                  "day_name": "Sunday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-21",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-22",
+                  "day_name": "Monday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-22",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-23",
+                  "day_name": "Tuesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-23",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-24",
+                  "day_name": "Wednesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-24",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-25",
+                  "day_name": "Thursday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-25",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-26",
+                  "day_name": "Friday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-26",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-27",
+                  "day_name": "Saturday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-27",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-28",
+                  "day_name": "Sunday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-28",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-29",
+                  "day_name": "Monday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-29",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-30",
+                  "day_name": "Tuesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-30",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "status": "Open",
+          "store_id": "1348",
+          "location_name": "Worcester",
+          "distance": 35.47,
+          "main_voice_phone_number": "508-852-3094",
+          "mailing_address": {
+            "address_line1": "529 Lincoln St",
+            "city": "Worcester",
+            "country_code": "US",
+            "region": "MA",
+            "state": "Massachusetts",
+            "postal_code": "01605-1905"
+          },
+          "rolling_operating_hours": {
+            "main_hours": {
+              "days": [
+                {
+                  "is_open": true,
+                  "date": "2024-01-17",
+                  "day_name": "Wednesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-17",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-18",
+                  "day_name": "Thursday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-18",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-19",
+                  "day_name": "Friday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-19",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-20",
+                  "day_name": "Saturday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-20",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-21",
+                  "day_name": "Sunday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-21",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-22",
+                  "day_name": "Monday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-22",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-23",
+                  "day_name": "Tuesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-23",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-24",
+                  "day_name": "Wednesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-24",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-25",
+                  "day_name": "Thursday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-25",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-26",
+                  "day_name": "Friday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-26",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-27",
+                  "day_name": "Saturday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-27",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-28",
+                  "day_name": "Sunday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-28",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-29",
+                  "day_name": "Monday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-29",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-30",
+                  "day_name": "Tuesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-30",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "status": "Open",
+          "store_id": "2649",
+          "location_name": "Westwood",
+          "distance": 36.28,
+          "main_voice_phone_number": "781-410-6945",
+          "mailing_address": {
+            "address_line1": "221 University Ave",
+            "city": "Westwood",
+            "country_code": "US",
+            "region": "MA",
+            "state": "Massachusetts",
+            "postal_code": "02090-2333"
+          },
+          "rolling_operating_hours": {
+            "main_hours": {
+              "days": [
+                {
+                  "is_open": true,
+                  "date": "2024-01-17",
+                  "day_name": "Wednesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-17",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-18",
+                  "day_name": "Thursday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-18",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-19",
+                  "day_name": "Friday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-19",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-20",
+                  "day_name": "Saturday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-20",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-21",
+                  "day_name": "Sunday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-21",
+                      "end_time": "21:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-22",
+                  "day_name": "Monday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-22",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-23",
+                  "day_name": "Tuesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-23",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-24",
+                  "day_name": "Wednesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-24",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-25",
+                  "day_name": "Thursday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-25",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-26",
+                  "day_name": "Friday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-26",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-27",
+                  "day_name": "Saturday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-27",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-28",
+                  "day_name": "Sunday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-28",
+                      "end_time": "21:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-29",
+                  "day_name": "Monday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-29",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-30",
+                  "day_name": "Tuesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-30",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "status": "Open",
+          "store_id": "2258",
+          "location_name": "Stoughton",
+          "distance": 36.55,
+          "main_voice_phone_number": "781-847-4000",
+          "mailing_address": {
+            "address_line1": "1 Hawes Way",
+            "city": "Stoughton",
+            "country_code": "US",
+            "region": "MA",
+            "state": "Massachusetts",
+            "postal_code": "02072-1162"
+          },
+          "rolling_operating_hours": {
+            "main_hours": {
+              "days": [
+                {
+                  "is_open": true,
+                  "date": "2024-01-17",
+                  "day_name": "Wednesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-17",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-18",
+                  "day_name": "Thursday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-18",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-19",
+                  "day_name": "Friday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-19",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-20",
+                  "day_name": "Saturday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-20",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-21",
+                  "day_name": "Sunday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-21",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-22",
+                  "day_name": "Monday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-22",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-23",
+                  "day_name": "Tuesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-23",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-24",
+                  "day_name": "Wednesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-24",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-25",
+                  "day_name": "Thursday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-25",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-26",
+                  "day_name": "Friday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-26",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-27",
+                  "day_name": "Saturday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-27",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-28",
+                  "day_name": "Sunday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-28",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-29",
+                  "day_name": "Monday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-29",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-30",
+                  "day_name": "Tuesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-30",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "status": "Open",
+          "store_id": "1308",
+          "location_name": "Framingham",
+          "distance": 36.67,
+          "main_voice_phone_number": "508-628-3136",
+          "mailing_address": {
+            "address_line1": "400 Cochituate Rd",
+            "city": "Framingham",
+            "country_code": "US",
+            "region": "MA",
+            "state": "Massachusetts",
+            "postal_code": "01701-4655"
+          },
+          "rolling_operating_hours": {
+            "main_hours": {
+              "days": [
+                {
+                  "is_open": true,
+                  "date": "2024-01-17",
+                  "day_name": "Wednesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-17",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-18",
+                  "day_name": "Thursday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-18",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-19",
+                  "day_name": "Friday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-19",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-20",
+                  "day_name": "Saturday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-20",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-21",
+                  "day_name": "Sunday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-21",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-22",
+                  "day_name": "Monday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-22",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-23",
+                  "day_name": "Tuesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-23",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-24",
+                  "day_name": "Wednesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-24",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-25",
+                  "day_name": "Thursday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-25",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-26",
+                  "day_name": "Friday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-26",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-27",
+                  "day_name": "Saturday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-27",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-28",
+                  "day_name": "Sunday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-28",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-29",
+                  "day_name": "Monday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-29",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                },
+                {
+                  "is_open": true,
+                  "date": "2024-01-30",
+                  "day_name": "Tuesday",
+                  "hours": [
+                    {
+                      "begin_time": "08:00:00",
+                      "end_date": "2024-01-30",
+                      "end_time": "22:00:00"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}
