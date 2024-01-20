@@ -143,6 +143,10 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        <dependency>
+            <groupId>io.micronaut.validation</groupId>
+            <artifactId>micronaut-validation</artifactId>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
@@ -176,7 +180,7 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
                     <!-- Uncomment to enable incremental compilation -->
-                    <!-- <useIncrementalCompilation>false</useIncrementalCompilation> -->
+                     <useIncrementalCompilation>false</useIncrementalCompilation>
 
                     <annotationProcessorPaths combine.self="override">
                         <path>
@@ -215,6 +219,10 @@
                                     <artifactId>micronaut-inject</artifactId>
                                 </exclusion>
                             </exclusions>
+                        </path>
+                        <path>
+                            <groupId>io.micronaut.validation</groupId>
+                            <artifactId>micronaut-validation-processor</artifactId>
                         </path>
                     </annotationProcessorPaths>
                     <compilerArgs>

@@ -21,12 +21,12 @@ import static io.micronaut.http.HttpHeaders.USER_AGENT;
  * <p>
  * Uses the following environment variables:
  * <ul>
- *     <li><dfn id="KEY">THRESHR_KEY</dnf>: bearer token to authenticate against the redsky api.</li>
+ *     <li><dfn id="KEY">THRESHR_KEY</dfn>: bearer token to authenticate against the redsky api.</li>
  *     <li><dfn id="VISITOR">THRESHR_VISITOR</dfn>: query value for member_id variable</li>
- *     <li><dfn id="CATEGORY">THRESHR_CATEGORY</dnf>: grocery category id.</li>
- *     <li><dfn id="CHANNEL">THRESHR_CHANNEL</dnf>: medium through which this api is exchanged. probably {@code WEB}</li>
+ *     <li><dfn id="CATEGORY">THRESHR_CATEGORY</dfn>: grocery category id.</li>
+ *     <li><dfn id="CHANNEL">THRESHR_CHANNEL</dfn>: medium through which this api is exchanged. probably {@code WEB}</li>
  *     <li><dfn id="SEARCH:">THRESHR_NEW_SEARCH</dfn>: boolean value. probably {@code false}</li>
- *     <li><dfn id="OFFSET">THRESHR_OFFSET</dnf>: not entirely sure, but I think this is a starting position. seems to always be {@code 0}</li>
+ *     <li><dfn id="OFFSET">THRESHR_OFFSET</dfn>: not entirely sure, but I think this is a starting position. seems to always be {@code 0}</li>
  *     <li><dfn id="PAGE">THRESHR_PAGE</dfn>: seems to always be a single character id related to category somehow.</li>
  *     <li><dfn id="PLATFORM">THRESHR_PLATFORM</dfn>: Where the api calls are made. probably {@code desktop}
  *     </li>
