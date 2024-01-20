@@ -1,7 +1,7 @@
 package com.github.graqr.threshr.model;
 
+import com.github.graqr.threshr.ThreshrException;
 import io.micronaut.core.annotation.Introspected;
-import picocli.CommandLine;
 
 import java.util.Arrays;
 import java.util.Objects;
@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 public class Tcin {
     String[] tcins;
 
-    public Tcin(String... tcin) {
+    public Tcin(String... tcin) throws ThreshrException {
         setTcins(tcin);
     }
 
@@ -23,13 +23,13 @@ public class Tcin {
      *              <a href="https://partners.target.com/termsandconditions">partners agreement</a> under
      *              "Merchandiser Datafeed"
      */
-    public void setTcins(String... tcins) {
+    public void setTcins(String... tcins) throws ThreshrException {
         Predicate<String> tcinCheck = t -> !String.valueOf(t).matches("\\d{8}");
         String badTcin = Arrays.stream(tcins)
                 .filter(tcinCheck)
                 .collect(Collectors.joining(", "));
         if (!badTcin.isEmpty()) {
-            throw new CommandLine.PicocliException("the following are invalid tcin:" + badTcin);
+            throw new ThreshrException( "the following are invalid tcin:" + badTcin);
         }
         this.tcins = tcins;
     }
