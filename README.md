@@ -8,48 +8,21 @@
 
 ## Summary
 
-Threshr is a cross-platform cli tool capable of querying product information from varying grocery stores.
+Threshr is java library wrappper capable of querying product information from varying Target's various api's, aimed 
+at querying product pricing.
 
-### Table of Contents
 
-- [Install Instructions](#install)
-- [Contributing](#want-to-get-involved)
+### Usage
 
-___
+see tests for [examples](https://github.com/Graqr/Threshr/blob/e643e9a7bde831d73587da0e55ae8799a9b79ee2/src/test/groovy/com/graqr/threshr). 
 
 ### Roadmap
 
-Current store supported is Target, with Kroger, Walmart and Associated Foods on the horizon.
+I want to facilitate querying prices with these improvements:
+ - something easier than including target store ID's when specifying target store locations
+ - flesh out target's department & category information
+ - flesh out products which can be queried
 
-#### Target
-
-Endpoints currently supported are the `pdp_client_v1` and `product_summary_with_fulfillment_v1` endpoints.
-___
-### Install
-
-<details><summary>Windows</summary>
-    <ol>
-        <li>Download latest windows <a href="https://github.com/Graqr/Threshr/releases/latest">binary</a></li>
-        <li>Move executable to dedicated directory, ie <code>C:\Program Files\threshr\</code></li>
-        <li>Add directory to your PATH</li>
-
-```PowerShell
-"C:\Program Files\threshr\" |
-if (!($env:Path -like "*$_*"))
-{
-    $env:Path = "$( $env:Path );$_"
-}
-```
-
-</ol>
-</details>
-
-<details><summary>Linux</summary>
-<ol>
-        <li>Download latest linux <a href="https://github.com/Graqr/Threshr/releases/latest">binary</a></li>
-        <li>Add to <code>$HOME\bin\</code> directory</li>
-</ol>
-</details>
 
 ___
 
