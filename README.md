@@ -31,9 +31,9 @@ ___
 See our [contributing] doc before taking a whack at any [open issues]. We'd love for you to work with us!
 
 
-[build badge]:https://img.shields.io/github/actions/workflow/status/Graqr/Threshr/maven.yml?style=plastic&logo=github&label=Github%20CI%20with%20Maven&link=https%3A%2F%2Fgithub.com%2FGraqr%2FThreshr%2Factions%20build-status%20
+[build badge]:https://img.shields.io/github/actions/workflow/status/Graqr/Threshr/mvn-package_pr,push_main.yml?style=plastic&logo=github&label=Build&link=https%3A%2F%2Fgithub.com%2FGraqr%2FThreshr%2Factions%20build-status%20
 
-[build link]:https://github.com/Graqr/Threshr/actions/workflows/maven.yml
+[build link]:https://github.com/Graqr/Threshr/actions/workflows/mvn-package_pr,push_main.yml?query=branch%3Amain
 
 [open issues]:https://github.com/Graqr/Threshr/issues"open-issues"
 
