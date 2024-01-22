@@ -36,7 +36,7 @@ public class ThreshrController {
             TargetStore targetStore,
             String... tcin) throws ThreshrException {
         return fetchProductSummariesWithFulfillment(targetStore,
-                new Tcin(String.join(",", tcin)));
+                new Tcin(tcin));
     }
 
     @Get("/details")

@@ -18,7 +18,7 @@ class ThreshrTest extends Specification {
     @Shared
     ThreshrClient threshrClient
 
-    @Shared
+    @Shared // TODO configure test data to be provided, not hardcoded
     TargetStore targetStore = new TargetStore(
             "1750",
             "UT",
