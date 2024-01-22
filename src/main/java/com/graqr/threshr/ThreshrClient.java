@@ -3,7 +3,7 @@ package com.graqr.threshr;
 import com.graqr.threshr.model.TargetStore;
 import com.graqr.threshr.model.TargetStorePdpSearch;
 import com.graqr.threshr.model.Tcin;
-import com.graqr.threshr.model.redsky.products.pdp.client.pdpClientRoot;
+import com.graqr.threshr.model.redsky.products.pdp.client.PdpClientRoot;
 import com.graqr.threshr.model.redsky.products.plp.search.plpSearchRoot;
 import com.graqr.threshr.model.redsky.products.summary.ProductSummaryRoot;
 import io.micronaut.http.HttpResponse;
@@ -81,7 +81,7 @@ public interface ThreshrClient {
             "?key=${threshr.key}" +
             "{&tcin}" +
             "{&targetStorePdpSearch*}")
-    HttpResponse<pdpClientRoot> pdpClient(
+    HttpResponse<PdpClientRoot> pdpClient(
             TargetStorePdpSearch targetStorePdpSearch,
             @Pattern(regexp = "(\\d{8})|(\\d{9})")
             String tcin);
