@@ -4,7 +4,6 @@ import com.graqr.threshr.model.TargetStore;
 import com.graqr.threshr.model.TargetStorePdpSearch;
 import com.graqr.threshr.model.Tcin;
 import com.graqr.threshr.model.redsky.products.pdp.client.PdpClientRoot;
-import com.graqr.threshr.model.redsky.products.plp.search.plpSearchRoot;
 import com.graqr.threshr.model.redsky.products.summary.ProductSummaryRoot;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.Get;
@@ -58,21 +57,6 @@ public interface ThreshrClient {
             Tcin tcins);
 
     /**
-     * Submits a search query to target's redsky api. {@link plpSearchRoot} results
-     * include pricing.
-     * <p>
-     * Uses the following environment variables (See {@link ThreshrClient}).
-     * <ul>
-     *     <li>THRESHR_KEY</li>
-     *     <li>THRESHR_VISITOR</li>
-     *     <li>THRESHR_CATEGORY</li>
-     *     <li>THRESHR_CHANNEL</li>
-     *     <li>THRESHR_NEW-SEARCH</li>
-     *     <li>THRESHR_OFFSET</li>
-     *     <li>THRESHR_PAGE</li>
-     *     <li>THRESHR_PLATFORM</li>
-     * </ul>
-     *
      * @param tcin                 tcin ID's for products to query
      * @param targetStorePdpSearch store from which the product summaries are to be queried.
      */
@@ -81,7 +65,7 @@ public interface ThreshrClient {
             "?key=${threshr.key}" +
             "{&tcin}" +
             "{&targetStorePdpSearch*}")
-    HttpResponse<PdpClientRoot> pdpClient(
+    HttpResponse<PdpClientRoot> productDetails(
             TargetStorePdpSearch targetStorePdpSearch,
             @Pattern(regexp = "(\\d{8})|(\\d{9})")
             String tcin);

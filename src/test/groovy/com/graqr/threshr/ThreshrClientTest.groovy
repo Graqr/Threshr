@@ -24,7 +24,7 @@ class ThreshrClientTest extends ThreshrTest {
 
     void "no error calling pdp client search"() {
         when:
-        HttpResponse<PdpClientRoot> response = threshrClient.pdpClient(
+        HttpResponse<PdpClientRoot> response = threshrClient.productDetails(
                 new TargetStorePdpSearch(targetStore),
                 tcin.getTcins().split(",")[0])
 
