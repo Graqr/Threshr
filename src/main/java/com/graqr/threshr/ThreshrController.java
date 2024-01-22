@@ -2,12 +2,13 @@ package com.graqr.threshr;
 
 import com.graqr.threshr.model.TargetStore;
 import com.graqr.threshr.model.Tcin;
-import com.graqr.threshr.model.redsky.products.summary.ProductSummaryRoot;
+import com.graqr.threshr.model.redsky.products.ProductSummary;
 import io.micronaut.core.async.annotation.SingleResult;
-import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
 import jakarta.inject.Inject;
+
+import java.util.List;
 
 @Controller("/product")
 public class ThreshrController {
@@ -18,9 +19,13 @@ public class ThreshrController {
 
     @Get("/summary")
     @SingleResult
-    public HttpResponse<ProductSummaryRoot> fetchProductSummaries(
+    public List<ProductSummary> fetchProductSummaries(
             TargetStore targetStore,
             Tcin tcin) {
-        return threshrClient.productSummaryWithFulfillment(targetStore, tcin);
+        return threshrClient
+                .productSummaryWithFulfillment(targetStore, tcin)
+                .body()
+                .data()
+                .productSummary();
     }
 }
