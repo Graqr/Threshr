@@ -35,7 +35,7 @@ import static io.micronaut.http.HttpHeaders.USER_AGENT;
 @Client(id = "redsky-api")
 @Header(name = USER_AGENT, value = "Micronaut HTTP Client")
 @Header(name = ACCEPT, value = "application/vnd.github.v3+json, application/json")
-public interface ThreshrClient {
+interface ThreshrClient {
 
 
     /**
