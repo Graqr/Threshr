@@ -2,7 +2,7 @@ package com.graqr.threshr
 
 
 import com.graqr.threshr.model.TargetStorePdpSearch
-import com.graqr.threshr.model.redsky.products.pdp.client.pdpClientRoot
+import com.graqr.threshr.model.redsky.products.pdp.client.PdpClientRoot
 import com.graqr.threshr.model.redsky.products.summary.ProductSummaryRoot
 import io.micronaut.http.HttpResponse
 /**
@@ -24,7 +24,7 @@ class ThreshrClientTest extends ThreshrTest {
 
     void "no error calling pdp client search"() {
         when:
-        HttpResponse<pdpClientRoot> response = threshrClient.pdpClient(
+        HttpResponse<PdpClientRoot> response = threshrClient.pdpClient(
                 new TargetStorePdpSearch(targetStore),
                 tcin.getTcins().split(",")[0])
 
