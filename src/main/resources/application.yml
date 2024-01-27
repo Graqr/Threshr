@@ -8,5 +8,5 @@ micronaut:
         path: redsky_aggregations/v1/web
 ---
 threshr:
-  key: 9f36aeafbe60771e321a7cc95a78140772ab3e96
-  CHANNEL: WEB
+  key:
+  channel:
