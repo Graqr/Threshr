@@ -4,10 +4,13 @@ on:
   push:
 
 jobs:
-  build:
+  test:
+    env:
+      THRESHR_KEY: ${{ vars.THRESHR_KEY }}
+      THRESHR_CHANNEL: ${{ vars.THRESHR_CHANNEL }}
 
+    environment: redsky api
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v3
     - name: Set up JDK 17
@@ -17,7 +20,7 @@ jobs:
         distribution: 'zulu'
         cache: maven
     - name: Package with Maven
-      run: mvn -B package --file pom.xml
+      run: mvn -B test --file pom.xml
 
     - name: Upload coverage reports to Codecov
       uses: codecov/codecov-action@v3
