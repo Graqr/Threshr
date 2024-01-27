@@ -51,7 +51,7 @@ interface ThreshrClient {
             "?key=${threshr.key}" +
             "{&tcins*}" +
             "{&targetStore*}" +
-            "&CHANNEL=${threshr.CHANNEL}")
+            "&CHANNEL=${threshr.channel}")
     HttpResponse<ProductSummaryRoot> productSummaryWithFulfillment(
             TargetStore targetStore,
             Tcin tcins);
