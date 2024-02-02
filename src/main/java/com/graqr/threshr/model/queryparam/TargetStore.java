@@ -1,4 +1,4 @@
-package com.graqr.threshr.model;
+package com.graqr.threshr.model.queryparam;
 
 import io.micronaut.core.annotation.Introspected;
 import io.micronaut.http.annotation.QueryValue;
@@ -9,7 +9,6 @@ import lombok.Data;
 @AllArgsConstructor
 @Introspected
 public class TargetStore {
-
     @QueryValue("store_id")
     String storeId;
 

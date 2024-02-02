@@ -1,4 +1,4 @@
-package com.graqr.threshr.model;
+package com.graqr.threshr.model.queryparam;
 
 import com.graqr.threshr.ThreshrException;
 import io.micronaut.core.annotation.Introspected;

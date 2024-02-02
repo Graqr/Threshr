@@ -1,18 +1,18 @@
 package com.graqr.threshr
 
-import com.graqr.threshr.model.TargetStore
-import com.graqr.threshr.model.Tcin
+import com.graqr.threshr.model.queryparam.TargetStore
+import com.graqr.threshr.model.queryparam.Tcin
 import io.micronaut.test.extensions.spock.annotation.MicronautTest
 import jakarta.inject.Inject
 import spock.lang.Shared
 import spock.lang.Specification
 
 @MicronautTest
-class ThreshrTest extends Specification {
+class ThreshrSpec extends Specification {
 
     @Inject
     @Shared
-    ThreshrController threshrController
+    Threshr threshrController
 
     @Inject
     @Shared
