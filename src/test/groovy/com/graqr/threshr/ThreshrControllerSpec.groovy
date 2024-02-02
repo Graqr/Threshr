@@ -1,10 +1,10 @@
 package com.graqr.threshr
 
-import com.graqr.threshr.model.Tcin
+import com.graqr.threshr.model.queryparam.Tcin
 import io.micronaut.test.extensions.spock.annotation.MicronautTest
 
 @MicronautTest
-class ThreshrControllerTest extends ThreshrTest {
+class ThreshrControllerSpec extends ThreshrSpec {
 
     void "query product summaries with no error with tcin string(s)"() {
         when:

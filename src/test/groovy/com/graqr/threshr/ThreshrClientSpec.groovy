@@ -1,15 +1,15 @@
 package com.graqr.threshr
 
-
-import com.graqr.threshr.model.TargetStorePdpSearch
+import com.graqr.threshr.model.queryparam.TargetStorePdpSearch
 import com.graqr.threshr.model.redsky.products.pdp.client.PdpClientRoot
 import com.graqr.threshr.model.redsky.products.summary.ProductSummaryRoot
 import io.micronaut.http.HttpResponse
+
 /**
  * This test class is necessary despite similarity to the controller test. please dont delete this as the
  * httpclient logs are visible in this test but not in the controller test.
  */
-class ThreshrClientTest extends ThreshrTest {
+class ThreshrClientSpec extends ThreshrSpec {
 
     void "no error requesting product summaries"() {
         when:
@@ -32,4 +32,11 @@ class ThreshrClientTest extends ThreshrTest {
         noExceptionThrown()
         null != response.body().data().product()
     }
+//
+//    void "no error querying target store locations"() {
+//        when:
+//        HttpResponse<TargetStoreRoot> response = threshrClient.queryTargetStore()
+//
+//        then:
+//    }
 }

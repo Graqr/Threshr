@@ -1,10 +1,12 @@
 package com.graqr.threshr;
 
-import com.graqr.threshr.model.TargetStore;
-import com.graqr.threshr.model.TargetStorePdpSearch;
-import com.graqr.threshr.model.Tcin;
+import com.graqr.threshr.model.queryparam.Place;
+import com.graqr.threshr.model.queryparam.TargetStore;
+import com.graqr.threshr.model.queryparam.TargetStorePdpSearch;
+import com.graqr.threshr.model.queryparam.Tcin;
 import com.graqr.threshr.model.redsky.products.pdp.client.PdpClientRoot;
 import com.graqr.threshr.model.redsky.products.summary.ProductSummaryRoot;
+import com.graqr.threshr.model.redsky.stores.NearbyStoresRoot;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.Get;
 import io.micronaut.http.annotation.Header;
@@ -69,4 +71,22 @@ interface ThreshrClient {
             TargetStorePdpSearch targetStorePdpSearch,
             @Pattern(regexp = "(\\d{8})|(\\d{9})")
             String tcin);
+
+    /**
+     * returns target stores within a given distance from a location.
+     *
+     * @param limit  count of locations to return
+     * @param within distance from place to include in results
+     * @param place  either a zipcode or a city + state wrapped as a place object
+     * @return TargetStoreRoot object in an HttpResponse object. the NearbyStores object can be found in a
+     * TargetStoreRoot object.
+     */
+    @Retryable
+    @Get("nearby_stores_v1" +
+            "?key=${threshr.key}" +
+            "{&limit}" +
+            "{&within}" +
+            "{&place}" +
+            "&CHANNEL=${threshr.channel}")
+    HttpResponse<NearbyStoresRoot> queryNearbyStores(int limit, int within, String place);
 }
