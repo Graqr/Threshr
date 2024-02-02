@@ -106,6 +106,12 @@
             <artifactId>micronaut-validation</artifactId>
             <scope>compile</scope>
         </dependency>
+        <dependency>
+            <groupId>net.datafaker</groupId>
+            <artifactId>datafaker</artifactId>
+            <version>2.1.0</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
