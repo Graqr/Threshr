@@ -10,3 +10,6 @@ micronaut:
 threshr:
   key:
   channel:
+  test:
+    data:
+      stores: ${TEST_STORE_FILE_DATA:nearby_stores.json}
