@@ -42,7 +42,7 @@ public class Threshr {
     @Get("/stores/locations-query")
     @SingleResult
     public NearbyStores queryStoreLocations(Place place) {
-        return queryStoreLocations(3, 100, place);
+        return queryStoreLocations(5, 100, place);
     }
 
     @Get("/stores/locations-query")
