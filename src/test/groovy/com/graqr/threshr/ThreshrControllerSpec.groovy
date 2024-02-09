@@ -8,7 +8,7 @@ class ThreshrControllerSpec extends ThreshrSpec {
 
     void "query product summaries with no error with tcin string(s)"() {
         when:
-        threshrController.fetchProductSummariesWithFulfillment(targetStore, tcinArg)
+        threshrController.fetchProductSummaries(targetStore, tcinArg)
 
         then:
         noExceptionThrown()
@@ -21,7 +21,7 @@ class ThreshrControllerSpec extends ThreshrSpec {
 
     void "query product summaries with no error tcin type arg"() {
         when:
-        threshrController.fetchProductSummariesWithFulfillment(targetStore, tcinArg)
+        threshrController.fetchProductSummaries(targetStore, tcinArg)
 
         then:
         noExceptionThrown()

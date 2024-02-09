@@ -23,14 +23,14 @@ public class Threshr {
 
     @Get("/product/summary-with-fulfillment")
     @SingleResult
-    public List<ProductSummary> fetchProductSummariesWithFulfillment(TargetStore targetStore, Tcin tcin) {
+    public List<ProductSummary> fetchProductSummaries(TargetStore targetStore, Tcin tcin) {
         return Objects.requireNonNull(threshrClient.productSummaryWithFulfillment(targetStore, tcin).body()).data().productSummary();
     }
 
     @Get("/product/summary-with-fulfillment")
     @SingleResult
-    public List<ProductSummary> fetchProductSummariesWithFulfillment(TargetStore targetStore, String... tcin) throws ThreshrException {
-        return fetchProductSummariesWithFulfillment(targetStore, new Tcin(tcin));
+    public List<ProductSummary> fetchProductSummaries(TargetStore targetStore, String... tcin) throws ThreshrException {
+        return fetchProductSummaries(targetStore, new Tcin(tcin));
     }
 
     @Get("/product/details")

@@ -1,4 +1,4 @@
-<img src="Threshr-header.svg" alt="Threshr - The Target Grocery Harvester" width="250">
+<img src="header_logo.svg" alt="Threshr - The Target Grocery Harvester" width="500">
 
 [![build badge]][build link]
 [![GitHub code size in bytes]][download link]
@@ -8,21 +8,87 @@
 
 ## Summary
 
-Threshr is java library wrappper capable of querying product information from varying Target's various api's, aimed 
-at querying product pricing.
+Threshr is a wrapper library for Target Corporation's redsky api. The redsky api has endpoints for querying product and store information. This includes fulfillment options, pricing, vendors, etc.
 
 
-### Usage
+## Install
 
-see tests for [examples](https://github.com/Graqr/Threshr/blob/e643e9a7bde831d73587da0e55ae8799a9b79ee2/src/test/groovy/com/graqr/threshr). 
+This project's artifacts are hosted on GitHub. Follow [these instructions] in order to include threshr in your maven or
+gradle projects.
+<ul>
+<details><summary>My summary of GitHub's Instructions</summary>
+    <ol>
+    At the time of writing this, GitHub doesn't support using GitHub-hosted artifacts without first authenticating. You can do this in two steps:
+    <li>Generate a personal access token with <code>read:packages</code> <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">privileges</a>. </li>
+    <li>Add <code><a href="settings.xml">settings.xml</a></code> to your <code>~/.m2/</code> directory (swapping Batman's name and password for your GitHub user and the token from step 1</li>
+    </ol>
+</details>
+</ul>
 
-### Roadmap
+#### Include as a Maven Dependency
+```xml
+<dependency>
+  <groupId>com.graqr</groupId>
+  <artifactId>threshr</artifactId>
+  <version>0.0.6</version>
+</dependency>
+```
+#### Include as a Gradle dependency
+```groovy
+compile "com.graqr:threshr:0.0.6"
+```
 
-I want to facilitate querying prices with these improvements:
- - something easier than including target store ID's when specifying target store locations
- - flesh out target's department & category information
- - flesh out products which can be queried
+#### Environment Variables
 
+You'll need to add api `key` and `CHANNEL` values to environment variables `THRESHR_KEY` and `THRESHR_CHANNEL`. I like using a `.env` file like the one below.
+```properties
+THRESHR_KEY=BatKey
+THRESHR_CHANNEL=WEB
+```
+
+<details><summary id="api-key">How to find a key for the redsky api</summary><ul>
+
+In the network tab in your browser's dev tools, search for any endpoints from the `redsky.target.com` domain. Below I'm in firefox, from whose context menu I'm given the option to copy an api call's parameters.
+
+![redsky_network-tab_firefox.gif](images%2Fredsky_network-tab_firefox.gif)
+</ul></details>
+
+## Usage
+
+Threshr doesn't support all redsky endpoints (not yet). There are three endpoints currently supported:
+
+```java
+List<ProductSummary> 	fetchProductSummaries(TargetStore targetStore, Tcin tcin);
+
+List<ProductSummary> 	fetchProductSummaries(TargetStore targetStore, String... tcin) throws ThreshrException;
+```
+```java
+Product 	fetchProductDetails(TargetStore targetStore, String tcin);
+```
+```java
+NearbyStores 	queryStoreLocations(Place place); // default values for limit and within
+
+NearbyStores 	queryStoreLocations(int limit, int within, Place place);
+```
+    
+### Using threshr pojo's 
+
+```java
+/**
+ * Queries the availability of products at a target store.
+ * 
+ * @param store     location to query 
+ * @param tcin      one or more target product item numbers as string values
+ * 
+ * returns a set of boolean values reflecting a product's availability.
+ */
+public Set<boolean> isProductInStock(TargetStore store, String ... tcin) {
+    ProductSummary summary = threshr.fetchProductSummaries(store, tcin);
+    return summary().stream().map(it -> 
+            it.fulfillment().soldOut())
+          .collect(Collectors.toSet());
+} 
+```
 
 ___
 
@@ -30,6 +96,8 @@ ___
 
 See our [contributing] doc before taking a whack at any [open issues]. We'd love for you to work with us!
 
+
+[these instructions]:https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-apache-maven-registry
 
 [build badge]:https://img.shields.io/github/actions/workflow/status/Graqr/Threshr/mvn-package_pr,push_main.yml?style=plastic&logo=github&label=Build&link=https%3A%2F%2Fgithub.com%2FGraqr%2FThreshr%2Factions%20build-status%20
 
