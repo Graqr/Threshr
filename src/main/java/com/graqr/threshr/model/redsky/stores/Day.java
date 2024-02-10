@@ -1,9 +1,8 @@
 package com.graqr.threshr.model.redsky.stores;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import io.micronaut.core.annotation.Nullable;
 import io.micronaut.serde.annotation.Serdeable;
-import lombok.AllArgsConstructor;
-import lombok.Data;
 
 import java.util.List;
 
@@ -13,5 +12,7 @@ public record Day(
         String date,
         @JsonProperty("day_name")
         String dayName,
-        List<Hour> hours) {
+        List<Hour> hours,
+        @Nullable @JsonProperty("sequence_number")
+        String sequenceNumber) {
 }
