@@ -16,7 +16,7 @@ class ThreshrClientSpec extends ThreshrSpec {
 
     void "no error requesting product summaries"() {
         when:
-        HttpResponse<ProductSummaryRoot> response = threshrClient.productSummaryWithFulfillment(
+        HttpResponse<ProductSummaryRoot> response = threshrClient.getProductSummary(
                 targetStore, tcin)
 
         then:
@@ -26,7 +26,7 @@ class ThreshrClientSpec extends ThreshrSpec {
 
     void "no error calling pdp client search"() {
         when:
-        HttpResponse<PdpClientRoot> response = threshrClient.productDetails(
+        HttpResponse<PdpClientRoot> response = threshrClient.getProductDetails(
                 new TargetStorePdpSearch(targetStore),
                 tcin.getTcins().split(",")[0])
 
@@ -37,7 +37,7 @@ class ThreshrClientSpec extends ThreshrSpec {
 
     void 'querying "#place.getPlace()" returns the "#expectedLocationName" store'() {
         when:
-        HttpResponse<NearbyStoresRoot> response = threshrClient.queryNearbyStores(5,100, place.getPlace())
+        HttpResponse<NearbyStoresRoot> response = threshrClient.getNearbyStores(5,100, place.getPlace())
 
         then:
         response.body().data().nearbyStores().stores()

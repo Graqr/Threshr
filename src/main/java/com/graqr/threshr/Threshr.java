@@ -24,7 +24,7 @@ public class Threshr {
     @Get("/product/summary-with-fulfillment")
     @SingleResult
     public List<ProductSummary> fetchProductSummaries(TargetStore targetStore, Tcin tcin) {
-        return Objects.requireNonNull(threshrClient.productSummaryWithFulfillment(targetStore, tcin).body()).data().productSummary();
+        return Objects.requireNonNull(threshrClient.getProductSummary(targetStore, tcin).body()).data().productSummary();
     }
 
     @Get("/product/summary-with-fulfillment")
@@ -36,7 +36,7 @@ public class Threshr {
     @Get("/product/details")
     @SingleResult
     public Product fetchProductDetails(TargetStore targetStore, String tcin) {
-        return Objects.requireNonNull(threshrClient.productDetails(new TargetStorePdpSearch(targetStore), tcin).body()).data().product();
+        return Objects.requireNonNull(threshrClient.getProductDetails(new TargetStorePdpSearch(targetStore), tcin).body()).data().product();
     }
 
     @Get("/stores/locations-query")
@@ -48,7 +48,7 @@ public class Threshr {
     @Get("/stores/locations-query")
     @SingleResult
     public NearbyStores queryStoreLocations(int limit, int within, Place place) {
-        return Objects.requireNonNull(threshrClient.queryNearbyStores(limit, within, place.getPlace()).body()).data().nearbyStores();
+        return Objects.requireNonNull(threshrClient.getNearbyStores(limit, within, place.getPlace()).body()).data().nearbyStores();
     }
 
 }
