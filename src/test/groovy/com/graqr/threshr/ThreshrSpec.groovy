@@ -3,9 +3,9 @@ package com.graqr.threshr
 import com.graqr.threshr.model.queryparam.Place
 import com.graqr.threshr.model.queryparam.TargetStore
 import com.graqr.threshr.model.queryparam.Tcin
-import com.graqr.threshr.model.redsky.stores.NearbyStores
-import com.graqr.threshr.model.redsky.stores.NearbyStoresRoot
-import com.graqr.threshr.model.redsky.stores.Store
+import com.graqr.threshr.model.redsky.store.NearbyStores
+import com.graqr.threshr.model.redsky.store.NearbyStoresRoot
+import com.graqr.threshr.model.redsky.store.Store
 import io.micronaut.context.annotation.Value
 import io.micronaut.core.io.ResourceLoader
 import io.micronaut.serde.ObjectMapper
