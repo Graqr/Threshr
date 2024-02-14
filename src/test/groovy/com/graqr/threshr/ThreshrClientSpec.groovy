@@ -2,9 +2,9 @@ package com.graqr.threshr
 
 import com.graqr.threshr.model.queryparam.Place
 import com.graqr.threshr.model.queryparam.TargetStorePdpSearch
-import com.graqr.threshr.model.redsky.products.pdp.client.PdpClientRoot
-import com.graqr.threshr.model.redsky.products.summary.ProductSummaryRoot
-import com.graqr.threshr.model.redsky.stores.NearbyStoresRoot
+import com.graqr.threshr.model.redsky.product.pdp.client.PdpClientRoot
+import com.graqr.threshr.model.redsky.product.summary.ProductSummaryRoot
+import com.graqr.threshr.model.redsky.store.NearbyStoresRoot
 import io.micronaut.http.HttpResponse
 
 import java.util.stream.Collectors

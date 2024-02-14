@@ -3,10 +3,9 @@ package com.graqr.threshr;
 import com.graqr.threshr.model.queryparam.TargetStore;
 import com.graqr.threshr.model.queryparam.TargetStorePdpSearch;
 import com.graqr.threshr.model.queryparam.Tcin;
-import com.graqr.threshr.model.redsky.products.pdp.client.PdpClientRoot;
-import com.graqr.threshr.model.redsky.products.summary.ProductSummaryRoot;
-import com.graqr.threshr.model.redsky.stores.NearbyStoresRoot;
-import com.graqr.threshr.model.redsky.stores.store.location.StoreLocationRoot;
+import com.graqr.threshr.model.redsky.product.pdp.client.PdpClientRoot;
+import com.graqr.threshr.model.redsky.product.summary.ProductSummaryRoot;
+import com.graqr.threshr.model.redsky.store.NearbyStoresRoot;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.Get;
 import io.micronaut.http.annotation.Header;
@@ -97,6 +96,6 @@ interface ThreshrClient {
     @Get("store_location_v1" +
             "?key=${threshr.key}" +
             "{&storeId}")
-    HttpResponse<StoreLocationRoot> getStoreInformation(String storeId);
+    HttpResponse<StoreRoot> getStoreInformation(String storeId);
 
 }
