@@ -5,7 +5,8 @@ import com.graqr.threshr.model.queryparam.TargetStorePdpSearch;
 import com.graqr.threshr.model.queryparam.Tcin;
 import com.graqr.threshr.model.redsky.product.pdp.client.PdpClientRoot;
 import com.graqr.threshr.model.redsky.product.summary.ProductSummaryRoot;
-import com.graqr.threshr.model.redsky.store.NearbyStoresRoot;
+import com.graqr.threshr.model.redsky.store.location.StoreLocationRoot;
+import com.graqr.threshr.model.redsky.store.nearby.NearbyStoreRoot;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.Get;
 import io.micronaut.http.annotation.Header;
@@ -37,7 +38,6 @@ import static io.micronaut.http.HttpHeaders.USER_AGENT;
 @Header(name = USER_AGENT, value = "Micronaut HTTP Client")
 @Header(name = ACCEPT, value = "application/vnd.github.v3+json, application/json")
 interface ThreshrClient {
-
 
     /**
      * Queries target's product summaries from of the given tcins at a given target store.
@@ -87,7 +87,7 @@ interface ThreshrClient {
             "{&within}" +
             "{&place}" +
             "&CHANNEL=${threshr.channel}")
-    HttpResponse<NearbyStoresRoot> getNearbyStores(int limit, int within, String place);
+    HttpResponse<NearbyStoreRoot> getNearbyStores(int limit, int within, String place);
 
     /**
      * Get Store Information (ie store hours) for a specific Target Store
@@ -95,7 +95,8 @@ interface ThreshrClient {
      */
     @Get("store_location_v1" +
             "?key=${threshr.key}" +
-            "{&storeId}")
-    HttpResponse<StoreRoot> getStoreInformation(String storeId);
+            "{&storeId}" +
+            "{&channel}")
+    HttpResponse<StoreLocationRoot> getStoreInformation(String storeId, String channel, String page);
 
 }

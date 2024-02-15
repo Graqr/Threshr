@@ -6,20 +6,27 @@ import com.graqr.threshr.model.queryparam.TargetStorePdpSearch;
 import com.graqr.threshr.model.queryparam.Tcin;
 import com.graqr.threshr.model.redsky.product.Product;
 import com.graqr.threshr.model.redsky.product.ProductSummary;
-import com.graqr.threshr.model.redsky.store.NearbyStores;
+import com.graqr.threshr.model.redsky.store.NearbyStore;
 import io.micronaut.core.async.annotation.SingleResult;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
 import jakarta.inject.Inject;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.List;
 
 @Controller()
 public class Threshr {
 
+    @Setter
+    @Getter
+    private String channel = "WEB";
+
     @Inject
     ThreshrClient threshrClient;
+
 
     @Get("/product/summary-with-fulfillment")
     @SingleResult
@@ -45,13 +52,13 @@ public class Threshr {
 
     @Get("/stores/locations-query")
     @SingleResult
-    public NearbyStores queryStoreLocations(Place place) throws ThreshrException {
+    public NearbyStore queryStoreLocations(Place place) throws ThreshrException {
         return queryStoreLocations(5, 100, place);
     }
 
     @Get("/stores/locations-query")
     @SingleResult
-    public NearbyStores queryStoreLocations(int limit, int within, Place place) throws ThreshrException {
+    public NearbyStore queryStoreLocations(int limit, int within, Place place) throws ThreshrException {
         return checkForNull(threshrClient.getNearbyStores(limit, within, place.getPlace()))
                 .data()
                 .nearbyStores();

@@ -4,7 +4,7 @@ import com.graqr.threshr.model.queryparam.Place
 import com.graqr.threshr.model.queryparam.TargetStorePdpSearch
 import com.graqr.threshr.model.redsky.product.pdp.client.PdpClientRoot
 import com.graqr.threshr.model.redsky.product.summary.ProductSummaryRoot
-import com.graqr.threshr.model.redsky.store.NearbyStoresRoot
+import com.graqr.threshr.model.redsky.store.nearby.NearbyStoreRoot
 import io.micronaut.http.HttpResponse
 
 import java.util.stream.Collectors
@@ -37,7 +37,7 @@ class ThreshrClientSpec extends ThreshrSpec {
 
     void 'querying "#place.getPlace()" returns the "#expectedLocationName" store'() {
         when:
-        HttpResponse<NearbyStoresRoot> response = threshrClient.getNearbyStores(5,100, place.getPlace())
+        HttpResponse<NearbyStoreRoot> response = threshrClient.getNearbyStores(5,100, place.getPlace())
 
         then:
         response.body().data().nearbyStores().stores()
