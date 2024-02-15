@@ -1,11 +1,39 @@
-package com.graqr.threshr
+package com.graqr.threshr.model.queryparam
 
-
+import com.graqr.threshr.ThreshrSpec
 import com.graqr.threshr.model.queryparam.Place
 import io.micronaut.test.extensions.spock.annotation.MicronautTest
+import net.datafaker.Faker
+import spock.lang.Shared
+import spock.lang.Specification
+
+import java.util.stream.Collectors
+import java.util.stream.Stream
 
 @MicronautTest
-class PlaceSpec extends ThreshrSpec {
+class PlaceSpec extends Specification {
+
+    @Shared
+    Faker faker = new Faker()
+
+    // TODO: https://g.co/gemini/share/8af67cd35757
+    @Shared
+    List<String> zipCodesPlus4 = Stream.generate(faker.address()::zipCodePlus4)
+            .distinct()
+            .limit(50)
+            .collect(Collectors.toList())
+
+    @Shared
+    List<String> zipCodes = Stream.generate(faker.address()::zipCode)
+            .distinct()
+            .limit(50)
+            .collect(Collectors.toList())
+    @Shared
+    List<String> cities = Stream.generate(faker.address()::cityName).limit(50).collect(Collectors.toList())
+    @Shared
+    List<String> states = Stream.generate(faker.address()::state).limit(50).collect(Collectors.toList())
+    @Shared
+    List<String> emptyStrings = Collections.nCopies(26, "").toList() + (Collections.nCopies(26, " "))
 
     void 'creating a Place object with "#badZipCode" throws an error'() {
         when:
