@@ -1,12 +1,11 @@
 package com.graqr.threshr.model.queryparam
 
-
 import io.micronaut.test.extensions.spock.annotation.MicronautTest
 import net.datafaker.Faker
 import spock.lang.Shared
 import spock.lang.Specification
 
-import java.util.function.Function
+import java.util.function.Supplier
 import java.util.stream.Collectors
 import java.util.stream.Stream
 
@@ -16,10 +15,23 @@ class PlaceSpec extends Specification {
     @Shared
     Faker faker = new Faker()
 
-    Function<Stream<String>, List<String>> getDistinctList = stream ->
-            stream.distinct().limit(50).collect(Collectors.toList())
+    /**
+     * @param supplier source for string values
+     * @return list of 50 Strings
+     */
+    List<String> getDistinctList(Supplier<String> supplier) {
+        return getDistinctList(supplier, 50)
+    }
 
-    // TODO: https://g.co/gemini/share/8af67cd35757
+    /**
+     * @param supplier source for string values
+     * @param count list size to be returned
+     * @return list of Strings of a given size.
+     */
+    List<String> getDistinctList(Supplier<String> supplier, int count) {
+        return Stream.generate(supplier).distinct().limit(count).collect(Collectors.toList())
+    }
+
     @Shared
     List<String> zipCodesPlus4 = getDistinctList(faker.address()::zipCodePlus4)
 
