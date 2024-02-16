@@ -4,19 +4,17 @@ import com.graqr.threshr.model.queryparam.Place
 import com.graqr.threshr.model.queryparam.TargetStore
 import com.graqr.threshr.model.queryparam.Tcin
 import com.graqr.threshr.model.redsky.store.NearbyStore
-import com.graqr.threshr.model.redsky.store.nearby.NearbyStoreRoot
 import com.graqr.threshr.model.redsky.store.Store
+import com.graqr.threshr.model.redsky.store.nearby.NearbyStoreRoot
 import io.micronaut.context.annotation.Value
 import io.micronaut.core.io.ResourceLoader
 import io.micronaut.serde.ObjectMapper
 import io.micronaut.test.extensions.spock.annotation.MicronautTest
 import jakarta.inject.Inject
-import net.datafaker.Faker
 import spock.lang.Shared
 import spock.lang.Specification
 
 import java.util.stream.Collectors
-import java.util.stream.Stream
 
 @MicronautTest
 class ThreshrSpec extends Specification {
@@ -30,26 +28,33 @@ class ThreshrSpec extends Specification {
     @Shared
     ThreshrClient threshrClient
 
-    @Inject @Shared
-    ResourceLoader resourceLoader
-
-    @Inject
-    ThreshrUtils threshrUtils;
-
     @Inject
     @Shared
     ObjectMapper mapper
 
+    @Inject
     @Shared
-    @Value('${threshr.test.data.stores}') // $env:THRESHR_TEST_DATA_STORES
+    ResourceLoader resourceLoader
+
+    @Shared
+    @Value('${threshr.test.data.stores}')
+    // $env:THRESHR_TEST_DATA_STORES
     String storesFilePath
 
     @Shared
     List<Store> expectedStores
 
+    byte[] getResourceFromFile(String filepath) {
+        try {
+            return resourceLoader.getResourceAsStream(filepath).get().readAllBytes()
+        } catch (IOException e) {
+            throw new ThreshrException(String.format("failed to load '%s'.", filepath), e)
+        }
+    }
+
+
     void setupSpec() {
-        expectedStores = threshrUtils
-                .readFileToObject(String.format("classpath:%s", storesFilePath), NearbyStoreRoot)
+        expectedStores = mapper.readValue(getResourceFromFile("classpath:" + storesFilePath), NearbyStoreRoot.class)
                 .data()
                 .nearbyStores()
                 .stores()
