@@ -45,12 +45,12 @@ You'll need to add api `key` and `CHANNEL` values to environment variables `THRE
 THRESHR_KEY=BatKey
 THRESHR_CHANNEL=WEB
 ```
-
+> :warning: Environment Variables on windows must be assigned as an environment variable, ie `$env:foo`.
 <details><summary id="api-key">How to find a key for the redsky api</summary><ul>
 
 In the network tab in your browser's dev tools, search for any endpoints from the `redsky.target.com` domain. Below I'm in firefox, from whose context menu I'm given the option to copy an api call's parameters.
 
-![redsky_network-tab_firefox.gif](images%2Fredsky_network-tab_firefox.gif)
+![redsky_network-tab_firefox.gif](media%2Fredsky_network-tab_firefox.gif)
 </ul></details>
 
 ## Usage
@@ -59,7 +59,6 @@ Threshr doesn't support all redsky endpoints (not yet). There are three endpoint
 
 ```java
 List<ProductSummary> 	fetchProductSummaries(TargetStore targetStore, Tcin tcin);
-
 List<ProductSummary> 	fetchProductSummaries(TargetStore targetStore, String... tcin) throws ThreshrException;
 ```
 ```java
@@ -67,34 +66,14 @@ Product 	fetchProductDetails(TargetStore targetStore, String tcin);
 ```
 ```java
 NearbyStores 	queryStoreLocations(Place place); // default values for limit and within
-
 NearbyStores 	queryStoreLocations(int limit, int within, Place place);
-```
-    
-### Using threshr pojo's 
-
-```java
-/**
- * Queries the availability of products at a target store.
- * 
- * @param store     location to query 
- * @param tcin      one or more target product item numbers as string values
- * 
- * returns a set of boolean values reflecting a product's availability.
- */
-public Set<boolean> isProductInStock(TargetStore store, String ... tcin) {
-    ProductSummary summary = threshr.fetchProductSummaries(store, tcin);
-    return summary().stream().map(it -> 
-            it.fulfillment().soldOut())
-          .collect(Collectors.toSet());
-} 
 ```
 
 ___
 
 ### Want to get involved?
 
-See our [contributing] doc before taking a whack at any [open issues]. We'd love for you to work with us!
+See our [contributing] doc before taking a whack at any [open issues]. Also be sure to read the [Testing README](src/test/groovy/com/graqr/threshr/README.md) for some tips and tricks. We'd love for you to work with us!
 
 
 [these instructions]:https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-apache-maven-registry
