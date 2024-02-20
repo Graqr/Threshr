@@ -1,12 +1,12 @@
 package com.graqr.threshr;
 
-import com.graqr.threshr.model.queryparam.Place;
 import com.graqr.threshr.model.queryparam.TargetStore;
 import com.graqr.threshr.model.queryparam.TargetStorePdpSearch;
 import com.graqr.threshr.model.queryparam.Tcin;
-import com.graqr.threshr.model.redsky.products.pdp.client.PdpClientRoot;
-import com.graqr.threshr.model.redsky.products.summary.ProductSummaryRoot;
-import com.graqr.threshr.model.redsky.stores.NearbyStoresRoot;
+import com.graqr.threshr.model.redsky.product.pdp.client.PdpClientRoot;
+import com.graqr.threshr.model.redsky.product.summary.ProductSummaryRoot;
+import com.graqr.threshr.model.redsky.store.location.StoreLocationRoot;
+import com.graqr.threshr.model.redsky.store.nearby.NearbyStoreRoot;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.Get;
 import io.micronaut.http.annotation.Header;
@@ -39,7 +39,6 @@ import static io.micronaut.http.HttpHeaders.USER_AGENT;
 @Header(name = ACCEPT, value = "application/vnd.github.v3+json, application/json")
 interface ThreshrClient {
 
-
     /**
      * Queries target's product summaries from of the given tcins at a given target store.
      * A product summary does not include pricing.
@@ -54,7 +53,7 @@ interface ThreshrClient {
             "{&tcins*}" +
             "{&targetStore*}" +
             "&CHANNEL=${threshr.channel}")
-    HttpResponse<ProductSummaryRoot> productSummaryWithFulfillment(
+    HttpResponse<ProductSummaryRoot> getProductSummary(
             TargetStore targetStore,
             Tcin tcins);
 
@@ -67,7 +66,7 @@ interface ThreshrClient {
             "?key=${threshr.key}" +
             "{&tcin}" +
             "{&targetStorePdpSearch*}")
-    HttpResponse<PdpClientRoot> productDetails(
+    HttpResponse<PdpClientRoot> getProductDetails(
             TargetStorePdpSearch targetStorePdpSearch,
             @Pattern(regexp = "(\\d{8})|(\\d{9})")
             String tcin);
@@ -88,5 +87,16 @@ interface ThreshrClient {
             "{&within}" +
             "{&place}" +
             "&CHANNEL=${threshr.channel}")
-    HttpResponse<NearbyStoresRoot> queryNearbyStores(int limit, int within, String place);
+    HttpResponse<NearbyStoreRoot> getNearbyStores(int limit, int within, String place);
+
+    /**
+     * Get Store Information (ie store hours) for a specific Target Store
+     * @return Store object, generally with more information about the store than other store endpoints.
+     */
+    @Get("store_location_v1" +
+            "?key=${threshr.key}" +
+            "{&storeId}" +
+            "{&channel}")
+    HttpResponse<StoreLocationRoot> getStoreInformation(String storeId, String channel, String page);
+
 }
