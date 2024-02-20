@@ -38,7 +38,6 @@ class ThreshrSpec extends Specification {
 
     @Shared
     @Value('${threshr.test.data.stores}')
-    // $env:THRESHR_TEST_DATA_STORES
     String storesFilePath
 
     @Shared

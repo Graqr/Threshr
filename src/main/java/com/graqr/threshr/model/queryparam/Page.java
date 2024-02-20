@@ -29,12 +29,12 @@ public class Page {
     public void setPage(String page) throws ThreshrException {
         String tempPage = page.trim().toLowerCase();
         if (tempPage.startsWith("/c/")) {
-            tempPage = tempPage.substring(2);
+            tempPage = tempPage.substring(3);
         }
-        if (tempPage.matches("[^a-z]") || tempPage.isEmpty()) {
+        if (tempPage.matches(".+([^(a-z|\\-)]).+") || tempPage.isEmpty()) {
             throw new ThreshrException(String.format(
                     "Expected only letters for the page value, but received \"%s\".", tempPage));
         }
-        this.page = page;
+        this.page = "/c/" + tempPage;
     }
 }
