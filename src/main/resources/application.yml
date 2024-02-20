@@ -12,4 +12,5 @@ threshr:
   channel:
   test:
     data:
-      stores: ${TEST_STORE_FILE_DATA:nearby_stores.json}
+      stores: ${TEST_DATA_STORES:nearby_stores.json}
+      categories:  ${TEST_DATA_CATEGORIES:target_categories.txt}
