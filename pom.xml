@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.${owner}</groupId>
     <artifactId>threshr</artifactId>
-    <version>0.0.7</version>
+    <version>0.0.8-SNAPSHOT</version>
     <packaging>${packaging}</packaging>
 
     <parent>
@@ -185,6 +185,16 @@
                         <arg>-Amicronaut.processing.group=com.graqr</arg>
                         <arg>-Amicronaut.processing.module=threshr</arg>
                     </compilerArgs>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.sonatype.central</groupId>
+                <artifactId>central-publishing-maven-plugin</artifactId>
+                <version>0.3.0</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <publishingServerId>central</publishingServerId>
+                    <tokenAuth>true</tokenAuth>
                 </configuration>
             </plugin>
         </plugins>
