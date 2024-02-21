@@ -31,6 +31,16 @@ body:
       placeholder: |
         I thought about getting a new bat suit where the neck could move freely, but I like my cowl as it is.
   - type: textarea
+    id: Requirements
+    attributes:
+      label: Requirements
+      description: provide bullet points for what must be done in order for this request to be fulfilled
+      placeholder: |
+        - [ ] automated tests verify impact standards, in case I land on my face.
+        - [ ] it comes in black
+        - [ ] I can turn left and right while not moving my torso
+        - [ ] has cup holders
+  - type: textarea
     id: additional-context
     attributes:
       label: Additional Context
