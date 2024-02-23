@@ -78,7 +78,7 @@ See our [contributing] doc before taking a whack at any [open issues]. Also be s
 
 [these instructions]:https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-apache-maven-registry
 
-[build badge]:https://img.shields.io/github/actions/workflow/status/Graqr/Threshr/mvn-package_pr,push_main.yml?style=plastic&logo=github&label=Build&link=https%3A%2F%2Fgithub.com%2FGraqr%2FThreshr%2Factions%20build-status%20
+[build badge]:https://img.shields.io/github/actions/workflow/status/Graqr/Threshr/mvn-test_push_all.yml?style=plastic&logo=github&label=Build&link=https%3A%2F%2Fgithub.com%2FGraqr%2FThreshr%2Factions%20build-status%20
 
 [build link]:https://github.com/Graqr/Threshr/actions/workflows/mvn-package_pr,push_main.yml?query=branch%3Amain
 
