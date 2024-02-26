@@ -6,17 +6,19 @@ import io.micronaut.test.extensions.spock.annotation.MicronautTest
 @MicronautTest
 class ThreshrControllerSpec extends ThreshrSpec {
 
+    // https://github.com/Graqr/Threshr/issues/67
     void "query product summaries with no error with tcin string(s)"() {
         when:
-        threshrController.fetchProductSummaries(targetStore, tcinArg)
+        threshrController.fetchProductSummaries(targetStore, tcinArg as String)
 
         then:
         noExceptionThrown()
 
         where:
-        tcinArg                         | _
-        tcin.getTcins().split(",")[0]   | _
-        tcin.getTcins().split(",")      | _
+        tcinArg << new String[]{
+                tcin.getTcins().split(",")[0],
+                tcin.getTcins().split(",")
+        }
     }
 
     void "query product summaries with no error tcin type arg"() {
