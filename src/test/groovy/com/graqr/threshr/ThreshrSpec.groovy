@@ -37,7 +37,7 @@ class ThreshrSpec extends Specification {
     ResourceLoader resourceLoader
 
     @Shared
-    @Value('${threshr.test.data.stores}')
+    @Value('${test.datasources.file.stores}')
     String storesFilePath
 
     @Shared

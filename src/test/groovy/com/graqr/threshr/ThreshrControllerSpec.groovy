@@ -6,6 +6,32 @@ import io.micronaut.test.extensions.spock.annotation.MicronautTest
 @MicronautTest
 class ThreshrControllerSpec extends ThreshrSpec {
 
+    @Shared
+    @Value('${test.datasources.default.dialect}')
+    String dialect
+    @Shared
+    @Value('${test.datasources.default.driver}')
+    String driver
+    @Shared
+    @Value('${test.datasources.default.url}')
+    String url
+    @Shared
+    @Value('${test.datasources.default.username}')
+    String username
+    @Shared
+    @Value('${test.datasources.default.password}')
+    String password
+
+    @Shared
+    Sql sql
+
+    void setupSpec() {
+        sql = Sql.newInstance(url, username, password, driver)
+    }
+//    void cleanupSpec() {
+//        sql.close()
+//    }
+
     // https://github.com/Graqr/Threshr/issues/67
     void "query product summaries with no error with tcin string(s)"() {
         when:
