@@ -22,18 +22,16 @@ class ThreshrControllerSpec extends ThreshrSpec {
     }
 
     // https://github.com/Graqr/Threshr/issues/67
-    void "query product summaries with no error with tcin string(s)"() {
+    void "query product summaries with no error with tcin strings"() {
         when:
-        threshrController.fetchProductSummaries(targetStore, tcinArg as String)
+        threshrController.fetchProductSummaries(targetStore, tcinArg)
 
         then:
         noExceptionThrown()
 
         where:
-        tcinArg << new String[]{
-                tcin.getTcins().split(",")[0],
-                tcin.getTcins().split(",")
-        }
+        tcinArg << [tcin.getTcins().split(",")[0], tcin.getTcins().split(",")]
+
     }
 
     void "query product summaries with no error tcin type arg"() {
