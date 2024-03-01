@@ -1,36 +1,25 @@
 package com.graqr.threshr
 
 import com.graqr.threshr.model.queryparam.Tcin
+import com.graqr.threshr.model.redsky.store.Store
+import groovy.sql.Sql
+import io.micronaut.context.annotation.Value
 import io.micronaut.test.extensions.spock.annotation.MicronautTest
+import spock.lang.Shared
 
 @MicronautTest
 class ThreshrControllerSpec extends ThreshrSpec {
-
-    @Shared
-    @Value('${test.datasources.default.dialect}')
-    String dialect
-    @Shared
-    @Value('${test.datasources.default.driver}')
-    String driver
+    
     @Shared
     @Value('${test.datasources.default.url}')
     String url
-    @Shared
-    @Value('${test.datasources.default.username}')
-    String username
-    @Shared
-    @Value('${test.datasources.default.password}')
-    String password
 
     @Shared
     Sql sql
 
     void setupSpec() {
-        sql = Sql.newInstance(url, username, password, driver)
+        sql = Sql.newInstance(url)
     }
-//    void cleanupSpec() {
-//        sql.close()
-//    }
 
     // https://github.com/Graqr/Threshr/issues/67
     void "query product summaries with no error with tcin string(s)"() {
@@ -68,5 +57,25 @@ class ThreshrControllerSpec extends ThreshrSpec {
 
         then:
         noExceptionThrown()
+    }
+
+    void "test querying store number #location_id returns all data needed for other api endpoints"() {
+        when:
+        Store store = threshrController.getStore(location_id as String)
+
+        then:
+        location_id as String    == store.storeId()
+        location_name as String  == store.locationName()
+        postal_code as String    == store.mailingAddress().postalCode()
+        latitude as Double      == store.geographicSpecifications().latitude()
+        longitude as Double     == store.geographicSpecifications().longitude()
+        city as String          == store.mailingAddress().city()
+        region as String        == store.mailingAddress().region()
+
+
+
+        where:
+        [location_id, location_name, postal_code, latitude, longitude, city, region] << sql.rows(
+                'select location_id, location_name, postal_code, latitude, longitude, city, region FROM target_stores LIMIT 20')
     }
 }
