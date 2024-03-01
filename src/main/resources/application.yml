@@ -14,10 +14,7 @@ threshr:
 test:
   datasources:
     default:
-      dialect:
-      driverClassName:
       url:
-      username:
     file:
       stores: ${:nearby_stores.json}
       categories: ${:target_categories.txt}

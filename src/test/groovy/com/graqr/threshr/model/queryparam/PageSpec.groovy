@@ -15,7 +15,7 @@ import java.util.stream.Stream
 class PageSpec extends Specification {
 
     @Shared
-    @Value('${threshr.test.data.categories}')
+    @Value('${test.datasources.file.categories}')
     String pagesFilepath
 
     @Shared

@@ -85,25 +85,32 @@ function Start-DevTerminal {
 
 <blockquote>Check out my <code><a href="https://github.com/Jonathan-Zollinger/powershell-profile/blob/c60d48da035977267ac523baf2ec4d15c16e8e68/bin.ps1#L29-L49">source</a></code> function to make using a .env file easier on windows.</blockquote>
 
-<div class="tg-wrap"><table>
-<tbody>
-  <tr>
-    <td><strong>Variable Name</strong></td>
-    <td><strong>Default Value</strong></td>
-    <td><strong>File Content</strong></td>
-  </tr>
-  <tr>
-    <td><i>TEST_DATA_STORES</i></td>
-    <td>nearby_stores.json</td>
-    <td>Emulated return json from the redsky `nearby_stores_v1` endpoint</td>
-  </tr>
-  <tr>
-    <td><i>TEST_DATA_CATEGORIES</i></td>
-    <td>target_categories.txt</td>
-    <td>Target categories scraped from html on target's "all categories" page</td>
-  </tr>
-</tbody>
-</table></div>
+<div class="tg-wrap">
+    <table>
+        <tbody>
+        <tr>
+            <td><strong>Variable Name</strong></td>
+            <td><strong>Default Value</strong></td>
+            <td><strong>File Content</strong></td>
+        </tr>
+        <tr>
+            <td><i>TEST_DATASOURCES_FILE_STORES</i></td>
+            <td>nearby_stores.json</td>
+            <td>Emulated return json from the redsky `nearby_stores_v1` endpoint</td>
+        </tr>
+        <tr>
+            <td><i>TEST_DATASOURCES_FILE_CATEGORIES</i></td>
+            <td>target_categories.txt</td>
+            <td>Target categories scraped from html on target's "all categories" page</td>
+        </tr>
+        <tr>
+            <td><i>TEST_DATASOURCES_DEFAULT_URL</i></td>
+            <td>full jdbc-formatted url</td>
+            <td>no default value is provided for this</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 
 ### Run Tests
 
