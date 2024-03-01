@@ -4,15 +4,18 @@ import com.graqr.threshr.model.queryparam.Place
 import com.graqr.threshr.model.queryparam.TargetStorePdpSearch
 import com.graqr.threshr.model.redsky.product.pdp.client.PdpClientRoot
 import com.graqr.threshr.model.redsky.product.summary.ProductSummaryRoot
+import com.graqr.threshr.model.redsky.store.location.StoreLocationRoot
 import com.graqr.threshr.model.redsky.store.nearby.NearbyStoreRoot
 import io.micronaut.http.HttpResponse
 
 import java.util.stream.Collectors
+
 /**
  * This test class is necessary despite similarity to the controller test. please don't delete this as the
  * httpclient logs are visible in this test but not in the controller test.
  */
 class ThreshrClientSpec extends ThreshrSpec {
+
 
     void "no error requesting product summaries"() {
         when:
@@ -54,4 +57,15 @@ class ThreshrClientSpec extends ThreshrSpec {
                 : new Place(store.mailingAddress().city(), store.mailingAddress().state())
     }
 
+    void "test querying store #expectedStore.storeId() throws no error"() { // see related test in controller spec
+        when:
+        HttpResponse<StoreLocationRoot> response = threshrClient.getStore(expectedStore.storeId(), "web", "/c/root")
+
+        then:
+        noExceptionThrown()
+        null != response.body()
+
+        where:
+        expectedStore << expectedStores
+    }
 }
