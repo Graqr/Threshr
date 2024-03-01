@@ -10,6 +10,7 @@ import com.graqr.threshr.model.redsky.store.nearby.NearbyStoreRoot;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.Get;
 import io.micronaut.http.annotation.Header;
+import io.micronaut.http.annotation.QueryValue;
 import io.micronaut.http.client.annotation.Client;
 import io.micronaut.retry.annotation.Retryable;
 import jakarta.validation.constraints.Pattern;
@@ -95,8 +96,9 @@ interface ThreshrClient {
      */
     @Get("store_location_v1" +
             "?key=${threshr.key}" +
-            "{&storeId}" +
-            "{&channel}")
-    HttpResponse<StoreLocationRoot> getStoreInformation(String storeId, String channel, String page);
+            "{&store}" +
+            "{&channel}" +
+            "{&page}")
+    HttpResponse<StoreLocationRoot> getStore(@QueryValue("store_id") String store, String channel, String page);
 
 }

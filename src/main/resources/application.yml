@@ -10,7 +10,11 @@ micronaut:
 threshr:
   key:
   channel:
-  test:
-    data:
-      stores: ${TEST_DATA_STORES:nearby_stores.json}
-      categories:  ${TEST_DATA_CATEGORIES:target_categories.txt}
+---
+test:
+  datasources:
+    default:
+      url:
+    file:
+      stores: ${:nearby_stores.json}
+      categories: ${:target_categories.txt}
