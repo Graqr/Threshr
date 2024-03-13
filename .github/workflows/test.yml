@@ -10,11 +10,6 @@ on:
 
 jobs:
   test:
-    env:
-      THRESHR_KEY: ${{ secrets.THRESHR_KEY }}
-      THRESHR_CHANNEL: ${{ vars.THRESHR_CHANNEL }}
-      TEST_DATASOURCES_DEFAULT_URL: ${{ secrets.TEST_DATASOURCES_DEFAULT_URL }}
-      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
     environment: redsky api
     runs-on: ubuntu-latest
     steps:
@@ -47,11 +42,19 @@ jobs:
         path: ~/.m2
         key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
         restore-keys: ${{ runner.os }}-m2
-    - name: "󰙨 test & generate jacoco report"
-      run: mvn -B test --file pom.xml jacoco:report
+#    - name: "󰙨 test & generate jacoco report"
+#      env:
+#        THRESHR_KEY: ${{ secrets.THRESHR_KEY }}
+#        THRESHR_CHANNEL: ${{ vars.THRESHR_CHANNEL }}
+#        TEST_DATASOURCES_DEFAULT_URL: ${{ secrets.TEST_DATASOURCES_DEFAULT_URL }}
+#        GITHUB_TOKEN: ${{ secrets.SONAR_GITHUB_TOKEN }}  # Needed to get PR information, if any
+#        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+#      run: mvn clean -Pcoverage sonar:sonar -Dsonar.projectKey=Graqr_Threshr
     - name: "SonarCloud Scan"
       env:
-        GITHUB_TOKEN: ${{ secrets.SONAR_GITHUB_TOKEN }}  # Needed to get PR information, if any
+        THRESHR_KEY: ${{ secrets.THRESHR_KEY }}
+        THRESHR_CHANNEL: ${{ vars.THRESHR_CHANNEL }}
+        TEST_DATASOURCES_DEFAULT_URL: ${{ secrets.TEST_DATASOURCES_DEFAULT_URL }}
+        GITHUB_TOKEN: ${{ secrets.SONAR_GITHUB_TOKEN }}
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          # sonar endpoint and org id set in pom
-      run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=Graqr_Threshr
+      run: mvn clean test -Pcoverage org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=Graqr_Threshr verify
