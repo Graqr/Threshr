@@ -1,7 +1,3 @@
----
-Author: Jonathan Zollinger
-Title: Threshr Main README
----
 <!-- Header -->
 <img src="header_logo.svg" alt="Threshr - The Target Grocery Harvester" width="500">
 
