@@ -65,12 +65,12 @@ gradle projects.
 <dependency>
   <groupId>com.graqr</groupId>
   <artifactId>threshr</artifactId>
-  <version>0.0.9-SNAPSHOT</version>
+  <version>0.0.9</version>
 </dependency>
 ```
 #### Include as a Gradle dependency
 ```groovy
-compile "com.graqr:threshr:0.0.8"
+compile "com.graqr:threshr:0.0.9"
 ```
 
 #### Environment Variables
