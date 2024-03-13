@@ -30,12 +30,12 @@ jobs:
         java-version: '17'
         distribution: 'zulu'
         cache: maven
-#    - name: Cache SonarCloud packages
-#      uses: actions/cache@v3
-#      with:
-#        path: ~/.sonar/cache
-#        key: ${{ runner.os }}-sonar
-#        restore-keys: ${{ runner.os }}-sonar
+    - name: Cache SonarCloud packages
+      uses: actions/cache@v3
+      with:
+        path: ~/.sonar/cache
+        key: ${{ runner.os }}-sonar
+        restore-keys: ${{ runner.os }}-sonar
 #    - name: Cache Maven packages
 #      uses: actions/cache@v3
 #      with:
@@ -49,7 +49,7 @@ jobs:
         TEST_DATASOURCES_DEFAULT_URL: ${{ secrets.TEST_DATASOURCES_DEFAULT_URL }}
         GITHUB_TOKEN: ${{ secrets.SONAR_GITHUB_TOKEN }}  # Needed to get PR information, if any
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-      run: mvn -Pcoverage org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=Graqr_Threshr
+      run: mvn clean -Pcoverage sonar:sonar -Dsonar.projectKey=Graqr_Threshr
     - name: "SonarCloud Scan"
       env:
         THRESHR_KEY: ${{ secrets.THRESHR_KEY }}
