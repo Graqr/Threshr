@@ -4,6 +4,8 @@ on:
   push:
     branches:
     - main
+    - release/*
+    - gh-actions-test*
   pull_request:
 
 jobs:
@@ -13,7 +15,6 @@ jobs:
       THRESHR_CHANNEL: ${{ vars.THRESHR_CHANNEL }}
       TEST_DATASOURCES_DEFAULT_URL: ${{ secrets.TEST_DATASOURCES_DEFAULT_URL }}
       SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-
     environment: redsky api
     runs-on: ubuntu-latest
     steps:
@@ -32,14 +33,25 @@ jobs:
       uses: actions/setup-java@v3
       with:
         java-version: '17'
-        distribution: 'temurin'
+        distribution: 'zulu'
         cache: maven
-    - name: "󰙨 test with maven"
+    - name: Cache SonarCloud packages
+      uses: actions/cache@v3
+      with:
+        path: ~/.sonar/cache
+        key: ${{ runner.os }}-sonar
+        restore-keys: ${{ runner.os }}-sonar
+    - name: Cache Maven packages
+      uses: actions/cache@v3
+      with:
+        path: ~/.m2
+        key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+        restore-keys: ${{ runner.os }}-m2
+    - name: "󰙨 test & generate jacoco report"
       run: mvn -B test --file pom.xml jacoco:report
-    - name: " SonarCloud Scan"
-      run: | 
-        mvn sonar:sonar -Pcoverage \
-        -Dsonar.token="$SONAR_TOKEN"
-        -Dsonar.host.url=https://sonarcloud.io \
-        -Dsonar.organization=graqr \
-        -Dsonar.projectKey=Graqr_Threshr
+    - name: "SonarCloud Scan"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          # sonar endpoint and org id set in pom
+      run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=Graqr_Threshr
