@@ -51,7 +51,7 @@ jobs:
       run: mvn -B test --file pom.xml jacoco:report
     - name: "SonarCloud Scan"
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+        GITHUB_TOKEN: ${{ secrets.SONAR_GITHUB_TOKEN }}  # Needed to get PR information, if any
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           # sonar endpoint and org id set in pom
       run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=Graqr_Threshr
