@@ -12,7 +12,7 @@ jobs:
       THRESHR_KEY: ${{ secrets.THRESHR_KEY }}
       THRESHR_CHANNEL: ${{ vars.THRESHR_CHANNEL }}
       TEST_DATASOURCES_DEFAULT_URL: ${{ secrets.TEST_DATASOURCES_DEFAULT_URL }}
-      SONAR_TOKEN: ${{ SONAR_TOKEN }}
+      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
     environment: redsky api
     runs-on: ubuntu-latest
@@ -39,7 +39,7 @@ jobs:
     - name: " SonarCloud Scan"
       run: | 
         mvn sonar:sonar -Pcoverage \
-        -Dsonar.token=$SONAR_TOKEN
+        -Dsonar.token="$SONAR_TOKEN"
         -Dsonar.host.url=https://sonarcloud.io \
         -Dsonar.organization=graqr \
         -Dsonar.projectKey=Graqr_Threshr

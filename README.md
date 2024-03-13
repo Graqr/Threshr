@@ -121,7 +121,7 @@ See our [contributing] doc before taking a whack at any [open issues]. Also be s
 [commit frequency]:https://github.com/Graqr/Threshr/graphs/code-frequency
 
 <!--Sonar Cloud Stuff-->
-[Quality Gate Status]:https://sonarcloud.io/api/project_badges/measure?project=Graqr_Threshr&metric=alert_status
+[Quality Gate Status]:https://sonarcloud.io/api/project_badges/quality_gate?project=Graqr_Threshr
 [Quality Gate Status link]:https://sonarcloud.io/summary/new_code?id=Graqr_Threshr
 [Code Smells]:https://sonarcloud.io/api/project_badges/measure?project=Graqr_Threshr&metric=code_smells
 [Code Smells Link]:https://sonarcloud.io/summary/new_code?id=Graqr_Threshr
