@@ -33,16 +33,22 @@ class SearchRecommendationsSpec extends Specification {
         given:
         SearchRecommendations recommendations = new SearchRecommendations(testCategories.first().title(), testCategories)
 
-        expect:
+        when:
         recommendations == new SearchRecommendations(testCategories.first().title(), testCategories)
+
+        then:
+        noExceptionThrown()
     }
 
     void "equals function fails appropriately with single field differences"() {
         given:
         SearchRecommendations recommendations = new SearchRecommendations(testCategories.first().title(), testCategories)
 
-        expect:
+        when:
         recommendations != new SearchRecommendations(title, categories as RelatedCategory[])
+
+        then:
+        noExceptionThrown()
 
         where:
         title                          | categories
@@ -56,16 +62,22 @@ class SearchRecommendationsSpec extends Specification {
         given:
         SearchRecommendations recommendations = new SearchRecommendations(testCategories.first().title(), testCategories)
 
-        expect:
+        when:
         recommendations.hashCode() == new SearchRecommendations(testCategories.first().title(), testCategories).hashCode()
+
+        then:
+        noExceptionThrown()
     }
 
     void "HashCode method fails appropriately with singe field differences"() {
         given:
         SearchRecommendations recommendations = new SearchRecommendations(testCategories.first().title(), testCategories)
 
-        expect:
+        when:
         recommendations != new SearchRecommendations(title, categories as RelatedCategory[])
+
+        then:
+        noExceptionThrown()
 
         where:
         title                          | categories
@@ -84,8 +96,11 @@ class SearchRecommendationsSpec extends Specification {
         }
                 .collect(Collectors.joining(", "))
 
-        expect:
+        when:
         recommendations.toString() == "SearchRecommendations[categoryId=${expectedTitle}, relatedCategories=[${expectedCategories}]]"
+
+        then:
+        noExceptionThrown()
 
 
         where:
