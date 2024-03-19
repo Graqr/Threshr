@@ -42,4 +42,12 @@ public record Metadata(
                 Objects.equals(totalResults, castObject.totalResults()) &&
                 Objects.equals(sortOptions, castObject.sortOptions());
     }
+
+    @Override
+    public int hashCode() {
+        int result = Objects.hash(count, currentPage, keyword, offset, sortBy, totalPages, totalResults, sortOptions);
+        result = 31 * result + Arrays.hashCode(responseIds);
+        return result;
+    }
+
 }
