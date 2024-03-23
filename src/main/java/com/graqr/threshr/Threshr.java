@@ -13,11 +13,15 @@ import jakarta.inject.Inject;
 
 import java.util.List;
 
-@Controller()
+@Controller("/constructor")
 public class Threshr {
 
+    private final ThreshrClient threshrClient;
+
     @Inject
-    ThreshrClient threshrClient;
+    public Threshr(@SuppressWarnings("ClassEscapesDefinedScope") ThreshrClient threshrClient){
+        this.threshrClient = threshrClient;
+    }
 
 
     @Get("/product/summary-with-fulfillment")
