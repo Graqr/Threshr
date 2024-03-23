@@ -1,7 +1,6 @@
 package com.graqr.threshr;
 
 import com.graqr.threshr.model.queryparam.TargetStore;
-import com.graqr.threshr.model.queryparam.TargetStorePdpSearch;
 import com.graqr.threshr.model.queryparam.Tcin;
 import com.graqr.threshr.model.redsky.product.pdp.client.PdpClientRoot;
 import com.graqr.threshr.model.redsky.product.summary.ProductSummaryRoot;
@@ -59,16 +58,19 @@ interface ThreshrClient {
             Tcin tcins);
 
     /**
-     * @param tcin                 tcin ID's for products to query
-     * @param targetStorePdpSearch store from which the product summaries are to be queried.
+     * @param tcin           tcin ID's for products to query
+     * @param pricingStoreId I really don't know why this second iteration of storeId is needed.
+     * @param storeId        store from which the product summaries are to be queried.
      */
     @Retryable
     @Get("/pdp_client_v1" +
             "?key=${threshr.key}" +
             "{&tcin}" +
-            "{&targetStorePdpSearch*}")
+            "{&pricingStoreId}" +
+            "{&storeId}")
     HttpResponse<PdpClientRoot> getProductDetails(
-            TargetStorePdpSearch targetStorePdpSearch,
+            @QueryValue("pricing_store_id") String pricingStoreId,
+            @QueryValue("store_id") String storeId,
             @Pattern(regexp = "(\\d{8})|(\\d{9})")
             String tcin);
 
@@ -92,6 +94,7 @@ interface ThreshrClient {
 
     /**
      * Get Store Information (ie store hours) for a specific Target Store
+     *
      * @return Store object, generally with more information about the store than other store endpoints.
      */
     @Get("store_location_v1" +
