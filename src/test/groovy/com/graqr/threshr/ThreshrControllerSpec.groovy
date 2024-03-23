@@ -9,7 +9,7 @@ import spock.lang.Shared
 
 @MicronautTest
 class ThreshrControllerSpec extends ThreshrSpec {
-    
+
     @Shared
     @Value('${test.datasources.default.url}')
     String url
@@ -22,15 +22,21 @@ class ThreshrControllerSpec extends ThreshrSpec {
     }
 
     // https://github.com/Graqr/Threshr/issues/67
-    void "query product summaries with no error with tcin strings"() {
+    void "query pdp for #tcinArg tcin strings"() {
         when:
-        threshrController.fetchProductSummaries(targetStore, tcinArg)
+        if (count == 1){
+            threshrController.fetchProductSummaries(targetStore, tcinArg as String)
+        }else {
+            threshrController.fetchProductSummaries(targetStore, tcinArg as String[])
+        }
 
         then:
         noExceptionThrown()
 
         where:
-        tcinArg << [tcin.getTcins().split(",")[0], tcin.getTcins().split(",")]
+        tcinArg                       | count
+        tcin.getTcins().split(",")[0] | 1
+        tcin.getTcins().split(",")    | 2
 
     }
 
@@ -49,7 +55,9 @@ class ThreshrControllerSpec extends ThreshrSpec {
 
     void "query product details with no error"() {
         when:
-        threshrController.fetchProductDetails(targetStore,
+        threshrController.fetchProductDetails(
+                targetStore.storeId,
+                targetStore.storeId,
                 tcin.getTcins().split(",")[0]
         )
 
@@ -62,14 +70,13 @@ class ThreshrControllerSpec extends ThreshrSpec {
         Store store = threshrController.getStore(location_id as String)
 
         then:
-        location_id as String    == store.storeId()
-        location_name as String  == store.locationName()
-        postal_code as String    == store.mailingAddress().postalCode()
-        latitude as Double      == store.geographicSpecifications().latitude()
-        longitude as Double     == store.geographicSpecifications().longitude()
-        city as String          == store.mailingAddress().city()
-        region as String        == store.mailingAddress().region()
-
+        location_id as String == store.storeId()
+        location_name as String == store.locationName()
+        postal_code as String == store.mailingAddress().postalCode()
+        latitude as Double == store.geographicSpecifications().latitude()
+        longitude as Double == store.geographicSpecifications().longitude()
+        city as String == store.mailingAddress().city()
+        region as String == store.mailingAddress().region()
 
 
         where:

@@ -1,7 +1,6 @@
 package com.graqr.threshr
 
 import com.graqr.threshr.model.queryparam.Place
-import com.graqr.threshr.model.queryparam.TargetStorePdpSearch
 import com.graqr.threshr.model.redsky.product.pdp.client.PdpClientRoot
 import com.graqr.threshr.model.redsky.product.summary.ProductSummaryRoot
 import com.graqr.threshr.model.redsky.store.location.StoreLocationRoot
@@ -9,7 +8,6 @@ import com.graqr.threshr.model.redsky.store.nearby.NearbyStoreRoot
 import io.micronaut.http.HttpResponse
 
 import java.util.stream.Collectors
-
 /**
  * This test class is necessary despite similarity to the controller test. please don't delete this as the
  * httpclient logs are visible in this test but not in the controller test.
@@ -30,7 +28,8 @@ class ThreshrClientSpec extends ThreshrSpec {
     void "no error calling pdp client search"() {
         when:
         HttpResponse<PdpClientRoot> response = threshrClient.getProductDetails(
-                new TargetStorePdpSearch(targetStore),
+                targetStore.getStoreId(),
+                targetStore.getStoreId(),
                 tcin.getTcins().split(",")[0])
 
         then:
