@@ -1,6 +1,9 @@
 package com.graqr.threshr;
 
-import com.graqr.threshr.model.queryparam.*;
+import com.graqr.threshr.model.queryparam.Page;
+import com.graqr.threshr.model.queryparam.Place;
+import com.graqr.threshr.model.queryparam.TargetStore;
+import com.graqr.threshr.model.queryparam.Tcin;
 import com.graqr.threshr.model.redsky.product.Product;
 import com.graqr.threshr.model.redsky.product.ProductSummary;
 import com.graqr.threshr.model.redsky.store.NearbyStore;
@@ -40,8 +43,8 @@ public class Threshr {
 
     @Get("/product/details")
     @SingleResult
-    public Product fetchProductDetails(TargetStore targetStore, String tcin) throws ThreshrException {
-        return checkForNull(threshrClient.getProductDetails(new TargetStorePdpSearch(targetStore), tcin))
+    public Product fetchProductDetails(String pricingStoreId, String storeId, String tcin) throws ThreshrException {
+        return checkForNull(threshrClient.getProductDetails(pricingStoreId, storeId, tcin))
                 .data()
                 .product();
     }
