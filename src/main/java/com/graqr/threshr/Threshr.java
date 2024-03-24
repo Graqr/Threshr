@@ -89,7 +89,7 @@ public class Threshr {
     @Get("/stores/id")
     @SingleResult
     public Store getStore(String storeId, String channel, Page page) throws ThreshrException {
-        return checkForNull(threshrClient.getStore(storeId, channel, page.getPage())).data().store();
+        return checkForNull(threshrClient.getStore(storeId, channel, page.getName())).data().store();
     }
 
     /**
