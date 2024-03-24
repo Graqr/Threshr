@@ -8,7 +8,7 @@ import lombok.Getter;
  */
 @Getter
 public class Page {
-    private String page;
+    private String name;
 
     /**
      * Sets string value as "/c/" + provided value.
@@ -17,17 +17,17 @@ public class Page {
      * @throws ThreshrException if string contains anything other than letters or is empty
      */
     public Page(String page) throws ThreshrException {
-        setPage(page);
+        setName(page);
     }
 
     /**
      * Sets string value as "/c/" + provided value.
      *
-     * @param page Query parameter in redsky api to specify from where an api call is made in the browser
+     * @param name Query parameter in redsky api to specify from where an api call is made in the browser
      * @throws ThreshrException if string contains anything other than letters or is empty
      */
-    public void setPage(String page) throws ThreshrException {
-        String tempPage = page.trim().toLowerCase();
+    public void setName(String name) throws ThreshrException {
+        String tempPage = name.trim().toLowerCase();
         if (tempPage.startsWith("/c/")) {
             tempPage = tempPage.substring(3);
         }
@@ -35,6 +35,6 @@ public class Page {
             throw new ThreshrException(String.format(
                     "Expected only letters for the page value, but received \"%s\".", tempPage));
         }
-        this.page = "/c/" + tempPage;
+        this.name = "/c/" + tempPage;
     }
 }

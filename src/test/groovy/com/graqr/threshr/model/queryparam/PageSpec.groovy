@@ -79,13 +79,13 @@ class PageSpec extends Specification {
         page = new Page(pageValue) //assumed data has "/c/" prepended to string
 
         then:
-        page.getPage() == pageValue
+        page.getName() == pageValue
 
         and:
-        page.setPage(pageValue.replace("/c/", ""))
+        page.setName(pageValue.replace("/c/", ""))
 
         then:
-        page.getPage() == pageValue
+        page.getName() == pageValue
 
         where:
         pageValue << Stream.of(expectedPages).map(it -> {
