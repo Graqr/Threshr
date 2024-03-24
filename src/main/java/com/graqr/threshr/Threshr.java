@@ -58,7 +58,7 @@ public class Threshr {
     @Get("/stores/locations-query")
     @SingleResult
     public NearbyStore queryStoreLocations(int limit, int within, Place place) throws ThreshrException {
-        return checkForNull(threshrClient.getNearbyStores(limit, within, place.getPlace()))
+        return checkForNull(threshrClient.getNearbyStores(limit, within, place.getZipOrCityState()))
                 .data()
                 .nearbyStores();
     }
