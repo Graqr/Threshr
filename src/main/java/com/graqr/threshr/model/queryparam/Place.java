@@ -6,13 +6,13 @@ import lombok.Data;
 @Serdeable
 @Data
 public class Place {
-    private final String place;
+    private final String zipOrCityState;
     public Place(String zipcode) {
         if (!String.valueOf(zipcode).matches("^\\d{5}(-|\\s*)?(\\d{4})?$")) {
             throw new IllegalArgumentException("Invalid zipcode provided, \"" + zipcode + "\". Zipcode provided " +
                     "must match this regex: \"^\\d{5}(-|\\s*)?(\\d{4})?$\"");
         }
-        place = zipcode;
+        zipOrCityState = zipcode;
     }
 
     public Place(String city, String state) {
@@ -32,6 +32,6 @@ public class Place {
         if (!errorMessage.isEmpty()) {
             throw new IllegalArgumentException(errorMessage);
         }
-        place = String.format("%s, %s", city, state);
+        zipOrCityState = String.format("%s, %s", city, state);
     }
 }
