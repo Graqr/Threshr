@@ -8,7 +8,7 @@ import lombok.Data;
 public class Place {
     private final String zipOrCityState;
     public Place(String zipcode) {
-        if (!String.valueOf(zipcode).matches("^\\d{5}(-|\\s*)?(\\d{4})?$")) {
+        if (!String.valueOf(zipcode).matches("^\\d{5}[-|\\s]?(\\d{4})?$")) {
             throw new IllegalArgumentException("Invalid zipcode provided, \"" + zipcode + "\". Zipcode provided " +
                     "must match this regex: \"^\\d{5}(-|\\s*)?(\\d{4})?$\"");
         }
