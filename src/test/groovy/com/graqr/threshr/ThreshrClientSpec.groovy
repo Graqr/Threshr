@@ -37,9 +37,9 @@ class ThreshrClientSpec extends ThreshrSpec {
         null != response.body().data().product()
     }
 
-    void 'querying "#place.getPlace()" returns the "#expectedLocationName" store'() {
+    void 'querying "#place.getZipOrCityState()" returns the "#expectedLocationName" store'() {
         when:
-        HttpResponse<NearbyStoreRoot> response = threshrClient.getNearbyStores(5,100, place.getPlace())
+        HttpResponse<NearbyStoreRoot> response = threshrClient.getNearbyStores(5,100, place.getZipOrCityState())
 
         then:
         response.body().data().nearbyStores().stores()
