@@ -19,20 +19,9 @@ import static io.micronaut.http.HttpHeaders.USER_AGENT;
 
 /**
  * This is a Micronaut HttpClient which consumes the target corporation's api.
- * <p>
- * Uses the following environment variables:
- * <ul>
- *     <li><dfn id="KEY">THRESHR_KEY</dfn>: bearer token to authenticate against the redsky api.</li>
- *     <li><dfn id="VISITOR">THRESHR_VISITOR</dfn>: query value for member_id variable</li>
- *     <li><dfn id="CATEGORY">THRESHR_CATEGORY</dfn>: grocery category id.</li>
- *     <li><dfn id="CHANNEL">THRESHR_CHANNEL</dfn>: medium through which this api is exchanged. probably {@code WEB}</li>
- *     <li><dfn id="SEARCH:">THRESHR_NEW_SEARCH</dfn>: boolean value. probably {@code false}</li>
- *     <li><dfn id="OFFSET">THRESHR_OFFSET</dfn>: not entirely sure, but I think this is a starting position. seems to always be {@code 0}</li>
- *     <li><dfn id="PAGE">THRESHR_PAGE</dfn>: seems to always be a single character id related to category somehow.</li>
- *     <li><dfn id="PLATFORM">THRESHR_PLATFORM</dfn>: Where the api calls are made. probably {@code desktop}
- *     </li>
- * </ul>
- * </p>
+ *
+ * @author jonathan zollinger
+ * @since 0.0.11
  */
 @Client(id = "redsky-api")
 @Header(name = USER_AGENT, value = "Micronaut HTTP Client")
@@ -42,7 +31,6 @@ interface ThreshrClient {
     /**
      * Queries target's product summaries from of the given tcins at a given target store.
      * A product summary does not include pricing.
-     * Uses environment variables THRESHR_KEY and THRESHR_CHANNEL to authenticate.
      *
      * @param tcins       tcin ID's for products to query. see {@link Tcin#setTcins(String...)}
      * @param targetStore store from which the product summaries are to be queried.
@@ -58,6 +46,8 @@ interface ThreshrClient {
             Tcin tcins);
 
     /**
+     * Get the pdp for the product with the given tcin from the given store.
+     *
      * @param tcin           tcin ID's for products to query
      * @param pricingStoreId I really don't know why this second iteration of storeId is needed.
      * @param storeId        store from which the product summaries are to be queried.
