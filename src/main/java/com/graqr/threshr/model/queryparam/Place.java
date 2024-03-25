@@ -3,6 +3,10 @@ package com.graqr.threshr.model.queryparam;
 import io.micronaut.serde.annotation.Serdeable;
 import lombok.Data;
 
+/**
+ * Place is a query parameter used when querying nearby target store locations. The query accepts either a zipcode
+ * or a city-state combo. See {@link com.graqr.threshr.Threshr#queryStoreLocations(Place)}.
+ */
 @Serdeable
 @Data
 public class Place {
@@ -17,15 +21,16 @@ public class Place {
 
     public Place(String city, String state) {
         String errorMessage = "";
-        if (!String.valueOf(city).matches("^([a-zA-Z\\u0080-\\u024F]+(?:. |-| |'))*[a-zA-Z\\u0080-\\u024F]*$")) {
+        if (!String.valueOf(city).toLowerCase().matches(
+                "^[a-z|\\u0080-\\u024F]+[.|\\-]?(\\s[a-z\\u0080-\\u024F]*){0,8}$")) {
             errorMessage = "Invalid city string provided, \"" + city + "\". String provided " +
-                    "must match this regex: \"^([a-zA-Z\\u0080-\\u024F]+(?:. |-| |'))*[a-zA-Z\\u0080-\\u024F]*$\".";
+                    "must match this regex: \"^[a-zA-Z\\u0080-\\u024F]+[.|\\-]*(\\s[a-zA-Z\\u0080-\\u024F]*)?$\".";
         } else if (city.isEmpty()) {
             errorMessage = "String value for city cannot be empty.";
         }
-        if (!String.valueOf(state).matches("^[A-Z][a-z]+(?: +[A-Z][a-z]+)*$")) {
+        if (!String.valueOf(state).toLowerCase().matches("^[a-z]+(\\s[a-z]*){0,5}$")) {
             errorMessage = "Invalid state string provided, \"" + state + "\". String provided " +
-                    "must match this regex: \"^[A-Z][a-z]+(?: +[A-Z][a-z]+)*$\".";
+                    "must match this regex: \"^[a-z]+\\s?[a-z]*$\".";
         } else if (state.isEmpty()) {
             errorMessage += "String value for state cannot be empty.";
         }
