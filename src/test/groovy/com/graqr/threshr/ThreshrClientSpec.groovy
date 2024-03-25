@@ -22,7 +22,7 @@ class ThreshrClientSpec extends ThreshrSpec {
 
         then:
         noExceptionThrown()
-        response.body().data().productSummary().size() == tcin.tcins.split(",").size()
+        response.body().data().productSummaryWithFulfillmentList().size() == tcin.tcins.split(",").size()
     }
 
     void "no error calling pdp client search"() {
