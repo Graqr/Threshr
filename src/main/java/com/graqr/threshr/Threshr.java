@@ -5,8 +5,8 @@ import com.graqr.threshr.model.queryparam.Place;
 import com.graqr.threshr.model.queryparam.TargetStore;
 import com.graqr.threshr.model.queryparam.Tcin;
 import com.graqr.threshr.model.redsky.product.Product;
-import com.graqr.threshr.model.redsky.product.ProductSummary;
-import com.graqr.threshr.model.redsky.store.NearbyStore;
+import com.graqr.threshr.model.redsky.product.ProductSummaryWithFulfillment;
+import com.graqr.threshr.model.redsky.store.NearbyStores;
 import com.graqr.threshr.model.redsky.store.Store;
 import io.micronaut.core.async.annotation.SingleResult;
 import io.micronaut.http.HttpResponse;
@@ -29,15 +29,15 @@ public class Threshr {
 
     @Get("/product/summary-with-fulfillment")
     @SingleResult
-    public List<ProductSummary> fetchProductSummaries(TargetStore targetStore, Tcin tcin) throws ThreshrException {
+    public List<ProductSummaryWithFulfillment> fetchProductSummaries(TargetStore targetStore, Tcin tcin) throws ThreshrException {
         return checkForNull(threshrClient.getProductSummary(targetStore, tcin))
                 .data()
-                .productSummary();
+                .productSummaryWithFulfillmentList();
     }
 
     @Get("/product/summary-with-fulfillment")
     @SingleResult
-    public List<ProductSummary> fetchProductSummaries(TargetStore targetStore, String... tcin) throws ThreshrException {
+    public List<ProductSummaryWithFulfillment> fetchProductSummaries(TargetStore targetStore, String... tcin) throws ThreshrException {
         return fetchProductSummaries(targetStore, new Tcin(tcin));
     }
 
@@ -51,13 +51,13 @@ public class Threshr {
 
     @Get("/stores/locations-query")
     @SingleResult
-    public NearbyStore queryStoreLocations(Place place) throws ThreshrException {
+    public NearbyStores queryStoreLocations(Place place) throws ThreshrException {
         return queryStoreLocations(5, 100, place);
     }
 
     @Get("/stores/locations-query")
     @SingleResult
-    public NearbyStore queryStoreLocations(int limit, int within, Place place) throws ThreshrException {
+    public NearbyStores queryStoreLocations(int limit, int within, Place place) throws ThreshrException {
         return checkForNull(threshrClient.getNearbyStores(limit, within, place.getZipOrCityState()))
                 .data()
                 .nearbyStores();
