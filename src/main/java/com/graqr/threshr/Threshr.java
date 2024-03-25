@@ -26,7 +26,14 @@ public class Threshr {
         this.threshrClient = threshrClient;
     }
 
-
+    /**
+     * Query product summaries and their fulfillment options. See {@link ProductSummaryWithFulfillment}
+     *
+     * @param targetStore TargetStore object whose inventory is queried for product summaries
+     * @param tcin TCIN object for one or many product ID(s)
+     * @return List of product summaries, one for each ID in the tcin object.
+     * @throws ThreshrException if no product summaries are returned by the query
+     */
     @Get("/product/summary-with-fulfillment")
     @SingleResult
     public List<ProductSummaryWithFulfillment> fetchProductSummaries(TargetStore targetStore, Tcin tcin) throws ThreshrException {
@@ -35,12 +42,29 @@ public class Threshr {
                 .productSummaryWithFulfillmentList();
     }
 
+    /**
+     * Query product summaries and their fulfillment options. See {@link ProductSummaryWithFulfillment}
+     *
+     * @param targetStore TargetStore object whose inventory is queried for product summaries
+     * @param tcin single or many string values for product ID(s)
+     * @return List of product summaries, one for each ID in the tcin object.
+     * @throws ThreshrException if no product summaries are returned by the query
+     */
     @Get("/product/summary-with-fulfillment")
     @SingleResult
     public List<ProductSummaryWithFulfillment> fetchProductSummaries(TargetStore targetStore, String... tcin) throws ThreshrException {
         return fetchProductSummaries(targetStore, new Tcin(tcin));
     }
 
+    /**
+     * Queries the product details page for a given product at a given store.
+     *
+     * @param pricingStoreId 4-digit target store identifier
+     * @param storeId 4-digit target store identifier
+     * @param tcin Target's internal product id number. aka 'Target Catalog Identification Number'
+     * @return Product object matching the given query
+     * @throws ThreshrException if no Product matching given query is found
+     */
     @Get("/product/details")
     @SingleResult
     public Product fetchProductDetails(String pricingStoreId, String storeId, String tcin) throws ThreshrException {
@@ -49,12 +73,28 @@ public class Threshr {
                 .product();
     }
 
+    /**
+     * queries at most 5 stores within 100 miles of a given location
+     *
+     * @param place Either a zipcode or a city-state pair of strings. see {@link Place}.
+     * @return NearbyStores object with a list of store objects
+     * @throws ThreshrException if the returned value is null.
+     */
     @Get("/stores/locations-query")
     @SingleResult
     public NearbyStores getStores(Place place) throws ThreshrException {
         return getStores(5, 100, place);
     }
 
+    /**
+     * Queries stores relative to a given location
+     *
+     * @param place Either a zipcode or a city-state pair of strings. see {@link Place}.
+     * @param limit max store locations to include in returned NearbyStores object.
+     * @param within distance from given location to include in search.
+     * @return NearbyStores object with a list of store objects
+     * @throws ThreshrException if the returned value is null.
+     */
     @Get("/stores/locations-query")
     @SingleResult
     public NearbyStores getStores(int limit, int within, Place place) throws ThreshrException {
