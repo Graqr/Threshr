@@ -21,16 +21,15 @@ public class Place {
 
     public Place(String city, String state) {
         String errorMessage = "";
-        if (!String.valueOf(city).toLowerCase().matches(
-                "^[a-z|\\u0080-\\u024F]+[.|\\-]?(\\s[a-z\\u0080-\\u024F]*){0,8}$")) {
-            errorMessage = "Invalid city string provided, \"" + city + "\". String provided " +
-                    "must match this regex: \"^[a-zA-Z\\u0080-\\u024F]+[.|\\-]*(\\s[a-zA-Z\\u0080-\\u024F]*)?$\".";
+        //match weird strings like D'Amoreport (texas) and Coeur D'Alene (idaho)
+        String pattern = "^([a-zA-Z|\\u0080-\\u024F]\\W?)*+$"; // *+ quantifier prevents backtracking
+        if (!String.valueOf(city).matches(pattern)) {
+            errorMessage = "Invalid city string provided, \"" + city + "\".";
         } else if (city.isEmpty()) {
             errorMessage = "String value for city cannot be empty.";
         }
-        if (!String.valueOf(state).toLowerCase().matches("^[a-z]+(\\s[a-z]*){0,5}$")) {
-            errorMessage = "Invalid state string provided, \"" + state + "\". String provided " +
-                    "must match this regex: \"^[a-z]+\\s?[a-z]*$\".";
+        if (!String.valueOf(state).matches(pattern)) {
+            errorMessage = "Invalid state string provided, \"" + state + "\".";
         } else if (state.isEmpty()) {
             errorMessage += "String value for state cannot be empty.";
         }
