@@ -1,6 +1,8 @@
 package com.graqr.threshr
 
+import com.graqr.threshr.model.queryparam.Place
 import com.graqr.threshr.model.queryparam.Tcin
+import com.graqr.threshr.model.redsky.store.NearbyStores
 import com.graqr.threshr.model.redsky.store.Store
 import groovy.sql.Sql
 import io.micronaut.context.annotation.Value
@@ -82,5 +84,21 @@ class ThreshrControllerSpec extends ThreshrSpec {
         where:
         [location_id, location_name, postal_code, latitude, longitude, city, region] << sql.rows(
                 'select location_id, location_name, postal_code, latitude, longitude, city, region FROM target_stores LIMIT 20')
+    }
+
+    void "test query store locations based on a Place object derived from a zipcode"() {
+        when:
+        NearbyStores stores = threshrController.getStores(testPlace)
+
+        and:
+        stores.stores().first().storeId() == location_id
+
+        then:
+        noExceptionThrown()
+
+        where:
+        [location_id, location_name, postal_code, latitude, longitude, city, region] << sql.rows(
+                'select location_id, location_name, postal_code, latitude, longitude, city, region FROM target_stores LIMIT 20')
+        testPlace = new Place(city as String, region as String)
     }
 }

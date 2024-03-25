@@ -51,13 +51,13 @@ public class Threshr {
 
     @Get("/stores/locations-query")
     @SingleResult
-    public NearbyStores queryStoreLocations(Place place) throws ThreshrException {
-        return queryStoreLocations(5, 100, place);
+    public NearbyStores getStores(Place place) throws ThreshrException {
+        return getStores(5, 100, place);
     }
 
     @Get("/stores/locations-query")
     @SingleResult
-    public NearbyStores queryStoreLocations(int limit, int within, Place place) throws ThreshrException {
+    public NearbyStores getStores(int limit, int within, Place place) throws ThreshrException {
         return checkForNull(threshrClient.getNearbyStores(limit, within, place.getZipOrCityState()))
                 .data()
                 .nearbyStores();
