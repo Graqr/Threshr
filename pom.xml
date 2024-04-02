@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.${owner}</groupId>
+    <groupId>com.graqr</groupId>
     <artifactId>threshr</artifactId>
     <version>0.0.12-SNAPSHOT</version>
     <packaging>${packaging}</packaging>
@@ -19,7 +19,7 @@
         <release.version>17</release.version>
         <micronaut.version>4.2.0</micronaut.version>
         <owner>graqr</owner>
-        <sonar.organization>${owner}</sonar.organization>
+        <sonar.organization>graqr</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     </properties>
 
@@ -35,7 +35,7 @@
         <repository>
             <id>github</id>
             <name>GitHub Packages</name>
-            <url>https://maven.pkg.github.com/${owner}/${project.artifactId}</url>
+            <url>https://maven.pkg.github.com/graqr/${project.artifactId}</url>
         </repository>
     </distributionManagement>
     <repositories>
