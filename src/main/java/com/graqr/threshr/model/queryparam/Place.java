@@ -5,7 +5,7 @@ import lombok.Data;
 
 /**
  * Place is a query parameter used when querying nearby target store locations. The query accepts either a zipcode
- * or a city-state combo. See {@link com.graqr.threshr.Threshr#queryStoreLocations(Place)}.
+ * or a city-state combo. See {@link com.graqr.threshr.Threshr#getStores(Place)} 
  */
 @Serdeable
 @Data
