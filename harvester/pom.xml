@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <artifactId>harvester</artifactId>
-  <version>0.1</version>
+  <version>0.0.1-SNAPSHOT</version>
   <packaging>${packaging}</packaging>
 
   <parent>
@@ -13,7 +13,7 @@
   </parent>
 
   <properties>
-    <packaging>native-image</packaging>
+    <packaging>jar</packaging>
     <micronaut.runtime>netty</micronaut.runtime>
     <micronaut.aot.enabled>false</micronaut.aot.enabled>
     <micronaut.aot.packageName>com.graqr.aot.generated</micronaut.aot.packageName>
@@ -40,6 +40,12 @@
       <groupId>io.micronaut.controlpanel</groupId>
       <artifactId>micronaut-control-panel-ui</artifactId>
       <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.graqr</groupId>
+      <artifactId>threshr</artifactId>
+      <version>0.0.13-SNAPSHOT</version>
+      <scope>compile</scope>
     </dependency>
   </dependencies>
 </project>

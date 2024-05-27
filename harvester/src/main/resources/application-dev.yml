@@ -1,0 +1,8 @@
+endpoints:
+  all:
+    enabled: true
+    sensitive: false
+  loggers:
+    write-sensitive: false
+  health:
+    details-visible: ANONYMOUS
