@@ -10,14 +10,14 @@
     <parent>
         <groupId>io.micronaut.platform</groupId>
         <artifactId>micronaut-parent</artifactId>
-        <version>4.4.1</version>
+        <version>4.4.3</version>
     </parent>
 
     <properties>
         <packaging>jar</packaging>
         <jdk.version>17</jdk.version>
         <release.version>17</release.version>
-        <micronaut.version>4.2.0</micronaut.version>
+        <micronaut.version>4.4.3</micronaut.version>
         <owner>graqr</owner>
         <sonar.organization>graqr</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
