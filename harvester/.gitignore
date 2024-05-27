@@ -1,0 +1,5 @@
+/.idea/
+/target/
+.env
+/.run/ThreshrClientTest.run.xml
+.iml
