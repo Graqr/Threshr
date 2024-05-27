@@ -1,5 +1,5 @@
 <!-- Header -->
-<img src="header_logo.svg" alt="Threshr - The Target Grocery Harvester" width="500">
+<img src="../header_logo.svg" alt="Threshr - The Target Grocery Harvester" width="500">
 
 
 [![GitHub code size in bytes]][download link]
@@ -51,7 +51,7 @@ gradle projects.
     <ol>
     At the time of writing this, GitHub doesn't support using GitHub-hosted artifacts without first authenticating. You can do this in two steps:
     <li>Generate a personal access token with <code>read:packages</code> <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">privileges</a>. </li>
-    <li>Add <code><a href="settings.xml">settings.xml</a></code> to your <code>~/.m2/</code> directory (swapping Batman's name and password for your GitHub user and the token from step 1</li>
+    <li>Add <code><a href="../settings.xml">settings.xml</a></code> to your <code>~/.m2/</code> directory (swapping Batman's name and password for your GitHub user and the token from step 1</li>
     </ol>
 </details>
 </ul>
@@ -61,7 +61,7 @@ gradle projects.
 <dependency>
   <groupId>com.graqr</groupId>
   <artifactId>threshr</artifactId>
-  <version>0.0.12</version>
+  <version>0.0.13</version>
 </dependency>
 ```
 #### Include as a Gradle dependency
@@ -104,17 +104,17 @@ ___
 
 ### Want to get involved?
 
-See our [contributing] doc before taking a whack at any [open issues]. Also be sure to read the [Testing README](src/test/groovy/com/graqr/threshr/README.md) for some tips and tricks. We'd love for you to work with us!
+See our [contributing] doc before taking a whack at any [open issues]. Also be sure to read the [Testing README](../src/test/groovy/com/graqr/threshr/README.md) for some tips and tricks. We'd love for you to work with us!
 
 <!--top bar-->
 [Bugs]:https://sonarcloud.io/api/project_badges/measure?project=Graqr_Threshr&metric=bugs
 [BugsLink]:https://sonarcloud.io/summary/new_code?id=Graqr_Threshr
 [open issues]:https://github.com/Graqr/Threshr/issues"open-issues"
-[contributing]:Contributing.md
+[contributing]:../Contributing.md
 [GitHub code size in bytes]:https://img.shields.io/github/languages/code-size/Graqr/Threshr?style=plastic%20project-size%20
 [download link]:https://github.com/Graqr/Threshr/archive/refs/heads/main.zip
 [license]:https://img.shields.io/github/license/Graqr/Threshr?style=plastic"GPL-3-License"
-[license file]:LICENSE
+[license file]:../LICENSE
 [GitHub last commit]:https://img.shields.io/github/last-commit/Graqr/Threshr/main?style=plastic%20most-recent-commit
 [commit history]:https://github.com/Graqr/Threshr/commits/main
 [GitHub commit activity]:https://img.shields.io/github/commit-activity/y/Graqr/Threshr?style=plastic"commit-frequency"

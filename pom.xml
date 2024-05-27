@@ -3,9 +3,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.graqr</groupId>
-    <artifactId>threshr</artifactId>
+    <artifactId>threshr-parent</artifactId>
     <version>0.0.13-SNAPSHOT</version>
-    <packaging>${packaging}</packaging>
+    <packaging>pom</packaging>
 
     <parent>
         <groupId>io.micronaut.platform</groupId>
@@ -14,7 +14,6 @@
     </parent>
 
     <properties>
-        <packaging>jar</packaging>
         <jdk.version>17</jdk.version>
         <release.version>17</release.version>
         <micronaut.version>4.4.3</micronaut.version>
@@ -127,7 +126,6 @@
             <version>42.7.2</version>
             <scope>test</scope>
         </dependency>
-
     </dependencies>
     <build>
         <plugins>
@@ -153,6 +151,10 @@
                 <groupId>io.micronaut.build</groupId>
                 <artifactId>micronaut-maven-plugin</artifactId>
                 <version>3.5.4</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
