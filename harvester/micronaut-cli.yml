@@ -1,0 +1,6 @@
+applicationType: default
+defaultPackage: com.graqr
+testFramework: spock
+sourceLanguage: java
+buildTool: maven
+features: [app-name, control-panel, groovy-maven-plus-plugin, http-client, java, java-application, logback, management, maven, maven-enforcer-plugin, micronaut-aot, micronaut-http-validation, netty-server, properties, readme, serialization-jackson, shade, spock, static-resources]
