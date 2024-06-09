@@ -16,10 +16,6 @@
     <properties>
         <jdk.version>17</jdk.version>
         <release.version>17</release.version>
-        <micronaut.version>4.4.3</micronaut.version>
-        <owner>graqr</owner>
-        <sonar.organization>graqr</sonar.organization>
-        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     </properties>
 
     <developers>

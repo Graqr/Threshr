@@ -2,15 +2,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.graqr</groupId>
   <artifactId>threshr-cli</artifactId>
   <version>0.1</version>
-  <packaging>${packaging}</packaging>
+  <packaging>native-image</packaging>
 
   <parent>
-    <groupId>io.micronaut.platform</groupId>
-    <artifactId>micronaut-parent</artifactId>
-    <version>4.4.3</version>
+    <groupId>com.graqr</groupId>
+    <artifactId>threshr-parent</artifactId>
+    <version>0.0.13-SNAPSHOT</version>
   </parent>
   <properties>
     <packaging>jar</packaging>
@@ -32,8 +31,13 @@
 
   <dependencies>
     <dependency>
-      <groupId>io.micronaut</groupId>
-      <artifactId>micronaut-http-server-netty</artifactId>
+      <groupId>info.picocli</groupId>
+      <artifactId>picocli</artifactId>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.micronaut.picocli</groupId>
+      <artifactId>micronaut-picocli</artifactId>
       <scope>compile</scope>
     </dependency>
     <dependency>
@@ -70,27 +74,6 @@
       <groupId>io.micronaut</groupId>
       <artifactId>micronaut-http-client</artifactId>
       <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>io.micronaut</groupId>
-      <artifactId>micronaut-inject-groovy</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>io.micronaut.test</groupId>
-      <artifactId>micronaut-test-spock</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.spockframework</groupId>
-      <artifactId>spock-core</artifactId>
-      <scope>test</scope>
-      <exclusions>
-          <exclusion>
-            <groupId>org.apache.groovy</groupId>
-            <artifactId>groovy-all</artifactId>
-          </exclusion>
-        </exclusions>
     </dependency>
   </dependencies>
   <build>
