@@ -15,7 +15,7 @@
         <micronaut.test.resources.enabled>true</micronaut.test.resources.enabled>
         <micronaut.aot.enabled>false</micronaut.aot.enabled>
         <micronaut.aot.packageName>com.graqr.aot.generated</micronaut.aot.packageName>
-        <exec.mainClass>com.graqr.Application</exec.mainClass>
+        <exec.mainClass>com.graqr.ThreshrCli</exec.mainClass>
     </properties>
     <repositories>
         <repository>

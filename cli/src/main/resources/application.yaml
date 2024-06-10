@@ -1,0 +1,19 @@
+micronaut:
+  application:
+    name: threshr-cli
+---
+datasources:
+  default:
+    driver-class-name: org.postgresql.Driver
+    db-type: postgres
+    schema-generate: CREATE_DROP
+    dialect: POSTGRES
+---
+threshr:
+  key:
+  channel:
+---
+test:
+  datasources:
+    default:
+      url:
