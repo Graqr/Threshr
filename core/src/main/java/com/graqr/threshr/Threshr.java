@@ -107,7 +107,7 @@ public class Threshr {
      * Get Store information by store ID.
      * Assigns sensible default values of 'WEB' and '/c/root' for channel and page parameters.
      *
-     * @param storeId 4-digit unique id for a target store
+     * @param storeId unique id for a target store
      * @return Store object
      * @throws ThreshrException if body of HttpResponse is null
      */
@@ -120,7 +120,7 @@ public class Threshr {
     /**
      * Get Store information by store ID.
      *
-     * @param storeId 4-digit unique id for a target store
+     * @param storeId unique id for a target store
      * @param channel communication through which this api is being called.
      * @param page source web page on target.com where this api call originates
      * @return Store object

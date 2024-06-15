@@ -35,6 +35,12 @@
             <scope>compile</scope>
         </dependency>
         <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.7.2</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
             <groupId>com.graqr</groupId>
             <artifactId>threshr</artifactId>
             <version>0.0.13-SNAPSHOT</version>
