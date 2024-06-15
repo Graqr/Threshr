@@ -7,7 +7,7 @@
     <version>0.0.13-SNAPSHOT</version>
   </parent>
   <artifactId>threshr</artifactId>
-  <version>${project.parent.version}</version>
+  <version>0.0.13-SNAPSHOT</version>
   <name>core</name>
   <dependencies>
     <dependency>
