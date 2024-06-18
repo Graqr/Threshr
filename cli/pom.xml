@@ -3,8 +3,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <artifactId>threshr-cli</artifactId>
-  <version>0.1</version>
-  <packaging>native-image</packaging>
+  <version>0.0.1</version>
+  <packaging>${packaging}</packaging>
 
     <parent>
         <groupId>com.graqr</groupId>
@@ -15,7 +15,8 @@
         <micronaut.test.resources.enabled>true</micronaut.test.resources.enabled>
         <micronaut.aot.enabled>false</micronaut.aot.enabled>
         <micronaut.aot.packageName>com.graqr.aot.generated</micronaut.aot.packageName>
-        <exec.mainClass>com.graqr.ThreshrCli</exec.mainClass>
+        <exec.mainClass>com.graqr.Pdp</exec.mainClass>
+        <packaging>jar</packaging>
     </properties>
     <repositories>
         <repository>
