@@ -1,0 +1,76 @@
+name: Build CLI Native Images
+
+on: [push, pull_request]
+jobs:
+  test:
+    name: "maven tests for cli module"
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ ubuntu-latest, windows-latest ]
+    steps:
+    - name: "󰆴 Free disk space"
+      if: ${{ matrix.os == 'ubuntu-latest' }}
+      run: |
+        sudo rm -rf "/usr/local/share/boost"
+        sudo rm -rf "$AGENT_TOOLSDIRECTORY"
+        sudo apt-get clean
+        df -h
+    - uses: actions/checkout@v4
+    - name: "󰬷 Set up JDK"
+      uses: actions/setup-java@v4.2.1
+      with:
+        distribution: 'zulu'
+        java-version: '17.0.7'
+        cache: 'maven'
+    - name: "💾 Cache Maven packages"
+      uses: actions/cache@4.0.2
+      with:
+        path: ~/.m2
+        key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+        restore-keys: ${{ runner.os }}-maven
+    - name: "🧪 Run Maven Tests"
+  build:
+    name: "🛠️ native compile on ${{ matrix.os }}"
+    needs: test
+    environment: redsky api
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    steps:
+      # https://github.com/actions/virtual-environments/issues/709
+    - name: "󰆴 Free disk space"
+      if: ${{ matrix.os == 'ubuntu-latest' }}
+      run: |
+        sudo rm -rf "/usr/local/share/boost"
+        sudo rm -rf "$AGENT_TOOLSDIRECTORY"
+        sudo apt-get clean
+        df -h
+    - uses: actions/checkout@v4
+    - name: "󰬷 Set up JDK 17"
+      uses: graalvm/setup-graalvm@v1.2.2
+      with:
+        java-version: '17.0.7'
+        distribution: 'graalvm'
+        cache: maven
+        cache-dependencies: 'cli/pom.xml'
+        native-image-job-reports: 'true'
+    - name: Cache Maven packages
+      uses: actions/cache@v4.0.2
+      with:
+        path: ~/.m2
+        key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml', '**/*.target', '**/*.pom.xml) }}
+        restore-keys: ${{ runner.os }}-m2
+    - name: "run maven tests"
+      env:
+        THRESHR_KEY: ${{ secrets.THRESHR_KEY }}
+        THRESHR_CHANNEL: ${{ vars.THRESHR_CHANNEL }}
+        TEST_DATASOURCES_DEFAULT_URL: ${{ secrets.TEST_DATASOURCES_DEFAULT_URL }}
+        GITHUB_TOKEN: ${{ secrets.GRAAL_COMMENT_PERMISSIONS }}
+      run: |
+        ./mvnw package -f pom.xml
+        ./mvnw package -f ./cli/ -Dmaven.test.skip=true -Dpackaging=native-image-Pnative-image
+        
