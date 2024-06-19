@@ -142,10 +142,7 @@ public class Threshr {
      */
     private <T> T checkForNull(HttpResponse<T> response) throws ThreshrException {
         if (null == response.body()) {
-            throw new ThreshrException(String.format("response body of HttpResponse<%s> is null", response
-                    .body()
-                    .getClass()
-                    .getName()));
+            throw new ThreshrException("response body is null or of an unexpected type.\n" + response);
         }
         return response.body();
     }
