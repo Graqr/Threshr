@@ -23,7 +23,6 @@ class ThreshrControllerSpec extends ThreshrSpec {
         sql = Sql.newInstance(url)
     }
 
-    // https://github.com/Graqr/Threshr/issues/67
     void "query pdp for #tcinArg tcin strings"() {
         when:
         if (count == 1){
