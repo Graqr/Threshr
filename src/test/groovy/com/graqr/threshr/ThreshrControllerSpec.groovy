@@ -23,6 +23,14 @@ class ThreshrControllerSpec extends ThreshrSpec {
         sql = Sql.newInstance(url)
     }
 
+    void "null-bodied response from redsky is handled gracefully"() {
+        when: "querying a non-existent tcin"
+        threshrController.fetchProductSummaries(targetStore, "imAFakeTcin")
+
+        then: "Threshr exception thrown"
+        thrown(ThreshrException)
+    }
+
     void "query pdp for #tcinArg tcin strings"() {
         when:
         if (count == 1){
