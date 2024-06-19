@@ -39,24 +39,18 @@
 
 ## Summary
 
-Threshr is a wrapper library for Target Corporation's redsky api. The redsky api has endpoints for querying product and store information. This includes fulfillment options, pricing, vendors, etc.
+Threshr is a wrapper library for various grocery store api's. This includes querying specific store pricing and product data.
 
+### Projects using threshr
+
+Other projects using threshr include other graqr projects like the [threshr cli] and [harvester]
 
 ## Install
 
-This project's artifacts are hosted on GitHub. Follow [these instructions] in order to include threshr in your maven or
-gradle projects.
-<ul>
-<details><summary>My summary of GitHub's Instructions</summary>
-    <ol>
-    At the time of writing this, GitHub doesn't support using GitHub-hosted artifacts without first authenticating. You can do this in two steps:
-    <li>Generate a personal access token with <code>read:packages</code> <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">privileges</a>. </li>
-    <li>Add <code><a href="settings.xml">settings.xml</a></code> to your <code>~/.m2/</code> directory (swapping Batman's name and password for your GitHub user and the token from step 1</li>
-    </ol>
-</details>
-</ul>
+Threshr is available to jvm projects via [maven central].
 
-#### Include as a Maven Dependency
+<details><summary>Maven</summary>
+
 ```xml
 <dependency>
   <groupId>com.graqr</groupId>
@@ -64,47 +58,29 @@ gradle projects.
   <version>0.0.12</version>
 </dependency>
 ```
-#### Include as a Gradle dependency
+
+</details>
+
+<details><summary>Gradle</summary>
+
 ```groovy
-compile "com.graqr:threshr:0.0.12"
+implementation group: 'com.graqr', name: 'threshr', version: '0.0.12'
 ```
+</details>
 
-#### Environment Variables
+<details><summary>Gradle Kotlin</summary>
 
-You'll need to add api `key` and `CHANNEL` values to environment variables `THRESHR_KEY` and `THRESHR_CHANNEL`. I like using a `.env` file like the one below.
-```properties
-THRESHR_KEY=BatKey
-THRESHR_CHANNEL=WEB
+```kotlin
+implementation("com.graqr:threshr:0.0.12")
 ```
-> :warning: Environment Variables on windows must be assigned as an environment variable, ie `$env:foo`.
-<details><summary id="api-key">How to find a key for the redsky api</summary><ul>
+</details>
 
-In the network tab in your browser's dev tools, search for any endpoints from the `redsky.target.com` domain. Below I'm in firefox, from whose context menu I'm given the option to copy an api call's parameters.
-
-![redsky_network-tab_firefox.gif](media%2Fredsky_network-tab_firefox.gif)
-</ul></details>
-
-## Usage
-
-Threshr doesn't support all redsky endpoints (not yet). There are three endpoints currently supported:
-
-```java
-List<ProductSummary> 	fetchProductSummaries(TargetStore targetStore, Tcin tcin);
-List<ProductSummary> 	fetchProductSummaries(TargetStore targetStore, String... tcin) throws ThreshrException;
-```
-```java
-Product 	fetchProductDetails(TargetStore targetStore, String tcin);
-```
-```java
-NearbyStores 	queryStoreLocations(Place place); // default values for limit and within
-NearbyStores 	queryStoreLocations(int limit, int within, Place place);
-```
-
-___
+> [!NOTE] 
+> See the [testing README] for more information about all the needed environment variables, as well as tips and best practices.
 
 ### Want to get involved?
 
-See our [contributing] doc before taking a whack at any [open issues]. Also be sure to read the [Testing README](src/test/groovy/com/graqr/threshr/README.md) for some tips and tricks. We'd love for you to work with us!
+See our [contributing] doc before taking a whack at any [open issues]. Also be sure to read the [testing README] for some tips and tricks. We'd love for you to work with us!
 
 <!--top bar-->
 [Bugs]:https://sonarcloud.io/api/project_badges/measure?project=Graqr_Threshr&metric=bugs
@@ -144,3 +120,7 @@ See our [contributing] doc before taking a whack at any [open issues]. Also be s
 
 <!--All the other links-->
 [these instructions]:https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-apache-maven-registry
+[testing README]:src\test\groovy\com\graqr\threshr\README.md
+[maven central]:https://central.sonatype.com/artifact/com.graqr/threshr/overview
+[threshr cli]:https://github.com/Graqr/threshr-cli
+[harvester]:https://github.com/Graqr/Harvester
