@@ -1,4 +1,4 @@
-name: Sonar-Backed Maven tests for Submodules
+name: Sonar Coverage Tests on Threshr Core
 
 on:
   push:
@@ -9,12 +9,8 @@ on:
   pull_request:
 
 jobs:
-  test:
-    strategy:
-      matrix:
-        module_directory:
-          - core
-          - cli
+  sonar-coverage-tests:
+    name: "sonar coverage scan on threshr core"
     environment: redsky api
     runs-on: ubuntu-latest
     steps:
@@ -48,7 +44,6 @@ jobs:
         key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
         restore-keys: ${{ runner.os }}-m2
     - name: "SonarCloud Scan"
-      if: ${{ matrix.module_directory == 'core' }}
       env:
         THRESHR_KEY: ${{ secrets.THRESHR_KEY }}
         THRESHR_CHANNEL: ${{ vars.THRESHR_CHANNEL }}
