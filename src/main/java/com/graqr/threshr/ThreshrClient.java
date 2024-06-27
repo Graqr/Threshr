@@ -3,6 +3,7 @@ package com.graqr.threshr;
 import com.graqr.threshr.model.queryparam.TargetStore;
 import com.graqr.threshr.model.queryparam.Tcin;
 import com.graqr.threshr.model.redsky.product.pdp.client.PdpClientRoot;
+import com.graqr.threshr.model.redsky.product.plp.search.PlpSearchRoot;
 import com.graqr.threshr.model.redsky.product.summary.ProductSummaryRoot;
 import com.graqr.threshr.model.redsky.store.location.StoreLocationRoot;
 import com.graqr.threshr.model.redsky.store.nearby.NearbyStoreRoot;
@@ -63,6 +64,30 @@ interface ThreshrClient {
             @QueryValue("store_id") String storeId,
             @Pattern(regexp = "(\\d{8})|(\\d{9})")
             String tcin);
+
+    /**
+     * Queries the 'plp_search_vs' endpoint for a given category at a given store. plp stands for product listing page.
+     *
+     * @param pricingStoreId store from which the product listings are to be queried.
+     * @param visitorId      id for the visitor. This could be meaningless, but can't be null.
+     * @param category       Target's internal category id.
+     * @param page           Seems to be the category value prepended with "/c/"
+     * @param channel        communication through which this api is being called. it's always 'WEB'
+     * @return HttpResponse object containing ProductListings object
+     */
+    @Get("plp_search_v2?" +
+            "?key=${threshr.key}" +
+            "{&category}" +
+            "{&channel}" +
+            "{&page}" +
+            "{&pricingStoreId}" +
+            "{&visitorId}")
+    HttpResponse<PlpSearchRoot> getProductListings(
+            @QueryValue("pricing_store_id") String pricingStoreId,
+            @QueryValue("visitor_id") String visitorId,
+            @QueryValue("category") String category,
+            @QueryValue("page") String page,
+            @QueryValue("channel") String channel);
 
     /**
      * returns target stores within a given distance from a location.

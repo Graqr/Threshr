@@ -6,6 +6,7 @@ import com.graqr.threshr.model.queryparam.TargetStore;
 import com.graqr.threshr.model.queryparam.Tcin;
 import com.graqr.threshr.model.redsky.product.Product;
 import com.graqr.threshr.model.redsky.product.ProductSummaryWithFulfillment;
+import com.graqr.threshr.model.redsky.product.plp.search.PlpSearchRoot;
 import com.graqr.threshr.model.redsky.store.NearbyStores;
 import com.graqr.threshr.model.redsky.store.Store;
 import io.micronaut.core.async.annotation.SingleResult;
@@ -13,6 +14,7 @@ import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
 import jakarta.inject.Inject;
+import org.apache.commons.lang3.RandomStringUtils;
 
 import java.util.List;
 
@@ -20,10 +22,12 @@ import java.util.List;
 public class Threshr {
 
     private final ThreshrClient threshrClient;
+    private final String visitorID;
 
     @Inject
-    public Threshr(@SuppressWarnings("ClassEscapesDefinedScope") ThreshrClient threshrClient){
+    public Threshr(@SuppressWarnings("ClassEscapesDefinedScope") ThreshrClient threshrClient) {
         this.threshrClient = threshrClient;
+        visitorID = RandomStringUtils.randomAlphanumeric(32);
     }
 
     // ------- product summary queries -------
@@ -32,7 +36,7 @@ public class Threshr {
      * Query product summaries and their fulfillment options. See {@link ProductSummaryWithFulfillment}
      *
      * @param targetStore TargetStore object whose inventory is queried for product summaries
-     * @param tcin TCIN object for one or many product ID(s)
+     * @param tcin        TCIN object for one or many product ID(s)
      * @return List of product summaries, one for each ID in the tcin object.
      * @throws ThreshrException if no product summaries are returned by the query
      */
@@ -48,7 +52,7 @@ public class Threshr {
      * Query product summaries and their fulfillment options. See {@link ProductSummaryWithFulfillment}
      *
      * @param targetStore TargetStore object whose inventory is queried for product summaries
-     * @param tcin single or many string values for product ID(s)
+     * @param tcin        single or many string values for product ID(s)
      * @return List of product summaries, one for each ID in the tcin object.
      * @throws ThreshrException if no product summaries are returned by the query
      */
@@ -64,8 +68,8 @@ public class Threshr {
      * Queries the product details page for a given product at a given store.
      *
      * @param pricingStoreId 4-digit target store identifier
-     * @param storeId 4-digit target store identifier
-     * @param tcin Target's internal product id number. aka 'Target Catalog Identification Number'
+     * @param storeId        4-digit target store identifier
+     * @param tcin           Target's internal product id number. aka 'Target Catalog Identification Number'
      * @return Product object matching the given query
      * @throws ThreshrException if no Product matching given query is found
      */
@@ -75,6 +79,39 @@ public class Threshr {
         return checkForNull(threshrClient.getProductDetails(pricingStoreId, storeId, tcin))
                 .data()
                 .product();
+    }
+
+    //------- plp queries -------
+
+    @Get("/product/listings")
+    @SingleResult
+    public PlpSearchRoot fetchProductListings(TargetStore pricingStore, String category) throws ThreshrException {
+        return checkForNull(threshrClient.getProductListings(
+                pricingStore.getStoreId(),
+                visitorID,
+                category,
+                "/c/" + category,
+                null == System.getenv("CHANNEL") ? "WEB" : System.getenv("CHANNEL")
+        ));
+    }
+
+    /**
+     * This is the lower level query for product listings. See {@link PlpSearchRoot}.
+     *
+     * @param pricingStoreId store from which the product listings are to be queried.
+     * @param visitorId      id for the visitor. This could be meaningless, but can't be null.
+     * @param category       Target's internal category id.
+     * @param page           Seems to be the category value prepended with "/c/"
+     * @param channel        communication through which this api is being called. it's always 'WEB'
+     * @return PlpSearchRoot object
+     * @throws ThreshrException if body of HttpResponse is null
+     */
+    @Get("/product/listings")
+    @SingleResult
+    public PlpSearchRoot fetchProductListings(String pricingStoreId, String visitorId, String category,
+                                              String channel, String page) throws ThreshrException {
+        return checkForNull(threshrClient.getProductListings(pricingStoreId, visitorId, category, page, channel)
+        );
     }
 
     //------- stores -------
@@ -95,8 +132,8 @@ public class Threshr {
     /**
      * Queries stores relative to a given location
      *
-     * @param place Either a zipcode or a city-state pair of strings. see {@link Place}.
-     * @param limit max store locations to include in returned NearbyStores object.
+     * @param place  Either a zipcode or a city-state pair of strings. see {@link Place}.
+     * @param limit  max store locations to include in returned NearbyStores object.
      * @param within distance from given location to include in search.
      * @return NearbyStores object with a list of store objects
      * @throws ThreshrException if the returned value is null.
@@ -128,7 +165,7 @@ public class Threshr {
      *
      * @param storeId 4-digit unique id for a target store
      * @param channel communication through which this api is being called.
-     * @param page source web page on target.com where this api call originates
+     * @param page    source web page on target.com where this api call originates
      * @return Store object
      * @throws ThreshrException if body of HttpResponse is null
      */
@@ -138,12 +175,10 @@ public class Threshr {
         return checkForNull(threshrClient.getStore(storeId, channel, page.getName())).data().store();
     }
 
-    //------- utils -------
-
     /**
      * Checks if the provided HttpResponse object has a null body and throws a ThreshrException if it does.
      *
-     * @param <T> The type of object expected in the response body.
+     * @param <T>      The type of object expected in the response body.
      * @param response The HttpResponse object to check.
      * @return The body of the HttpResponse object if it's not null.
      * @throws ThreshrException If the response body is null.
