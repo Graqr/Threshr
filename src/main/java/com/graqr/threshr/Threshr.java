@@ -26,6 +26,8 @@ public class Threshr {
         this.threshrClient = threshrClient;
     }
 
+    // ------- product summary queries -------
+
     /**
      * Query product summaries and their fulfillment options. See {@link ProductSummaryWithFulfillment}
      *
@@ -56,6 +58,8 @@ public class Threshr {
         return fetchProductSummaries(targetStore, new Tcin(tcin));
     }
 
+    // ------- pdp queries -------
+
     /**
      * Queries the product details page for a given product at a given store.
      *
@@ -72,6 +76,8 @@ public class Threshr {
                 .data()
                 .product();
     }
+
+    //------- stores -------
 
     /**
      * queries at most 5 stores within 100 miles of a given location
@@ -131,6 +137,8 @@ public class Threshr {
     public Store getStore(String storeId, String channel, Page page) throws ThreshrException {
         return checkForNull(threshrClient.getStore(storeId, channel, page.getName())).data().store();
     }
+
+    //------- utils -------
 
     /**
      * Checks if the provided HttpResponse object has a null body and throws a ThreshrException if it does.
