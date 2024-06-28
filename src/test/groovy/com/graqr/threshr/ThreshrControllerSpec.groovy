@@ -2,6 +2,7 @@ package com.graqr.threshr
 
 import com.graqr.threshr.model.queryparam.Place
 import com.graqr.threshr.model.queryparam.Tcin
+import com.graqr.threshr.model.redsky.product.Search
 import com.graqr.threshr.model.redsky.store.NearbyStores
 import com.graqr.threshr.model.redsky.store.Store
 import groovy.sql.Sql
@@ -33,9 +34,9 @@ class ThreshrControllerSpec extends ThreshrSpec {
 
     void "query pdp for #tcinArg tcin strings"() {
         when:
-        if (count == 1){
+        if (count == 1) {
             threshrController.fetchProductSummaries(targetStore, tcinArg as String)
-        }else {
+        } else {
             threshrController.fetchProductSummaries(targetStore, tcinArg as String[])
         }
 
@@ -46,6 +47,25 @@ class ThreshrControllerSpec extends ThreshrSpec {
         tcinArg                       | count
         tcin.getTcins().split(",")[0] | 1
         tcin.getTcins().split(",")    | 2
+
+    }
+
+    void "query product summary for category #id returns expected data"() {
+        when: "querying the #categoryName category from #targetStore"
+        String formattedCategoryId = (id as String).substring(2)
+        Search search = threshrController.fetchProductListings(targetStore, formattedCategoryId as String)
+
+        then: "submitting query didn't throw any errors"
+        noExceptionThrown()
+
+        and: "Product array is not null"
+        null != search.products()
+
+        and: "Each product object contains non-null price object."
+        null != search.products().collect { it.price() }
+
+        where:
+        id << sql.rows('select id from test_target_categories TABLESAMPLE BERNOULLI(10) LIMIT 5')
 
     }
 
