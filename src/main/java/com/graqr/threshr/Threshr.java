@@ -6,6 +6,7 @@ import com.graqr.threshr.model.queryparam.TargetStore;
 import com.graqr.threshr.model.queryparam.Tcin;
 import com.graqr.threshr.model.redsky.product.Product;
 import com.graqr.threshr.model.redsky.product.ProductSummaryWithFulfillment;
+import com.graqr.threshr.model.redsky.product.Search;
 import com.graqr.threshr.model.redsky.product.plp.search.PlpSearchRoot;
 import com.graqr.threshr.model.redsky.store.NearbyStores;
 import com.graqr.threshr.model.redsky.store.Store;
@@ -83,16 +84,27 @@ public class Threshr {
 
     //------- plp queries -------
 
+    /**
+     * This is product listings query with sensible default values for channel, page and visitorId.
+     * See{@link PlpSearchRoot}.
+     *
+     * @param pricingStore store from which the product listings are to be queried.
+     * @param category     Target's internal product category id.
+     * @return Search object with non-null product array.
+     * May include non-null searchSuggestion string array.
+     * May include non-null SearchResponse object.
+     * @throws ThreshrException if body of HttpResponse providing the Search object is null
+     */
     @Get("/product/listings")
     @SingleResult
-    public PlpSearchRoot fetchProductListings(TargetStore pricingStore, String category) throws ThreshrException {
-        return checkForNull(threshrClient.getProductListings(
+    public Search fetchProductListings(TargetStore pricingStore, String category) throws ThreshrException {
+        return fetchProductListings(
                 pricingStore.getStoreId(),
                 visitorID,
                 category,
                 "/c/" + category,
-                null == System.getenv("CHANNEL") ? "WEB" : System.getenv("CHANNEL")
-        ));
+                null == System.getenv("THRESHR_CHANNEL") ? "WEB" : System.getenv("THRESHR_CHANNEL")
+        );
     }
 
     /**
@@ -100,18 +112,20 @@ public class Threshr {
      *
      * @param pricingStoreId store from which the product listings are to be queried.
      * @param visitorId      id for the visitor. This could be meaningless, but can't be null.
-     * @param category       Target's internal category id.
+     * @param category       Target's internal product category id.
      * @param page           Seems to be the category value prepended with "/c/"
      * @param channel        communication through which this api is being called. it's always 'WEB'
-     * @return PlpSearchRoot object
-     * @throws ThreshrException if body of HttpResponse is null
+     * @return Search object with non-null product array.
+     * May include non-null searchSuggestion string array.
+     * May include non-null SearchResponse object.
+     * @throws ThreshrException if body of HttpResponse providing the Search object is null
      */
     @Get("/product/listings")
     @SingleResult
-    public PlpSearchRoot fetchProductListings(String pricingStoreId, String visitorId, String category,
-                                              String channel, String page) throws ThreshrException {
-        return checkForNull(threshrClient.getProductListings(pricingStoreId, visitorId, category, page, channel)
-        );
+    public Search fetchProductListings(String pricingStoreId, String visitorId, String category,
+                                       String page, String channel) throws ThreshrException {
+        return checkForNull(threshrClient.getProductListings(pricingStoreId, visitorId, category, page, channel))
+                .data().search();
     }
 
     //------- stores -------
