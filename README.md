@@ -80,7 +80,7 @@ implementation("com.graqr:threshr:0.0.13")
 
 ### Want to get involved?
 
-See our [contributing] doc before taking a whack at any [open issues]. Also be sure to read the [testing README] for some tips and tricks. We'd love for you to work with us!
+See our [contributing] doc before taking a whack at any [open issues]. We'd love for you to work with us!
 
 <!--top bar-->
 [Bugs]:https://sonarcloud.io/api/project_badges/measure?project=Graqr_Threshr&metric=bugs
@@ -120,7 +120,7 @@ See our [contributing] doc before taking a whack at any [open issues]. Also be s
 
 <!--All the other links-->
 [these instructions]:https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-apache-maven-registry
-[testing README]:src\test\groovy\com\graqr\threshr\README.md
+[testing README]:https://github.com/Graqr/Threshr/tree/main/src/test/groovy/com/graqr/threshr
 [maven central]:https://central.sonatype.com/artifact/com.graqr/threshr/overview
 [threshr cli]:https://github.com/Graqr/threshr-cli
 [harvester]:https://github.com/Graqr/Harvester
