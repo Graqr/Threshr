@@ -11,10 +11,3 @@ threshr:
   key:
   channel:
 ---
-test:
-  datasources:
-    default:
-      url:
-    file:
-      stores: ${:nearby_stores.json}
-      categories: ${:target_categories.txt}

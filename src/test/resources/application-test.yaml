@@ -1,0 +1,8 @@
+flyway:
+  datasources:
+    default:
+      locations:
+        - classpath:db
+datasources:
+  default:
+    url: jdbc:postgresql://localhost:5432/postgres # test containers endpoint

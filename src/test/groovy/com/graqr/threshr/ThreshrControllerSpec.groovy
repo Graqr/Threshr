@@ -4,13 +4,19 @@ import com.graqr.threshr.model.queryparam.Place
 import com.graqr.threshr.model.queryparam.Tcin
 import com.graqr.threshr.model.redsky.store.NearbyStores
 import com.graqr.threshr.model.redsky.store.Store
-import groovy.sql.Sql
 import io.micronaut.context.annotation.Value
+import io.micronaut.test.annotation.Sql
 import io.micronaut.test.extensions.spock.annotation.MicronautTest
+import jakarta.inject.Inject
 import spock.lang.Shared
+import spock.lang.Specification
 
-@MicronautTest
-class ThreshrControllerSpec extends ThreshrSpec {
+@MicronautTest(startApplication = false)
+class ThreshrControllerSpec extends Specification {
+
+    @Inject
+    @Shared
+    Threshr threshrController
 
     @Shared
     @Value('${test.datasources.default.url}')
