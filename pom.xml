@@ -18,6 +18,7 @@
         <jdk.version>17</jdk.version>
         <release.version>17</release.version>
         <micronaut.version>4.5.0</micronaut.version>
+        <micronaut.test.resources.enabled>true</micronaut.test.resources.enabled>
         <owner>graqr</owner>
         <sonar.organization>graqr</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
@@ -114,6 +115,16 @@
             <groupId>net.datafaker</groupId>
             <artifactId>datafaker</artifactId>
             <version>2.1.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.micronaut.flyway</groupId>
+            <artifactId>micronaut-flyway</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.flywaydb</groupId>
+            <artifactId>flyway-database-postgresql</artifactId>
             <scope>test</scope>
         </dependency>
         <dependency>
