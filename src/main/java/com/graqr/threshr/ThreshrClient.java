@@ -75,7 +75,7 @@ interface ThreshrClient {
      * @param channel        communication through which this api is being called. it's always 'WEB'
      * @return HttpResponse object containing ProductListings object
      */
-    @Get("plp_search_v2?" +
+    @Get("plp_search_v2" +
             "?key=${threshr.key}" +
             "{&category}" +
             "{&channel}" +
