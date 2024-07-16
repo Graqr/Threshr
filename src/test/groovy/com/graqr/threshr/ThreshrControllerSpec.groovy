@@ -51,9 +51,8 @@ class ThreshrControllerSpec extends ThreshrSpec {
     }
 
     void "query product summary for category #id returns expected data"() {
-        when: "querying the #categoryName category from #targetStore"
-        String formattedCategoryId = (id as String).substring(2)
-        Search search = threshrController.fetchProductListings(targetStore, formattedCategoryId as String)
+        when: "querying the #category_name category from #targetStore"
+        Search search = threshrController.fetchProductListings(targetStore, (id as String).replace("N-", ""))
 
         then: "submitting query didn't throw any errors"
         noExceptionThrown()
@@ -65,7 +64,7 @@ class ThreshrControllerSpec extends ThreshrSpec {
         null != search.products().collect { it.price() }
 
         where:
-        id << sql.rows('select id from test_target_categories TABLESAMPLE BERNOULLI(10) LIMIT 5')
+        [id, category_name] << sql.rows('select id, category_name from test_target_categories TABLESAMPLE BERNOULLI(10) LIMIT 5')
 
     }
 
