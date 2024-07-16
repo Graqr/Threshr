@@ -1,6 +1,7 @@
 package com.graqr.threshr
 
 import com.graqr.threshr.model.queryparam.Place
+import com.graqr.threshr.model.queryparam.TargetStore
 import com.graqr.threshr.model.queryparam.Tcin
 import com.graqr.threshr.model.redsky.store.NearbyStores
 import com.graqr.threshr.model.redsky.store.Store
@@ -11,7 +12,17 @@ import jakarta.inject.Inject
 import spock.lang.Shared
 import spock.lang.Specification
 
-@MicronautTest(startApplication = false)
+@MicronautTest
+//@Property(name = "datasources.default.dialect", value = "postgresql")
+//@Property(name = "datasources.default.driverClassName", value = "postgresql")
+//@Property(name = "datasources.default.schema-generate", value = "CREATE_DROP")
+//@Property(name = "datasources.default.url", value = "jdbc:postgresql://localhost:5432/postgres")
+@Sql(scripts = ["classpath:/db/V1__create-target-categories.sql",
+        "classpath:/db/V1__create-target-pdp.sql",
+        "classpath:/db/V1__create-target-stores.sql",
+        "classpath:/db/V2__populate-target-categories.sql",
+        "classpath:/db/V2__populate-target-pdp.sql",
+        "classpath:/db/V2__populate-target-stores.sql"], phase = Sql.Phase.BEFORE_ALL )
 class ThreshrControllerSpec extends Specification {
 
     @Inject
@@ -19,29 +30,61 @@ class ThreshrControllerSpec extends Specification {
     Threshr threshrController
 
     @Shared
-    @Value('${test.datasources.default.url}')
-    String url
+    @Value('${datasources.default.url}')
+    String testDataUrl
 
     @Shared
-    Sql sql
+    groovy.sql.Sql sql
 
-    void setupSpec() {
-        sql = Sql.newInstance(url)
+    @Shared
+    def String targetStoreQuery = { Integer sample, Integer size ->
+        """
+select location_id, 
+postal_code, 
+latitude, 
+longitude, 
+region FROM target_stores where is_test_location = false TABLESAMPLE BERNOULLI (${sample}) LIMIT ${size}"""
     }
 
-    void "null-bodied response from redsky is handled gracefully"() {
+    void setupSpec() {
+        sql = groovy.sql.Sql.newInstance(testDataUrl)
+    }
+
+    void "null-bodied response from redsky is caught in a ThreshrException"() {
         when: "querying a non-existent tcin"
-        threshrController.fetchProductSummaries(targetStore, "imAFakeTcin")
+        TargetStore targetStore = new TargetStore(
+                locationId as String,
+                region as String,
+                postalCode as String,
+                latitude as double,
+                longitude as double
+        )
+        threshrController.fetchProductSummaries(targetStore, badTcin)
 
         then: "Threshr exception thrown"
         thrown(ThreshrException)
+
+        where:
+        badTcin                      | _
+        "0123456789ABCDEF01234567"   | _ // Valid hexadecimal TCIN
+        "ABCDE1234567890ABCDE1234"   | _ // Valid alphanumeric TCIN
+        ""                           | _ //
+        null                         | _ //
+        "12345"                      | _ // Too short
+        "123456789012345678901234!"  | _ // Invalid character
+        "  1234567890  "             | _ // Leading trailing spaces
+        "000000000000000000000000"   | _ // All zeros
+        "111111111111111111111111"   | _ // All ones
+        "12345678901234567890123456" | _ //  Overflow
+        "';DROP TABLE target-pdp;"   | _ // SQL injection attempt
+        [locationId, postalCode, latitude, longitude, city, region] << sql.rows(targetStoreQuery(10, 10) as String)
     }
 
     void "query pdp for #tcinArg tcin strings"() {
         when:
-        if (count == 1){
+        if (count == 1) {
             threshrController.fetchProductSummaries(targetStore, tcinArg as String)
-        }else {
+        } else {
             threshrController.fetchProductSummaries(targetStore, tcinArg as String[])
         }
 

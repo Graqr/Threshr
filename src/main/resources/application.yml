@@ -11,3 +11,21 @@ threshr:
   key:
   channel:
 ---
+#datasources:
+#  default:
+#    driver-class-name: org.postgresql.Driver
+#    db-type: postgres
+#    schema-generate: CREATE_DROP
+#    dialect: POSTGRES
+#---
+#jpa:
+#  default:
+#    properties:
+#      hibernate:
+#        hbm2ddl:
+#          auto: none
+#          dialect: POSTGRES
+#          db-type: postgres
+#          driver-class-name: org.postgresql.Driver
+#          username: 'sa'
+#          password: ''

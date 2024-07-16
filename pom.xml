@@ -19,10 +19,14 @@
         <release.version>17</release.version>
         <micronaut.version>4.5.0</micronaut.version>
         <micronaut.test.resources.enabled>true</micronaut.test.resources.enabled>
+        <micronaut.runtime>netty</micronaut.runtime>
+        <micronaut.aot.enabled>false</micronaut.aot.enabled>
+        <micronaut.aot.packageName>com.graqr.aot.generated</micronaut.aot.packageName>
         <owner>graqr</owner>
         <sonar.organization>graqr</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
         <sonar.projectKey>Graqr_Threshr</sonar.projectKey>
+        <exec.mainClass>com.graqr.threshr.Threshr</exec.mainClass>
     </properties>
 
     <developers>
@@ -118,13 +122,18 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>io.micronaut.flyway</groupId>
-            <artifactId>micronaut-flyway</artifactId>
+            <groupId>io.micronaut.testresources</groupId>
+            <artifactId>micronaut-test-resources-client</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.flywaydb</groupId>
-            <artifactId>flyway-database-postgresql</artifactId>
+            <groupId>org.testcontainers</groupId>
+            <artifactId>postgresql</artifactId>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -133,13 +142,6 @@
             <version>4.0.18</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <version>42.7.2</version>
-            <scope>test</scope>
-        </dependency>
-
     </dependencies>
     <build>
         <plugins>
