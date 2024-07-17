@@ -15,11 +15,12 @@ import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
 import jakarta.inject.Inject;
-import org.apache.commons.lang3.RandomStringUtils;
 
+import java.security.SecureRandom;
+import java.util.Base64;
 import java.util.List;
 
-@Controller("/constructor")
+@Controller("/constructor") // https://github.com/Graqr/Threshr/issues/147
 public class Threshr {
 
     private final ThreshrClient threshrClient;
@@ -28,7 +29,11 @@ public class Threshr {
     @Inject
     public Threshr(@SuppressWarnings("ClassEscapesDefinedScope") ThreshrClient threshrClient) {
         this.threshrClient = threshrClient;
-        visitorID = RandomStringUtils.randomAlphanumeric(32);
+        SecureRandom random = new SecureRandom(); // Compliant for security-sensitive use cases
+        byte[] bytes = new byte[32];
+        random.nextBytes(bytes);
+        Base64.Encoder encoder = Base64.getUrlEncoder().withoutPadding();
+        visitorID = encoder.encodeToString(bytes);
     }
 
     // ------- product summary queries -------
