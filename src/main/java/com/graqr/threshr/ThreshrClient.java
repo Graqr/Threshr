@@ -25,8 +25,14 @@ import static io.micronaut.http.HttpHeaders.USER_AGENT;
  * @since 0.0.11
  */
 @Client(id = "redsky-api")
-@Header(name = USER_AGENT, value = "Micronaut HTTP Client")
-@Header(name = ACCEPT, value = "application/vnd.github.v3+json, application/json")
+@Header(name = USER_AGENT, value = "${}") //dynamically named user agent to avoid getting rate limited
+@Header(name = ACCEPT, value = "text/html," +
+        "application/xhtml+xml," +
+        "application/xml;q=0.9," +
+        "image/avif,image/webp," +
+        "image/png," +
+        "image/svg+xml," +
+        "*/*;q=0.8")
 interface ThreshrClient {
 
     /**
@@ -78,6 +84,7 @@ interface ThreshrClient {
     @Get("plp_search_v2" +
             "?key=${threshr.key}" +
             "{&category}" +
+            "{&offset}" +
             "{&channel}" +
             "{&page}" +
             "{&pricingStoreId}" +
@@ -85,9 +92,10 @@ interface ThreshrClient {
     HttpResponse<PlpSearchRoot> getProductListings(
             @QueryValue("pricing_store_id") String pricingStoreId,
             @QueryValue("visitor_id") String visitorId,
-            @QueryValue("category") String category,
-            @QueryValue("page") String page,
-            @QueryValue("channel") String channel);
+            int offset,
+            String category,
+            String page,
+            String channel);
 
     /**
      * returns target stores within a given distance from a location.
