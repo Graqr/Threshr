@@ -89,6 +89,19 @@ public class Threshr {
 
     //------- plp queries -------
 
+    @Get("/product/listings/")
+    public List<Search> plpQuery(TargetStore pricingStore, String category) throws ThreshrException {
+        int offset = 0;
+        List<Search> searchList = new java.util.ArrayList<>();
+        Search result;
+        do {
+            result = plpQuery(pricingStore, category, offset);
+            searchList.add(result);
+            offset ++;
+        } while (result.searchResponse().metadata().totalPages() >= offset);
+        return searchList;
+    }
+
     /**
      * This is product listings query with sensible default values for channel, page and visitorId.
      * See{@link PlpSearchRoot}.
@@ -100,12 +113,13 @@ public class Threshr {
      * May include non-null SearchResponse object.
      * @throws ThreshrException if body of HttpResponse providing the Search object is null
      */
-    @Get("/product/listings")
+    @Get("/product/listings/{offset}")
     @SingleResult
-    public Search fetchProductListings(TargetStore pricingStore, String category) throws ThreshrException {
-        return fetchProductListings(
+    public Search plpQuery(TargetStore pricingStore, String category, int offset) throws ThreshrException {
+        return plpQuery(
                 pricingStore.getStoreId(),
                 visitorID,
+                offset,
                 category,
                 "/c/" + category,
                 null == System.getenv("THRESHR_CHANNEL") ? "WEB" : System.getenv("THRESHR_CHANNEL")
@@ -125,11 +139,11 @@ public class Threshr {
      * May include non-null SearchResponse object.
      * @throws ThreshrException if body of HttpResponse providing the Search object is null
      */
-    @Get("/product/listings")
+    @Get("/product/listings/{offset}")
     @SingleResult
-    public Search fetchProductListings(String pricingStoreId, String visitorId, String category,
-                                       String page, String channel) throws ThreshrException {
-        return checkForNull(threshrClient.getProductListings(pricingStoreId, visitorId, category, page, channel))
+    public Search plpQuery(String pricingStoreId, String visitorId, int offset, String category,
+                           String page, String channel) throws ThreshrException {
+        return checkForNull(threshrClient.getProductListings(pricingStoreId, visitorId, offset, category, page, channel))
                 .data().search();
     }
 
@@ -203,9 +217,11 @@ public class Threshr {
      * @throws ThreshrException If the response body is null.
      */
     private <T> T checkForNull(HttpResponse<T> response) throws ThreshrException {
-        if (null == response.body()) {
-            throw new ThreshrException("response body is null or of an unexpected type.\n" + response);
+        if (null != response.body()) {
+            return response.body();
         }
-        return response.body();
+        throw new ThreshrException("response body is null or of an unexpected type.\n" +
+                "Response Code:" + response.code() + "\n" + response.getStatus());
+
     }
 }

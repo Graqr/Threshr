@@ -52,7 +52,7 @@ class ThreshrControllerSpec extends ThreshrSpec {
 
     void "query product summary for category #id returns expected data"() {
         when: "querying the #category_name category from #targetStore"
-        Search search = threshrController.fetchProductListings(targetStore, (id as String).replace("N-", ""))
+        Search search = threshrController.plpQuery(targetStore, (id as String).replace("N-", ""),0)
 
         then: "submitting query didn't throw any errors"
         noExceptionThrown()
@@ -65,7 +65,24 @@ class ThreshrControllerSpec extends ThreshrSpec {
 
         where:
         [id, category_name] << sql.rows('select id, category_name from test_target_categories TABLESAMPLE BERNOULLI(10) LIMIT 5')
+    }
 
+    void "query product summary list for category #id returns expected data"() {
+        when: "querying the #category_name category from #targetStore"
+        List<Search> searches = threshrController.plpQuery(targetStore, (id as String).replace("N-", ""))
+
+        then: "submitting query didn't throw any errors"
+        noExceptionThrown()
+
+        and: "List size matches pagination expected size."
+        null != searches && searches.size() > 0 ? searches[0].searchResponse().metadata().totalPages() == searches.size() :
+                "Expected list size " + searches.size() + " but got " + searches[0].searchResponse().metadata().totalPages()
+
+        and: "Each product object contains non-null price object."
+        searches.forEach {it.products().collect { null != it.price() }}
+
+        where:
+        [id, category_name] << sql.rows('select id, category_name from test_target_categories TABLESAMPLE BERNOULLI(10) LIMIT 1')
     }
 
     void "query product summaries with no error tcin type arg"() {
