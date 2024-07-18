@@ -94,7 +94,7 @@ public class Threshr {
             result = plpQuery(pricingStore, category, offset);
             searchList.add(result);
             offset ++;
-        } while (result.searchResponse().metadata().totalPages() >= offset);
+        } while (result.searchResponse().metadata().totalPages() > offset);
         return searchList;
     }
 
