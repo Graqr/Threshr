@@ -61,7 +61,7 @@ class ThreshrControllerSpec extends ThreshrSpec {
         null != search.products()
 
         and: "Each product object contains non-null price object."
-        null != search.products().collect { it.price() }
+        search.products().collect { null != it.price() }
 
         where:
         [id, category_name] << sql.rows('select id, category_name from test_target_categories TABLESAMPLE BERNOULLI(10) LIMIT 5')
