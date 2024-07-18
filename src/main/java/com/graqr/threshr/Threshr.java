@@ -16,8 +16,6 @@ import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
 import jakarta.inject.Inject;
 
-import java.security.SecureRandom;
-import java.util.Base64;
 import java.util.List;
 
 import static com.graqr.threshr.Utils.getSecureRandomString;
@@ -222,4 +220,5 @@ public class Threshr {
                 "Response Code:" + response.code() + "\n" + response.getStatus());
 
     }
+
 }

@@ -13,10 +13,8 @@ import io.micronaut.http.annotation.Header;
 import io.micronaut.http.annotation.QueryValue;
 import io.micronaut.http.client.annotation.Client;
 import io.micronaut.retry.annotation.Retryable;
-import jakarta.validation.constraints.Pattern;
 
 import static io.micronaut.http.HttpHeaders.ACCEPT;
-import static io.micronaut.http.HttpHeaders.USER_AGENT;
 
 /**
  * This is a Micronaut HttpClient which consumes the target corporation's api.
@@ -67,7 +65,6 @@ interface ThreshrClient {
     HttpResponse<PdpClientRoot> getProductDetails(
             @QueryValue("pricing_store_id") String pricingStoreId,
             @QueryValue("store_id") String storeId,
-            @Pattern(regexp = "(\\d{8})|(\\d{9})")
             String tcin);
 
     /**
