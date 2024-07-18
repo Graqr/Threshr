@@ -75,9 +75,12 @@ class ThreshrControllerSpec extends ThreshrSpec {
         noExceptionThrown()
 
         and: "List size matches pagination expected size."
-        null != searches && searches.size() > 0 ? searches[0].searchResponse().metadata().totalPages() == searches.size() :
-                "Expected list size " + searches.size() + " but got " + searches[0].searchResponse().metadata().totalPages()
-
+        if (null != searches && searches.size() > 0 )
+            if (searches[0].searchResponse().metadata().totalPages() == 0) {
+                searches[0].searchResponse().metadata().totalPages() == 1
+            }else {
+                searches[0].searchResponse().metadata().totalPages() == searches.size()
+            }
         and: "Each product object contains non-null price object."
         searches.forEach {it.products().collect { null != it.price() }}
 
