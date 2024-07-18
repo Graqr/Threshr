@@ -25,7 +25,6 @@ import static io.micronaut.http.HttpHeaders.USER_AGENT;
  * @since 0.0.11
  */
 @Client(id = "redsky-api")
-@Header(name = USER_AGENT, value = "${}") //dynamically named user agent to avoid getting rate limited
 @Header(name = ACCEPT, value = "text/html," +
         "application/xhtml+xml," +
         "application/xml;q=0.9," +

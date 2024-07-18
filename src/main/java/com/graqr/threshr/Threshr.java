@@ -20,6 +20,8 @@ import java.security.SecureRandom;
 import java.util.Base64;
 import java.util.List;
 
+import static com.graqr.threshr.Utils.getSecureRandomString;
+
 @Controller("/constructor") // https://github.com/Graqr/Threshr/issues/147
 public class Threshr {
 
@@ -29,11 +31,7 @@ public class Threshr {
     @Inject
     public Threshr(@SuppressWarnings("ClassEscapesDefinedScope") ThreshrClient threshrClient) {
         this.threshrClient = threshrClient;
-        SecureRandom random = new SecureRandom(); // Compliant for security-sensitive use cases
-        byte[] bytes = new byte[32];
-        random.nextBytes(bytes);
-        Base64.Encoder encoder = Base64.getUrlEncoder().withoutPadding();
-        visitorID = encoder.encodeToString(bytes);
+        visitorID = getSecureRandomString(32);
     }
 
     // ------- product summary queries -------
