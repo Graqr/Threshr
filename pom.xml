@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.graqr</groupId>
     <artifactId>threshr</artifactId>
-    <version>0.0.14-SNAPSHOT</version>
+    <version>0.0.14</version>
     <packaging>${packaging}</packaging>
 
     <parent>
@@ -12,6 +12,28 @@
         <artifactId>micronaut-parent</artifactId>
         <version>4.5.0</version>
     </parent>
+    <name>Threshr</name>
+    <description>Grocery JDK for Target's grocery API</description>
+    <url>https://github.com/graqr/threshr</url>
+    <licenses>
+        <license>
+            <name>GNU General Public License v3.0</name>
+            <url>http://www.gnu.org/licenses/gpl-3.0.txt</url>
+        </license>
+    </licenses>
+    <scm>
+        <url>scm:git@github.com:graqr/threshr.git</url>
+        <connection>scm:git@github.com:graqr/threshr.git</connection>
+        <developerConnection>scm:git@github.com:graqr/threshr.git</developerConnection>
+    </scm>
+    <developers>
+        <developer>
+            <id>jonathan-zollinger</id>
+            <name>Jonathan Zollinger</name>
+            <timezone>Mountain Standard Time</timezone>
+            <url>https://www.linkedin.com/in/jonathan-zollinger/</url>
+        </developer>
+    </developers>
 
     <properties>
         <packaging>jar</packaging>
@@ -24,14 +46,6 @@
         <sonar.projectKey>Graqr_Threshr</sonar.projectKey>
     </properties>
 
-    <developers>
-        <developer>
-            <id>jonathan-zollinger</id>
-            <name>Jonathan Zollinger</name>
-            <timezone>Mountain Standard Time</timezone>
-            <url>https://www.linkedin.com/in/jonathan-zollinger/</url>
-        </developer>
-    </developers>
     <distributionManagement>
         <snapshotRepository>
             <id>ossrh</id>
