@@ -55,7 +55,7 @@ Threshr is available to jvm projects via [maven central].
 <dependency>
   <groupId>com.graqr</groupId>
   <artifactId>threshr</artifactId>
-  <version>0.0.14</version>
+  <version>0</version>
 </dependency>
 ```
 
@@ -64,14 +64,14 @@ Threshr is available to jvm projects via [maven central].
 <details><summary>Gradle</summary>
 
 ```groovy
-implementation group: 'com.graqr', name: 'threshr', version: '0.0.14'
+implementation group: 'com.graqr', name: 'threshr', version: '0.0.15-SNAPSHOT'
 ```
 </details>
 
 <details><summary>Gradle Kotlin</summary>
 
 ```kotlin
-implementation("com.graqr:threshr:0.0.14")
+implementation("com.graqr:threshr:0.0.15-SNAPSHOT")
 ```
 </details>
 
