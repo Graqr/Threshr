@@ -5,6 +5,7 @@ import io.micronaut.context.annotation.Value
 import io.micronaut.core.io.ResourceLoader
 import io.micronaut.test.extensions.spock.annotation.MicronautTest
 import jakarta.inject.Inject
+import net.datafaker.Faker
 import spock.lang.Shared
 import spock.lang.Specification
 
@@ -67,6 +68,40 @@ class PageSpec extends Specification {
 
     def setupSpec() {
         expectedPages = getLinesFromFile("classpath:" + pagesFilepath)
+    }
+
+    def "validate page title word count limit"() {
+        when: "create page title of #size word count"
+        String delimiter = new Random().nextBoolean() ? "_" : "-"
+        String pageValue = new Faker().lorem().sentence(size as int)
+                .replace(" ", delimiter)
+                .replace(".","") // remove ending punctuation
+
+        and: "create page object whose title is '#pageValue'"
+        //noinspection GroovyResultOfObjectAllocationIgnored
+        new Page(pageValue)
+
+        then:
+        noExceptionThrown()
+
+        where:
+        size << (1..30)
+    }
+
+    def "Creating Page with title word count under or over limit fails"() {
+        when: "creating page with '#pageValue' title"
+        //noinspection GroovyResultOfObjectAllocationIgnored
+        new Page(pageValue)
+
+        then:
+        def exception = thrown(ThreshrException)
+        exception.message.contains("Expected non-space-character delimited string of up to 30 words, but got")
+
+
+        where:
+        pageValue                        | _
+        ""                               | _
+        new Faker().lorem().sentence(31) | _
     }
 
 
