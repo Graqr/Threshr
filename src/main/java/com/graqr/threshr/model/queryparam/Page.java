@@ -21,7 +21,8 @@ public class Page {
     }
 
     /**
-     * Sets string value as "/c/" + provided value.
+     * Sets string value as "/c/" + provided value. As a means of security, value is permitted to be 26 alphanumeric
+     * words delimited with either - or _
      *
      * @param name Query parameter in redsky api to specify from where an api call is made in the browser
      * @throws ThreshrException if string contains anything other than letters or is empty
@@ -31,9 +32,9 @@ public class Page {
         if (tempPage.startsWith("/c/")) {
             tempPage = tempPage.substring(3);
         }
-        if (tempPage.matches(".+([^(a-z|\\-)]).+") || tempPage.isEmpty()) {
+        if (!tempPage.matches("^([a-z\\d]+[-_]?){1,31}$")) {
             throw new ThreshrException(String.format(
-                    "Expected only letters for the page value, but received \"%s\".", tempPage));
+                    "Expected non-space-character delimited string of up to 30 words, but got \"%s\".", tempPage));
         }
         this.name = "/c/" + tempPage;
     }
