@@ -13,14 +13,13 @@ import com.graqr.threshr.model.redsky.store.Store;
 import io.micronaut.core.async.annotation.SingleResult;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.Controller;
-import io.micronaut.http.annotation.Get;
 import jakarta.inject.Inject;
 
 import java.util.List;
 
 import static com.graqr.threshr.Utils.getSecureRandomString;
 
-@Controller("/constructor") // https://github.com/Graqr/Threshr/issues/147
+@Controller()
 public class Threshr {
 
     private final ThreshrClient threshrClient;
@@ -42,7 +41,6 @@ public class Threshr {
      * @return List of product summaries, one for each ID in the tcin object.
      * @throws ThreshrException if no product summaries are returned by the query
      */
-    @Get("/product/summary-with-fulfillment")
     @SingleResult
     public List<ProductSummaryWithFulfillment> fetchProductSummaries(TargetStore targetStore, Tcin tcin) throws ThreshrException {
         return checkForNull(threshrClient.getProductSummary(targetStore, tcin))
@@ -58,7 +56,6 @@ public class Threshr {
      * @return List of product summaries, one for each ID in the tcin object.
      * @throws ThreshrException if no product summaries are returned by the query
      */
-    @Get("/product/summary-with-fulfillment")
     @SingleResult
     public List<ProductSummaryWithFulfillment> fetchProductSummaries(TargetStore targetStore, String... tcin) throws ThreshrException {
         return fetchProductSummaries(targetStore, new Tcin(tcin));
@@ -69,13 +66,12 @@ public class Threshr {
     /**
      * Queries the product details page for a given product at a given store.
      *
-     * @param pricingStoreId 4-digit target store identifier
-     * @param storeId        4-digit target store identifier
+     * @param pricingStoreId store identifier
+     * @param storeId        store identifier
      * @param tcin           Target's internal product id number. aka 'Target Catalog Identification Number'
      * @return Product object matching the given query
      * @throws ThreshrException if no Product matching given query is found
      */
-    @Get("/product/details")
     @SingleResult
     public Product fetchProductDetails(String pricingStoreId, String storeId, String tcin) throws ThreshrException {
         return checkForNull(threshrClient.getProductDetails(pricingStoreId, storeId, tcin))
@@ -85,7 +81,15 @@ public class Threshr {
 
     //------- plp queries -------
 
-    @Get("/product/listings/")
+    /**
+     *
+     * @param pricingStore  store identifier
+     * @param category      Target's internal product category id.
+     * @return Search object with non-null product array.
+     * May include non-null searchSuggestion string array.
+     * May include non-null SearchResponse object.
+     * @throws ThreshrException if no Product matching given query is found
+     */
     public List<Search> plpQuery(TargetStore pricingStore, String category) throws ThreshrException {
         int offset = 0;
         List<Search> searchList = new java.util.ArrayList<>();
@@ -109,7 +113,6 @@ public class Threshr {
      * May include non-null SearchResponse object.
      * @throws ThreshrException if body of HttpResponse providing the Search object is null
      */
-    @Get("/product/listings/{offset}")
     @SingleResult
     public Search plpQuery(TargetStore pricingStore, String category, int offset) throws ThreshrException {
         return plpQuery(
@@ -135,7 +138,6 @@ public class Threshr {
      * May include non-null SearchResponse object.
      * @throws ThreshrException if body of HttpResponse providing the Search object is null
      */
-    @Get("/product/listings/{offset}")
     @SingleResult
     public Search plpQuery(String pricingStoreId, String visitorId, int offset, String category,
                            String page, String channel) throws ThreshrException {
@@ -152,7 +154,6 @@ public class Threshr {
      * @return NearbyStores object with a list of store objects
      * @throws ThreshrException if the returned value is null.
      */
-    @Get("/stores/locations-query")
     @SingleResult
     public NearbyStores getStores(Place place) throws ThreshrException {
         return getStores(5, 100, place);
@@ -167,7 +168,6 @@ public class Threshr {
      * @return NearbyStores object with a list of store objects
      * @throws ThreshrException if the returned value is null.
      */
-    @Get("/stores/locations-query")
     @SingleResult
     public NearbyStores getStores(int limit, int within, Place place) throws ThreshrException {
         return checkForNull(threshrClient.getNearbyStores(limit, within, place.getZipOrCityState()))
@@ -179,11 +179,10 @@ public class Threshr {
      * Get Store information by store ID.
      * Assigns sensible default values of 'WEB' and '/c/root' for channel and page parameters.
      *
-     * @param storeId 4-digit unique id for a target store
+     * @param storeId target store id
      * @return Store object
      * @throws ThreshrException if body of HttpResponse is null
      */
-    @Get("/stores/id")
     @SingleResult
     public Store getStore(String storeId) throws ThreshrException {
         return getStore(storeId, "WEB", new Page("root"));
@@ -192,13 +191,12 @@ public class Threshr {
     /**
      * Get Store information by store ID.
      *
-     * @param storeId 4-digit unique id for a target store
+     * @param storeId target store id
      * @param channel communication through which this api is being called.
      * @param page    source web page on target.com where this api call originates
      * @return Store object
      * @throws ThreshrException if body of HttpResponse is null
      */
-    @Get("/stores/id")
     @SingleResult
     public Store getStore(String storeId, String channel, Page page) throws ThreshrException {
         return checkForNull(threshrClient.getStore(storeId, channel, page.getName())).data().store();
