@@ -72,14 +72,19 @@ class PageSpec extends Specification {
 
     def "validate page title word count limit"() {
         when: "create page title of #size word count"
-        String delimiter = new Random().nextBoolean() ? "_" : "-"
+        Random randy = new Random()
+        String delimiter = randy.nextBoolean() ? "_" : "-"
+        String titleStart = randy.nextBoolean() ? "/c/" : ""
         String pageValue = new Faker().lorem().sentence(size as int)
-                .replace(" ", delimiter)
-                .replace(".","") // remove ending punctuation
+        // weirdly, faker can sometimes add extra words. this is kinda documented, but doesn't make sense to me.
+        // this removes those extra words.
+        pageValue = pageValue.split(" ")[0..(size as int) - 1]
+                .join(delimiter)
+                .replace(".", "") // remove ending punctuation
 
         and: "create page object whose title is '#pageValue'"
         //noinspection GroovyResultOfObjectAllocationIgnored
-        new Page(pageValue)
+        new Page("$titleStart$pageValue")
 
         then:
         noExceptionThrown()
@@ -93,15 +98,18 @@ class PageSpec extends Specification {
         //noinspection GroovyResultOfObjectAllocationIgnored
         new Page(pageValue)
 
+
         then:
         def exception = thrown(ThreshrException)
         exception.message.contains("Expected non-space-character delimited string of up to 30 words, but got")
 
 
         where:
-        pageValue                        | _
-        ""                               | _
-        new Faker().lorem().sentence(31) | _
+        pageValue                                                  | _
+        ""                                                         | _
+        "/c/"                                                      | _
+        "/c/" + new Faker().lorem().sentence(31).replace(" ", "-") | _
+        new Faker().lorem().sentence(31).replace(" ", "_")         | _
     }
 
 
