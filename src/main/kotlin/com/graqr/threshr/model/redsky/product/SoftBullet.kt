@@ -4,5 +4,5 @@ import io.micronaut.serde.annotation.Serdeable
 
 @Serdeable
 data class SoftBullet(
-        val bullets: List<String>) {
-}
+    val bullets: List<String>
+) {}

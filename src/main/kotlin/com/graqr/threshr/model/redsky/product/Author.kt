@@ -5,7 +5,5 @@ import io.micronaut.serde.annotation.Serdeable
 
 @Serdeable
 data class Author(
-        val nickname: String,
-        @JsonProperty("external_id")
-        val externalId: String) {
-}
+    val nickname: String, @param:JsonProperty("external_id") val externalId: String
+) {}

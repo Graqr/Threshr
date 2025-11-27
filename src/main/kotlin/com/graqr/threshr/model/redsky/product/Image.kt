@@ -5,11 +5,9 @@ import io.micronaut.serde.annotation.Serdeable
 
 @Serdeable
 data class Image(
-        val url: String,
-        @JsonProperty("alt_text")
-        val altText: String,
-        val height: Long,
-        val width: Long,
-        @JsonProperty("aspect_ratio")
-        val aspectRatio: String){
-}
+    val url: String,
+    @param:JsonProperty("alt_text") val altText: String,
+    val height: Long,
+    val width: Long,
+    @param:JsonProperty("aspect_ratio") val aspectRatio: String
+) {}

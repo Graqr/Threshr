@@ -6,9 +6,10 @@ import io.micronaut.serde.annotation.Serdeable
 
 @Serdeable
 data class Hour(
-        @Nullable @JsonProperty("begin_date")
-        val beginDate: String,
-        @JsonProperty("begin_time") val beginTime: String,
-        @JsonProperty("end_date") val endDate: String,
-        @JsonProperty("end_time") val endTime: String) {
+    @param:Nullable @param:JsonProperty("begin_date")
+    val beginDate: String,
+    @param:JsonProperty("begin_time") val beginTime: String,
+    @param:JsonProperty("end_date") val endDate: String,
+    @param:JsonProperty("end_time") val endTime: String
+) {
 }

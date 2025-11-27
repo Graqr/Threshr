@@ -6,8 +6,6 @@ import jakarta.annotation.Nullable
 
 @Serdeable
 data class Compliance(
-        @Nullable @JsonProperty("is_proposition_65")
-        val isProposition65: Boolean,
-        @Nullable @JsonProperty("is_snap_eligible")
-        val isSnapEligible: Boolean) {
-}
+    @param:Nullable @param:JsonProperty("is_proposition_65") val isProposition65: Boolean,
+    @param:Nullable @param:JsonProperty("is_snap_eligible") val isSnapEligible: Boolean
+) {}

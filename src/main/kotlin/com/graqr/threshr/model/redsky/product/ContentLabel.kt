@@ -5,6 +5,5 @@ import io.micronaut.serde.annotation.Serdeable
 
 @Serdeable
 data class ContentLabel(
-        @JsonProperty("image_url")
-        val imageUrl: String) {
-}
+    @param:JsonProperty("image_url") val imageUrl: String
+) {}

@@ -8,8 +8,7 @@ data class FindsPost(
     val id: String,
     val caption: String,
     val url: String,
-    @JsonProperty("placeholder_color")
-    val placeholderColor: String,
+    @param:JsonProperty("placeholder_color") val placeholderColor: String,
     val user: User,
-    val image: Image) {
-}
+    val image: Image
+) {}

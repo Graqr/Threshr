@@ -5,6 +5,5 @@ import io.micronaut.serde.annotation.Serdeable
 
 @Serdeable
 data class VideoCaption(
-        @JsonProperty("caption_url") val captionUrl: String,
-        val language: String) {
-}
+    @param:JsonProperty("caption_url") val captionUrl: String, val language: String
+) {}

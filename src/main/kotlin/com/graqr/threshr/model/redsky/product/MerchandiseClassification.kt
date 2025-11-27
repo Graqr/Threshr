@@ -5,7 +5,7 @@ import io.micronaut.serde.annotation.Serdeable
 
 @Serdeable
 data class MerchandiseClassification(
-        @JsonProperty("class_id") val classId: Long,
-        @JsonProperty("department_id") val departmentId: Long,
-        @JsonProperty("department_name") val departmentName: String) {
-}
+    @param:JsonProperty("class_id") val classId: Long,
+    @param:JsonProperty("department_id") val departmentId: Long,
+    @param:JsonProperty("department_name") val departmentName: String
+) {}

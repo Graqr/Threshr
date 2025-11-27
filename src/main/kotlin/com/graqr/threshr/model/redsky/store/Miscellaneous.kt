@@ -4,4 +4,4 @@ import com.fasterxml.jackson.annotation.JsonProperty
 import io.micronaut.serde.annotation.Serdeable
 
 @Serdeable
-data class Miscellaneous(@JsonProperty("google_cid") val googleCid: String) {}
+data class Miscellaneous(@param:JsonProperty("google_cid") val googleCid: String) {}

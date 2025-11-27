@@ -5,6 +5,6 @@ import com.graqr.threshr.model.redsky.store.NearbyStores
 import io.micronaut.serde.annotation.Serdeable
 
 @Serdeable
-data class Data(@JsonProperty("nearby_stores") val nearbyStores: NearbyStores) {
+data class Data(@param:JsonProperty("nearby_stores") val nearbyStores: NearbyStores) {
 }
 

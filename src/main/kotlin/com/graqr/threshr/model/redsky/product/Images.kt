@@ -24,18 +24,12 @@ import java.util.*
  */
 @Serdeable
 data class Images(
-    @JsonProperty("primary_image_url")
-    val primaryImageUrl: URL,
-    @JsonProperty("alternate_image_urls")
-    val alternateImageUrls: Array<URL>,
-    @Nullable @JsonProperty("base_url")
-    val baseUrl: String,
-    @Nullable @JsonProperty("primary_image")
-    val primaryImage: String,
-    @Nullable @JsonProperty("alternate_images")
-    val alternateImages: List<String>,
-    @Nullable @JsonProperty("content_labels")
-    val contentLabels: List<ContentLabel>
+    @param:JsonProperty("primary_image_url") val primaryImageUrl: URL,
+    @param:JsonProperty("alternate_image_urls") val alternateImageUrls: Array<URL>,
+    @param:Nullable @param:JsonProperty("base_url") val baseUrl: String,
+    @param:Nullable @param:JsonProperty("primary_image") val primaryImage: String,
+    @param:Nullable @param:JsonProperty("alternate_images") val alternateImages: List<String>,
+    @param:Nullable @param:JsonProperty("content_labels") val contentLabels: List<ContentLabel>
 ) {
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
@@ -52,11 +46,7 @@ data class Images(
 
     override fun hashCode(): Int {
         val result = Objects.hash(
-            primaryImageUrl,
-            baseUrl,
-            primaryImage,
-            alternateImages,
-            contentLabels
+            primaryImageUrl, baseUrl, primaryImage, alternateImages, contentLabels
         ) * 31 + alternateImageUrls.contentHashCode()
 
         return result

@@ -8,9 +8,9 @@ import io.micronaut.http.annotation.QueryValue
  */
 @Introspected
 data class TargetStore(
-    @QueryValue("store_id") val storeId: String,
-    @QueryValue("scheduled_delivery_store_id") val scheduledDeliveryStoreId: String,
-    @QueryValue("required_store_id") val requiredStoreId: String,
+    @param:QueryValue("store_id") val storeId: String,
+    @param:QueryValue("scheduled_delivery_store_id") val scheduledDeliveryStoreId: String,
+    @param:QueryValue("required_store_id") val requiredStoreId: String,
     val zip: String, val state: String, val latitude: Double, val longitude: Double) {
 
     /**

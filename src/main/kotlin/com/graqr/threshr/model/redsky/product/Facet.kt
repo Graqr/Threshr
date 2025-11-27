@@ -5,11 +5,10 @@ import io.micronaut.serde.annotation.Serdeable
 
 @Serdeable
 data class Facet(
-        @JsonProperty("facet_id")
-        val facetId: String,
-        val type: String,
-        @JsonProperty("display_name")
-        val displayName: String,
-        val expand: Boolean) {
+    @param:JsonProperty("facet_id") val facetId: String,
+    val type: String,
+    @param:JsonProperty("display_name") val displayName: String,
+    val expand: Boolean
+) {
 
 }

@@ -6,12 +6,8 @@ import io.micronaut.serde.annotation.Serdeable
 
 @Serdeable
 data class OrderPickup(
-        @JsonProperty("availability_status")
-        val availabilityStatus: String,
-        @Nullable @JsonProperty("pickup_date")
-        val pickupDate: String,
-        @Nullable @JsonProperty("guest_pick_sla")
-        val guestPickSla: Long,
-        @Nullable @JsonProperty("location_locale")
-        val locationLocale: String) {
-}
+    @param:JsonProperty("availability_status") val availabilityStatus: String,
+    @param:Nullable @param:JsonProperty("pickup_date") val pickupDate: String,
+    @param:Nullable @param:JsonProperty("guest_pick_sla") val guestPickSla: Long,
+    @param:Nullable @param:JsonProperty("location_locale") val locationLocale: String
+) {}

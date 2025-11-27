@@ -6,8 +6,6 @@ import io.micronaut.serde.annotation.Serdeable
 
 @Serdeable
 data class ScheduledDelivery(
-        @JsonProperty("is_active")
-        val isActive: Boolean,
-        @Nullable @JsonProperty("location_available_to_promise_quantity")
-        val locationAvailableToPromiseQuantity: Double) {
-}
+    @param:JsonProperty("is_active") val isActive: Boolean,
+    @param:Nullable @param:JsonProperty("location_available_to_promise_quantity") val locationAvailableToPromiseQuantity: Double
+) {}

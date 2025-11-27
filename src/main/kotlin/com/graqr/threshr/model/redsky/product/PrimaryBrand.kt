@@ -5,9 +5,7 @@ import io.micronaut.serde.annotation.Serdeable
 
 @Serdeable
 data class PrimaryBrand(
-        @JsonProperty("canonical_url")
-        val canonicalUrl: String,
-        @JsonProperty("linking_id")
-        val linkingId: String,
-        val name: String) {
-}
+    @param:JsonProperty("canonical_url") val canonicalUrl: String,
+    @param:JsonProperty("linking_id") val linkingId: String,
+    val name: String
+) {}

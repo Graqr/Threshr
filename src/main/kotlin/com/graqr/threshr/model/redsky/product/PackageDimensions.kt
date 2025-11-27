@@ -5,12 +5,10 @@ import io.micronaut.serde.annotation.Serdeable
 
 @Serdeable
 data class PackageDimensions(
-        val depth: Double,
-        val height: Double,
-        val weight: Double,
-        val width: Double,
-        @JsonProperty("dimension_unit_of_measure")
-        val dimensionUnitOfMeasure: String,
-        @JsonProperty("weight_unit_of_measure")
-        val weightUnitOfMeasure: String) {
-}
+    val depth: Double,
+    val height: Double,
+    val weight: Double,
+    val width: Double,
+    @param:JsonProperty("dimension_unit_of_measure") val dimensionUnitOfMeasure: String,
+    @param:JsonProperty("weight_unit_of_measure") val weightUnitOfMeasure: String
+) {}

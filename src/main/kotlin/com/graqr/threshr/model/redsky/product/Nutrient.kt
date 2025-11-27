@@ -7,7 +7,6 @@ import io.micronaut.serde.annotation.Serdeable
 data class Nutrient(
     val name: String,
     val quantity: Double,
-    @JsonProperty("unit_of_measurement")
-    val unitOfMeasurement: String,
+    @param:JsonProperty("unit_of_measurement") val unitOfMeasurement: String,
     val percentage: Double
 ) {}

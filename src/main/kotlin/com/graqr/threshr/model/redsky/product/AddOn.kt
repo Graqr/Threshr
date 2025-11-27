@@ -5,6 +5,5 @@ import io.micronaut.serde.annotation.Serdeable
 
 @Serdeable
 data class AddOn(
-        @JsonProperty("is_active")
-        val isActive: Boolean) {
-}
+    @param:JsonProperty("is_active") val isActive: Boolean
+)

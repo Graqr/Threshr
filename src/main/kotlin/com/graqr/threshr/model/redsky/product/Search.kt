@@ -6,14 +6,8 @@ import io.micronaut.serde.annotation.Serdeable
 
 @Serdeable
 data class Search(
-        @JsonProperty("search_recommendations")
-        val searchRecommendations: SearchRecommendations,
-        @JsonProperty("search_response")
-        val searchResponse: SearchResponse,
-        @Nullable
-        @JsonProperty("search_suggestions")
-        val searchSuggestions: List<String>,
-        @Nullable
-        val products: List<Product>
-) {
-}
+    @param:JsonProperty("search_recommendations") val searchRecommendations: SearchRecommendations,
+    @param:JsonProperty("search_response") val searchResponse: SearchResponse,
+    @param:Nullable @param:JsonProperty("search_suggestions") val searchSuggestions: List<String>,
+    @param:Nullable val products: List<Product>
+) {}

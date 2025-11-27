@@ -6,17 +6,10 @@ import io.micronaut.serde.annotation.Serdeable
 
 @Serdeable
 data class Rating(
-        @Nullable
-        val average: Double,
-        @Nullable
-        val count: Long,
-        @Nullable
-        val distribution: Distribution,
-        @JsonProperty("secondary_averages")
-        @Nullable
-        val secondaryAverages: List<SecondaryAverage>,
-        @Nullable
-        val value: Double,
-        @JsonProperty("submitted_at")
-        val submittedAt: String) {
-}
+    @param:Nullable val average: Double,
+    @param:Nullable val count: Long,
+    @param:Nullable val distribution: Distribution,
+    @param:JsonProperty("secondary_averages") @param:Nullable val secondaryAverages: List<SecondaryAverage>,
+    @param:Nullable val value: Double,
+    @param:JsonProperty("submitted_at") val submittedAt: String
+) {}

@@ -6,10 +6,10 @@ import jakarta.annotation.Nullable
 
 @Serdeable
 data class Video(
-        @JsonProperty("video_files") val videoFiles: List<VideoFile>,
-        @Nullable @JsonProperty("video_captions") val videoCaptions: List<VideoCaption>,
-        @Nullable @JsonProperty("video_length_seconds") val videoLengthSeconds: String,
-        @Nullable @JsonProperty("video_poster_image") val videoPosterImage: String,
-        @Nullable @JsonProperty("video_title") val videoTitle: String,
-        @Nullable val isListPageEligible: Boolean) {
-}
+    @param:JsonProperty("video_files") val videoFiles: List<VideoFile>,
+    @param:Nullable @param:JsonProperty("video_captions") val videoCaptions: List<VideoCaption>,
+    @param:Nullable @param:JsonProperty("video_length_seconds") val videoLengthSeconds: String,
+    @param:Nullable @param:JsonProperty("video_poster_image") val videoPosterImage: String,
+    @param:Nullable @param:JsonProperty("video_title") val videoTitle: String,
+    @param:Nullable val isListPageEligible: Boolean
+) {}

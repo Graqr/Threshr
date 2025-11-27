@@ -6,15 +6,11 @@ import io.micronaut.serde.annotation.Serdeable
 
 @Serdeable
 data class Options(
-        @JsonProperty("display_name")
-        val displayName: String,
-        @JsonProperty("canonical_name")
-        val canonicalName: String,
-        val id: String,
-        @Nullable val source: String,
-        @JsonProperty("image_url")
-        @Nullable val imageUrl: String,
-        val url: String,
-        val value: String
-) {
-}
+    @param:JsonProperty("display_name") val displayName: String,
+    @param:JsonProperty("canonical_name") val canonicalName: String,
+    val id: String,
+    @param:Nullable val source: String,
+    @param:JsonProperty("image_url") @param:Nullable val imageUrl: String,
+    val url: String,
+    val value: String
+) {}

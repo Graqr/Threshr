@@ -6,9 +6,9 @@ import io.micronaut.serde.annotation.Serdeable
 
 @Serdeable
 data class RollingOperatingHours(
-        @JsonProperty("main_hours")
-        val mainHours: MainHours,
-        @Nullable @JsonProperty("capability_hours")
-        val capabilityHours: List<CapabilityHour>
+    @param:JsonProperty("main_hours")
+    val mainHours: MainHours,
+    @param:Nullable @param:JsonProperty("capability_hours")
+    val capabilityHours: List<CapabilityHour>
 ) {
 }

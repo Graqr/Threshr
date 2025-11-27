@@ -8,5 +8,4 @@ import io.micronaut.serde.annotation.Serdeable
  * @param locationName
  */
 @Serdeable
-data class Store(@JsonProperty("location_name") val locationName: String) {
-}
+data class Store(@param:JsonProperty("location_name") val locationName: String) {}

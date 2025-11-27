@@ -5,6 +5,5 @@ import io.micronaut.serde.annotation.Serdeable
 
 @Serdeable
 data class EnvironmentalSegmentation(
-        @JsonProperty("is_hazardous_material")
-        val isHazardousMaterial: Boolean) {
-}
+    @param:JsonProperty("is_hazardous_material") val isHazardousMaterial: Boolean
+) {}

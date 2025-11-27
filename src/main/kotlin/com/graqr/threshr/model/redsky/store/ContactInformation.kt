@@ -5,9 +5,9 @@ import io.micronaut.serde.annotation.Serdeable
 
 @Serdeable
 data class ContactInformation(
-    @JsonProperty("building_area") val buildingArea: String,
-    @JsonProperty("telephone_type") val telephoneType: String,
-    @JsonProperty("is_international_phone_number") val isInternationalPhoneNumber: Boolean,
-    @JsonProperty("telephone_number") val telephoneNumber: String,
+    @param:JsonProperty("building_area") val buildingArea: String,
+    @param:JsonProperty("telephone_type") val telephoneType: String,
+    @param:JsonProperty("is_international_phone_number") val isInternationalPhoneNumber: Boolean,
+    @param:JsonProperty("telephone_number") val telephoneNumber: String,
     val capability: String
 ) {}

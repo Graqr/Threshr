@@ -7,18 +7,16 @@ import io.micronaut.serde.annotation.Serdeable
 
 @Serdeable
 data class Product(
-        @JsonProperty("__typename") val typename: String,
-        val tcin: Tcin,
-        @Nullable @JsonProperty("original_tcin") val originalTcin: String,
-        val category: Category,
-        @JsonProperty("ratings_and_reviews") val ratingsAndReviews: RatingsAndReviews,
-        val item: Item,
-        @JsonProperty("finds_stories")
-        val findStories: List<FindsStory>,
-        @Nullable @JsonProperty("finds_posts")
-        val findsPosts: List<FindsPost>,
-        val price: Price,
-        val promotions: List<Any>
+    @param:JsonProperty("__typename") val typename: String,
+    val tcin: Tcin,
+    @param:Nullable @param:JsonProperty("original_tcin") val originalTcin: String,
+    val category: Category,
+    @param:JsonProperty("ratings_and_reviews") val ratingsAndReviews: RatingsAndReviews,
+    val item: Item,
+    @param:JsonProperty("finds_stories") val findStories: List<FindsStory>,
+    @param:Nullable @param:JsonProperty("finds_posts") val findsPosts: List<FindsPost>,
+    val price: Price,
+    val promotions: List<Any>
 ) {
 
 }

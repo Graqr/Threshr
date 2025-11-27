@@ -5,6 +5,5 @@ import io.micronaut.serde.annotation.Serdeable
 
 @Serdeable
 data class Handling(
-    @JsonProperty("import_designation_description")
-    val importDesignationDescription: String) {
-}
+    @param:JsonProperty("import_designation_description") val importDesignationDescription: String
+) {}

@@ -7,22 +7,15 @@ import java.util.*
 
 @Serdeable
 data class Metadata(
-    @JsonProperty("response_ids")
-    val responseIds: Array<String>,
+    @param:JsonProperty("response_ids") val responseIds: Array<String>,
     val count: Int,
-    @JsonProperty("current_page")
-    val currentPage: Int,
-    @Nullable
-    val keyword: String,
+    @param:JsonProperty("current_page") val currentPage: Int,
+    @param:Nullable val keyword: String,
     val offset: Int,
-    @JsonProperty("sort_by")
-    val sortBy: String,
-    @JsonProperty("total_pages")
-    val totalPages: Int,
-    @JsonProperty("total_results")
-    val totalResults: Int,
-    @JsonProperty("sort_options")
-    val sortOptions: Map<String, String>
+    @param:JsonProperty("sort_by") val sortBy: String,
+    @param:JsonProperty("total_pages") val totalPages: Int,
+    @param:JsonProperty("total_results") val totalResults: Int,
+    @param:JsonProperty("sort_options") val sortOptions: Map<String, String>
 ) {
 
     override fun equals(other: Any?): Boolean {

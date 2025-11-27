@@ -5,6 +5,6 @@ import io.micronaut.serde.annotation.Serdeable
 
 @Serdeable
 data class Hold(
-    @JsonProperty("is_active")
+    @param:JsonProperty("is_active")
     val isActive: Boolean) {
 }

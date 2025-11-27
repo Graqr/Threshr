@@ -5,7 +5,5 @@ import io.micronaut.serde.annotation.Serdeable
 
 @Serdeable
 data class Category(
-        @JsonProperty("parent_category_id")
-        val parentCategoryId: String,
-        val name: String) {
-}
+    @param:JsonProperty("parent_category_id") val parentCategoryId: String, val name: String
+) {}

@@ -4,6 +4,5 @@ import io.micronaut.serde.annotation.Serdeable
 
 @Serdeable
 data class ItemType(
-        val name: String,
-        val type: String) {
-}
+    val name: String, val type: String
+) {}

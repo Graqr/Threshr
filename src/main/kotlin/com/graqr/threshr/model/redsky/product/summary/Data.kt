@@ -6,7 +6,7 @@ import io.micronaut.serde.annotation.Serdeable
 
 @Serdeable
 data class Data(
-        @JsonProperty("product_summaries")
+        @param:JsonProperty("product_summaries")
         val productSummaryWithFulfillmentList: List<ProductSummaryWithFulfillment>
 ) {
 }

@@ -5,10 +5,7 @@ import io.micronaut.serde.annotation.Serdeable
 
 @Serdeable
 data class SearchResponse(
-        val metadata: Metadata,
-        @JsonProperty("facet_list")
-        val facets: List<Facet>,
-        @JsonProperty("visual_facet_list")
-        val visualFacets: List<Facet>
-) {
-}
+    val metadata: Metadata,
+    @param:JsonProperty("facet_list") val facets: List<Facet>,
+    @param:JsonProperty("visual_facet_list") val visualFacets: List<Facet>
+) {}

@@ -1,7 +1,6 @@
 package com.graqr.threshr
 
 import com.graqr.threshr.model.queryparam.TargetStore
-import com.graqr.threshr.model.queryparam.Tcin
 import com.graqr.threshr.model.redsky.product.pdp.client.PdpClientRoot
 import com.graqr.threshr.model.redsky.product.plp.search.PlpSearchRoot
 import com.graqr.threshr.model.redsky.product.summary.ProductSummaryRoot
@@ -40,8 +39,16 @@ interface ThreshrClient {
      * @param tcins       tcin ID's for products to query. see {@link Tcin#setTcins(String...)}
      * @param targetStore store from which the product summaries are to be queried.
      */
-    @Get("/product_summary_with_fulfillment_v1key=\${threshr.key}\${&tcins*}\${&targetStore*}&CHANNEL=\${threshr.channel}")
-    fun getProductSummary(targetStore: TargetStore, tcins: Tcin): HttpResponse<ProductSummaryRoot>
+    @Get("/product_summary_with_fulfillment_v1")
+    fun getProductSummary(
+        @QueryValue("store_id") targetStore: TargetStore,
+        @QueryValue("tcins") tcins: String, // comma separated list of tcins
+        @QueryValue("channel") channel: String = "WEB"
+    ): HttpResponse<ProductSummaryRoot>
+
+    fun getProductSummary(targetStore: TargetStore, vararg tcins: String, channel: String): HttpResponse<ProductSummaryRoot> {
+       return getProductSummary(targetStore, tcins.joinToString(","), channel)
+    }
 
     /**
      * Get the pdp for the product with the given tcin from the given store.

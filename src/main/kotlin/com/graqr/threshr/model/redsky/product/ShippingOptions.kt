@@ -5,10 +5,7 @@ import io.micronaut.serde.annotation.Serdeable
 
 @Serdeable
 data class ShippingOptions(
-        @JsonProperty("availability_status")
-        val availabilityStatus: String,
-        @JsonProperty("loyalty_availability_status")
-        val loyaltyAvailabilityStatus: String,
-        val services: List<Any>
-) {
-}
+    @param:JsonProperty("availability_status") val availabilityStatus: String,
+    @param:JsonProperty("loyalty_availability_status") val loyaltyAvailabilityStatus: String,
+    val services: List<Any>
+) {}

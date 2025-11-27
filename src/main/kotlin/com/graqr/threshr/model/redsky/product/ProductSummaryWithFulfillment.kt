@@ -6,10 +6,8 @@ import io.micronaut.serde.annotation.Serdeable
 
 @Serdeable
 data class ProductSummaryWithFulfillment(
-        @JsonProperty("__typename")
-        val typename: String,
-        val tcin: String,
-        val item: Item,
-        @Nullable
-        val fulfillment: Fulfillment) {
-}
+    @param:JsonProperty("__typename") val typename: String,
+    val tcin: String,
+    val item: Item,
+    @param:Nullable val fulfillment: Fulfillment
+) {}
