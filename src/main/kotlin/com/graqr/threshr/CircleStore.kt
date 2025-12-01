@@ -11,7 +11,7 @@ import io.micronaut.core.async.annotation.SingleResult
 import io.micronaut.http.annotation.Controller
 import org.reactivestreams.Publisher
 
-@Controller()
+@Controller("/circleStore")
 class CircleStore private constructor(
     private val productClient: ProductClient,
     private val storeClient: StoreClient,
@@ -26,10 +26,23 @@ class CircleStore private constructor(
      * @return List of product summaries, one for each ID in the tcin object.
      * @throws ThreshrException if no product summaries are returned by the query
      */
+    @Throws(ThreshrException::class)
+    fun getProductSummary(targetStore: TargetStore, vararg tcins: String): ProductSummaryRoot {
+        return nullCheck(productClient.getProductSummary(targetStore, tcins.joinToString { "," }))
+    }
+
+    /**
+     * Query product summaries and their fulfillment options. see [ProductSummaryRoot]
+     *
+     * @param targetStore TargetStore object whose inventory is queried for product summaries
+     * @param tcins       String object for one or many product ID(s)
+     * @return List of product summaries, one for each ID in the tcin object.
+     * @throws ThreshrException if no product summaries are returned by the query
+     */
     @SingleResult
     @Throws(ThreshrException::class)
-    fun fetchProductSummaries(targetStore: TargetStore, vararg tcins: String): ProductSummaryRoot {
-        return nullCheck(productClient.getProductSummary(targetStore, tcins.joinToString { "," }))
+    fun getProductSummaryAsync(targetStore: TargetStore, vararg tcins: String): Publisher<ProductSummaryRoot> {
+        return productClient.getProductSummaryAsync(targetStore, tcins.joinToString { "," })
     }
 
 
@@ -39,29 +52,29 @@ class CircleStore private constructor(
      * @param pricingStoreId store identifier
      * @param storeId        store identifier
      * @param tcins          Target's internal product id number. aka 'Target Catalog Identification Number'
-     * @return Product object matching the given query
+     * @return Product details matching the given query
      * @throws ThreshrException if no Product matching given query is found
      */
-    @SingleResult
     @Throws(ThreshrException::class)
     fun getProductDetails(pricingStoreId: String, storeId: String, vararg tcins: String): PdpClientRoot {
         return nullCheck(productClient.getProductDetails(pricingStoreId, storeId, tcins.joinToString { "," }))
     }
 
-
     /**
-     * Submits a product listings query with sensible default values for channel, page and visitorId. Offset is 0.
-     * See[PlpSearchRoot].
-     * @param pricingStore  store identifier
-     * @param category      Target's internal product category id.
-     * @return Search object with non-null product array.
-     * May include non-null searchSuggestion string array.
-     * May include non-null SearchResponse object.
+     * Queries the product details page for a given product at a given store.
+     *
+     * @param pricingStoreId store identifier
+     * @param storeId        store identifier
+     * @param tcins          Target's internal product id number. aka 'Target Catalog Identification Number'
+     * @return Product details matching the given query wrapped in a Publisher object.
      * @throws ThreshrException if no Product matching given query is found
      */
+    @SingleResult
     @Throws(ThreshrException::class)
-    fun plpQuery(pricingStore: TargetStore, category: String): PlpSearchRoot {
-        return plpQuery(pricingStore, category, 0)
+    fun getProductDetailsAsync(
+        pricingStoreId: String, storeId: String, vararg tcins: String
+    ): Publisher<PdpClientRoot> {
+        return productClient.getProductDetailsAsync(pricingStoreId, storeId, tcins.joinToString { "," })
     }
 
     /**

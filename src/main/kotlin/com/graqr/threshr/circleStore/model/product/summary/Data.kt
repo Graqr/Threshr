@@ -1,7 +1,7 @@
 package com.graqr.threshr.circleStore.model.product.summary
 
 import com.fasterxml.jackson.annotation.JsonProperty
-import com.graqr.threshr.circle.model.product.ProductSummaryWithFulfillment
+import com.graqr.threshr.circleStore.model.product.ProductSummaryWithFulfillment
 import io.micronaut.serde.annotation.Serdeable
 
 @Serdeable
