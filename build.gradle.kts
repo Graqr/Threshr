@@ -3,9 +3,8 @@ plugins {
     id("org.jetbrains.kotlin.plugin.allopen") version "1.9.25"
     id("com.google.devtools.ksp") version "1.9.25-1.0.20"
     id("groovy") 
-    id("io.micronaut.application") version "4.4.4"
+    id("io.micronaut.library") version "4.4.4"
     id("io.micronaut.test-resources") version "4.4.4"
-    id("io.micronaut.aot") version "4.4.4"
 }
 
 version = "0.1.0"
@@ -41,9 +40,6 @@ dependencies {
 }
 
 
-application {
-    mainClass = "com.graqr.ApplicationKt"
-}
 java {
     sourceCompatibility = JavaVersion.toVersion("17")
 }
@@ -59,18 +55,6 @@ micronaut {
     }
     testResources {
         additionalModules.add("jdbc-postgresql")
-    }
-    aot {
-        // Please review carefully the optimizations enabled below
-        // Check https://micronaut-projects.github.io/micronaut-aot/latest/guide/ for more details
-        optimizeServiceLoading = false
-        convertYamlToJava = false
-        precomputeOperations = true
-        cacheEnvironment = true
-        optimizeClassLoading = true
-        deduceEnvironment = true
-        optimizeNetty = true
-        replaceLogbackXml = true
     }
 }
 
